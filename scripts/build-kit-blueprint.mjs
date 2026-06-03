@@ -73,7 +73,7 @@ const STRUCTURE = [
     pages: [
       '⚛️ Tabs',
       '⚛️ Step Progress Tabs',
-      { current: 'Stepper', target: '⚛️ Stepper', renameReason: 'missing ⚛️ prefix' },
+      '⚛️ Stepper', // emoji-prefix fix already applied in the live file
       '⚛️ Breadcrumbs',
       '⚛️ Pagination',
     ],
