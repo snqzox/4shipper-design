@@ -1,0 +1,61 @@
+name: Figma Sync & Dashboard
+
+# Runs the token-free sync script on a schedule (polls for UI Kit publishes),
+# commits any design-system changes, and deploys the dashboard to GitHub Pages.
+on:
+  schedule:
+    - cron: '*/30 * * * *' # every 30 min; lower the frequency if Actions minutes are tight
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: figma-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Sync design system from Figma
+        env:
+          FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
+        run: npm run sync
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "figma-sync-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data docs dashboard
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "chore: sync design system from Figma"
+            git push
+          fi
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dashboard
+
+  deploy:
+    needs: sync
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

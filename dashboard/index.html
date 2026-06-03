@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>4Shipper Design System</title>
+<style>
+  :root { --bg:#0e1116; --card:#171c24; --line:#252c38; --fg:#e6e9ef; --muted:#8b96a8; --accent:#5b8cff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:24px 28px; border-bottom:1px solid var(--line); }
+  header h1 { margin:0; font-size:18px; }
+  header .meta { color:var(--muted); font-size:12px; margin-top:4px; }
+  .wrap { padding:24px 28px; max-width:1100px; margin:0 auto; }
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
+  .stat { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
+  .stat .n { font-size:26px; font-weight:600; }
+  .stat .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  nav { display:flex; gap:4px; border-bottom:1px solid var(--line); margin-bottom:16px; flex-wrap:wrap; }
+  nav button { background:none; border:none; color:var(--muted); padding:10px 14px; cursor:pointer; font-size:13px; border-bottom:2px solid transparent; }
+  nav button.active { color:var(--fg); border-bottom-color:var(--accent); }
+  table { width:100%; border-collapse:collapse; }
+  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--muted); font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
+  td.desc { color:var(--muted); }
+  .pill { display:inline-block; background:var(--line); border-radius:6px; padding:1px 7px; font-size:11px; color:var(--muted); }
+  .search { width:100%; padding:9px 12px; background:var(--card); border:1px solid var(--line); border-radius:8px; color:var(--fg); margin-bottom:12px; }
+  .page-group { margin-bottom:18px; }
+  .page-group h3 { margin:0 0 6px; font-size:14px; }
+  .page-group .scr { color:var(--muted); }
+  pre { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; overflow:auto; white-space:pre-wrap; }
+  .hidden { display:none; }
+  .empty { color:var(--muted); padding:20px 0; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>4Shipper Design System</h1>
+  <div class="meta" id="meta"></div>
+</header>
+<div class="wrap">
+  <div class="stats" id="stats"></div>
+  <nav id="nav"></nav>
+  <div id="view"></div>
+</div>
+<script id="model" type="application/json">{"generatedAt":"2026-06-03T01:06:25.300Z","uiKit":{},"counts":{"components":0,"componentSets":0,"styles":0,"pages":0,"screens":0},"components":[],"componentSets":[],"styles":[],"design":{"pages":[]},"changelog":"# Design System Changelog\n\n_No changes recorded yet._"}</script>
+<script>
+const M = JSON.parse(document.getElementById('model').textContent);
+const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.getElementById('meta').textContent =
+  'UI Kit: ' + (M.uiKit.name || '—') + ' · v' + (M.uiKit.version || '?') + ' · synced ' + new Date(M.generatedAt).toLocaleString();
+
+const stats = [
+  ['Components', M.counts.components], ['Component sets', M.counts.componentSets],
+  ['Styles', M.counts.styles], ['Design pages', M.counts.pages], ['Screens', M.counts.screens],
+];
+document.getElementById('stats').innerHTML = stats.map(([l,n]) =>
+  '<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>').join('');
+
+function compTable(rows) {
+  if (!rows.length) return '<div class="empty">Nothing here yet. Run <code>npm run sync</code>.</div>';
+  return '<input class="search" placeholder="Filter…" oninput="filterRows(this)">' +
+    '<table><thead><tr><th>Name</th><th>Set</th><th>Description</th></tr></thead><tbody>' +
+    rows.map(c => '<tr><td>'+esc(c.name)+'</td><td>'+(c.set?'<span class=pill>'+esc(c.set)+'</span>':'')+
+    '</td><td class="desc">'+esc(c.description)+'</td></tr>').join('') + '</tbody></table>';
+}
+function styleTable(rows) {
+  if (!rows.length) return '<div class="empty">No styles found.</div>';
+  return '<input class="search" placeholder="Filter…" oninput="filterRows(this)">' +
+    '<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>' +
+    rows.map(s => '<tr><td>'+esc(s.name)+'</td><td><span class=pill>'+esc(s.type)+'</span></td>'+
+    '<td class="desc">'+esc(s.description)+'</td></tr>').join('') + '</tbody></table>';
+}
+function pagesView(design) {
+  if (!design.pages.length) return '<div class="empty">No pages found.</div>';
+  return design.pages.map(p => '<div class="page-group"><h3>'+esc(p.name)+
+    ' <span class="scr">('+(p.screens?.length||0)+' screens)</span></h3>' +
+    (p.screens?.length ? '<div class="scr">'+p.screens.map(s=>esc(s.name)).join(' · ')+'</div>' : '') +
+    '</div>').join('');
+}
+function changelogView(md) { return '<pre>'+esc(md)+'</pre>'; }
+
+const TABS = {
+  'Components': () => compTable(M.components),
+  'Component sets': () => compTable(M.componentSets),
+  'Styles': () => styleTable(M.styles),
+  'Pages': () => pagesView(M.design),
+  'Changelog': () => changelogView(M.changelog),
+};
+const names = Object.keys(TABS);
+document.getElementById('nav').innerHTML = names.map((n,i) =>
+  '<button class="'+(i===0?'active':'')+'" onclick="showTab('+i+')">'+n+'</button>').join('');
+function showTab(i) {
+  [...document.querySelectorAll('nav button')].forEach((b,j)=>b.classList.toggle('active',i===j));
+  document.getElementById('view').innerHTML = TABS[names[i]]();
+}
+function filterRows(input) {
+  const q = input.value.toLowerCase();
+  input.parentElement.querySelectorAll('tbody tr').forEach(tr =>
+    tr.classList.toggle('hidden', !tr.textContent.toLowerCase().includes(q)));
+}
+showTab(0);
+</script>
+</body>
+</html>
