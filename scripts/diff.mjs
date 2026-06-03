@@ -1,4 +1,5 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { computeStaleDocs, staleDocsSection, writeStaleDocs } from './stale-docs.mjs'
 
 const CHANGELOG = 'docs/design-system/changelog.md'
 const MARKER = '<!-- entries -->'
@@ -72,6 +73,11 @@ export function writeChangelog(diff, snapshot) {
     entry += section(`${label} changed`, bucket.changed)
     entry += section(`${label} removed`, bucket.removed)
   }
+
+  // Flag the documentation that depends on the changed components (markdown doc + Figma showcase).
+  const stale = computeStaleDocs(diff)
+  entry += staleDocsSection(stale)
+  writeStaleDocs(stale, snapshot)
 
   const current = readFileSync(CHANGELOG, 'utf8')
   const out = current.includes(MARKER)
