@@ -1,39 +1,50 @@
 # 4Shipper Design Guidelines
 
-These are the **binding rules** the `designer` agent follows when producing designs.
-Keep them short, concrete, and current. The `design-system-manager` agent owns this file.
+The **binding rules** the `designer` agent follows. Derived from the real UI Kit 2.0 tokens and
+file structure. Owned by `design-system-manager`. Keep concrete and current.
 
-> ⚠️ This is a seed. Fill the bracketed `[…]` placeholders with the real conventions
-> from the Transportly UI Kit 2.0 and the 4Shipper Design file.
-
-## Foundations
-- **Spacing scale:** [e.g. 4 / 8 / 12 / 16 / 24 / 32 — use tokens, never arbitrary values]
-- **Grid:** [columns, gutter, margins per breakpoint]
-- **Color:** use library color styles/variables only. Primary: [token], surfaces: [tokens], semantic (success/warning/danger): [tokens].
-- **Typography:** use library text styles only. Headings: [styles], body: [styles].
-- **Corner radius / elevation:** [tokens]
+## Foundations (full detail in `../foundations/`)
+- **Color** → semantic tokens only. Brand primary `background/primary #105BFF`; text `text/body #11151D`,
+  `text/muted #606673`; status via `*-subtle` bg + solid text. See [color.md](../foundations/color.md).
+- **Typography** → **Mulish**, library text styles only. Page title `headline/h2`–`h3`, body
+  `body/md-regular` (14/20), labels `sm/sm-semibold`. See [typography.md](../foundations/typography.md).
+- **Spacing** → 4-base scale (`spacing/2 8`, `/3 12`, `/4 16`, `/6 24`, `/8 32`); layout gaps
+  `xs6 sm12 md20 lg32`. See [spacing.md](../foundations/spacing.md).
+- **Radius** → inputs/buttons `sm 8`, cards/dialogs `md 12`, pills `full`. **Icons** default 20.
+- **Never** hardcode a value that duplicates a token — bind the variable/style.
 
 ## Components
-- Build screens from **published UI Kit components only** (see `data/components.json`).
-- Prefer the highest-level component that fits (e.g. a full `Table` over hand-assembled rows).
-- Never detach instances unless a one-off truly requires it — and note why.
+- Build from **published UI Kit components only** (56 sets + standalone — see Components tab or
+  `data/components.json`). If a needed component is missing, **stop and request it** — don't draw it.
+- Prefer the highest-level fit: `Table` + `Table Cell`, `Input`/`Form Control`, `Button`, `Badge`,
+  `Status/*`, `Dialog`, `Tabs`, `Dropdown`, `Notification (Alert)`, `Pagination`, `Stepper`,
+  `Carrier Selection`, `Route Entry`, `Waypoint Entry`.
+- Don't detach instances unless a one-off truly requires it — note why.
 
 ## Layout & structure
-- Use **auto-layout** for everything; no absolute positioning unless required.
-- Standard page frame: [width, e.g. 1440] with the app shell (sidebar + topbar) when designing in-app screens.
-- Forms: [label position, field width rules, required-field marker, error pattern].
+- **Auto-layout for everything.** No absolute positioning unless unavoidable.
+- In-app screens: standard **1440** frame with the app shell (sidebar + topbar). Content max-width
+  consistent with neighbouring screens.
+- Vertical rhythm: section gaps `spacing/8 (32)`, block gaps `spacing/4 (16)`, control padding `spacing/3 (12)`.
 
-## Pages & naming in the Figma file
-- Page organization: [how pages map to app sections — Requests, Transports, Tenders, Contracts, Directory, Reports, Settings…].
-- Frame naming: [convention, e.g. `1.4 Request detail / Route tab`].
-- Keep a `🚧 WIP` page for unfinished work; move to the section page when done.
+## Forms
+- One column; label **above** field (`sm/sm-semibold`, `text/body`).
+- Fields use the `Input` / `Form Control` set, radius `sm 8`, border `border/input #D0D4DD`.
+- Required = `*` after label. Errors: `text/danger` message + danger border; helper text `sm/sm-regular text/muted`.
+- Group related fields; primary action right-aligned (`Button` primary), secondary to its left.
+- Multi-step flows use the `Stepper` / `Step Progress Tabs` (e.g. tender & request wizards).
 
-## Product context
-- App sections and screens are documented in `platform-structure.md`.
-- Product flow and pricing models in `platform-overview.md`.
+## Pages & naming (4Shipper Design file)
+- The file is split into two role sections marked by divider pages: **`SHIPPER ---------`** and
+  **`CARRIER ---------`**.
+- Section pages carry an emoji prefix, mirroring the app nav: `⏰ Requests`, `🚚 Transports`,
+  `📦 Tenders`, `📑 Contracts`, `🗂️ Directory`, `📊 Reports`, `⚙️ Settings` (+ `Carrier - Sign in/up flow`).
+- Put new work on the matching section page; **keep new screens on a `🚧 WIP` area** until done, then
+  place them in order next to siblings. Name frames after the app structure, e.g. `Requests / 1.4 Request detail / Route`.
+- App sections & screens reference: `platform-structure.md`. Product flow: `platform-overview.md`.
 
 ## Do / Don't
-- ✅ Reuse patterns from existing screens for consistency.
-- ✅ Match labels and terminology used elsewhere in the app.
-- ❌ No off-system colors, type, or spacing.
-- ❌ Don't invent components that aren't in the library — request them instead.
+- ✅ Reuse the pattern of the nearest existing screen; match its terminology and labels.
+- ✅ Use semantic color tokens and named text styles; bind, don't hardcode.
+- ✅ Take a screenshot to verify before reporting done.
+- ❌ Off-system color/type/spacing. ❌ Inventing components. ❌ Editing the UI Kit library (that's the DS manager's job).
