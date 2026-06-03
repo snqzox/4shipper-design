@@ -21,6 +21,9 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
   `Status/*`, `Dialog`, `Tabs`, `Dropdown`, `Notification (Alert)`, `Pagination`, `Stepper`,
   `Carrier Selection`, `Route Entry`, `Waypoint Entry`.
 - Don't detach instances unless a one-off truly requires it — note why.
+- **Reuse the whole component, not its parts.** Containers (dialogs, cards, banners) are components —
+  instance them and fill their slots; never rebuild their chrome from frames. Recipes in
+  `../patterns/` (e.g. **dialogs → use the `Dialog` component**, see [patterns/dialog.md](../patterns/dialog.md)).
 
 ## Layout & structure
 - **Auto-layout for everything.** No absolute positioning unless unavoidable.
