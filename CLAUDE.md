@@ -15,6 +15,18 @@ the thinking and **scripts doing the mechanical work** to save tokens.
 - **Transportly 4Shipper — Design** — the product design file (pages & screens).
   Key: `Xol48qmGXL8hIqA42jbHno`.
 
+### figma-mcp-bridge dedicated ports
+`.mcp.json` registers two `@magic-spells/figma-mcp-bridge` servers, each pinned to a fixed
+`FIGMA_BRIDGE_PORT` so every file has a stable, dedicated bridge port (both usable at once —
+one server holds one plugin connection):
+- **`figma-uikit` → port `4444`** — open UI Kit 2.0, run the bridge plugin, set its port to `4444`.
+- **`figma-4shipper` → port `3056`** — open 4Shipper — Design, run the plugin, set its port to `3056`.
+
+The port lives on the *server process*, not the file — the bridge has no file→port mapping, so the
+binding only holds if you type the matching port in each file's plugin. Tools are namespaced per
+server: `mcp__figma-uikit__figma_*` vs `mcp__figma-4shipper__figma_*`. Note: the bridge's
+in-use fallback only climbs to `3070`, so `3056` can shift if occupied but `4444` cannot fall back.
+
 ## Layout
 ```
 scripts/        Node scripts — pull, tokens, snapshot, diff, dashboard, sync, serve (REST)
