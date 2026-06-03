@@ -1,6 +1,6 @@
 # Button
 
-**Component set key:** `1486c9a8e275e63d11e9f333cc1d8000d4226070`
+**Component set key:** `20ca3f58e52ca60646e8a283cd2b3218285c1d4a` (node `15:105`)
 **Figma page:** `⚛️ Button`
 **Variants in set:** 27
 
@@ -29,6 +29,25 @@ Button is the primary interactive trigger for actions in the 4Shipper / Transpor
 | `Default` | Resting, ready for interaction. |
 | `Hover` | Cursor is over the button. |
 | `Disabled` | Action is not currently available; non-interactive. |
+
+### Component properties (non-variant)
+| Property | Type | Default | Effect |
+|---|---|---|---|
+| `hasLeftIcon` | boolean | `true` | Leading (left) icon slot. |
+| `hasRightIcon` | boolean | `false` | Trailing (right) icon slot. |
+| `hasText` | boolean | `true` | Shows the label; set `false` for an icon-only button. |
+| `hasBadge` | boolean | `false` | Trailing count badge. |
+| `isDropdown` | boolean | `false` | Adds a chevron for menu / dropdown triggers. |
+| `text` | text | `"Button"` | The button label. |
+
+### Size (not a property)
+Size is **not** a variant or component property — it is driven by the **`input-sizes` variable mode** on the
+enclosing frame: `xs 28 / sm 34 / md 42 / lg 48` px (variable `button/size`). The collection's default mode is
+`xs`; the component bakes `md` onto each instance. To render another size, set the frame's `input-sizes` mode
+and clear the instance's baked override (see `design-system-manager` → *Writing to Figma* for the pattern).
+
+A live in-Figma showcase of all of the above (properties, variant×state in light/dark, sizes) lives on the
+**`📖 Docs / Button`** page in the UI Kit file.
 
 ## Usage rules
 
