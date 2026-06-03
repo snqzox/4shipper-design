@@ -39,6 +39,7 @@ platform-overview.md / platform-structure.md   Product context
 | `npm run serve` | **Local control panel** at http://localhost:4178 — the dashboard plus an Actions tab with Refresh/Publish buttons (no terminal needed). Double-click `4shipper-design.command` in Finder to launch it. |
 | `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. **Subject to a daily rate limit** on the Dev Mode MCP server. |
 | `npm run variables:bridge` | **Fallback when Dev Mode is rate-limited.** Resolves a **figma-mcp-bridge** variable dump (alias chains → concrete values) into `data/variables-desktop.json`. Two-step: the agent dumps local vars (compact) to `data/_bridge-vars-raw.json` via the bridge plugin, then this resolves them. The bridge MCP is stdio-only, so the agent must do the dump — a script can't reach it. Bonus: bridge returns only *local* vars, so library leaks can't appear. See `scripts/build-variables-from-bridge.mjs` header. |
+| `npm run thumbnails` | Render a PNG preview of every component via REST `/v1/images` → `dashboard/thumbs/` + manifest `data/thumbnails.json`. The dashboard **Components** view shows them. PNGs are committed so the published Pages dashboard is self-contained. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
 
@@ -65,3 +66,10 @@ diffs against `latest.json`; if the UI Kit library version or any component/styl
 prepends an entry to `docs/design-system/changelog.md`. The GitHub Action runs this on a schedule,
 so publishing a new UI Kit version is detected automatically (within the schedule interval) and the
 dashboard redeploys. For instant detection, a Figma `LIBRARY_PUBLISH` webhook can be added later (Phase 2).
+
+When a component changes, `diff.mjs` also flags the docs that depend on it: it appends a **"Docs to refresh"**
+section to the changelog and writes `data/stale-docs.json` (see `scripts/stale-docs.mjs`). The dashboard
+**Components** view surfaces per-component **health** (📄 markdown doc · 📝 Figma description · 📖 in-Figma
+showcase page · 🔄 fresh/stale), a deep **Figma link** and **Doc link** per component, and a **thumbnail**.
+Detection is automatic; rebuilding a component's markdown + its `📖 Docs / <name>` Figma showcase stays a
+triggered `design-system-manager` pass (a script can't drive the Figma MCP).

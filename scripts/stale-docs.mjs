@@ -17,7 +17,7 @@ const OUT = 'data/stale-docs.json'
 // Build { componentName -> docFileName } from the components README table. Parsing the table
 // (rather than slugifying names) honours the custom file names already in use
 // (e.g. "Assets (Icons & Helper Components)" -> assets-icons.md).
-function readDocMap() {
+export function readDocMap() {
   if (!existsSync(README)) return {}
   const map = {}
   const rowRe = /^\|\s*(.+?)\s*\|\s*\[[^\]]+\]\(([^)]+\.md)\)\s*\|/gm

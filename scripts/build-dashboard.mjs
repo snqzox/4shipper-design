@@ -1,7 +1,10 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { readDocMap } from './stale-docs.mjs'
 
 const DATA_DIR = 'data'
 const OUT_DIR = 'dashboard'
+const REPO_URL = 'https://github.com/snqzox/4shipper-design'
+const COMPONENTS_DIR = 'docs/design-system/components'
 
 function readJson(path, fallback) {
   if (!existsSync(path)) return fallback
@@ -12,9 +15,33 @@ function readText(path, fallback) {
   return existsSync(path) ? readFileSync(path, 'utf8') : fallback
 }
 
+// Enrich a component with documentation/health signals + outbound links, all derived from data
+// (zero Figma round-trips): markdown doc presence, Figma description, an in-Figma showcase page,
+// staleness flag, a deep link to the node in Figma, a GitHub link to the doc, and a thumbnail.
+function componentHealth(item, ctx) {
+  const doc = ctx.docMap[item.name] || null
+  const hasDoc = Boolean(doc && existsSync(`${COMPONENTS_DIR}/${doc}`))
+  const hasDescription = Boolean(item.description && String(item.description).trim())
+  const hasShowcase = ctx.showcaseNames.has(item.name)
+  const stale = ctx.staleNames.has(item.name)
+  const nodeId = item.nodeId || null
+  return {
+    ...item,
+    hasDoc,
+    hasDescription,
+    hasShowcase,
+    stale,
+    docUrl: doc ? `${REPO_URL}/blob/main/${COMPONENTS_DIR}/${doc}` : null,
+    figmaUrl: nodeId ? `https://www.figma.com/design/${ctx.fileKey}/?node-id=${nodeId.replace(/:/g, '-')}` : null,
+    thumb: nodeId ? ctx.thumbs[nodeId] || null : null,
+    needsAttention: !hasDoc || !hasDescription || stale,
+  }
+}
+
 // Turn the flat component list (mostly variants) into meaningful units:
-// component sets (with variant counts) + standalone components, grouped by Figma page.
-function buildComponentsModel(componentsData) {
+// component sets (with variant counts) + standalone components, grouped by Figma page,
+// each enriched with health signals and links.
+function buildComponentsModel(componentsData, ctx) {
   const components = componentsData.components || []
   const sets = componentsData.componentSets || []
 
@@ -27,16 +54,27 @@ function buildComponentsModel(componentsData) {
     if (c.set && !pageOfSet[c.set] && c.page) pageOfSet[c.set] = c.page
   }
 
-  const setItems = sets.map((s) => ({
-    kind: 'set',
-    name: s.name,
-    description: s.description,
-    page: pageOfSet[s.name] || null,
-    variants: variantCount[s.name] || 0,
-  }))
+  const setItems = sets.map((s) =>
+    componentHealth(
+      {
+        kind: 'set',
+        name: s.name,
+        description: s.description,
+        nodeId: s.nodeId,
+        page: pageOfSet[s.name] || null,
+        variants: variantCount[s.name] || 0,
+      },
+      ctx,
+    ),
+  )
   const standaloneItems = components
     .filter((c) => !c.set)
-    .map((c) => ({ kind: 'component', name: c.name, description: c.description, page: c.page || null }))
+    .map((c) =>
+      componentHealth(
+        { kind: 'component', name: c.name, description: c.description, nodeId: c.nodeId, page: c.page || null },
+        ctx,
+      ),
+    )
 
   const items = [...setItems, ...standaloneItems]
   const groups = {}
@@ -51,11 +89,21 @@ function buildComponentsModel(componentsData) {
     }))
     .sort((a, b) => b.items.length - a.items.length)
 
+  const health = {
+    total: items.length,
+    documented: items.filter((i) => i.hasDoc).length,
+    described: items.filter((i) => i.hasDescription).length,
+    showcased: items.filter((i) => i.hasShowcase).length,
+    stale: items.filter((i) => i.stale).length,
+    needsAttention: items.filter((i) => i.needsAttention).length,
+  }
+
   return {
     raw: components.length,
     sets: setItems.length,
     standalone: standaloneItems.length,
     meaningful: setItems.length + standaloneItems.length,
+    health,
     groups: grouped,
   }
 }
@@ -65,8 +113,23 @@ function collect() {
   const tokens = readJson(`${DATA_DIR}/tokens.json`, { typography: [], shadows: [], colors: [], variables: { available: false } })
   const pages = readJson(`${DATA_DIR}/pages.json`, { design: { pages: [] } })
   const changelog = readText('docs/design-system/changelog.md', '# Design System Changelog\n\n_No changes recorded yet._')
+  const staleDocs = readJson(`${DATA_DIR}/stale-docs.json`, { items: [] })
+  const thumbnails = readJson(`${DATA_DIR}/thumbnails.json`, { thumbs: {} })
 
-  const comps = buildComponentsModel(componentsData)
+  // Component names that have an in-Figma showcase page ("📖 Docs / <Name>") in the UI Kit.
+  const showcaseNames = new Set(
+    (componentsData.file?.pages || [])
+      .map((p) => /^📖\s*Docs\s*\/\s*(.+)$/u.exec(p.name)?.[1]?.trim())
+      .filter(Boolean),
+  )
+  const ctx = {
+    docMap: readDocMap(),
+    staleNames: new Set((staleDocs.items || []).map((i) => i.name)),
+    showcaseNames,
+    thumbs: thumbnails.thumbs || {},
+    fileKey: componentsData.file?.key || 'XVou4XJ4rWbt4oXoSxO7hO',
+  }
+  const comps = buildComponentsModel(componentsData, ctx)
   const screensTotal = (pages.design?.pages || []).reduce((sum, p) => sum + (p.screens?.length || 0), 0)
   const varCount = tokens.variables?.available
     ? tokens.variables.count
@@ -239,6 +302,28 @@ function render(model) {
   .links a { font-size:13px; }
   .pill { display:inline-block; background:var(--line); border-radius:6px; padding:2px 8px; font:11px/1.4 var(--mono); color:var(--muted); }
   .muted { color:var(--muted); } .faint { color:var(--faint); }
+
+  /* Component cards (health view) */
+  .attn-toggle { display:inline-flex; align-items:center; gap:7px; color:var(--muted); font-size:12px; margin:-6px 0 14px; cursor:pointer; }
+  .attn-toggle input { accent-color:var(--accent); }
+  .cgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:10px; }
+  .ccard { display:flex; gap:12px; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:11px; }
+  .ccard:hover { border-color:var(--line2); }
+  .cthumb { flex:0 0 88px; height:60px; border-radius:7px; background:#fff; border:1px solid var(--line2);
+    display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .cthumb img { max-width:100%; max-height:100%; object-fit:contain; }
+  .cthumb .cph { color:#9aa; font:600 20px/1 var(--sans); }
+  .cmeta { min-width:0; flex:1; display:flex; flex-direction:column; gap:6px; }
+  .ctop { display:flex; align-items:baseline; gap:8px; }
+  .cnm { font-weight:600; font-size:13px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .cvar { color:var(--faint); font:10px/1 var(--mono); flex:0 0 auto; }
+  .cpills { display:flex; flex-wrap:wrap; gap:4px; }
+  .hp { font:10px/1.4 var(--mono); padding:2px 6px; border-radius:5px; }
+  .hp.on { color:var(--ok); background:#16241c; }
+  .hp.off { color:var(--faint); background:#171c26; }
+  .hp.warn { color:var(--warn); background:#241d10; }
+  .clinks { display:flex; gap:14px; margin-top:auto; }
+  .clinks a { font-size:11px; }
   @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
 </style>
 </head>
@@ -379,15 +464,35 @@ async function runAction(action,btn){
   initActions();
 }
 
+function ccard(it){
+  const pill=(on,label)=>'<span class="hp '+(on?'on':'off')+'">'+label+'</span>';
+  const thumb = it.thumb
+    ? '<div class="cthumb"><img loading="lazy" src="'+esc(it.thumb)+'" alt=""></div>'
+    : '<div class="cthumb"><span class="cph">'+esc((it.name[0]||'?').toUpperCase())+'</span></div>';
+  const links='<div class="clinks">'+
+    (it.figmaUrl?'<a href="'+esc(it.figmaUrl)+'" target="_blank">Figma ↗</a>':'')+
+    (it.docUrl?'<a href="'+esc(it.docUrl)+'" target="_blank">Doc ↗</a>':'<span class="faint">no doc</span>')+'</div>';
+  return '<div class="ccard citem" data-attn="'+(it.needsAttention?1:0)+'" data-n="'+esc((it.name+' '+(it.description||'')).toLowerCase())+'">'+
+    thumb+
+    '<div class="cmeta">'+
+      '<div class="ctop"><span class="cnm">'+esc(it.name)+'</span><span class="cvar">'+(it.kind==='set'?it.variants+' var':'comp')+'</span></div>'+
+      '<div class="cpills">'+pill(it.hasDoc,'doc')+pill(it.hasDescription,'desc')+pill(it.hasShowcase,'showcase')+(it.stale?'<span class="hp warn">stale</span>':'')+'</div>'+
+      links+
+    '</div></div>';
+}
+
 function components(){
-  let html = '<input class="search" id="csearch" placeholder="Filter components…">';
-  html += M.components.groups.map((g,gi) => groupBlock(g.page, g.items.length, gi<2,
-    g.items.map(it =>
-      '<div class="row citem" data-n="'+esc((it.name+' '+(it.description||'')).toLowerCase())+'">'+
-      '<span class="nm">'+esc(it.name)+'</span>'+
-      (it.description?'<span class="ds">'+esc(it.description)+'</span>':'')+
-      (it.kind==='set'?'<span class="tag set">'+it.variants+' variants</span>':'<span class="tag comp">component</span>')+
-      '</div>').join('')
+  const h=M.components.health;
+  let html=statCards([
+    [h.documented+'/'+h.total,'Documented','have a markdown doc'],
+    [h.described+'/'+h.total,'Figma described','have a component description'],
+    [h.showcased,'Showcased','have a 📖 Docs page'],
+    [(h.stale||0),'Stale', h.stale?'flagged by last sync':'all fresh'],
+  ]);
+  html+='<input class="search" id="csearch" placeholder="Filter components…">';
+  html+='<label class="attn-toggle"><input type="checkbox" id="attnonly"> Needs attention only ('+h.needsAttention+')</label>';
+  html+=M.components.groups.map((g,gi)=>groupBlock(g.page, g.items.length, gi<2,
+    '<div class="cgrid">'+g.items.map(ccard).join('')+'</div>'
   )).join('');
   return html;
 }
@@ -469,13 +574,18 @@ function bindGroups(){
   const cs=document.getElementById('csearch'); if(cs) cs.oninput=()=>filter(cs,'.citem');
   const ps=document.getElementById('psearch'); if(ps) ps.oninput=()=>filter(ps,'.sitem');
   const vs=document.getElementById('vsearch'); if(vs) vs.oninput=()=>filter(vs,'.vitem');
+  const attn=document.getElementById('attnonly'); if(attn&&cs) attn.onchange=()=>filter(cs,'.citem');
 }
 function filter(input, sel){
-  const q=input.value.toLowerCase();
+  const q=(input?input.value:'').toLowerCase();
+  const attnOnly=!!(document.getElementById('attnonly')&&document.getElementById('attnonly').checked);
   document.querySelectorAll('.group').forEach(g=>{
     let any=false;
-    g.querySelectorAll(sel).forEach(r=>{ const hit=r.dataset.n.includes(q); r.style.display=hit?'':'none'; if(hit)any=true; });
-    if(g.querySelector(sel)){ g.style.display=any?'':'none'; if(q&&any) g.classList.add('open'); }
+    g.querySelectorAll(sel).forEach(r=>{
+      const hit=r.dataset.n.includes(q) && (!attnOnly || r.dataset.attn==='1');
+      r.style.display=hit?'':'none'; if(hit)any=true;
+    });
+    if(g.querySelector(sel)){ g.style.display=any?'':'none'; if((q||attnOnly)&&any) g.classList.add('open'); }
   });
 }
 function mdToHtml(md){
