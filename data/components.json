@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T18:37:43.667Z",
+  "generatedAt": "2026-06-03T19:40:38.783Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2360930161515345371",
-    "lastModified": "2026-06-03T18:32:46Z",
+    "version": "2360940816807885383",
+    "lastModified": "2026-06-03T19:21:49Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -65,6 +65,10 @@
       {
         "id": "5510:145876",
         "name": "⚛️ Table"
+      },
+      {
+        "id": "8860:108283",
+        "name": "⚛️ Icon"
       },
       {
         "id": "5510:138759",
@@ -1310,9 +1314,9 @@
       "name": "Icon",
       "nodeId": "15:520",
       "description": "",
-      "updatedAt": "2026-06-03T18:31:16.420Z",
+      "updatedAt": "2026-06-03T19:21:56.015Z",
       "set": null,
-      "page": "🧩 Assets"
+      "page": "⚛️ Icon"
     },
     {
       "key": "426ff8463e36e55b56bbf895c91ec94e37abde79",
