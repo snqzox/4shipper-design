@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T13:59:13.995Z",
+  "generatedAt": "2026-06-03T15:57:42.834Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2360849846192687321",
-    "lastModified": "2026-06-03T13:11:54Z",
+    "version": "2360894611533023108",
+    "lastModified": "2026-06-03T15:54:35Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -438,6 +438,11 @@
             "id": "1895:156776",
             "name": "Price/Auction/Fee",
             "type": "COMPONENT"
+          },
+          {
+            "id": "1996:189616",
+            "name": "Bidding Flow",
+            "type": "FRAME"
           }
         ]
       },

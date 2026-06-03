@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T13:59:13.995Z",
+  "generatedAt": "2026-06-03T15:57:42.834Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2360848097061576186",
-    "lastModified": "2026-06-03T13:05:46Z",
+    "version": "2360895440990241440",
+    "lastModified": "2026-06-03T15:57:11Z",
     "pages": [
       {
         "id": "1793:36457",
@@ -173,10 +173,22 @@
       {
         "id": "8808:80242",
         "name": "Stepper"
+      },
+      {
+        "id": "8810:80309",
+        "name": "bc"
+      },
+      {
+        "id": "8815:992",
+        "name": "📖 Docs / Button"
+      },
+      {
+        "id": "8848:107957",
+        "name": "📖 Docs / Badge"
       }
     ]
   },
-  "count": 26,
+  "count": 30,
   "styles": [
     {
       "key": "502cdda8948fca79b7ef32a85155111f08392996",
@@ -635,6 +647,70 @@
         "fontWeight": 700,
         "fontSize": 14,
         "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
+    },
+    {
+      "key": "7eccfed5911617e98c130bd49833575aa9bb44fd",
+      "name": "2xs/2xs-semibold",
+      "nodeId": "8812:83074",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-06-03T14:56:33.514Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 600,
+        "fontSize": 10,
+        "lineHeight": 14,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
+    },
+    {
+      "key": "84cd95a87dac99bb08fb1a8d9767e78e791de1fc",
+      "name": "2xs/2xs-regular",
+      "nodeId": "8812:83073",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-06-03T14:56:33.521Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 400,
+        "fontSize": 10,
+        "lineHeight": 14,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
+    },
+    {
+      "key": "fe43906edc0d69762d265171f59831502b7f70ba",
+      "name": "2xs/2xs-bold",
+      "nodeId": "8812:83075",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-06-03T14:56:33.527Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 10,
+        "lineHeight": 14,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
+    },
+    {
+      "key": "ff851cb133cfe3b199aa3e84979ae517ab0c879e",
+      "name": "2xs/2xs-extrabold",
+      "nodeId": "8812:83076",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-06-03T14:56:33.532Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 10,
+        "lineHeight": 14,
         "letterSpacing": 0,
         "textCase": "ORIGINAL"
       }
