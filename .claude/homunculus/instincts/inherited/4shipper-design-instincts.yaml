@@ -1,0 +1,300 @@
+# Instincts generated from https://github.com/snqzox/4shipper-design
+# Generated: 2026-06-03T18:29:24.315Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: 4shipper-design-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: feat, chore
+
+## Evidence
+
+- 2 commits analyzed
+- Detected conventional commit pattern
+- Examples: feat(design-system): UI Kit 2.0 file-structure IA + blueprint automation, chore: sync design system after UI Kit 2.0 restructure
+
+---
+id: 4shipper-design-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Commit Length
+
+## Action
+
+Write moderate-length commit messages (~63 characters)
+
+## Evidence
+
+- Average commit message length: 63 chars
+- Based on 2 commits
+
+---
+id: 4shipper-design-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: 4shipper-design-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: 4shipper-design-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: 4shipper-design-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: 4shipper-design-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct File Naming
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: 4shipper-design-instinct-function-naming
+trigger: "When declaring a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Function Naming
+
+## Action
+
+Use camelCase for the function name
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: 4shipper-design-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Class Naming
+
+## Action
+
+Use PascalCase for the class name
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: 4shipper-design-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for the constant name
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: 4shipper-design-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: 4shipper-design-instinct-export-style
+trigger: "When exporting code from a module"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: 4shipper-design-instinct-commit-format
+trigger: "When making a git commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Commit Format
+
+## Action
+
+Format the commit message using the conventional commits style, starting with 'feat' or 'chore' as appropriate
+
+## Evidence
+
+- Seen in commit: feat(design-system): UI Kit 2.0 file-structure IA + blueprint automation
+- Seen in commit: chore: sync design system after UI Kit 2.0 restructure
+- Pattern in commits.prefixes
+
+---
+id: 4shipper-design-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 63 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: 4shipper-design-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Test Location
+
+## Action
+
+Place test files in a separate test location, not mixed with source files
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
