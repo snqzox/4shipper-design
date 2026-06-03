@@ -1,4 +1,5 @@
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
+import { writeJsonStable } from './json-store.mjs'
 
 const DATA_DIR = 'data'
 
@@ -133,7 +134,7 @@ export function buildTokens() {
     colors: styleColors.length ? styleColors : variableColors,
     variables,
   }
-  writeFileSync(`${DATA_DIR}/tokens.json`, `${JSON.stringify(tokens, null, 2)}\n`)
+  writeJsonStable('tokens.json', tokens)
   return tokens
 }
 

@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 *.log
 data/_bridge-vars-raw.json
+data/_last-refresh.json

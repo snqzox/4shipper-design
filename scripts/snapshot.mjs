@@ -52,6 +52,21 @@ export function saveSnapshot(snapshot) {
   return path
 }
 
+// Compare two snapshots ignoring the per-run `takenAt` timestamp.
+function sameIgnoringTakenAt(a, b) {
+  if (!a || !b) return false
+  const strip = ({ takenAt, ...rest }) => rest
+  return JSON.stringify(strip(a)) === JSON.stringify(strip(b))
+}
+
+// Persist a snapshot only when its meaningful content differs from the previous one. A no-op sync
+// (design system unchanged) then writes neither latest.json nor a new snapshots/<stamp>.json, so it
+// produces no git churn. Returns the snapshot path when written, or null when skipped.
+export function saveSnapshotIfChanged(current, previous) {
+  if (sameIgnoringTakenAt(previous, current)) return null
+  return saveSnapshot(current)
+}
+
 const isMain = import.meta.url === `file://${process.argv[1]}`
 if (isMain) {
   const path = saveSnapshot(buildSnapshot())

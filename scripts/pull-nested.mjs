@@ -1,5 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { figmaGet } from './figma-client.mjs'
+import { writeJsonStable } from './json-store.mjs'
 
 // Extract *which other components each component is built from* (its direct nested instances)
 // straight from the Figma node tree, and write data/nested.json. Zero model tokens — this is
@@ -16,11 +17,6 @@ const GENERIC_NAME = /^(Frame|Group|Rectangle|Ellipse|Vector|Line|Component|Inst
 function readJson(path, fallback) {
   if (!existsSync(path)) return fallback
   return JSON.parse(readFileSync(path, 'utf8'))
-}
-
-function writeJson(name, obj) {
-  mkdirSync(DATA_DIR, { recursive: true })
-  writeFileSync(`${DATA_DIR}/${name}`, `${JSON.stringify(obj, null, 2)}\n`)
 }
 
 function isGenericName(name) {
@@ -128,7 +124,7 @@ export async function pullNested() {
     withNested += 1
   }
 
-  writeJson('nested.json', {
+  writeJsonStable('nested.json', {
     generatedAt: new Date().toISOString(),
     file: { key: fileKey, version: data.file?.version },
     units: unitsOut,

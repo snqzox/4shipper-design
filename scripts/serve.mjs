@@ -1,6 +1,6 @@
 import { createServer } from 'node:http'
 import { readFile } from 'node:fs/promises'
-import { existsSync, readFileSync } from 'node:fs'
+import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { spawn } from 'node:child_process'
 import { extname, join, normalize } from 'node:path'
 
@@ -14,16 +14,21 @@ const TYPES = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascrip
 
 // Allowed actions → fixed command pipelines. No request data ever reaches the shell.
 const GIT_ID = ['-c', 'user.name=Jakub Bielesch', '-c', 'user.email=jakub.bielesch@gmail.com']
+// Committed data files only advance their `generatedAt` when the design system actually changes, so
+// this sidecar (git-ignored) records when the dashboard last *ran* a refresh — surfaced as a live
+// "Last refreshed" indicator without dirtying the working tree.
+const LAST_REFRESH = 'data/_last-refresh.json'
 const ACTIONS = {
-  sync: { cmds: [['node', 'scripts/sync.mjs']] },
+  sync: { refresh: true, cmds: [['node', 'scripts/sync.mjs']] },
   variables: {
+    refresh: true,
     cmds: [
       ['node', 'scripts/pull-variables-desktop.mjs'],
       ['node', 'scripts/tokens.mjs'],
       ['node', 'scripts/build-dashboard.mjs'],
     ],
   },
-  dashboard: { cmds: [['node', 'scripts/build-dashboard.mjs']] },
+  dashboard: { refresh: true, cmds: [['node', 'scripts/build-dashboard.mjs']] },
   publish: {
     lenient: true, // `git commit` exits 1 when there's nothing to commit — keep going
     cmds: [
@@ -74,9 +79,11 @@ async function status() {
   const read = (path, fb) => (existsSync(path) ? JSON.parse(readFileSync(path, 'utf8')) : fb)
   const comps = read('data/components.json', {})
   const tokens = read('data/tokens.json', {})
+  const lastRefresh = read(LAST_REFRESH, {})
   const git = await gitStatus()
   return {
     generatedAt: comps.generatedAt || null,
+    refreshedAt: lastRefresh.refreshedAt || null,
     components: comps.count || 0,
     variables: tokens.variables?.count || 0,
     colors: tokens.colors?.length || 0,
@@ -106,7 +113,11 @@ async function handleApi(req, res) {
     try { action = JSON.parse(body).action } catch { /* ignore */ }
     const def = ACTIONS[action]
     if (!def) return json(400, { ok: false, output: `Unknown action: ${action}` })
-    return json(200, await runCmds(def.cmds, def.lenient))
+    const result = await runCmds(def.cmds, def.lenient)
+    if (result.ok && def.refresh) {
+      try { writeFileSync(LAST_REFRESH, `${JSON.stringify({ refreshedAt: new Date().toISOString() }, null, 2)}\n`) } catch { /* best effort */ }
+    }
+    return json(200, result)
   }
   json(404, { ok: false, output: 'not found' })
 }

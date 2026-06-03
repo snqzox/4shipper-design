@@ -1,5 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { connect, callTool } from './figma-desktop.mjs'
+import { writeJsonStable } from './json-store.mjs'
 
 // Pull Figma variables (design tokens) via the local Dev Mode MCP server by walking every
 // page and unioning the resolved variable maps. Writes data/variables-desktop.json, which
@@ -47,7 +48,6 @@ async function main() {
     }
   }
 
-  mkdirSync(DATA_DIR, { recursive: true })
   const out = {
     generatedAt: new Date().toISOString(),
     source: 'figma-desktop-mcp',
@@ -56,7 +56,7 @@ async function main() {
     count: Object.keys(union).length,
     variables: union,
   }
-  writeFileSync(`${DATA_DIR}/variables-desktop.json`, `${JSON.stringify(out, null, 2)}\n`)
+  writeJsonStable('variables-desktop.json', out)
   console.log(`✓ ${out.count} unique variables → data/variables-desktop.json`)
 }
 

@@ -1,4 +1,5 @@
-import { existsSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
+import { writeJsonStable } from './json-store.mjs'
 
 // Build data/variables-desktop.json from a raw figma-mcp-bridge variable dump, resolving
 // VARIABLE_ALIAS chains to concrete values. This is the **bridge** path — independent of the
@@ -97,7 +98,7 @@ function main() {
     count: Object.keys(variables).length,
     variables,
   }
-  writeFileSync(OUT, `${JSON.stringify(out, null, 2)}\n`)
+  writeJsonStable(OUT, out)
   console.log(`✓ ${out.count} variables (${unresolved} unresolved) → ${OUT}`)
 }
 

@@ -1,7 +1,7 @@
 import { pullAll } from './pull.mjs'
 import { pullNested } from './pull-nested.mjs'
 import { buildTokens } from './tokens.mjs'
-import { buildSnapshot, readLatest, saveSnapshot } from './snapshot.mjs'
+import { buildSnapshot, readLatest, saveSnapshotIfChanged } from './snapshot.mjs'
 import { diffSnapshots, hasChanges, writeChangelog } from './diff.mjs'
 import { buildDashboard } from './build-dashboard.mjs'
 
@@ -25,7 +25,7 @@ async function main() {
   const current = buildSnapshot()
   const diff = diffSnapshots(previous, current)
   const changed = writeChangelog(diff, current)
-  saveSnapshot(current)
+  saveSnapshotIfChanged(current, previous)
 
   buildDashboard()
 

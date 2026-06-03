@@ -1,12 +1,21 @@
-import { mkdirSync, writeFileSync } from 'node:fs'
 import { figmaGet, figmaGetOptional } from './figma-client.mjs'
+import { writeJsonStable } from './json-store.mjs'
 import { FILES } from './config.mjs'
 
-const DATA_DIR = 'data'
-
-function writeJson(name, obj) {
-  mkdirSync(DATA_DIR, { recursive: true })
-  writeFileSync(`${DATA_DIR}/${name}`, `${JSON.stringify(obj, null, 2)}\n`)
+// Figma's Variables REST endpoint is Enterprise-gated, so the token usually gets a 403 whose body
+// (scope list order, statusText) varies run-to-run. Collapse that into a deterministic payload so
+// the committed variables.json doesn't churn. Keeps "403" in the reason so tokens.mjs still maps it
+// to the full Enterprise message.
+function canonicalUnavailable(value) {
+  if (!value?.__unavailable) return value
+  if (/\b403\b/.test(value.reason || '')) {
+    return {
+      __unavailable: true,
+      status: 403,
+      reason: 'Figma API 403 — Variables REST endpoint requires the file_variables:read scope (Enterprise plan only).',
+    }
+  }
+  return { __unavailable: true, reason: value.reason }
 }
 
 // depth=1 keeps the payload small: document + its pages, no nested layers.
@@ -112,7 +121,7 @@ export async function pullAll() {
   const variables = await figmaGetOptional(`/v1/files/${FILES.uiKit.key}/variables/local`)
   const design = await designScreens(FILES.design.key)
 
-  writeJson('components.json', {
+  writeJsonStable('components.json', {
     generatedAt,
     file: uiKitMeta,
     count: library.components.length,
@@ -120,14 +129,14 @@ export async function pullAll() {
     components: library.components,
     componentSets: library.componentSets,
   })
-  writeJson('styles.json', {
+  writeJsonStable('styles.json', {
     generatedAt,
     file: uiKitMeta,
     count: styles.length,
     styles,
   })
-  writeJson('variables.json', { generatedAt, file: uiKitMeta, raw: variables })
-  writeJson('pages.json', { generatedAt, design })
+  writeJsonStable('variables.json', { generatedAt, file: uiKitMeta, raw: canonicalUnavailable(variables) })
+  writeJsonStable('pages.json', { generatedAt, design })
 
   return { uiKitMeta, library: { ...library, styles }, design, generatedAt }
 }
