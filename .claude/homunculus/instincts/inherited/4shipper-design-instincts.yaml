@@ -1,0 +1,665 @@
+# Instincts generated from https://github.com/snqzox/4shipper-design
+# Generated: 2026-06-03T17:04:35.542Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: 4shipper-design-commit-conventional
+trigger: "when writing a commit message"
+confidence: 0.85
+domain: git
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Commit Conventional
+
+## Action
+
+Use conventional commit format with prefixes: chore, docs, feat, fix, merge
+
+## Evidence
+
+- 52 commits analyzed
+- Detected conventional commit pattern
+- Examples: chore: sync design system from Figma, feat(dashboard): component health view — doc link, Figma link, thumbnails
+
+---
+id: 4shipper-design-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Commit Length
+
+## Action
+
+Write moderate-length commit messages (~51 characters)
+
+## Evidence
+
+- Average commit message length: 51 chars
+- Based on 52 commits
+
+---
+id: 4shipper-design-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Naming Files
+
+## Action
+
+Use kebab-case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: kebab-case
+
+---
+id: 4shipper-design-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: 4shipper-design-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: 4shipper-design-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: 4shipper-design-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: data/*, docs/design-system/components/*, **/*.test.*
+
+---
+id: 4shipper-design-workflow-test-driven-development
+trigger: "when adding new functionality"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Test Driven Development
+
+## Action
+
+Follow the test-driven-development workflow:
+1. Write failing test
+2. Implement code to pass test
+3. Refactor if needed
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: **/*.test.*, **/*.spec.*, src/**/*
+
+---
+id: 4shipper-design-workflow-refactoring
+trigger: "when refactoring code"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Refactoring
+
+## Action
+
+Follow the refactoring workflow:
+1. Ensure tests pass before refactor
+2. Refactor code structure
+3. Verify tests still pass
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: src/**/*
+
+---
+id: 4shipper-design-workflow-sync-design-system-from-figma
+trigger: "when doing sync design system from figma"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Sync Design System From Figma
+
+## Action
+
+Follow the sync-design-system-from-figma workflow:
+1. Run sync script to pull latest data from Figma
+2. Update dashboard/index.html with new data
+3. Update data/components.json, data/latest.json, data/pages.json, data/styles.json, data/tokens.json, data/variables.json
+4. Add new data/snapshots/<timestamp>.json
+5. Optionally update docs/design-system/changelog.md if changes detected
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~10x per month
+- Files: dashboard/index.html, data/components.json, data/latest.json
+
+---
+id: 4shipper-design-workflow-document-or-update-component-docs
+trigger: "when doing document or update component docs"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Document Or Update Component Docs
+
+## Action
+
+Follow the document-or-update-component-docs workflow:
+1. Create or update docs/design-system/components/<component>.md
+2. Optionally update docs/design-system/components/README.md
+3. Optionally update docs/design-system/audit-*.md or docs/design-system/fixes/*.md
+4. Commit changes with descriptive message
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/design-system/components/*.md, docs/design-system/components/README.md, docs/design-system/audit-*.md
+
+---
+id: 4shipper-design-workflow-update-design-system-guidelines-or-patterns
+trigger: "when doing update design system guidelines or patterns"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Update Design System Guidelines Or Patterns
+
+## Action
+
+Follow the update-design-system-guidelines-or-patterns workflow:
+1. Edit or create docs/design-system/guidelines/README.md or docs/design-system/patterns/*.md
+2. Optionally update .claude/agents/designer.md with new rules or recipes
+3. Commit changes with a summary of the new or changed rule
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: docs/design-system/guidelines/README.md, docs/design-system/patterns/*.md, .claude/agents/designer.md
+
+---
+id: 4shipper-design-workflow-add-or-update-dashboard-feature
+trigger: "when doing add or update dashboard feature"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Add Or Update Dashboard Feature
+
+## Action
+
+Follow the add-or-update-dashboard-feature workflow:
+1. Implement or update dashboard feature in dashboard/index.html
+2. Update or add supporting scripts in scripts/*.mjs
+3. Update or generate supporting data files (e.g., data/thumbnails.json, data/tokens.json)
+4. Update package.json if new scripts or dependencies are added
+5. Commit all related files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: dashboard/index.html, scripts/*.mjs, data/*.json
+
+---
+id: 4shipper-design-workflow-refresh-or-rebuild-variables-and-tokens
+trigger: "when doing refresh or rebuild variables and tokens"
+confidence: 0.6
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/snqzox/4shipper-design
+---
+
+# 4shipper Design Workflow Refresh Or Rebuild Variables And Tokens
+
+## Action
+
+Follow the refresh-or-rebuild-variables-and-tokens workflow:
+1. Run scripts to pull or resolve variables from Figma or bridge
+2. Update data/variables-desktop.json and/or data/tokens.json
+3. Optionally update dashboard/index.html to reflect new tokens
+4. Commit the updated files
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~2x per month
+- Files: data/variables-desktop.json, data/tokens.json, dashboard/index.html
+
+---
+id: 4shipper-design-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct File Naming
+
+## Action
+
+Name the file using kebab-case (e.g., my-component.ts)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+- Files in repo follow kebab-case
+
+---
+id: 4shipper-design-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., getComponentData)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+- Functions in codebase use camelCase
+
+---
+id: 4shipper-design-instinct-class-naming
+trigger: "When defining a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., ComponentManager)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+- Classes in codebase use PascalCase
+
+---
+id: 4shipper-design-instinct-constant-naming
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., DEFAULT_TIMEOUT)
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+- Constants in codebase use SCREAMING_SNAKE_CASE
+
+---
+id: 4shipper-design-instinct-relative-imports
+trigger: "When importing modules"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Relative Imports
+
+## Action
+
+Use relative import paths (e.g., import x from './x')
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+- Imports in codebase are relative
+
+---
+id: 4shipper-design-instinct-named-exports
+trigger: "When exporting modules"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Named Exports
+
+## Action
+
+Use named exports (e.g., export function foo())
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+- Exports in codebase are named
+
+---
+id: 4shipper-design-instinct-test-file-location
+trigger: "When adding tests"
+confidence: 0.9
+domain: testing
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Test File Location
+
+## Action
+
+Place test files in separate directories, using .test. or .spec. in the filename
+
+## Evidence
+
+- Pattern in workflows.test-driven-development.filesInvolved
+- Examples: src/utils/validation.test.ts
+
+---
+id: 4shipper-design-instinct-tdd-sequence
+trigger: "When following test-driven development"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Tdd Sequence
+
+## Action
+
+First write a failing test, then implement code to pass the test, then refactor if needed
+
+## Evidence
+
+- Pattern in workflows.test-driven-development.commitSequence
+- Example commits: test: add tests for user validation, feat: implement user validation
+
+---
+id: 4shipper-design-instinct-feature-test-doc-sequence
+trigger: "When developing a new feature"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Feature Test Doc Sequence
+
+## Action
+
+Implement the feature, add tests for the feature, and update documentation in sequence
+
+## Evidence
+
+- Pattern in workflows.feature-development.commitSequence
+- Example: feat(dashboard): sidebar redesign, chore: sync design system from Figma
+
+---
+id: 4shipper-design-instinct-conventional-commits
+trigger: "When writing a commit message"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Conventional Commits
+
+## Action
+
+Use conventional commit prefixes (e.g., feat, fix, chore, docs, merge, ci) and a descriptive message
+
+## Evidence
+
+- Pattern in commits.prefixes
+- Examples: feat(dashboard): component health view, fix(ds): prune orphan tokens
+
+---
+id: 4shipper-design-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Commit Length
+
+## Action
+
+Keep the commit message concise, around 50 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+- Observed average length: 51
+
+---
+id: 4shipper-design-instinct-sync-figma
+trigger: "When someone wants to update the local repo with the latest design system changes from Figma"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Sync Figma
+
+## Action
+
+Run the sync script, update dashboard/index.html and all relevant data JSONs, add a new snapshot, and optionally update the changelog
+
+## Evidence
+
+- Workflow: sync-design-system-from-figma
+- Example commits: chore: sync design system from Figma
+
+---
+id: 4shipper-design-instinct-document-component
+trigger: "When someone wants to document, audit, or fix documentation for a component or set of components"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Document Component
+
+## Action
+
+Create or update the relevant markdown files in docs/design-system/components/, and optionally update audit/fixes/README files
+
+## Evidence
+
+- Workflow: document-or-update-component-docs
+- Example commits: docs(ds): bring badge.md to parity with Figma
+
+---
+id: 4shipper-design-instinct-update-guideline
+trigger: "When someone wants to clarify, correct, or add a pattern or guideline for the design system"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Update Guideline
+
+## Action
+
+Edit or create guideline or pattern markdown files, and optionally update designer agent rules
+
+## Evidence
+
+- Workflow: update-design-system-guidelines-or-patterns
+- Example commits: docs(ds): note bridge resolver multi-mode limitation
+
+---
+id: 4shipper-design-instinct-add-dashboard-feature
+trigger: "When someone wants to add a new feature or visualization to the design system dashboard"
+confidence: 0.85
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Add Dashboard Feature
+
+## Action
+
+Implement or update dashboard/index.html, update/add scripts, update/generate data files, update package.json if needed, and commit all related files
+
+## Evidence
+
+- Workflow: add-or-update-dashboard-feature
+- Example commits: feat(dashboard): sidebar redesign
+
+---
+id: 4shipper-design-instinct-refresh-variables
+trigger: "When someone wants to update or fix the design tokens/variables from Figma, or resolve token leaks"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Refresh Variables
+
+## Action
+
+Run scripts to pull or resolve variables, update data/variables-desktop.json and/or data/tokens.json, optionally update dashboard/index.html, and commit the updated files
+
+## Evidence
+
+- Workflow: refresh-or-rebuild-variables-and-tokens
+- Example commits: fix(ds): prune orphan Uixmate button/primary*+secondary* tokens
+
+---
+id: 4shipper-design-instinct-refactor-with-tests
+trigger: "When refactoring code"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: snqzox/4shipper-design
+---
+
+# 4shipper Design Instinct Refactor With Tests
+
+## Action
+
+Ensure tests pass before refactoring, refactor code structure, and verify tests still pass after refactor
+
+## Evidence
+
+- Workflow: refactoring.commitSequence
+- Example commits: chore(ds): sync reorg — 17 product sets moved
+
