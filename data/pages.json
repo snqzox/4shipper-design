@@ -1,75 +1,19 @@
 {
-  "generatedAt": "2026-06-03T11:33:33.177Z",
+  "generatedAt": "2026-06-03T11:47:06.364Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2360818487548235110",
-    "lastModified": "2026-06-03T11:28:47Z",
+    "version": "2360834293040300007",
+    "lastModified": "2026-06-03T11:39:48Z",
     "pages": [
       {
-        "id": "0:1",
-        "name": "Carrier - Sign in/up flow",
-        "screens": [
-          {
-            "id": "2:12751",
-            "name": "Alert - Session will expire",
-            "type": "FRAME"
-          },
-          {
-            "id": "81:4499",
-            "name": "Email not verified",
-            "type": "FRAME"
-          },
-          {
-            "id": "32:2309",
-            "name": "Alert - Session will expire",
-            "type": "FRAME"
-          },
-          {
-            "id": "32:2052",
-            "name": "Alert - Session will expire",
-            "type": "FRAME"
-          },
-          {
-            "id": "3:2706",
-            "name": "Session expired",
-            "type": "FRAME"
-          },
-          {
-            "id": "4:830",
-            "name": "Session Expired - Link sent",
-            "type": "FRAME"
-          },
-          {
-            "id": "3:2343",
-            "name": "Toast - Session renewed",
-            "type": "FRAME"
-          },
-          {
-            "id": "32:5364",
-            "name": "Toast - Session renewed",
-            "type": "FRAME"
-          },
-          {
-            "id": "9:2577",
-            "name": "Email template",
-            "type": "FRAME"
-          },
-          {
-            "id": "79:4418",
-            "name": "Page - Session extended",
-            "type": "FRAME"
-          }
-        ]
-      },
-      {
-        "id": "241:11173",
-        "name": "---------------",
+        "id": "1938:163864",
+        "name": "-----------",
         "screens": []
       },
       {
         "id": "451:4081",
-        "name": "SHIPPER ---------",
+        "name": "SHIPPER",
         "screens": []
       },
       {
@@ -240,9 +184,70 @@
         ]
       },
       {
-        "id": "451:28606",
-        "name": "CARRIER ---------",
+        "id": "241:11173",
+        "name": "---------------",
         "screens": []
+      },
+      {
+        "id": "451:28606",
+        "name": "CARRIER",
+        "screens": []
+      },
+      {
+        "id": "0:1",
+        "name": "🔒 Login/Registration",
+        "screens": [
+          {
+            "id": "2:12751",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "81:4499",
+            "name": "Email not verified",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:2309",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:2052",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "3:2706",
+            "name": "Session expired",
+            "type": "FRAME"
+          },
+          {
+            "id": "4:830",
+            "name": "Session Expired - Link sent",
+            "type": "FRAME"
+          },
+          {
+            "id": "3:2343",
+            "name": "Toast - Session renewed",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:5364",
+            "name": "Toast - Session renewed",
+            "type": "FRAME"
+          },
+          {
+            "id": "9:2577",
+            "name": "Email template",
+            "type": "FRAME"
+          },
+          {
+            "id": "79:4418",
+            "name": "Page - Session extended",
+            "type": "FRAME"
+          }
+        ]
       },
       {
         "id": "1819:217875",
