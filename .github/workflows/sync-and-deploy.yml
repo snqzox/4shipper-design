@@ -31,7 +31,12 @@ jobs:
       - name: Sync design system from Figma
         env:
           FIGMA_TOKEN: ${{ secrets.FIGMA_TOKEN }}
-        run: npm run sync
+        run: |
+          if [ -z "$FIGMA_TOKEN" ]; then
+            echo "FIGMA_TOKEN not set — skipping sync; deploying existing dashboard."
+          else
+            npm run sync
+          fi
 
       - name: Commit changes (if any)
         run: |
