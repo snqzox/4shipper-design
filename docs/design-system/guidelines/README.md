@@ -3,6 +3,10 @@
 The **binding rules** the `designer` agent follows. Derived from the real UI Kit 2.0 tokens and
 file structure. Owned by `design-system-manager`. Keep concrete and current.
 
+> **How the UI Kit library file itself is organized** (page grouping, emoji legend, per-component
+> anatomy, description standard): [ui-kit-file-structure.md](ui-kit-file-structure.md) — the IA
+> companion to [../audit-2026-06-03.md](../audit-2026-06-03.md).
+
 ## Foundations (full detail in `../foundations/`)
 - **Color** → semantic tokens only. Brand primary `background/primary #105BFF`; text `text/body #11151D`,
   `text/muted #606673`; status via `*-subtle` bg + solid text. See [color.md](../foundations/color.md).

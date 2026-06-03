@@ -9,6 +9,7 @@
     "tokens": "node scripts/tokens.mjs",
     "snapshot": "node scripts/snapshot.mjs",
     "dashboard": "node scripts/build-dashboard.mjs",
+    "blueprint": "node scripts/build-kit-blueprint.mjs",
     "sync": "node scripts/sync.mjs",
     "serve": "node scripts/serve.mjs",
     "variables:desktop": "node scripts/pull-variables-desktop.mjs",
