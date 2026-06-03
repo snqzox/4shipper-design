@@ -69,7 +69,9 @@ function collect() {
   const comps = buildComponentsModel(componentsData)
   const screensTotal = (pages.design?.pages || []).reduce((sum, p) => sum + (p.screens?.length || 0), 0)
   const varCount = tokens.variables?.available
-    ? (tokens.variables.collections || []).reduce((n, c) => n + (c.variables?.length || 0), 0)
+    ? tokens.variables.count
+      || (tokens.variables.groups || []).reduce((n, g) => n + (g.items?.length || 0), 0)
+      || (tokens.variables.collections || []).reduce((n, c) => n + (c.variables?.length || 0), 0)
     : 0
 
   return {
@@ -195,8 +197,13 @@ function render(model) {
   .swatch { border:1px solid var(--line); border-radius:10px; overflow:hidden; }
   .swatch .fill { height:64px; }
   .swatch .info { padding:9px 11px; }
-  .swatch .tn { font:12px/1.3 var(--sans); }
+  .swatch .tn { font:12px/1.3 var(--sans); word-break:break-all; }
   .swatch .tv { font:11px/1.3 var(--mono); color:var(--faint); }
+
+  /* Variable rows */
+  .vchip { width:16px; height:16px; border-radius:4px; border:1px solid var(--line2); flex:0 0 auto; }
+  .vval { margin-left:auto; font-size:12px; color:var(--muted); white-space:nowrap; }
+  .vval.mono { font-family:var(--mono); font-size:11px; }
 
   /* Variables / empty states */
   .empty { background:var(--panel); border:1px dashed var(--line2); border-radius:var(--radius); padding:26px; color:var(--muted); }
@@ -245,8 +252,8 @@ const SECTIONS = [
   { id:'components', title:'Components',  sub:M.components.meaningful+' components ('+M.components.sets+' sets · '+M.components.standalone+' standalone), grouped by Figma page.', count:M.counts.meaningful, render:components },
   { id:'typography', title:'Typography',  sub:M.counts.typography+' text styles with live previews.', count:M.counts.typography, render:typography },
   { id:'shadows',    title:'Shadows',     sub:M.counts.shadows+' effect styles.', count:M.counts.shadows, render:shadows },
-  { id:'colors',     title:'Colors',      sub:'Color styles published in the library.', count:M.counts.colors, render:colors },
-  { id:'variables',  title:'Variables',   sub:'Figma variables (tokens with modes).', count:M.counts.variables, render:variables },
+  { id:'colors',     title:'Colors',      sub:M.counts.colors+' color tokens.', count:M.counts.colors, render:colors },
+  { id:'variables',  title:'Variables',   sub:M.counts.variables+' design tokens (color, spacing, sizing, typography).', count:M.counts.variables, render:variables },
   { id:'pages',      title:'Pages',       sub:M.counts.pages+' pages · '+M.counts.screens+' screens in the design file.', count:M.counts.pages, render:pages },
   { id:'changelog',  title:'Changelog',   sub:'Recorded library changes over time.', count:null, render:changelog },
 ];
@@ -319,28 +326,39 @@ function shadows(){
     '<div class="tn">'+esc(s.name)+'</div><div class="tv">'+esc(s.css||'—')+'</div></div>').join('')+'</div>';
 }
 
+function groupByPrefix(items, key){
+  const m={};
+  for(const it of items){ const g=(it[key]||'').includes('/')?it[key].split('/')[0]:'other'; (m[g]||=[]).push(it); }
+  return Object.entries(m).map(([name,list])=>({name,items:list})).sort((a,b)=>b.items.length-a.items.length);
+}
+
 function colors(){
-  if(!M.tokens.colors.length) return '<div class="empty"><h4>No color styles in the library</h4>'+
-    'Colors in this UI Kit are defined as <strong>Figma Variables</strong>, not paint styles. See the <strong>Variables</strong> section.</div>';
-  return '<div class="colors">'+M.tokens.colors.map(c=>
-    '<div class="swatch"><div class="fill" style="background:'+esc(c.hex||'#000')+'"></div>'+
-    '<div class="info"><div class="tn">'+esc(c.name)+'</div><div class="tv">'+esc(c.hex||c.rgba||'')+'</div></div></div>').join('')+'</div>';
+  if(!M.tokens.colors.length) return '<div class="empty"><h4>No color tokens found</h4>'+
+    'Colors are defined as Figma Variables — pull them with <code>npm run variables:desktop</code>.</div>';
+  const groups=groupByPrefix(M.tokens.colors,'name');
+  return '<input class="search" id="csearch" placeholder="Filter colors…">'+
+    groups.map((g,i)=>groupBlock(g.name, g.items.length, i<3,
+      '<div class="colors">'+g.items.map(c=>
+        '<div class="swatch citem" data-n="'+esc(c.name.toLowerCase())+'"><div class="fill" style="background:'+esc(c.hex||'#000')+'"></div>'+
+        '<div class="info"><div class="tn">'+esc(c.name)+'</div><div class="tv">'+esc(c.hex||'')+'</div></div></div>').join('')+'</div>'
+    )).join('');
 }
 
 function variables(){
   const v=M.tokens.variables;
-  if(v && v.available){
-    return v.collections.map(col=>groupBlock(col.name+'  ·  '+col.modes.map(m=>m.name).join(' / '), col.variables.length, true,
-      col.variables.map(vr=>'<div class="row"><span class="nm">'+esc(vr.name)+'</span><span class="tag comp">'+esc(vr.type)+'</span></div>').join('')
-    )).join('');
+  if(v && v.available && (v.groups||[]).length){
+    return '<input class="search" id="vsearch" placeholder="Filter variables…">'+
+      v.groups.map((g,i)=>groupBlock(g.name, g.items.length, i<2,
+        g.items.map(it=>'<div class="row vitem" data-n="'+esc(it.name.toLowerCase())+'">'+
+          (it.kind==='color'?'<span class="vchip" style="background:'+esc(it.value)+'"></span>':'')+
+          '<span class="nm">'+esc(it.name)+'</span>'+
+          '<span class="vval '+(it.kind==='color'?'mono':'')+'">'+esc(it.value)+'</span></div>').join('')
+      )).join('');
   }
   return '<div class="empty"><span class="badge-soft">UNAVAILABLE ON CURRENT PLAN</span>'+
     '<h4>Variables aren\\'t exposed by the REST API here</h4>'+
     '<p class="muted">'+esc(v?.reason||'The Figma Variables REST endpoint requires an Enterprise plan.')+'</p>'+
-    '<p class="muted">Two ways to populate this section:</p>'+
-    '<ol><li><strong>Enterprise plan</strong> → variables sync automatically with <code>npm run sync</code>.</li>'+
-    '<li><strong>One-time manual export</strong> → in Figma desktop, select a frame in the UI Kit and use the Figma MCP <code>get_variable_defs</code>, then drop the result into <code>data/variables.json</code>.</li></ol>'+
-    '<p class="faint" style="margin-top:14px">Meanwhile, typography and shadow tokens are live in their sections.</p></div>';
+    '<p class="muted">Pull them via the desktop Dev Mode MCP instead: open the UI Kit in Figma desktop and run <code>npm run variables:desktop</code>.</p></div>';
 }
 
 function pages(){
@@ -365,6 +383,7 @@ function bindGroups(){
   document.querySelectorAll('.group .ghead').forEach(h=> h.onclick=()=>h.parentElement.classList.toggle('open'));
   const cs=document.getElementById('csearch'); if(cs) cs.oninput=()=>filter(cs,'.citem');
   const ps=document.getElementById('psearch'); if(ps) ps.oninput=()=>filter(ps,'.sitem');
+  const vs=document.getElementById('vsearch'); if(vs) vs.oninput=()=>filter(vs,'.vitem');
 }
 function filter(input, sel){
   const q=input.value.toLowerCase();

@@ -17,8 +17,9 @@ the thinking and **scripts doing the mechanical work** to save tokens.
 
 ## Layout
 ```
-scripts/        Node scripts (Figma REST API) — pull, tokens, snapshot, diff, dashboard, sync, serve
-data/           Versioned extracted state (components/styles/tokens/pages JSON + snapshots)
+scripts/        Node scripts — pull, tokens, snapshot, diff, dashboard, sync, serve (REST)
+                + figma-desktop / pull-variables-desktop (local Dev Mode MCP, for variables)
+data/           Versioned extracted state (components/styles/tokens/variables/pages + snapshots)
 docs/design-system/   Documentation: components/, foundations/, guidelines/, changelog.md
 dashboard/      Generated static dashboard (index.html) → deployed to GitHub Pages
 .claude/agents/ design-system-manager, ds-component-describer, designer
@@ -36,6 +37,7 @@ platform-overview.md / platform-structure.md   Product context
 | `npm run snapshot` | Save a fingerprint snapshot of current data. |
 | `npm run dashboard` | Rebuild `dashboard/index.html` from `data/`. |
 | `npm run serve` | Local static preview of the dashboard at http://localhost:4178. |
+| `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
 

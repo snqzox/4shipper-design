@@ -65,6 +65,29 @@ function colorToken(style) {
   }
 }
 
+const isHex = (v) => typeof v === 'string' && /^#([0-9a-f]{3,8})$/i.test(v)
+
+function classifyValue(value) {
+  if (isHex(value)) return 'color'
+  if (/^-?\d+(\.\d+)?$/.test(value)) return 'number'
+  if (/^Font\(/.test(value)) return 'font'
+  return 'text'
+}
+
+// Normalize the desktop-MCP variable map (flat name→resolved value) into prefix groups.
+function normalizeDesktopVariables(desktop) {
+  const entries = Object.entries(desktop.variables || {})
+  const groupsMap = {}
+  for (const [name, value] of entries) {
+    const group = name.includes('/') ? name.split('/')[0] : 'other'
+    ;(groupsMap[group] ||= []).push({ name, value, kind: classifyValue(value) })
+  }
+  const groups = Object.entries(groupsMap)
+    .map(([name, items]) => ({ name, items: items.sort((a, b) => a.name.localeCompare(b.name)) }))
+    .sort((a, b) => b.items.length - a.items.length)
+  return { available: true, source: desktop.source || 'figma-desktop-mcp', count: entries.length, groups }
+}
+
 // Normalize Figma local-variables payload (Enterprise) into collections → modes → variables.
 function normalizeVariables(raw) {
   if (!raw || raw.__unavailable) {
@@ -88,15 +111,27 @@ function normalizeVariables(raw) {
 export function buildTokens() {
   const stylesData = readJson(`${DATA_DIR}/styles.json`, { styles: [], file: {} })
   const variablesData = readJson(`${DATA_DIR}/variables.json`, { raw: { __unavailable: true } })
+  const desktop = readJson(`${DATA_DIR}/variables-desktop.json`, null)
   const styles = stylesData.styles || []
+
+  // Prefer real variables pulled via the desktop Dev Mode MCP; fall back to the REST state.
+  const variables = desktop ? normalizeDesktopVariables(desktop) : normalizeVariables(variablesData.raw)
+
+  // Color tokens: paint styles if any, otherwise the color-typed variables (the real palette).
+  const styleColors = styles.filter((s) => s.type === 'FILL').map(colorToken)
+  const variableColors = desktop
+    ? Object.entries(desktop.variables || {})
+        .filter(([, v]) => isHex(v))
+        .map(([name, v]) => ({ name, hex: v.toUpperCase(), rgba: null, description: '' }))
+    : []
 
   const tokens = {
     generatedAt: stylesData.generatedAt || new Date().toISOString(),
     file: stylesData.file || {},
     typography: styles.filter((s) => s.type === 'TEXT').map(typographyToken),
     shadows: styles.filter((s) => s.type === 'EFFECT').map(shadowToken),
-    colors: styles.filter((s) => s.type === 'FILL').map(colorToken),
-    variables: normalizeVariables(variablesData.raw),
+    colors: styleColors.length ? styleColors : variableColors,
+    variables,
   }
   writeFileSync(`${DATA_DIR}/tokens.json`, `${JSON.stringify(tokens, null, 2)}\n`)
   return tokens
