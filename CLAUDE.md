@@ -17,15 +17,33 @@ the thinking and **scripts doing the mechanical work** to save tokens.
 
 ### figma-mcp-bridge dedicated ports
 `.mcp.json` registers two `@magic-spells/figma-mcp-bridge` servers, each pinned to a fixed
-`FIGMA_BRIDGE_PORT` so every file has a stable, dedicated bridge port (both usable at once —
-one server holds one plugin connection):
-- **`figma-uikit` → port `4444`** — open UI Kit 2.0, run the bridge plugin, set its port to `4444`.
+`FIGMA_BRIDGE_PORT` so every file has a stable, dedicated bridge port. Two files CAN be connected
+at once — open each in its **own Figma window** (not just tabs) and run the plugin in each:
+- **`figma-uikit` → port `3060`** — open UI Kit 2.0, run the bridge plugin, set its port to `3060`.
 - **`figma-4shipper` → port `3056`** — open 4Shipper — Design, run the plugin, set its port to `3056`.
+
+**CRITICAL — ports must be in `3055`–`3070`.** The Figma plugin's `manifest.json`
+(`networkAccess.allowedDomains`) only whitelists `ws://localhost:3055` … `3070`. Any port outside
+that range (e.g. the old `4444`) is silently blocked by Figma's plugin sandbox — the plugin never
+even opens a socket and shows a red/orange dot forever. The bridge's own in-use fallback also only
+climbs within `3055`–`3070`. So pick bridge ports only from that range; `3056` can shift to `3057`
+if occupied, which is fine.
 
 The port lives on the *server process*, not the file — the bridge has no file→port mapping, so the
 binding only holds if you type the matching port in each file's plugin. Tools are namespaced per
-server: `mcp__figma-uikit__figma_*` vs `mcp__figma-4shipper__figma_*`. Note: the bridge's
-in-use fallback only climbs to `3070`, so `3056` can shift if occupied but `4444` cannot fall back.
+server: `mcp__figma-uikit__figma_*` vs `mcp__figma-4shipper__figma_*`.
+
+**Gotchas (cost a lot of debugging once):**
+- **Editing `.mcp.json` needs a full app restart** to take effect — `/mcp` reconnect re-uses the
+  session's cached server spec and ignores the file. (Cmd+Q + reopen, not just reconnect.)
+- **Orphaned bridge processes survive an app restart** (reparented to launchd) and keep squatting
+  their port, forcing the new server to climb. If a port is unexpectedly held, `pkill -f
+  figma-mcp-bridge` (or kill the specific PID) and reconnect.
+- The desktop app may also spawn its own app-level figma connectors (`figma-bridge`,
+  `figma-mcp-bridge`, incl. `@gethopp/*`) that compete for these ports — disable them in
+  Settings → Connectors if they keep grabbing `3056`.
+- Check live state with `mcp__figma-{uikit,4shipper}__figma_server_info` (`connected` +
+  `documentInfo`) and `lsof -nP -iTCP | grep -E ':(3056|3057|3060)'`.
 
 ## Layout
 ```

@@ -4,7 +4,7 @@
       "type": "stdio",
       "command": "npx",
       "args": ["@magic-spells/figma-mcp-bridge"],
-      "env": { "FIGMA_BRIDGE_PORT": "4444" }
+      "env": { "FIGMA_BRIDGE_PORT": "3060" }
     },
     "figma-4shipper": {
       "type": "stdio",
