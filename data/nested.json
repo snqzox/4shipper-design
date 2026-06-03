@@ -1,0 +1,869 @@
+{
+  "generatedAt": "2026-06-03T19:14:40.197Z",
+  "file": {
+    "key": "XVou4XJ4rWbt4oXoSxO7hO",
+    "version": "2360930161515345371"
+  },
+  "units": {
+    "8754:49262": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 4
+      }
+    ],
+    "5239:152707": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Link, State=Default",
+        "count": 4
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 2
+      }
+    ],
+    "8804:49176": [
+      {
+        "name": "Price/Basic",
+        "nodeId": "8784:67597",
+        "resolved": true,
+        "viaVariant": "Property 1=MD",
+        "count": 4
+      },
+      {
+        "name": "Price/Original",
+        "nodeId": "8784:67541",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 4
+      },
+      {
+        "name": "Price/Original/Per Kilometer",
+        "nodeId": "8785:67714",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 4
+      },
+      {
+        "name": "Price/Per Kilometer",
+        "nodeId": "8784:67542",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 4
+      }
+    ],
+    "707:402598": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 10
+      }
+    ],
+    "3555:106557": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 8
+      }
+    ],
+    "15:105": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 81
+      },
+      {
+        "name": "Badge",
+        "nodeId": "18:968",
+        "resolved": true,
+        "viaVariant": "Variant=Body",
+        "count": 27
+      }
+    ],
+    "18:968": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 14
+      }
+    ],
+    "6985:1269630": [
+      {
+        "name": "_Separator/Line",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 8
+      }
+    ],
+    "31:1784": [
+      {
+        "name": "_Checkbox-Radio-Switch",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 12
+      }
+    ],
+    "8754:49370": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 5
+      }
+    ],
+    "6324:59033": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 6
+      }
+    ],
+    "5978:71425": [
+      {
+        "name": "_Checkbox-Radio-Switch",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 8
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 8
+      }
+    ],
+    "8754:49197": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 5
+      }
+    ],
+    "147:67475": [
+      {
+        "name": "Carrier Selection/Entry",
+        "nodeId": "147:66956",
+        "resolved": true,
+        "viaVariant": "Variant=Carrier",
+        "count": 20
+      }
+    ],
+    "8754:49327": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 6
+      }
+    ],
+    "26:1063": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 67
+      },
+      {
+        "name": "Badge",
+        "nodeId": "18:968",
+        "resolved": true,
+        "viaVariant": "Variant=Primary",
+        "count": 4
+      },
+      {
+        "name": "Flag",
+        "nodeId": "102:19056",
+        "resolved": true,
+        "viaVariant": "Property 1=de",
+        "count": 4
+      }
+    ],
+    "6803:72493": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Body, State=Default",
+        "count": 19
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 3
+      }
+    ],
+    "147:66956": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 7
+      },
+      {
+        "name": "Checkbox Item",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 2
+      }
+    ],
+    "36:1862": [
+      {
+        "name": "_Tabs/Tab",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 16
+      }
+    ],
+    "8617:6114": [
+      {
+        "name": "_Route Entry/Waypoint Line",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 8
+      },
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Link, State=Default",
+        "count": 8
+      },
+      {
+        "name": "_Route Entry/Address Contact",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 4
+      },
+      {
+        "name": "Flag",
+        "nodeId": "102:19056",
+        "resolved": true,
+        "viaVariant": "Property 1=cz",
+        "count": 4
+      },
+      {
+        "name": "_Route Entry/Date and Time",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 3
+      },
+      {
+        "name": "_Route Entry/Date and Time 2",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "7713:17336": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Secondary, State=Default",
+        "count": 10
+      },
+      {
+        "name": "_Page Header/Menu Item",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 5
+      },
+      {
+        "name": "Logo",
+        "nodeId": "105:4737",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 3
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 2
+      }
+    ],
+    "5978:70626": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 20
+      },
+      {
+        "name": "_Checkbox-Radio-Switch",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 4
+      }
+    ],
+    "6985:1377167": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Primary, State=Default",
+        "count": 4
+      },
+      {
+        "name": "Separator",
+        "nodeId": "6985:1269630",
+        "resolved": true,
+        "viaVariant": "Orientation=Horizontal, Spacing=0",
+        "count": 4
+      }
+    ],
+    "7191:91598": [
+      {
+        "name": "_Checkbox-Radio-Switch",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 12
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 3
+      }
+    ],
+    "5803:43489": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 8
+      }
+    ],
+    "131:12752": [
+      {
+        "name": "Flag",
+        "nodeId": "102:19056",
+        "resolved": true,
+        "viaVariant": "Property 1=de",
+        "count": 6
+      },
+      {
+        "name": "_Route Entry/Waypoint",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 3
+      }
+    ],
+    "5250:197334": [
+      {
+        "name": "_Dialog/Footer",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "_Dialog/Header",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Ghost, State=Default",
+        "count": 1
+      }
+    ],
+    "32:1770": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Body, State=Default",
+        "count": 10
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 5
+      }
+    ],
+    "6277:69164": [
+      {
+        "name": "_Tooltip/Arrow",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 4
+      },
+      {
+        "name": "_Tooltip/Text Container",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 4
+      }
+    ],
+    "6905:1228093": [
+      {
+        "name": "_Textarea/Toolbar",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 2
+      }
+    ],
+    "129:12914": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "106:7070": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Secondary, State=Default",
+        "count": 10
+      },
+      {
+        "name": "_Page Header/Menu Item",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 7
+      },
+      {
+        "name": "Logo",
+        "nodeId": "105:4737",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 3
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 2
+      }
+    ],
+    "707:368801": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Body, State=Default",
+        "count": 24
+      },
+      {
+        "name": "_Checkbox-Radio-Switch",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 8
+      },
+      {
+        "name": "Countries",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 8
+      }
+    ],
+    "6826:331": [
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 6
+      },
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Primary Subtle, State=Default",
+        "count": 3
+      }
+    ],
+    "6986:12807": [
+      {
+        "name": "Separator",
+        "nodeId": "6985:1269630",
+        "resolved": true,
+        "viaVariant": "Orientation=Horizontal, Spacing=0",
+        "count": 2
+      },
+      {
+        "name": "Check, Radio, Switch Item",
+        "nodeId": "31:1784",
+        "resolved": true,
+        "viaVariant": "Checked=True, Variant=Default, Disabled=False",
+        "count": 1
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "5899:42082": [
+      {
+        "name": "Logo Small",
+        "nodeId": "87:9555",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "26:1580": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Link, State=Default",
+        "count": 1
+      },
+      {
+        "name": "Input",
+        "nodeId": "26:1063",
+        "resolved": true,
+        "viaVariant": "Empty=True, Type=Text, Disabled=False",
+        "count": 1
+      },
+      {
+        "name": "Notification (Alert)",
+        "nodeId": "32:1770",
+        "resolved": true,
+        "viaVariant": "Property 1=Warning",
+        "count": 1
+      }
+    ],
+    "8622:85326": [
+      {
+        "name": "_Route Entry/Waypoint",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "6984:1254074": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Body, State=Default",
+        "count": 24
+      },
+      {
+        "name": "Separator",
+        "nodeId": "6985:1269630",
+        "resolved": true,
+        "viaVariant": "Orientation=Horizontal, Spacing=0",
+        "count": 6
+      },
+      {
+        "name": "Input",
+        "nodeId": "26:1063",
+        "resolved": true,
+        "viaVariant": "Empty=False, Type=Text, Disabled=False",
+        "count": 2
+      },
+      {
+        "name": "_Content Header/Active filters",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "Breadcrumbs",
+        "nodeId": "129:12955",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "Notification (Alert)",
+        "nodeId": "32:1770",
+        "resolved": true,
+        "viaVariant": "Property 1=Primary",
+        "count": 1
+      },
+      {
+        "name": "Tabs",
+        "nodeId": "36:1862",
+        "resolved": true,
+        "viaVariant": "Orientation=Horizontal",
+        "count": 1
+      }
+    ],
+    "5803:40223": [
+      {
+        "name": "Dropdown Item",
+        "nodeId": "707:402598",
+        "resolved": true,
+        "viaVariant": "State=Default, Selected=False",
+        "count": 3
+      }
+    ],
+    "7215:102950": [
+      {
+        "name": "Progress Bar/Label Description",
+        "nodeId": "7215:102922",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 3
+      },
+      {
+        "name": "Progress Bar/Bar",
+        "nodeId": "7215:102951",
+        "resolved": true,
+        "viaVariant": "Size=Default",
+        "count": 1
+      }
+    ],
+    "8680:8274": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Primary Subtle, State=Default",
+        "count": 1
+      },
+      {
+        "name": "Separator",
+        "nodeId": "6985:1269630",
+        "resolved": true,
+        "viaVariant": "Orientation=Horizontal, Spacing=0",
+        "count": 1
+      },
+      {
+        "name": "Step Progress Tabs",
+        "nodeId": "6955:1232404",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "6324:59165": [
+      {
+        "name": "Option Cards/Card",
+        "nodeId": "6324:59033",
+        "resolved": true,
+        "viaVariant": "Selected=True, Disabled=False",
+        "count": 5
+      }
+    ],
+    "5746:44409": [
+      {
+        "name": "_Alert Dialog/Content",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "_Alert Dialog/Footer",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      }
+    ],
+    "129:12955": [
+      {
+        "name": "Breadcrumb Item",
+        "nodeId": "129:12914",
+        "resolved": true,
+        "viaVariant": "LastChild=False",
+        "count": 3
+      }
+    ],
+    "6987:87353": [
+      {
+        "name": "Content Box",
+        "nodeId": "6985:1377167",
+        "resolved": true,
+        "viaVariant": "Style=Boxed, Size=MD",
+        "count": 11
+      },
+      {
+        "name": "Notification (Alert)",
+        "nodeId": "32:1770",
+        "resolved": true,
+        "viaVariant": "Property 1=Danger Subtle",
+        "count": 2
+      },
+      {
+        "name": "Content Header",
+        "nodeId": "6984:1254074",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "Page/Footer",
+        "nodeId": "129:13709",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 1
+      },
+      {
+        "name": "Page/Header/Shipper",
+        "nodeId": "106:7070",
+        "resolved": true,
+        "viaVariant": "Layout=Desktop, Expanded=False",
+        "count": 1
+      },
+      {
+        "name": "Tabs",
+        "nodeId": "36:1862",
+        "resolved": true,
+        "viaVariant": "Orientation=Vertical",
+        "count": 1
+      }
+    ],
+    "6955:1232404": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Primary Subtle, State=Default",
+        "count": 6
+      },
+      {
+        "name": "Icon",
+        "nodeId": "15:520",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 5
+      }
+    ],
+    "7191:92194": [
+      {
+        "name": "Table Cell",
+        "nodeId": "7191:91598",
+        "resolved": true,
+        "viaVariant": "Align=Left, Variant=Head",
+        "count": 5
+      }
+    ],
+    "6987:65811": [
+      {
+        "name": "Content Box",
+        "nodeId": "6985:1377167",
+        "resolved": true,
+        "viaVariant": "Style=Boxed, Size=MD",
+        "count": 11
+      },
+      {
+        "name": "Notification (Alert)",
+        "nodeId": "32:1770",
+        "resolved": true,
+        "viaVariant": "Property 1=Danger Subtle",
+        "count": 2
+      },
+      {
+        "name": "Tabs",
+        "nodeId": "36:1862",
+        "resolved": true,
+        "viaVariant": "Orientation=Vertical",
+        "count": 1
+      }
+    ],
+    "7191:94525": [
+      {
+        "name": "Table Column",
+        "nodeId": "7191:92194",
+        "resolved": true,
+        "viaVariant": null,
+        "count": 5
+      }
+    ],
+    "5184:85248": [
+      {
+        "name": "Button",
+        "nodeId": "15:105",
+        "resolved": true,
+        "viaVariant": "Variant=Primary Subtle, State=Default",
+        "count": 1
+      }
+    ],
+    "5803:43124": [
+      {
+        "name": "Popover Item",
+        "nodeId": "5803:43489",
+        "resolved": true,
+        "viaVariant": "State=Default, Selected=False",
+        "count": 6
+      },
+      {
+        "name": "_Popover/Subheadline",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 2
+      },
+      {
+        "name": "_Popover/Header",
+        "nodeId": null,
+        "resolved": false,
+        "viaVariant": null,
+        "count": 1
+      }
+    ]
+  }
+}
