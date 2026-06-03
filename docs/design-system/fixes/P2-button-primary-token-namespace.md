@@ -117,19 +117,27 @@ fill → the bound variable shows a library badge naming the source.
    - `3771:123894` Selection confirmation · `4054:73237` Tenders · `5250:86013` Components · `147:64155` _Form/New Tender/1
 2. **Page `⚛️ Fileupload`** (`5510:143842`) — inside the **`Fileupload`** component (`5184:85248`), only `button/primary-subtle/*`.
 
-**What this tells us:** the `Tenders - Shipper` page is a set of **stale product mockups** (these are
-4Shipper *screens*, which belong in the 4Shipper Design file — not in the UI Kit). They were built
-against the old Uixmate tokens and never migrated.
+**What this tells us:** the `Tenders - Shipper` page mixes **stale product mockups** with **real
+component masters** — its `Components` section (`5250:86013`) hosts genuine published sets
+(Stepper, Waypoint Entry, Address entry, Carrier Offer, Shipper list entries, …). So the page is
+**not** disposable.
 
-### Recommended cleanup (in order)
-1. **Delete the `Tenders - Shipper` page** from UI Kit 2.0 (product mockups don't belong in the library).
-   This removes ~90% of the leak instantly. (If any of it is still wanted, move it to the 4Shipper file
-   first.)
-2. **Fix the `Fileupload` component** (`5184:85248`): rebind its `button/primary-subtle/*` fills/strokes/
-   text to `button-primary-subtle/*` (Variables → `theme-colors`).
+> ⚠️ **Lesson learned (2026-06-03):** deleting the whole `Tenders - Shipper` page was tried and
+> **reverted** — it removed 18 real component sets + 16 standalone components (741→663) because their
+> masters lived on that page. **Do NOT delete the page.** Fix the leak by **rebinding**, which
+> preserves every component.
+
+### Recommended cleanup (in order) — rebind, do NOT delete
+1. **Rebind the leaking nodes** to the canonical `button-primary/*` variables (Variables → `theme-colors`)
+   on the frames listed above. Scriptable via `use_figma`: for each fill/stroke/text whose bound variable
+   name starts `button/primary`, `setBoundVariable` to the matching `button-primary/*` token (mapping table
+   above). This keeps all component masters intact.
+2. **Fix the `Fileupload` component** (`5184:85248`): rebind its `button/primary-subtle/*` to
+   `button-primary-subtle/*` the same way.
 3. **Unlink the non-Transportly libraries** — Assets → Libraries → toggle **off** *Uixmate team library*
-   (and, if unused, Material 3 / Simple Design System / iOS 18). With no node still referencing them,
-   removal is clean.
-4. **Publish** UI Kit 2.0 → `npm run sync` logs it.
-5. **Verify:** re-run `npm run variables:desktop` — `button/primary*` and `#0048E3` should be gone from
-   `data/variables-desktop.json`.
+   (and, if unused, Material 3 / Simple Design System / iOS 18). Only after nothing references them.
+4. **(Optional) Relocate** the real component masters out of the `Components` section into the dedicated
+   `⚛️ …` pages, so product mockups and library masters no longer share a page.
+5. **Publish** UI Kit 2.0 → `npm run sync` logs it.
+6. **Verify:** re-run `npm run variables:desktop` — `button/primary*` and `#0048E3` should be gone from
+   `data/variables-desktop.json`, with all 58 sets still present.
