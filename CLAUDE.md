@@ -52,6 +52,7 @@ platform-overview.md / platform-structure.md   Product context
 | `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. **Subject to a daily rate limit** on the Dev Mode MCP server. |
 | `npm run variables:bridge` | **Fallback when Dev Mode is rate-limited.** Resolves a **figma-mcp-bridge** variable dump (alias chains → concrete values) into `data/variables-desktop.json`. Two-step: the agent dumps local vars (compact) to `data/_bridge-vars-raw.json` via the bridge plugin, then this resolves them. The bridge MCP is stdio-only, so the agent must do the dump — a script can't reach it. Bonus: bridge returns only *local* vars, so library leaks can't appear. See `scripts/build-variables-from-bridge.mjs` header. |
 | `npm run thumbnails` | Render a PNG preview of every component via REST `/v1/images` → `dashboard/thumbs/` + manifest `data/thumbnails.json`. The dashboard **Components** view shows them. PNGs are committed so the published Pages dashboard is self-contained. |
+| `npm run thumbnails:pages` | Same idea for the **design file**: render a PNG of every top-level screen → `dashboard/thumbs-pages/` + manifest `data/page-thumbnails.json`. The dashboard **Pages** view + detail drawer show them. Rendered at a low scale (frames are large); large frames fall back to single-id requests if a batch render times out. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
 

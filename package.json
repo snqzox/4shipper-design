@@ -15,7 +15,8 @@
     "serve": "node scripts/serve.mjs",
     "variables:desktop": "node scripts/pull-variables-desktop.mjs",
     "variables:bridge": "node scripts/build-variables-from-bridge.mjs",
-    "thumbnails": "node scripts/pull-thumbnails.mjs"
+    "thumbnails": "node scripts/pull-thumbnails.mjs",
+    "thumbnails:pages": "node scripts/pull-page-thumbnails.mjs"
   },
   "engines": {
     "node": ">=20.12"

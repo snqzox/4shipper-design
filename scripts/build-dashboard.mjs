@@ -157,6 +157,7 @@ function collect() {
   const changelog = readText('docs/design-system/changelog.md', '# Design System Changelog\n\n_No changes recorded yet._')
   const staleDocs = readJson(`${DATA_DIR}/stale-docs.json`, { items: [] })
   const thumbnails = readJson(`${DATA_DIR}/thumbnails.json`, { thumbs: {} })
+  const pageThumbnails = readJson(`${DATA_DIR}/page-thumbnails.json`, { thumbs: {} })
   const nested = readJson(`${DATA_DIR}/nested.json`, { units: {} })
 
   // Invert the nested graph into a "used in" map (reverse usage) — zero extra Figma calls.
@@ -219,6 +220,7 @@ function collect() {
     components: comps,
     tokens,
     design: pages.design || { pages: [] },
+    pageThumbs: pageThumbnails.thumbs || {},
     changelog,
   }
 }
@@ -494,6 +496,39 @@ function render(model) {
   .doc .dtable td { color:var(--muted); }
   .doc .docnote { color:var(--faint); font-style:italic; }
 
+  /* Pages detail: screen/structure list */
+  .dfilter { margin-bottom:10px; }
+  .flist { display:flex; flex-direction:column; gap:8px; }
+  .frame { border:1px solid var(--line); border-radius:9px; overflow:hidden; background:var(--panel); }
+  .frame:hover { border-color:var(--line2); }
+  .fhead { display:flex; align-items:center; gap:11px; padding:9px 11px; cursor:pointer; }
+  .fthumb { flex:0 0 64px; height:42px; border-radius:6px; background:#fff; border:1px solid var(--line2);
+    display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .fthumb img { max-width:100%; max-height:100%; object-fit:contain; }
+  .fthumb .cph { color:#9aa; font:600 16px/1 var(--sans); }
+  .fmeta { min-width:0; flex:1; display:flex; flex-direction:column; gap:4px; }
+  .ftop { display:flex; align-items:center; gap:7px; }
+  .fname { font-size:13px; font-weight:600; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .fsub { display:flex; align-items:center; gap:10px; font:11px/1 var(--mono); color:var(--faint); }
+  .fdim { color:var(--muted); }
+  .ffig { font-size:11px; }
+  .fexp { all:unset; cursor:pointer; color:var(--faint); font-size:10px; padding:6px; transition:transform .15s; flex:0 0 auto; }
+  .frame.open .fexp { transform:rotate(90deg); }
+  .fkids { display:none; flex-wrap:wrap; gap:5px; padding:10px 12px 12px; border-top:1px solid var(--line); background:#10151e; }
+  .frame.open .fkids { display:flex; }
+  .fkids.empty { color:var(--faint); font-style:italic; font-size:12px; }
+  .kchip { display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--fg);
+    background:#141a25; border:1px solid var(--line); border-radius:6px; padding:3px 8px; max-width:100%; }
+  .kchip .kn { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:180px; }
+  .kchip.more { color:var(--faint); }
+  .ntag { font:9px/1.4 var(--mono); text-transform:uppercase; letter-spacing:.04em; padding:2px 5px;
+    border-radius:4px; background:#1d2530; color:var(--muted); flex:0 0 auto; }
+  .ntag.nt-frame { background:#1c2740; color:var(--accent); }
+  .ntag.nt-section { background:#16241c; color:var(--ok); }
+  .ntag.nt-component, .ntag.nt-componentset { background:#241c2f; color:var(--accent2); }
+  .ntag.nt-instance { background:#202634; color:var(--muted); }
+  .ntag.nt-text, .ntag.nt-vector, .ntag.nt-rectangle { background:#181d27; color:var(--faint); }
+
   @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
 </style>
 </head>
@@ -562,6 +597,7 @@ function show(i){
   bindGroups();
   if (s.id==='components') initComponents();
   if (s.id==='assets') initAssets();
+  if (s.id==='pages') initPages();
   if (s.id==='actions') initActions();
   if (location.hash !== '#'+s.id) history.replaceState(null,'','#'+s.id);
 }
@@ -1001,14 +1037,151 @@ function variables(){
     '<p class="muted">Pull them via the desktop Dev Mode MCP instead: open the UI Kit in Figma desktop and run <code>npm run variables:desktop</code>.</p></div>';
 }
 
+// ---- Pages (the "Transportly 4Shipper — Design" file) ----
+const PAGE_THUMBS = M.pageThumbs || {};
+const DESIGN_KEY = (M.design && M.design.key) || 'Xol48qmGXL8hIqA42jbHno';
+const NODE_LABELS = { FRAME:'frame', SECTION:'section', COMPONENT:'component', COMPONENT_SET:'set',
+  INSTANCE:'instance', GROUP:'group', TEXT:'text', RECTANGLE:'rect', VECTOR:'vector', ELLIPSE:'ellipse' };
+
+function pageBreakdown(p){
+  const screens = p.screens||[];
+  const by = {};
+  for(const s of screens) by[s.type] = (by[s.type]||0)+1;
+  return { total:screens.length, by,
+    frames:by.FRAME||0, components:(by.COMPONENT||0)+(by.COMPONENT_SET||0), sections:by.SECTION||0 };
+}
+// Real pages keep their original index so the detail drawer can look them up by data-pi.
+const PAGE_LIST = (M.design.pages||[]).map((p,i)=>({ ...p, _i:i, ...pageBreakdown(p) }));
+const pageState = { q:'' };
+
+function figNode(id){ return 'https://www.figma.com/design/'+DESIGN_KEY+'/?node-id='+String(id).replace(/:/g,'-'); }
+function typeTag(t){
+  const cls = 'nt-'+String(t||'').toLowerCase().replace(/_/g,'');
+  return '<span class="ntag '+cls+'">'+esc(NODE_LABELS[t]||String(t||'').toLowerCase())+'</span>';
+}
+function pageThumbCell(p){
+  const s = (p.screens||[]).find(x=>PAGE_THUMBS[x.id]);
+  if(s) return '<div class="tthumb"><img loading="lazy" src="'+esc(PAGE_THUMBS[s.id])+'" alt=""></div>';
+  const ch = (p.name.replace(/[^A-Za-z0-9]/g,'')[0]||'#').toUpperCase();
+  return '<div class="tthumb"><span class="cph">'+esc(ch)+'</span></div>';
+}
+
 function pages(){
-  if(!M.design.pages.length) return '<div class="empty">No pages found.</div>';
-  let html = '<input class="search" id="psearch" placeholder="Filter screens…">';
-  html += M.design.pages.map((p,i)=>groupBlock(p.name, (p.screens||[]).length, false,
-    (p.screens||[]).map(s=>'<div class="row sitem" data-n="'+esc(s.name.toLowerCase())+'"><span class="nm">'+esc(s.name)+'</span><span class="tag scr">'+esc(s.type)+'</span></div>').join('')
-      || '<div class="row faint">No top-level frames.</div>'
-  )).join('');
+  if(!PAGE_LIST.length) return '<div class="empty">No pages found.</div>';
+  const totalScreens = PAGE_LIST.reduce((n,p)=>n+p.total,0);
+  const withScreens = PAGE_LIST.filter(p=>p.total>0).length;
+  let html = statCards([
+    [PAGE_LIST.length,'Pages', withScreens+' with screens'],
+    [totalScreens,'Screens','top-level frames'],
+    [PAGE_LIST.reduce((n,p)=>n+p.frames,0),'Frames','type = FRAME'],
+    [PAGE_LIST.reduce((n,p)=>n+p.components,0),'Components','on design pages'],
+  ]);
+  html += '<div class="ctoolbar">'+
+    '<input class="search" id="pagesearch" placeholder="Filter by page or screen name…">'+
+    '<a class="fsel" style="text-decoration:none" href="'+esc('https://www.figma.com/design/'+DESIGN_KEY)+'" target="_blank">Open design file ↗</a>'+
+    '<span class="ccount" id="pagecount"></span>'+
+  '</div>'+
+  '<div id="pagebody"></div>';
   return html;
+}
+function filteredPages(){
+  const q = pageState.q.toLowerCase();
+  if(!q) return PAGE_LIST;
+  return PAGE_LIST.filter(p => p.name.toLowerCase().includes(q) ||
+    (p.screens||[]).some(s=>s.name.toLowerCase().includes(q)));
+}
+function pageTable(items){
+  const head = '<tr><th class="nosort" title="First screen preview"></th><th>Page</th>'+
+    '<th>Screens</th><th>Frames</th><th>Comp.</th><th>Sections</th><th class="nosort">Figma</th></tr>';
+  const rows = items.map(p =>
+    '<tr data-pi="'+p._i+'">'+
+      '<td>'+pageThumbCell(p)+'</td>'+
+      '<td><div class="tnm">'+esc(p.name)+'</div></td>'+
+      '<td class="muted">'+p.total+'</td>'+
+      '<td class="muted">'+(p.frames||'—')+'</td>'+
+      '<td class="muted">'+(p.components||'—')+'</td>'+
+      '<td class="muted">'+(p.sections||'—')+'</td>'+
+      '<td class="tlinks"><a href="'+esc(figNode(p.id))+'" target="_blank">Figma ↗</a></td>'+
+    '</tr>').join('');
+  return '<div class="twrap"><table class="ctable"><thead>'+head+'</thead><tbody>'+
+    (rows||'<tr><td colspan="7" class="muted" style="padding:24px;text-align:center">No pages match.</td></tr>')+
+    '</tbody></table></div>';
+}
+function renderPages(){
+  const items = filteredPages();
+  const body = document.getElementById('pagebody'); if(!body) return;
+  body.innerHTML = pageTable(items);
+  const cnt = document.getElementById('pagecount'); if(cnt) cnt.textContent = items.length+' / '+PAGE_LIST.length;
+  body.querySelectorAll('[data-pi]').forEach(el=>el.onclick=ev=>{
+    if(ev.target.closest('a')) return;
+    openPageDetail(+el.dataset.pi);
+  });
+}
+function initPages(){
+  const q = document.getElementById('pagesearch'); if(!q) return;
+  q.value = pageState.q; q.oninput = ()=>{ pageState.q=q.value; renderPages(); };
+  renderPages();
+}
+
+// ---- Page detail drawer (reuses the shared #drawer infrastructure) ----
+function screenRow(s){
+  const thumb = PAGE_THUMBS[s.id]
+    ? '<div class="fthumb"><img loading="lazy" src="'+esc(PAGE_THUMBS[s.id])+'" alt=""></div>'
+    : '<div class="fthumb"><span class="cph">'+esc((s.name[0]||'?').toUpperCase())+'</span></div>';
+  const dim = (s.w&&s.h) ? '<span class="fdim">'+s.w+'×'+s.h+'</span>' : '';
+  const kids = s.children||[];
+  const kidsHtml = kids.length
+    ? '<div class="fkids">'+kids.map(c=>'<span class="kchip">'+typeTag(c.type)+'<span class="kn">'+esc(c.name)+'</span></span>').join('')+
+        (s.childCount>kids.length?'<span class="kchip more">+'+(s.childCount-kids.length)+' more</span>':'')+'</div>'
+    : '<div class="fkids empty">No child layers.</div>';
+  return '<div class="frame" data-fn="'+esc(s.name.toLowerCase())+'">'+
+    '<div class="fhead">'+thumb+
+      '<div class="fmeta">'+
+        '<div class="ftop"><span class="fname">'+esc(s.name)+'</span>'+typeTag(s.type)+'</div>'+
+        '<div class="fsub">'+dim+'<span class="fcount">'+s.childCount+' layer'+(s.childCount===1?'':'s')+'</span>'+
+          '<a class="ffig" href="'+esc(figNode(s.id))+'" target="_blank">Figma ↗</a></div>'+
+      '</div>'+
+      '<button class="fexp" aria-label="Toggle structure">▶</button>'+
+    '</div>'+kidsHtml+'</div>';
+}
+function pageDetailPanel(p){
+  const pill=(n,label)=> n?'<span class="hp on">'+n+' '+label+'</span>':'';
+  const head = '<div class="dhead"><button class="dclose" aria-label="Close">×</button>'+
+    '<div class="dpage">'+esc(M.design.name||'Design file')+'</div>'+
+    '<h2>'+esc(p.name)+'</h2>'+
+    '<div class="cpills">'+pill(p.total,'screens')+pill(p.frames,'frames')+
+      pill(p.components,'components')+pill(p.sections,'sections')+'</div></div>';
+  const byChips = Object.entries(p.by).sort((a,b)=>b[1]-a[1])
+    .map(([t,n])=>'<span class="achip">'+typeTag(t)+' ×'+n+'</span>').join('');
+  const screens = p.screens||[];
+  let body = '<div class="dsec"><h4>Composition</h4><div class="av">'+
+    (byChips||'<span class="ddesc none">Empty page.</span>')+'</div></div>';
+  body += '<div class="dsec"><h4>Screens &amp; structure ('+screens.length+')</h4>'+
+    (screens.length>6?'<input class="search dfilter" id="framefilter" placeholder="Filter screens…">':'')+
+    '<div class="flist">'+(screens.map(screenRow).join('')||'<div class="ddesc none">No top-level frames.</div>')+
+    '</div></div>';
+  body += '<div class="dsec"><h4>Links</h4><div class="dlinks">'+
+    '<a href="'+esc(figNode(p.id))+'" target="_blank">Open page in Figma ↗</a></div></div>';
+  return head+'<div class="dbody">'+body+'</div>';
+}
+function openPageDetail(i){
+  const p = PAGE_LIST[i]; if(!p) return;
+  const panel = document.getElementById('drawerpanel');
+  panel.innerHTML = pageDetailPanel(p);
+  const dr = document.getElementById('drawer');
+  dr.classList.add('open'); dr.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden'; panel.scrollTop=0;
+  panel.querySelector('.dclose').onclick = closeDetail;
+  // Expand a screen to reveal its immediate child layers (the structure preview).
+  panel.querySelectorAll('.frame .fhead').forEach(h=>h.onclick=ev=>{
+    if(ev.target.closest('a')) return;
+    h.parentElement.classList.toggle('open');
+  });
+  const ff = panel.querySelector('#framefilter');
+  if(ff) ff.oninput = ()=>{ const q=ff.value.toLowerCase();
+    panel.querySelectorAll('.frame').forEach(f=>{ f.style.display=f.dataset.fn.includes(q)?'':'none'; }); };
+  document.querySelectorAll('.ctable tbody tr.sel').forEach(r=>r.classList.remove('sel'));
+  const row = document.querySelector('.ctable tbody tr[data-pi="'+i+'"]'); if(row) row.classList.add('sel');
 }
 
 function changelog(){ return '<div class="changelog card">'+mdToHtml(M.changelog)+'</div>'; }
