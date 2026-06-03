@@ -324,6 +324,41 @@ function render(model) {
   .hp.warn { color:var(--warn); background:#241d10; }
   .clinks { display:flex; gap:14px; margin-top:auto; }
   .clinks a { font-size:11px; }
+
+  /* Components toolbar (search + filters + view toggle) */
+  .ctoolbar { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:14px; }
+  .ctoolbar .search { flex:1; min-width:200px; margin-bottom:0; }
+  .seg { display:inline-flex; border:1px solid var(--line2); border-radius:9px; overflow:hidden; flex:0 0 auto; }
+  .seg button { all:unset; cursor:pointer; padding:9px 14px; font-size:13px; color:var(--muted); }
+  .seg button:hover { color:var(--fg); background:#161c28; }
+  .seg button.active { background:#18202e; color:var(--fg); }
+  .fsel { padding:10px 12px; background:var(--panel); border:1px solid var(--line2); border-radius:9px;
+    color:var(--fg); font-size:13px; cursor:pointer; }
+  .fsel:focus { outline:none; border-color:var(--accent); }
+  .ctoolbar .attn-toggle { margin:0; }
+  .ccount { margin-left:auto; font:11px/1 var(--mono); color:var(--faint); }
+
+  /* Components table */
+  .twrap { border:1px solid var(--line); border-radius:var(--radius); overflow:auto; background:var(--panel); }
+  .ctable { width:100%; border-collapse:collapse; font-size:13px; }
+  .ctable th { text-align:left; padding:10px 12px; border-bottom:1px solid var(--line2); color:var(--muted);
+    font-size:11px; text-transform:uppercase; letter-spacing:.05em; white-space:nowrap; cursor:pointer;
+    user-select:none; position:sticky; top:0; background:var(--panel2); z-index:1; }
+  .ctable th.nosort { cursor:default; }
+  .ctable th:not(.nosort):hover { color:var(--fg); }
+  .ctable th .sar { color:var(--accent); font-size:9px; margin-left:4px; }
+  .ctable td { padding:8px 12px; border-bottom:1px solid var(--line); vertical-align:middle; white-space:nowrap; }
+  .ctable tr:last-child td { border-bottom:none; }
+  .ctable tbody tr:hover td { background:#141b27; }
+  .ctable .tthumb { width:54px; height:36px; border-radius:5px; background:#fff; border:1px solid var(--line2);
+    display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .ctable .tthumb img { max-width:100%; max-height:100%; object-fit:contain; }
+  .ctable .tthumb .cph { color:#9aa; font:600 14px/1 var(--sans); }
+  .ctable .tnm { font-weight:600; }
+  .ctable .tdesc { color:var(--faint); font-size:11px; max-width:320px; overflow:hidden; text-overflow:ellipsis; }
+  .ctable .tlinks a { font-size:11px; margin-right:10px; }
+  .tick { color:var(--ok); font-weight:600; } .cross { color:var(--faint); }
+
   @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
 </style>
 </head>
@@ -343,6 +378,11 @@ function render(model) {
 <script>
 const M = JSON.parse(document.getElementById('model').textContent);
 const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+// Flat component list + derived facets for the Components table/cards views.
+const COMP_ALL = (M.components.groups||[]).flatMap(g => g.items);
+const COMP_PAGES = [...new Set(COMP_ALL.map(it => it.page || 'Other'))].sort((a,b)=>a.localeCompare(b));
+const compState = { view:'table', q:'', page:'all', kind:'all', attn:false, sort:'name', dir:1 };
 
 document.getElementById('brandsub').textContent = (M.uiKit.name || 'design system');
 document.getElementById('topline').textContent =
@@ -375,6 +415,7 @@ function show(i){
   document.getElementById('vsub').textContent = s.sub;
   document.getElementById('view').innerHTML = s.render();
   bindGroups();
+  if (s.id==='components') initComponents();
   if (s.id==='actions') initActions();
   if (location.hash !== '#'+s.id) history.replaceState(null,'','#'+s.id);
 }
@@ -489,12 +530,120 @@ function components(){
     [h.showcased,'Showcased','have a 📖 Docs page'],
     [(h.stale||0),'Stale', h.stale?'flagged by last sync':'all fresh'],
   ]);
-  html+='<input class="search" id="csearch" placeholder="Filter components…">';
-  html+='<label class="attn-toggle"><input type="checkbox" id="attnonly"> Needs attention only ('+h.needsAttention+')</label>';
-  html+=M.components.groups.map((g,gi)=>groupBlock(g.page, g.items.length, gi<2,
-    '<div class="cgrid">'+g.items.map(ccard).join('')+'</div>'
-  )).join('');
+  const pageOpts=COMP_PAGES.map(p=>'<option value="'+esc(p)+'">'+esc(p)+'</option>').join('');
+  html+='<div class="ctoolbar">'+
+    '<div class="seg" id="compview"><button data-v="table">▦ Table</button><button data-v="cards">▤ Cards</button></div>'+
+    '<input class="search" id="compsearch" placeholder="Filter by name or description…">'+
+    '<select class="fsel" id="comppage"><option value="all">All pages</option>'+pageOpts+'</select>'+
+    '<select class="fsel" id="compkind"><option value="all">All kinds</option><option value="set">Sets</option><option value="component">Components</option></select>'+
+    '<label class="attn-toggle"><input type="checkbox" id="compattn"> Needs attention ('+h.needsAttention+')</label>'+
+    '<span class="ccount" id="compcount"></span>'+
+  '</div>'+
+  '<div id="compbody"></div>';
   return html;
+}
+
+// ---- Components table/cards: filtering, sorting, rendering ----
+function filteredComponents(){
+  const s=compState, q=s.q.toLowerCase();
+  return COMP_ALL.filter(it=>{
+    if(q && !((it.name+' '+(it.description||'')).toLowerCase().includes(q))) return false;
+    if(s.page!=='all' && (it.page||'Other')!==s.page) return false;
+    if(s.kind!=='all' && it.kind!==s.kind) return false;
+    if(s.attn && !it.needsAttention) return false;
+    return true;
+  });
+}
+const COMP_SORT={
+  name:it=>it.name.toLowerCase(),
+  page:it=>(it.page||'').toLowerCase(),
+  kind:it=>it.kind,
+  variants:it=>it.kind==='set'?(it.variants||0):-1,
+  desc:it=>it.hasDescription?1:0,
+  doc:it=>it.hasDoc?1:0,
+  showcase:it=>it.hasShowcase?1:0,
+  stale:it=>it.stale?1:0,
+};
+function sortComponents(items){
+  const f=COMP_SORT[compState.sort]||COMP_SORT.name, d=compState.dir;
+  return items.slice().sort((a,b)=>{
+    const va=f(a),vb=f(b);
+    if(va<vb)return -d; if(va>vb)return d;
+    return a.name.localeCompare(b.name);
+  });
+}
+const COMP_COLS=[
+  {k:'name',label:'Component'},{k:'page',label:'Page'},{k:'kind',label:'Kind'},
+  {k:'variants',label:'Variants'},{k:'desc',label:'Desc'},{k:'doc',label:'Doc'},
+  {k:'showcase',label:'Showcase'},{k:'stale',label:'Stale'},
+];
+function compTable(items){
+  const s=compState, yes='<span class="tick">✓</span>', no='<span class="cross">✗</span>';
+  const head='<tr><th class="nosort"></th>'+COMP_COLS.map(c=>
+    '<th data-k="'+c.k+'">'+esc(c.label)+(s.sort===c.k?'<span class="sar">'+(s.dir>0?'▲':'▼')+'</span>':'')+'</th>'
+  ).join('')+'<th class="nosort">Links</th></tr>';
+  const rows=items.map(it=>{
+    const thumb=it.thumb
+      ? '<div class="tthumb"><img loading="lazy" src="'+esc(it.thumb)+'" alt=""></div>'
+      : '<div class="tthumb"><span class="cph">'+esc((it.name[0]||'?').toUpperCase())+'</span></div>';
+    const links=(it.figmaUrl?'<a href="'+esc(it.figmaUrl)+'" target="_blank">Figma ↗</a>':'')+
+      (it.docUrl?'<a href="'+esc(it.docUrl)+'" target="_blank">Doc ↗</a>':'');
+    return '<tr>'+
+      '<td>'+thumb+'</td>'+
+      '<td><div class="tnm">'+esc(it.name)+'</div>'+(it.description?'<div class="tdesc">'+esc(it.description)+'</div>':'')+'</td>'+
+      '<td class="muted">'+esc(it.page||'—')+'</td>'+
+      '<td>'+(it.kind==='set'?'<span class="tag set">set</span>':'<span class="tag comp">comp</span>')+'</td>'+
+      '<td class="muted">'+(it.kind==='set'?it.variants:'—')+'</td>'+
+      '<td>'+(it.hasDescription?yes:no)+'</td>'+
+      '<td>'+(it.hasDoc?yes:no)+'</td>'+
+      '<td>'+(it.hasShowcase?yes:no)+'</td>'+
+      '<td>'+(it.stale?'<span class="hp warn">stale</span>':no)+'</td>'+
+      '<td class="tlinks">'+(links||'<span class="faint">—</span>')+'</td>'+
+    '</tr>';
+  }).join('');
+  return '<div class="twrap"><table class="ctable"><thead>'+head+'</thead><tbody>'+
+    (rows||'<tr><td colspan="11" class="muted" style="padding:24px;text-align:center">No components match.</td></tr>')+
+    '</tbody></table></div>';
+}
+function compCards(items){
+  if(!items.length) return '<div class="empty">No components match.</div>';
+  const groups={};
+  for(const it of items){ (groups[it.page||'Other'] ||= []).push(it); }
+  const list=Object.entries(groups).map(([page,its])=>({page,its})).sort((a,b)=>b.its.length-a.its.length);
+  const openAll=items.length<=40;
+  return list.map((g,gi)=>groupBlock(g.page, g.its.length, openAll||gi<2,
+    '<div class="cgrid">'+g.its.map(ccard).join('')+'</div>'
+  )).join('');
+}
+function renderComponents(){
+  const items=sortComponents(filteredComponents());
+  const cnt=document.getElementById('compcount');
+  if(cnt) cnt.textContent=items.length+' / '+COMP_ALL.length;
+  const body=document.getElementById('compbody'); if(!body) return;
+  body.innerHTML = compState.view==='table' ? compTable(items) : compCards(items);
+  if(compState.view==='table'){
+    body.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{
+      const k=th.dataset.k;
+      if(compState.sort===k){ compState.dir*=-1; }
+      else { compState.sort=k; compState.dir=['name','page','kind'].includes(k)?1:-1; }
+      renderComponents();
+    });
+  } else {
+    body.querySelectorAll('.group .ghead').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
+  }
+}
+function initComponents(){
+  const seg=document.getElementById('compview'); if(!seg) return;
+  seg.querySelectorAll('button').forEach(b=>{
+    b.classList.toggle('active', b.dataset.v===compState.view);
+    b.onclick=()=>{ compState.view=b.dataset.v;
+      seg.querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b)); renderComponents(); };
+  });
+  const q=document.getElementById('compsearch'); q.value=compState.q; q.oninput=()=>{ compState.q=q.value; renderComponents(); };
+  const pg=document.getElementById('comppage'); pg.value=compState.page; pg.onchange=()=>{ compState.page=pg.value; renderComponents(); };
+  const kd=document.getElementById('compkind'); kd.value=compState.kind; kd.onchange=()=>{ compState.kind=kd.value; renderComponents(); };
+  const at=document.getElementById('compattn'); at.checked=compState.attn; at.onchange=()=>{ compState.attn=at.checked; renderComponents(); };
+  renderComponents();
 }
 
 function typography(){
