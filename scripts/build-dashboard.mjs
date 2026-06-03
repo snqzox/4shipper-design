@@ -5,6 +5,8 @@ const DATA_DIR = 'data'
 const OUT_DIR = 'dashboard'
 const REPO_URL = 'https://github.com/snqzox/4shipper-design'
 const COMPONENTS_DIR = 'docs/design-system/components'
+// Figma page whose components (icons, logos, flags, illustrations) get their own Assets section.
+const ASSETS_PAGE = '🧩 Assets'
 
 function readJson(path, fallback) {
   if (!existsSync(path)) return fallback
@@ -15,12 +17,37 @@ function readText(path, fallback) {
   return existsSync(path) ? readFileSync(path, 'utf8') : fallback
 }
 
+// Parse a variant component name ("Size=Large, State=Default") into [axis, value] pairs.
+function parseVariantProps(variantName) {
+  return String(variantName)
+    .split(',')
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((pair) => {
+      const i = pair.indexOf('=')
+      return i >= 0 ? [pair.slice(0, i).trim(), pair.slice(i + 1).trim()] : [pair, '']
+    })
+}
+
+// Collapse a set's variants into property axes: [{ axis, values:[...] }], preserving first-seen order.
+function deriveProperties(variants) {
+  const props = {}
+  for (const v of variants) {
+    for (const [axis, value] of parseVariantProps(v.name)) {
+      if (!axis) continue
+      ;(props[axis] ||= new Set()).add(value)
+    }
+  }
+  return Object.entries(props).map(([axis, values]) => ({ axis, values: [...values] }))
+}
+
 // Enrich a component with documentation/health signals + outbound links, all derived from data
 // (zero Figma round-trips): markdown doc presence, Figma description, an in-Figma showcase page,
 // staleness flag, a deep link to the node in Figma, a GitHub link to the doc, and a thumbnail.
 function componentHealth(item, ctx) {
   const doc = ctx.docMap[item.name] || null
   const hasDoc = Boolean(doc && existsSync(`${COMPONENTS_DIR}/${doc}`))
+  const docContent = hasDoc ? readText(`${COMPONENTS_DIR}/${doc}`, null) : null
   const hasDescription = Boolean(item.description && String(item.description).trim())
   const hasShowcase = ctx.showcaseNames.has(item.name)
   const stale = ctx.staleNames.has(item.name)
@@ -32,6 +59,7 @@ function componentHealth(item, ctx) {
     hasShowcase,
     stale,
     docUrl: doc ? `${REPO_URL}/blob/main/${COMPONENTS_DIR}/${doc}` : null,
+    docContent,
     figmaUrl: nodeId ? `https://www.figma.com/design/${ctx.fileKey}/?node-id=${nodeId.replace(/:/g, '-')}` : null,
     thumb: nodeId ? ctx.thumbs[nodeId] || null : null,
     needsAttention: !hasDoc || !hasDescription || stale,
@@ -45,28 +73,31 @@ function buildComponentsModel(componentsData, ctx) {
   const components = componentsData.components || []
   const sets = componentsData.componentSets || []
 
-  const variantCount = {}
+  const variantsOfSet = {}
   for (const c of components) {
-    if (c.set) variantCount[c.set] = (variantCount[c.set] || 0) + 1
+    if (c.set) (variantsOfSet[c.set] ||= []).push({ name: c.name, nodeId: c.nodeId })
   }
   const pageOfSet = {}
   for (const c of components) {
     if (c.set && !pageOfSet[c.set] && c.page) pageOfSet[c.set] = c.page
   }
 
-  const setItems = sets.map((s) =>
-    componentHealth(
+  const setItems = sets.map((s) => {
+    const variants = variantsOfSet[s.name] || []
+    return componentHealth(
       {
         kind: 'set',
         name: s.name,
         description: s.description,
         nodeId: s.nodeId,
         page: pageOfSet[s.name] || null,
-        variants: variantCount[s.name] || 0,
+        variants: variants.length,
+        variantNames: variants.map((v) => v.name),
+        properties: deriveProperties(variants),
       },
       ctx,
-    ),
-  )
+    )
+  })
   const standaloneItems = components
     .filter((c) => !c.set)
     .map((c) =>
@@ -76,7 +107,14 @@ function buildComponentsModel(componentsData, ctx) {
       ),
     )
 
-  const items = [...setItems, ...standaloneItems]
+  const allItems = [...setItems, ...standaloneItems]
+  // The "🧩 Assets" page (icons, logos, flags, illustrations) is split into its own Assets
+  // section so the Components view stays focused on real UI components.
+  const assetItems = allItems
+    .filter((it) => it.page === ASSETS_PAGE)
+    .sort((a, b) => a.name.localeCompare(b.name))
+  const items = allItems.filter((it) => it.page !== ASSETS_PAGE)
+
   const groups = {}
   for (const it of items) {
     const page = it.page || 'Other'
@@ -100,11 +138,13 @@ function buildComponentsModel(componentsData, ctx) {
 
   return {
     raw: components.length,
-    sets: setItems.length,
-    standalone: standaloneItems.length,
-    meaningful: setItems.length + standaloneItems.length,
+    sets: items.filter((i) => i.kind === 'set').length,
+    standalone: items.filter((i) => i.kind === 'component').length,
+    meaningful: items.length,
     health,
     groups: grouped,
+    assets: assetItems,
+    assetsPage: ASSETS_PAGE,
   }
 }
 
@@ -144,6 +184,7 @@ function collect() {
       meaningful: comps.meaningful,
       sets: comps.sets,
       standalone: comps.standalone,
+      assets: comps.assets.length,
       variants: comps.raw,
       typography: tokens.typography.length,
       shadows: tokens.shadows.length,
@@ -358,6 +399,66 @@ function render(model) {
   .ctable .tdesc { color:var(--faint); font-size:11px; max-width:320px; overflow:hidden; text-overflow:ellipsis; }
   .ctable .tlinks a { font-size:11px; margin-right:10px; }
   .tick { color:var(--ok); font-weight:600; } .cross { color:var(--faint); }
+  .ctable tbody tr { cursor:pointer; }
+  .ctable tbody tr.sel td { background:#17243b; }
+  .ccard { cursor:pointer; }
+
+  /* Assets gallery */
+  .agrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(116px,1fr)); gap:10px; }
+  .atile { all:unset; cursor:pointer; display:flex; flex-direction:column; align-items:center; gap:9px;
+    background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 10px; text-align:center; }
+  .atile:hover { border-color:var(--accent); background:#161d2a; }
+  .athumb { width:52px; height:52px; border-radius:8px; background:#fff; border:1px solid var(--line2);
+    display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .athumb img { max-width:100%; max-height:100%; object-fit:contain; }
+  .athumb .cph { color:#9aa; font:600 18px/1 var(--sans); }
+  .aname { font-size:11px; color:var(--muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:100%; }
+
+  /* Detail drawer */
+  .drawer { position:fixed; inset:0; z-index:50; display:none; }
+  .drawer.open { display:block; }
+  .drawer-back { position:absolute; inset:0; background:rgba(4,7,12,.55); opacity:0; transition:opacity .18s; }
+  .drawer.open .drawer-back { opacity:1; }
+  .drawer-panel { position:absolute; top:0; right:0; height:100%; width:min(520px,92vw); background:var(--panel2);
+    border-left:1px solid var(--line2); box-shadow:-18px 0 48px rgba(0,0,0,.4); overflow-y:auto;
+    transform:translateX(100%); transition:transform .2s cubic-bezier(.4,0,.2,1); padding:0; }
+  .drawer.open .drawer-panel { transform:translateX(0); }
+  .dhead { position:sticky; top:0; background:var(--panel2); border-bottom:1px solid var(--line); padding:20px 24px 16px; z-index:1; }
+  .dhead .dclose { all:unset; cursor:pointer; position:absolute; top:16px; right:18px; color:var(--muted);
+    font-size:20px; line-height:1; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:8px; }
+  .dhead .dclose:hover { background:#1a2230; color:var(--fg); }
+  .dhead .dpage { color:var(--faint); font:11px/1.4 var(--mono); margin-bottom:6px; }
+  .dhead h2 { margin:0 0 10px; font-size:19px; letter-spacing:-.2px; padding-right:36px; }
+  .dhead .cpills { gap:5px; }
+  .dbody { padding:18px 24px 40px; display:flex; flex-direction:column; gap:22px; }
+  .dsec h4 { margin:0 0 9px; font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+  .ddesc { color:var(--fg); font-size:13px; line-height:1.6; }
+  .ddesc.none { color:var(--faint); font-style:italic; }
+  .axes { display:flex; flex-direction:column; gap:11px; }
+  .axis .an { font:11px/1.4 var(--mono); color:var(--accent); margin-bottom:5px; }
+  .axis .av { display:flex; flex-wrap:wrap; gap:5px; }
+  .achip { font:11px/1.4 var(--sans); background:#1a2230; border:1px solid var(--line2); color:var(--fg);
+    padding:3px 9px; border-radius:6px; }
+  .achip.empty { color:var(--faint); font-style:italic; }
+  .vnames { display:flex; flex-wrap:wrap; gap:5px; max-height:168px; overflow:auto; }
+  .vname { font:10px/1.4 var(--mono); background:#141a25; border:1px solid var(--line); color:var(--muted); padding:3px 7px; border-radius:5px; }
+  .dlinks { display:flex; flex-wrap:wrap; gap:14px; }
+  .dlinks a { font-size:13px; }
+
+  /* Rendered doc markdown */
+  .doc { font-size:13px; line-height:1.65; color:var(--fg); }
+  .doc h3 { font-size:14px; margin:18px 0 8px; color:var(--fg); }
+  .doc h4 { font-size:12px; margin:14px 0 6px; color:var(--muted); text-transform:none; letter-spacing:0; }
+  .doc p { margin:8px 0; color:var(--muted); }
+  .doc ul { margin:8px 0; padding-left:18px; color:var(--muted); }
+  .doc li { margin:3px 0; }
+  .doc code { font:11px/1.5 var(--mono); background:#0c1019; padding:1px 5px; border-radius:4px; color:var(--accent2); }
+  .doc strong { color:var(--fg); }
+  .doc table.dtable { width:100%; border-collapse:collapse; margin:10px 0; font-size:12px; }
+  .doc .dtable th, .doc .dtable td { text-align:left; padding:6px 9px; border:1px solid var(--line); vertical-align:top; }
+  .doc .dtable th { background:var(--panel); color:var(--muted); font-weight:600; }
+  .doc .dtable td { color:var(--muted); }
+  .doc .docnote { color:var(--faint); font-style:italic; }
 
   @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
 </style>
@@ -374,15 +475,24 @@ function render(model) {
   <p class="sub" id="vsub"></p>
   <div id="view"></div>
 </main>
+<div id="drawer" class="drawer" aria-hidden="true">
+  <div class="drawer-back" id="drawerback"></div>
+  <aside class="drawer-panel" id="drawerpanel" role="dialog" aria-modal="true"></aside>
+</div>
 <script id="model" type="application/json">${json}</script>
 <script>
 const M = JSON.parse(document.getElementById('model').textContent);
 const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
 
 // Flat component list + derived facets for the Components table/cards views.
-const COMP_ALL = (M.components.groups||[]).flatMap(g => g.items);
-const COMP_PAGES = [...new Set(COMP_ALL.map(it => it.page || 'Other'))].sort((a,b)=>a.localeCompare(b));
+const COMP_MAIN = (M.components.groups||[]).flatMap(g => g.items);
+const COMP_ASSETS = M.components.assets || [];
+// COMP_ALL indexes both so the detail drawer (keyed by _i) works for components and assets alike.
+const COMP_ALL = COMP_MAIN.concat(COMP_ASSETS);
+COMP_ALL.forEach((it,i)=>{ it._i=i; });
+const COMP_PAGES = [...new Set(COMP_MAIN.map(it => it.page || 'Other'))].sort((a,b)=>a.localeCompare(b));
 const compState = { view:'table', q:'', page:'all', kind:'all', attn:false, sort:'name', dir:1 };
+const assetState = { q:'' };
 
 document.getElementById('brandsub').textContent = (M.uiKit.name || 'design system');
 document.getElementById('topline').textContent =
@@ -395,6 +505,7 @@ const SECTIONS = [
   { id:'overview',   title:'Overview',   sub:'Current state of the 4Shipper design system.', count:null, render:overview },
   { id:'actions',    title:'Actions',    sub:'Refresh data and publish — no terminal needed.', count:null, render:actions },
   { id:'components', title:'Components',  sub:M.components.meaningful+' components ('+M.components.sets+' sets · '+M.components.standalone+' standalone), grouped by Figma page.', count:M.counts.meaningful, render:components },
+  { id:'assets',     title:'Assets',      sub:M.counts.assets+' icons, logos, flags & illustrations from the '+(M.components.assetsPage||'Assets')+' page.', count:M.counts.assets, render:assetsView },
   { id:'typography', title:'Typography',  sub:M.counts.typography+' text styles with live previews.', count:M.counts.typography, render:typography },
   { id:'shadows',    title:'Shadows',     sub:M.counts.shadows+' effect styles.', count:M.counts.shadows, render:shadows },
   { id:'colors',     title:'Colors',      sub:M.counts.colors+' color tokens.', count:M.counts.colors, render:colors },
@@ -416,6 +527,7 @@ function show(i){
   document.getElementById('view').innerHTML = s.render();
   bindGroups();
   if (s.id==='components') initComponents();
+  if (s.id==='assets') initAssets();
   if (s.id==='actions') initActions();
   if (location.hash !== '#'+s.id) history.replaceState(null,'','#'+s.id);
 }
@@ -430,6 +542,7 @@ function overview(){
   const c=M.counts;
   let html = statCards([
     [c.meaningful,'Components', c.sets+' sets · '+c.standalone+' standalone'],
+    [c.assets,'Assets','icons · logos · illustrations'],
     [c.variants,'Total variants','published in library'],
     [c.typography+c.shadows+c.colors,'Style tokens', c.typography+' type · '+c.shadows+' shadow'],
     [c.variables||'—','Variables', c.variables?'':'Enterprise-gated'],
@@ -513,7 +626,7 @@ function ccard(it){
   const links='<div class="clinks">'+
     (it.figmaUrl?'<a href="'+esc(it.figmaUrl)+'" target="_blank">Figma ↗</a>':'')+
     (it.docUrl?'<a href="'+esc(it.docUrl)+'" target="_blank">Doc ↗</a>':'<span class="faint">no doc</span>')+'</div>';
-  return '<div class="ccard citem" data-attn="'+(it.needsAttention?1:0)+'" data-n="'+esc((it.name+' '+(it.description||'')).toLowerCase())+'">'+
+  return '<div class="ccard citem" data-id="'+it._i+'" data-attn="'+(it.needsAttention?1:0)+'" data-n="'+esc((it.name+' '+(it.description||'')).toLowerCase())+'">'+
     thumb+
     '<div class="cmeta">'+
       '<div class="ctop"><span class="cnm">'+esc(it.name)+'</span><span class="cvar">'+(it.kind==='set'?it.variants+' var':'comp')+'</span></div>'+
@@ -546,7 +659,7 @@ function components(){
 // ---- Components table/cards: filtering, sorting, rendering ----
 function filteredComponents(){
   const s=compState, q=s.q.toLowerCase();
-  return COMP_ALL.filter(it=>{
+  return COMP_MAIN.filter(it=>{
     if(q && !((it.name+' '+(it.description||'')).toLowerCase().includes(q))) return false;
     if(s.page!=='all' && (it.page||'Other')!==s.page) return false;
     if(s.kind!=='all' && it.kind!==s.kind) return false;
@@ -573,22 +686,27 @@ function sortComponents(items){
   });
 }
 const COMP_COLS=[
-  {k:'name',label:'Component'},{k:'page',label:'Page'},{k:'kind',label:'Kind'},
-  {k:'variants',label:'Variants'},{k:'desc',label:'Desc'},{k:'doc',label:'Doc'},
-  {k:'showcase',label:'Showcase'},{k:'stale',label:'Stale'},
+  {k:'name',label:'Component',tip:'Component or component-set name. Click a row for full detail'},
+  {k:'page',label:'Page',tip:'Figma page the component lives on'},
+  {k:'kind',label:'Kind',tip:'Set = has variants · comp = standalone component'},
+  {k:'variants',label:'Variants',tip:'Number of variants in the set'},
+  {k:'desc',label:'Desc',tip:'Has a component description written in Figma'},
+  {k:'doc',label:'Doc',tip:'Has a Markdown doc in the repo (docs/design-system/components)'},
+  {k:'showcase',label:'Showcase',tip:'Has a 📖 Docs showcase page in the Figma UI Kit'},
+  {k:'stale',label:'Stale',tip:'Doc may be out of date — flagged by the last sync'},
 ];
 function compTable(items){
   const s=compState, yes='<span class="tick">✓</span>', no='<span class="cross">✗</span>';
-  const head='<tr><th class="nosort"></th>'+COMP_COLS.map(c=>
-    '<th data-k="'+c.k+'">'+esc(c.label)+(s.sort===c.k?'<span class="sar">'+(s.dir>0?'▲':'▼')+'</span>':'')+'</th>'
-  ).join('')+'<th class="nosort">Links</th></tr>';
+  const head='<tr><th class="nosort" title="Component preview"></th>'+COMP_COLS.map(c=>
+    '<th data-k="'+c.k+'" title="'+esc(c.tip)+' · Click to sort">'+esc(c.label)+(s.sort===c.k?'<span class="sar">'+(s.dir>0?'▲':'▼')+'</span>':'')+'</th>'
+  ).join('')+'<th class="nosort" title="Open in Figma · Doc on GitHub">Links</th></tr>';
   const rows=items.map(it=>{
     const thumb=it.thumb
       ? '<div class="tthumb"><img loading="lazy" src="'+esc(it.thumb)+'" alt=""></div>'
       : '<div class="tthumb"><span class="cph">'+esc((it.name[0]||'?').toUpperCase())+'</span></div>';
     const links=(it.figmaUrl?'<a href="'+esc(it.figmaUrl)+'" target="_blank">Figma ↗</a>':'')+
       (it.docUrl?'<a href="'+esc(it.docUrl)+'" target="_blank">Doc ↗</a>':'');
-    return '<tr>'+
+    return '<tr data-id="'+it._i+'">'+
       '<td>'+thumb+'</td>'+
       '<td><div class="tnm">'+esc(it.name)+'</div>'+(it.description?'<div class="tdesc">'+esc(it.description)+'</div>':'')+'</td>'+
       '<td class="muted">'+esc(it.page||'—')+'</td>'+
@@ -618,7 +736,7 @@ function compCards(items){
 function renderComponents(){
   const items=sortComponents(filteredComponents());
   const cnt=document.getElementById('compcount');
-  if(cnt) cnt.textContent=items.length+' / '+COMP_ALL.length;
+  if(cnt) cnt.textContent=items.length+' / '+COMP_MAIN.length;
   const body=document.getElementById('compbody'); if(!body) return;
   body.innerHTML = compState.view==='table' ? compTable(items) : compCards(items);
   if(compState.view==='table'){
@@ -631,6 +749,10 @@ function renderComponents(){
   } else {
     body.querySelectorAll('.group .ghead').forEach(h=>h.onclick=()=>h.parentElement.classList.toggle('open'));
   }
+  body.querySelectorAll('[data-id]').forEach(el=>el.onclick=ev=>{
+    if(ev.target.closest('a')) return;
+    openDetail(+el.dataset.id);
+  });
 }
 function initComponents(){
   const seg=document.getElementById('compview'); if(!seg) return;
@@ -644,6 +766,117 @@ function initComponents(){
   const kd=document.getElementById('compkind'); kd.value=compState.kind; kd.onchange=()=>{ compState.kind=kd.value; renderComponents(); };
   const at=document.getElementById('compattn'); at.checked=compState.attn; at.onchange=()=>{ compState.attn=at.checked; renderComponents(); };
   renderComponents();
+}
+
+// ---- Assets gallery (icons, logos, flags, illustrations) ----
+function assetsView(){
+  return '<div class="ctoolbar">'+
+      '<input class="search" id="assetsearch" placeholder="Filter assets by name…">'+
+      '<span class="ccount" id="assetcount"></span>'+
+    '</div>'+
+    '<div id="assetgrid" class="agrid"></div>';
+}
+function assetTile(it){
+  const shortName=it.name.replace(/^icon\\//,'');
+  const thumb=it.thumb
+    ? '<div class="athumb"><img loading="lazy" src="'+esc(it.thumb)+'" alt=""></div>'
+    : '<div class="athumb"><span class="cph">'+esc((shortName[0]||'?').toUpperCase())+'</span></div>';
+  return '<button class="atile" data-id="'+it._i+'" data-n="'+esc(it.name.toLowerCase())+'" title="'+esc(it.name)+'">'+
+    thumb+'<span class="aname">'+esc(shortName)+'</span></button>';
+}
+function renderAssets(){
+  const q=assetState.q.toLowerCase();
+  const items=COMP_ASSETS.filter(it=>!q || it.name.toLowerCase().includes(q));
+  const grid=document.getElementById('assetgrid'); if(!grid) return;
+  grid.innerHTML = items.length ? items.map(assetTile).join('') : '<div class="empty">No assets match.</div>';
+  const cnt=document.getElementById('assetcount'); if(cnt) cnt.textContent=items.length+' / '+COMP_ASSETS.length;
+  grid.querySelectorAll('[data-id]').forEach(el=>el.onclick=()=>openDetail(+el.dataset.id));
+}
+function initAssets(){
+  const q=document.getElementById('assetsearch'); if(!q) return;
+  q.value=assetState.q; q.oninput=()=>{ assetState.q=q.value; renderAssets(); };
+  renderAssets();
+}
+
+// ---- Component detail drawer ----
+function detailPanel(it){
+  const pill=(on,label)=>'<span class="hp '+(on?'on':'off')+'">'+label+'</span>';
+  const kindTag = it.kind==='set'
+    ? '<span class="tag set">set · '+it.variants+' var</span>'
+    : '<span class="tag comp">component</span>';
+  const headPills='<div class="cpills">'+kindTag+pill(it.hasDoc,'doc')+pill(it.hasDescription,'desc')+
+    pill(it.hasShowcase,'showcase')+(it.stale?'<span class="hp warn">stale</span>':'')+'</div>';
+
+  let body='<div class="dsec"><h4>Description</h4>'+
+    (it.hasDescription?'<div class="ddesc">'+esc(it.description)+'</div>':'<div class="ddesc none">No Figma description.</div>')+'</div>';
+
+  if(it.kind==='set' && (it.properties||[]).length){
+    body+='<div class="dsec"><h4>Properties</h4><div class="axes">'+
+      it.properties.map(ax=>'<div class="axis"><div class="an">'+esc(ax.axis)+'</div><div class="av">'+
+        ax.values.map(v=>'<span class="achip'+(v===''?' empty':'')+'">'+(v===''?'(empty)':esc(v))+'</span>').join('')+
+      '</div></div>').join('')+'</div></div>';
+  }
+  if(it.kind==='set' && (it.variantNames||[]).length){
+    body+='<div class="dsec"><h4>Variants ('+it.variantNames.length+')</h4><div class="vnames">'+
+      it.variantNames.map(n=>'<span class="vname">'+esc(n)+'</span>').join('')+'</div></div>';
+  }
+  if(it.docContent){
+    body+='<div class="dsec"><h4>Documentation</h4><div class="doc">'+mdDoc(it.docContent)+'</div></div>';
+  }
+  const links=[];
+  if(it.figmaUrl) links.push('<a href="'+esc(it.figmaUrl)+'" target="_blank">Open in Figma ↗</a>');
+  if(it.docUrl) links.push('<a href="'+esc(it.docUrl)+'" target="_blank">Doc on GitHub ↗</a>');
+  if(links.length) body+='<div class="dsec"><h4>Links</h4><div class="dlinks">'+links.join('')+'</div></div>';
+
+  return '<div class="dhead"><button class="dclose" aria-label="Close">×</button>'+
+    '<div class="dpage">'+esc(it.page||'—')+'</div><h2>'+esc(it.name)+'</h2>'+headPills+'</div>'+
+    '<div class="dbody">'+body+'</div>';
+}
+function openDetail(i){
+  const it=COMP_ALL[i]; if(!it) return;
+  const panel=document.getElementById('drawerpanel');
+  panel.innerHTML=detailPanel(it);
+  const dr=document.getElementById('drawer');
+  dr.classList.add('open'); dr.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden'; panel.scrollTop=0;
+  panel.querySelector('.dclose').onclick=closeDetail;
+  document.querySelectorAll('.ctable tbody tr.sel').forEach(r=>r.classList.remove('sel'));
+  const row=document.querySelector('.ctable tbody tr[data-id="'+i+'"]'); if(row) row.classList.add('sel');
+}
+function closeDetail(){
+  const dr=document.getElementById('drawer');
+  dr.classList.remove('open'); dr.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+  document.querySelectorAll('.ctable tbody tr.sel').forEach(r=>r.classList.remove('sel'));
+}
+document.getElementById('drawerback').onclick=closeDetail;
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeDetail(); });
+
+// Minimal Markdown → HTML for the doc preview (headings, lists, tables, bold, inline code).
+function dsplitRow(ln){ return ln.trim().replace(/^\\||\\|$/g,'').split('|').map(s=>s.trim()); }
+function dinline(s){ return esc(s).replace(/\`([^\`]+)\`/g,'<code>$1</code>').replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>'); }
+function mdDoc(md){
+  const lines=String(md).split('\\n'); const out=[]; let i=0; let inList=false;
+  const closeList=()=>{ if(inList){ out.push('</ul>'); inList=false; } };
+  while(i<lines.length){
+    const ln=lines[i];
+    if(/^\\s*\\|/.test(ln) && i+1<lines.length && /^[\\s|:-]*-[\\s|:-]*$/.test(lines[i+1])){
+      closeList();
+      const header=dsplitRow(ln); i+=2; const rows=[];
+      while(i<lines.length && /^\\s*\\|/.test(lines[i])){ rows.push(dsplitRow(lines[i])); i++; }
+      out.push('<table class="dtable"><thead><tr>'+header.map(h=>'<th>'+dinline(h)+'</th>').join('')+
+        '</tr></thead><tbody>'+rows.map(r=>'<tr>'+r.map(c=>'<td>'+dinline(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table>');
+      continue;
+    }
+    if(/^###\\s/.test(ln)){ closeList(); out.push('<h4>'+dinline(ln.replace(/^###\\s/,''))+'</h4>'); i++; continue; }
+    if(/^##\\s/.test(ln)){ closeList(); out.push('<h3>'+dinline(ln.replace(/^##\\s/,''))+'</h3>'); i++; continue; }
+    if(/^#\\s/.test(ln)){ i++; continue; }
+    if(/^[-*]\\s/.test(ln)){ if(!inList){ out.push('<ul>'); inList=true; } out.push('<li>'+dinline(ln.replace(/^[-*]\\s/,''))+'</li>'); i++; continue; }
+    if(!ln.trim()){ closeList(); i++; continue; }
+    closeList(); out.push('<p>'+dinline(ln)+'</p>'); i++;
+  }
+  closeList();
+  return out.join('');
 }
 
 function typography(){
