@@ -1,0 +1,396 @@
+{
+  "generatedAt": "2026-06-03T01:19:03.104Z",
+  "file": {
+    "key": "XVou4XJ4rWbt4oXoSxO7hO",
+    "name": "Transportly UI Kit 2.0",
+    "version": "2360656262327279585",
+    "lastModified": "2026-06-03T00:59:27Z",
+    "pages": [
+      {
+        "id": "146:60786",
+        "name": "Tenders - Shipper"
+      },
+      {
+        "id": "1449:56089",
+        "name": "Tenders - Carrier"
+      },
+      {
+        "id": "5510:144965",
+        "name": "---------"
+      },
+      {
+        "id": "1793:36457",
+        "name": "✉️ E-mail templates"
+      },
+      {
+        "id": "5510:145844",
+        "name": "--------"
+      },
+      {
+        "id": "0:1",
+        "name": "Helper Components"
+      },
+      {
+        "id": "146:15362",
+        "name": "🧩 Assets"
+      },
+      {
+        "id": "6803:72402",
+        "name": "-----------"
+      },
+      {
+        "id": "6983:1246590",
+        "name": "📦 Content Header"
+      },
+      {
+        "id": "8719:63079",
+        "name": "📦 Page"
+      },
+      {
+        "id": "6824:52717",
+        "name": "📦 Content Box"
+      },
+      {
+        "id": "8680:7883",
+        "name": "📦 Form Header"
+      },
+      {
+        "id": "5510:144478",
+        "name": "📦 Page Footer"
+      },
+      {
+        "id": "5934:67523",
+        "name": "📦 Page Header"
+      },
+      {
+        "id": "8719:57832",
+        "name": "------"
+      },
+      {
+        "id": "5746:44198",
+        "name": "⚛️ Alert Dialog"
+      },
+      {
+        "id": "8719:65102",
+        "name": "⚛️ Section Title"
+      },
+      {
+        "id": "5510:140612",
+        "name": "⚛️ Button"
+      },
+      {
+        "id": "8783:67502",
+        "name": "⚛️ Price"
+      },
+      {
+        "id": "5510:138757",
+        "name": "⚛️ Dropdown"
+      },
+      {
+        "id": "5803:42782",
+        "name": "⚛️ Popover"
+      },
+      {
+        "id": "5899:42070",
+        "name": "⚛️ No Data Placeholder"
+      },
+      {
+        "id": "5510:138631",
+        "name": "⚛️ Notification (Alert)"
+      },
+      {
+        "id": "146:14947",
+        "name": "⚛️ Dialog"
+      },
+      {
+        "id": "5510:138818",
+        "name": "⚛️ Tabs"
+      },
+      {
+        "id": "8719:82845",
+        "name": "⚛️ Separator"
+      },
+      {
+        "id": "6277:69151",
+        "name": "⚛️ Tooltip"
+      },
+      {
+        "id": "5510:142308",
+        "name": "⚛️ Input & Form Control"
+      },
+      {
+        "id": "5510:143842",
+        "name": "⚛️ Fileupload"
+      },
+      {
+        "id": "5510:144244",
+        "name": "⚛️ Pagination"
+      },
+      {
+        "id": "5510:138759",
+        "name": "⚛️ Badge"
+      },
+      {
+        "id": "8745:49161",
+        "name": "⚛️ Status"
+      },
+      {
+        "id": "7215:102889",
+        "name": "⚛️ Progress Bar"
+      },
+      {
+        "id": "6824:54251",
+        "name": "⚛️ Item"
+      },
+      {
+        "id": "146:15360",
+        "name": "⚛️ Breadcrumbs"
+      },
+      {
+        "id": "5510:142860",
+        "name": "⚛️ Checkbox, Radio, Switch (Toggle)"
+      },
+      {
+        "id": "5510:145876",
+        "name": "⚛️ Table"
+      },
+      {
+        "id": "6956:1232757",
+        "name": "⚛️ Accordion"
+      },
+      {
+        "id": "5510:143087",
+        "name": "⚛️ Attachment"
+      },
+      {
+        "id": "8680:57271",
+        "name": "⚛️ Step Progress Tabs"
+      },
+      {
+        "id": "5510:143872",
+        "name": "⚛️ Carrier Selection"
+      },
+      {
+        "id": "5510:145845",
+        "name": "⚛️ Location Pointer"
+      },
+      {
+        "id": "6324:59017",
+        "name": "⚛️ Option Cards"
+      },
+      {
+        "id": "6803:75281",
+        "name": "⚛️ Route Entry"
+      },
+      {
+        "id": "6899:71500",
+        "name": "FIgma MCP Frames"
+      },
+      {
+        "id": "8542:48169",
+        "name": "✨ Recreation — Route Waypoints"
+      },
+      {
+        "id": "8559:48169",
+        "name": "✨ Recreation — Cargo Details"
+      },
+      {
+        "id": "8569:48169",
+        "name": "✨ Recreation — Carriers & Options"
+      },
+      {
+        "id": "8591:48169",
+        "name": "✨ Recreation — Route Waypoints (v2 layout-gap)"
+      },
+      {
+        "id": "8594:48169",
+        "name": "✨ Recreation — Waypoints v3 (production)"
+      }
+    ]
+  },
+  "count": 26,
+  "styles": [
+    {
+      "key": "502cdda8948fca79b7ef32a85155111f08392996",
+      "name": "left",
+      "type": "EFFECT",
+      "description": "",
+      "updatedAt": "2025-11-15T23:16:10.641Z"
+    },
+    {
+      "key": "69346c4d379c2c843e15dc353708c977af5655a0",
+      "name": "headline/h1",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.043Z"
+    },
+    {
+      "key": "3365858f67ec0405c4613b63d4f1c363ddfa723f",
+      "name": "Default",
+      "type": "EFFECT",
+      "description": "",
+      "updatedAt": "2026-03-27T08:54:10.440Z"
+    },
+    {
+      "key": "14d7a83ce8c188c0c111db291eb86dc35bd2a980",
+      "name": "lg/lg-regular",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.022Z"
+    },
+    {
+      "key": "117e8b15699fbf765c0882e11c184e449d565c68",
+      "name": "headline/h5",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.379Z"
+    },
+    {
+      "key": "1c8bd0ddfb4d951bf698c7fbf1d83626f8f6b638",
+      "name": "headline/h3",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.392Z"
+    },
+    {
+      "key": "ace2fbff791c55c236c8c8f7cf1bd1974f98aa8e",
+      "name": "lg/lg-semibold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.059Z"
+    },
+    {
+      "key": "c5639a23dd752652e50c5cf32ce2b6a77e6695d5",
+      "name": "lg/lg-bold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.063Z"
+    },
+    {
+      "key": "f521dfca5db7f3c61bca3da007d03fad38a7ced1",
+      "name": "headline/h2",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.075Z"
+    },
+    {
+      "key": "0b5b6e8b18e1bfe2ae314e725825eaf80644afb4",
+      "name": "sm/sm-regular",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.015Z"
+    },
+    {
+      "key": "1c60fc27afa3b02e7d166310d089d3dd50cbf2aa",
+      "name": "xs/xs-extrabold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.387Z"
+    },
+    {
+      "key": "26118434ab3c03bfcd810238aff83e2c769ae877",
+      "name": "body/md-regular",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:28.397Z"
+    },
+    {
+      "key": "2e684a3ebdc4751b446719563dfa435aaae53112",
+      "name": "sm/sm-extrabold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.030Z"
+    },
+    {
+      "key": "d8f4cbd44ad009fe9769c51117fbe997ce768f61",
+      "name": "body/md-bold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.067Z"
+    },
+    {
+      "key": "e9f3fe441bcf7bb6b30dcb1fa79c97ec2787bf45",
+      "name": "sm/sm-semibold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.071Z"
+    },
+    {
+      "key": "db750814e085a97104ecf61696a317ff0d26a078",
+      "name": "xs/xs-semibold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.423Z"
+    },
+    {
+      "key": "573b650402da28692aad778ceb0adf9d5bcad52c",
+      "name": "Special/Display 1",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-10T11:56:13.183Z"
+    },
+    {
+      "key": "512c584806744b7ed479e82adc9a9a6600eebda3",
+      "name": "headline/h4",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.034Z"
+    },
+    {
+      "key": "a1b791985c798df20352df2c0a48edc4c5e39afd",
+      "name": "headline/h6",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:27.050Z"
+    },
+    {
+      "key": "476b29eb3f62b55a8eb0f3fae17f00afb51094da",
+      "name": "lg/lg-extrabold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:28.403Z"
+    },
+    {
+      "key": "5f35dbe232cca9ff56241c2fd080cf031e2f4935",
+      "name": "xs/xs-regular",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.408Z"
+    },
+    {
+      "key": "9512fae5ab8d5e51a4caf2fc95f189dbbbbda106",
+      "name": "sm/sm-bold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.413Z"
+    },
+    {
+      "key": "cfa0e4c2f54a3821a88c9ec08893800e3f2ad109",
+      "name": "xs/xs-bold",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-04-12T01:28:28.418Z"
+    },
+    {
+      "key": "54556b20d8675b68fb01944a08a17ab85a29b2e4",
+      "name": "body/md-semibold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.039Z"
+    },
+    {
+      "key": "a7c34316853cc13d2f1a39bf983682474502f66c",
+      "name": "body/md-extrabold",
+      "type": "TEXT",
+      "description": "Default text style for this project.",
+      "updatedAt": "2026-04-12T01:28:27.054Z"
+    },
+    {
+      "key": "f0089bbc765fb26aaa07ffcd16133292b01187fe",
+      "name": "Special/Label",
+      "type": "TEXT",
+      "description": "",
+      "updatedAt": "2026-05-20T13:23:04.162Z"
+    }
+  ]
+}

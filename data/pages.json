@@ -1,0 +1,351 @@
+{
+  "generatedAt": "2026-06-03T01:19:03.104Z",
+  "design": {
+    "key": "Xol48qmGXL8hIqA42jbHno",
+    "name": "Transportly 4Shipper - Design",
+    "version": "2360624587589312359",
+    "lastModified": "2026-06-02T22:41:24Z",
+    "pages": [
+      {
+        "id": "0:1",
+        "name": "Carrier - Sign in/up flow",
+        "screens": [
+          {
+            "id": "2:12751",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "81:4499",
+            "name": "Email not verified",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:2309",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:2052",
+            "name": "Alert - Session will expire",
+            "type": "FRAME"
+          },
+          {
+            "id": "3:2706",
+            "name": "Session expired",
+            "type": "FRAME"
+          },
+          {
+            "id": "4:830",
+            "name": "Session Expired - Link sent",
+            "type": "FRAME"
+          },
+          {
+            "id": "3:2343",
+            "name": "Toast - Session renewed",
+            "type": "FRAME"
+          },
+          {
+            "id": "32:5364",
+            "name": "Toast - Session renewed",
+            "type": "FRAME"
+          },
+          {
+            "id": "9:2577",
+            "name": "Email template",
+            "type": "FRAME"
+          },
+          {
+            "id": "79:4418",
+            "name": "Page - Session extended",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "241:11173",
+        "name": "---------------",
+        "screens": []
+      },
+      {
+        "id": "451:4081",
+        "name": "SHIPPER ---------",
+        "screens": []
+      },
+      {
+        "id": "249:16864",
+        "name": "⏰ Requests",
+        "screens": [
+          {
+            "id": "290:98518",
+            "name": "Requests",
+            "type": "FRAME"
+          },
+          {
+            "id": "1753:77800",
+            "name": "New Request",
+            "type": "FRAME"
+          },
+          {
+            "id": "808:34729",
+            "name": "Requests/Create New Request/Step 2 - With Cargo Items",
+            "type": "FRAME"
+          },
+          {
+            "id": "951:22824",
+            "name": "Requests/Create New Request/Step 5",
+            "type": "FRAME"
+          },
+          {
+            "id": "1111:36128",
+            "name": "Requests/Create New Request/Step 8",
+            "type": "FRAME"
+          },
+          {
+            "id": "1077:14865",
+            "name": "Requests/Create New Request/Step 6",
+            "type": "FRAME"
+          },
+          {
+            "id": "808:34802",
+            "name": "Waypoints v3 — Recreation",
+            "type": "FRAME"
+          },
+          {
+            "id": "808:34838",
+            "name": "Main Content",
+            "type": "FRAME"
+          },
+          {
+            "id": "808:38010",
+            "name": "Waypoint Card 1",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1111:33742",
+            "name": "Screenshots from app",
+            "type": "SECTION"
+          },
+          {
+            "id": "1173:339026",
+            "name": "New Request/Cargo Item List View",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1626:22967",
+            "name": "_Map Placeholder",
+            "type": "COMPONENT"
+          }
+        ]
+      },
+      {
+        "id": "249:16865",
+        "name": "🚚 Transports",
+        "screens": [
+          {
+            "id": "290:86567",
+            "name": "Transports",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "241:11172",
+        "name": "🗂️ Directory",
+        "screens": [
+          {
+            "id": "250:16866",
+            "name": "Directory",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "250:30727",
+        "name": "📊 Reports",
+        "screens": [
+          {
+            "id": "250:30730",
+            "name": "Reports",
+            "type": "FRAME"
+          },
+          {
+            "id": "455:30027",
+            "name": "Frame 1",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "249:16862",
+        "name": "📦 Tenders",
+        "screens": [
+          {
+            "id": "292:19968",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "292:21305",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "540:25723",
+            "name": "Tender - Bulk selection",
+            "type": "FRAME"
+          },
+          {
+            "id": "799:19375",
+            "name": "Cargo Details — Recreation",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "249:16863",
+        "name": "📑 Contracts",
+        "screens": [
+          {
+            "id": "317:75501",
+            "name": "Contracts",
+            "type": "FRAME"
+          },
+          {
+            "id": "317:85352",
+            "name": "Contracts",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "141:1647",
+        "name": "⚙️ Settings",
+        "screens": [
+          {
+            "id": "222:60091",
+            "name": "Settings",
+            "type": "FRAME"
+          },
+          {
+            "id": "222:30428",
+            "name": "_Workspace/Button",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "345:40744",
+            "name": "Frame 27752",
+            "type": "FRAME"
+          }
+        ]
+      },
+      {
+        "id": "451:28606",
+        "name": "CARRIER ---------",
+        "screens": []
+      },
+      {
+        "id": "1819:217875",
+        "name": "⏰ Requests",
+        "screens": [
+          {
+            "id": "1898:158369",
+            "name": "Frame 3",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1890:52726",
+            "name": "Shipper/Request Detail/Auction Header",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1840:407573",
+            "name": "Price/Auction",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1840:407562",
+            "name": "Bidding Status",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1840:485117",
+            "name": "Header",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138269",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138358",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138444",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138542",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138657",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138735",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138813",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138891",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:138962",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1891:139096",
+            "name": "New request - Waypoints",
+            "type": "FRAME"
+          },
+          {
+            "id": "1895:156776",
+            "name": "Price/Auction/Fee",
+            "type": "COMPONENT"
+          }
+        ]
+      },
+      {
+        "id": "451:28607",
+        "name": "🖥️ Contracts",
+        "screens": [
+          {
+            "id": "451:28608",
+            "name": "Contracts",
+            "type": "FRAME"
+          },
+          {
+            "id": "451:28611",
+            "name": "Contract detail",
+            "type": "FRAME"
+          }
+        ]
+      }
+    ]
+  }
+}
