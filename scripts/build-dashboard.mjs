@@ -12,28 +12,83 @@ function readText(path, fallback) {
   return existsSync(path) ? readFileSync(path, 'utf8') : fallback
 }
 
-// Read every data source the dashboard renders, with safe fallbacks.
+// Turn the flat component list (mostly variants) into meaningful units:
+// component sets (with variant counts) + standalone components, grouped by Figma page.
+function buildComponentsModel(componentsData) {
+  const components = componentsData.components || []
+  const sets = componentsData.componentSets || []
+
+  const variantCount = {}
+  for (const c of components) {
+    if (c.set) variantCount[c.set] = (variantCount[c.set] || 0) + 1
+  }
+  const pageOfSet = {}
+  for (const c of components) {
+    if (c.set && !pageOfSet[c.set] && c.page) pageOfSet[c.set] = c.page
+  }
+
+  const setItems = sets.map((s) => ({
+    kind: 'set',
+    name: s.name,
+    description: s.description,
+    page: pageOfSet[s.name] || null,
+    variants: variantCount[s.name] || 0,
+  }))
+  const standaloneItems = components
+    .filter((c) => !c.set)
+    .map((c) => ({ kind: 'component', name: c.name, description: c.description, page: c.page || null }))
+
+  const items = [...setItems, ...standaloneItems]
+  const groups = {}
+  for (const it of items) {
+    const page = it.page || 'Other'
+    ;(groups[page] ||= []).push(it)
+  }
+  const grouped = Object.entries(groups)
+    .map(([page, list]) => ({
+      page,
+      items: list.sort((a, b) => a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => b.items.length - a.items.length)
+
+  return {
+    raw: components.length,
+    sets: setItems.length,
+    standalone: standaloneItems.length,
+    meaningful: setItems.length + standaloneItems.length,
+    groups: grouped,
+  }
+}
+
 function collect() {
-  const components = readJson(`${DATA_DIR}/components.json`, { components: [], componentSets: [], file: {}, count: 0 })
-  const styles = readJson(`${DATA_DIR}/styles.json`, { styles: [], count: 0 })
+  const componentsData = readJson(`${DATA_DIR}/components.json`, { components: [], componentSets: [], file: {} })
+  const tokens = readJson(`${DATA_DIR}/tokens.json`, { typography: [], shadows: [], colors: [], variables: { available: false } })
   const pages = readJson(`${DATA_DIR}/pages.json`, { design: { pages: [] } })
   const changelog = readText('docs/design-system/changelog.md', '# Design System Changelog\n\n_No changes recorded yet._')
 
+  const comps = buildComponentsModel(componentsData)
   const screensTotal = (pages.design?.pages || []).reduce((sum, p) => sum + (p.screens?.length || 0), 0)
+  const varCount = tokens.variables?.available
+    ? (tokens.variables.collections || []).reduce((n, c) => n + (c.variables?.length || 0), 0)
+    : 0
 
   return {
-    generatedAt: components.generatedAt || new Date().toISOString(),
-    uiKit: components.file || {},
+    generatedAt: componentsData.generatedAt || new Date().toISOString(),
+    uiKit: componentsData.file || {},
     counts: {
-      components: components.count || components.components?.length || 0,
-      componentSets: components.setCount || components.componentSets?.length || 0,
-      styles: styles.count || styles.styles?.length || 0,
+      meaningful: comps.meaningful,
+      sets: comps.sets,
+      standalone: comps.standalone,
+      variants: comps.raw,
+      typography: tokens.typography.length,
+      shadows: tokens.shadows.length,
+      colors: tokens.colors.length,
+      variables: varCount,
       pages: pages.design?.pages?.length || 0,
       screens: screensTotal,
     },
-    components: components.components || [],
-    componentSets: components.componentSets || [],
-    styles: styles.styles || [],
+    components: comps,
+    tokens,
     design: pages.design || { pages: [] },
     changelog,
   }
@@ -46,104 +101,295 @@ function render(model) {
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>4Shipper Design System</title>
+<title>4Shipper · Design System</title>
 <style>
-  :root { --bg:#0e1116; --card:#171c24; --line:#252c38; --fg:#e6e9ef; --muted:#8b96a8; --accent:#5b8cff; }
+  :root {
+    --bg:#0b0e14; --panel:#121722; --panel2:#0f141d; --line:#222a38; --line2:#2c3647;
+    --fg:#e8ecf3; --muted:#8a95a8; --faint:#5d6678; --accent:#6ea8fe; --accent2:#caa9ff;
+    --ok:#54d18c; --warn:#f0b860; --radius:12px;
+    --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,sans-serif;
+  }
   * { box-sizing:border-box; }
-  body { margin:0; font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; background:var(--bg); color:var(--fg); }
-  header { padding:24px 28px; border-bottom:1px solid var(--line); }
-  header h1 { margin:0; font-size:18px; }
-  header .meta { color:var(--muted); font-size:12px; margin-top:4px; }
-  .wrap { padding:24px 28px; max-width:1100px; margin:0 auto; }
-  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:24px; }
-  .stat { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; }
-  .stat .n { font-size:26px; font-weight:600; }
-  .stat .l { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
-  nav { display:flex; gap:4px; border-bottom:1px solid var(--line); margin-bottom:16px; flex-wrap:wrap; }
-  nav button { background:none; border:none; color:var(--muted); padding:10px 14px; cursor:pointer; font-size:13px; border-bottom:2px solid transparent; }
-  nav button.active { color:var(--fg); border-bottom-color:var(--accent); }
-  table { width:100%; border-collapse:collapse; }
-  th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
-  th { color:var(--muted); font-weight:500; font-size:12px; text-transform:uppercase; letter-spacing:.04em; }
-  td.desc { color:var(--muted); }
-  .pill { display:inline-block; background:var(--line); border-radius:6px; padding:1px 7px; font-size:11px; color:var(--muted); }
-  .search { width:100%; padding:9px 12px; background:var(--card); border:1px solid var(--line); border-radius:8px; color:var(--fg); margin-bottom:12px; }
-  .page-group { margin-bottom:18px; }
-  .page-group h3 { margin:0 0 6px; font-size:14px; }
-  .page-group .scr { color:var(--muted); }
-  pre { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:16px; overflow:auto; white-space:pre-wrap; }
-  .hidden { display:none; }
-  .empty { color:var(--muted); padding:20px 0; }
+  html,body { margin:0; height:100%; }
+  body { background:var(--bg); color:var(--fg); font:14px/1.55 var(--sans); display:flex; min-height:100vh; }
   a { color:var(--accent); }
+  ::-webkit-scrollbar { width:10px; height:10px; }
+  ::-webkit-scrollbar-thumb { background:var(--line2); border-radius:8px; }
+
+  /* Sidebar */
+  aside { width:248px; flex:0 0 248px; background:var(--panel2); border-right:1px solid var(--line);
+    position:sticky; top:0; height:100vh; padding:22px 16px; display:flex; flex-direction:column; gap:4px; }
+  .brand { display:flex; align-items:center; gap:10px; padding:0 8px 18px; }
+  .brand .dot { width:26px; height:26px; border-radius:7px; background:linear-gradient(135deg,var(--accent),var(--accent2)); }
+  .brand b { font-size:14px; letter-spacing:.2px; }
+  .brand span { display:block; color:var(--faint); font-size:11px; font-weight:400; }
+  nav.side { display:flex; flex-direction:column; gap:2px; }
+  nav.side button { all:unset; cursor:pointer; display:flex; align-items:center; justify-content:space-between;
+    padding:9px 12px; border-radius:9px; color:var(--muted); font-size:13px; }
+  nav.side button:hover { background:#161c28; color:var(--fg); }
+  nav.side button.active { background:#18202e; color:var(--fg); box-shadow:inset 2px 0 0 var(--accent); }
+  nav.side .cnt { font:11px/1 var(--mono); color:var(--faint); background:#1a2230; padding:3px 7px; border-radius:20px; }
+  nav.side button.active .cnt { color:var(--accent); }
+  .side-foot { margin-top:auto; padding:12px 10px 0; color:var(--faint); font-size:11px; border-top:1px solid var(--line); }
+
+  /* Main */
+  main { flex:1; min-width:0; padding:28px 34px 60px; max-width:1180px; }
+  .topline { color:var(--faint); font:12px/1.4 var(--mono); margin-bottom:6px; }
+  h1.view-title { font-size:22px; margin:0 0 2px; letter-spacing:-.2px; }
+  .sub { color:var(--muted); margin:0 0 22px; font-size:13px; }
+
+  /* Stat cards */
+  .stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-bottom:26px; }
+  .stat { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; }
+  .stat .n { font:600 28px/1 var(--sans); letter-spacing:-.5px; }
+  .stat .l { color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.06em; margin-top:7px; }
+  .stat .hint { color:var(--faint); font-size:11px; margin-top:3px; }
+
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:18px 20px; margin-bottom:14px; }
+  .card h3 { margin:0 0 12px; font-size:13px; text-transform:uppercase; letter-spacing:.06em; color:var(--muted); }
+
+  /* Search */
+  .search { width:100%; padding:11px 14px; background:var(--panel); border:1px solid var(--line2); border-radius:10px;
+    color:var(--fg); margin-bottom:16px; font-size:13px; }
+  .search:focus { outline:none; border-color:var(--accent); }
+
+  /* Collapsible groups */
+  .group { border:1px solid var(--line); border-radius:var(--radius); margin-bottom:10px; overflow:hidden; background:var(--panel); }
+  .group > .ghead { all:unset; cursor:pointer; display:flex; align-items:center; gap:10px; width:100%;
+    padding:13px 16px; box-sizing:border-box; }
+  .group > .ghead:hover { background:#161c28; }
+  .group .chev { color:var(--faint); transition:transform .15s; font-size:11px; }
+  .group.open .chev { transform:rotate(90deg); }
+  .group .gname { font-weight:600; font-size:13px; }
+  .group .gcount { margin-left:auto; font:11px/1 var(--mono); color:var(--faint); }
+  .group .gbody { display:none; border-top:1px solid var(--line); padding:6px; }
+  .group.open .gbody { display:block; }
+
+  .row { display:flex; align-items:center; gap:12px; padding:9px 11px; border-radius:8px; }
+  .row:hover { background:#141b27; }
+  .row .nm { font-size:13px; }
+  .row .ds { color:var(--faint); font-size:12px; margin-left:6px; }
+  .row .tag { font:10px/1 var(--mono); padding:3px 7px; border-radius:6px; margin-left:auto; white-space:nowrap; }
+  .tag.set { background:#1c2740; color:var(--accent); }
+  .tag.comp { background:#1d2530; color:var(--muted); }
+  .tag.scr { background:#16241c; color:var(--ok); }
+
+  /* Typography tokens */
+  .typ { display:flex; align-items:baseline; justify-content:space-between; gap:20px; padding:16px 4px; border-bottom:1px solid var(--line); }
+  .typ:last-child { border-bottom:none; }
+  .typ .prev { min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:var(--fg); }
+  .typ .meta { flex:0 0 auto; text-align:right; }
+  .typ .meta .tn { font:12px/1.3 var(--mono); color:var(--accent); }
+  .typ .meta .tv { font:11px/1.4 var(--mono); color:var(--faint); }
+
+  /* Shadow tokens */
+  .shadows { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:16px; }
+  .shadow-card { background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:20px; }
+  .shadow-swatch { height:88px; border-radius:10px; background:#1a2230; margin-bottom:14px; }
+  .shadow-card .tn { font:12px/1.3 var(--mono); color:var(--accent); }
+  .shadow-card .tv { font:10px/1.4 var(--mono); color:var(--faint); margin-top:6px; word-break:break-all; }
+
+  /* Colors */
+  .colors { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:14px; }
+  .swatch { border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  .swatch .fill { height:64px; }
+  .swatch .info { padding:9px 11px; }
+  .swatch .tn { font:12px/1.3 var(--sans); }
+  .swatch .tv { font:11px/1.3 var(--mono); color:var(--faint); }
+
+  /* Variables / empty states */
+  .empty { background:var(--panel); border:1px dashed var(--line2); border-radius:var(--radius); padding:26px; color:var(--muted); }
+  .empty h4 { margin:0 0 8px; color:var(--fg); font-size:15px; }
+  .empty ol { margin:12px 0 0; padding-left:20px; }
+  .empty code { font:12px/1.5 var(--mono); background:#0c1019; padding:2px 6px; border-radius:5px; color:var(--accent2); }
+  .badge-soft { display:inline-block; font:10px/1 var(--mono); color:var(--warn); background:#241d10; padding:4px 8px; border-radius:6px; margin-bottom:14px; }
+
+  /* Changelog */
+  .changelog h2 { font-size:15px; margin:22px 0 8px; }
+  .changelog strong { color:var(--fg); }
+  .changelog ul { margin:6px 0 14px; padding-left:18px; color:var(--muted); }
+  .changelog li { margin:2px 0; }
+
+  .pill { display:inline-block; background:var(--line); border-radius:6px; padding:2px 8px; font:11px/1.4 var(--mono); color:var(--muted); }
+  .muted { color:var(--muted); } .faint { color:var(--faint); }
+  @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
 </style>
 </head>
 <body>
-<header>
-  <h1>4Shipper Design System</h1>
-  <div class="meta" id="meta"></div>
-</header>
-<div class="wrap">
-  <div class="stats" id="stats"></div>
-  <nav id="nav"></nav>
+<aside>
+  <div class="brand"><div class="dot"></div><div><b>4Shipper DS</b><span id="brandsub">design system</span></div></div>
+  <nav class="side" id="nav"></nav>
+  <div class="side-foot" id="foot"></div>
+</aside>
+<main>
+  <div class="topline" id="topline"></div>
+  <h1 class="view-title" id="vtitle"></h1>
+  <p class="sub" id="vsub"></p>
   <div id="view"></div>
-</div>
+</main>
 <script id="model" type="application/json">${json}</script>
 <script>
 const M = JSON.parse(document.getElementById('model').textContent);
 const esc = (s) => String(s ?? '').replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-document.getElementById('meta').textContent =
-  'UI Kit: ' + (M.uiKit.name || '—') + ' · v' + (M.uiKit.version || '?') + ' · synced ' + new Date(M.generatedAt).toLocaleString();
 
-const stats = [
-  ['Components', M.counts.components], ['Component sets', M.counts.componentSets],
-  ['Styles', M.counts.styles], ['Design pages', M.counts.pages], ['Screens', M.counts.screens],
+document.getElementById('brandsub').textContent = (M.uiKit.name || 'design system');
+document.getElementById('topline').textContent =
+  (M.uiKit.name || 'UI Kit') + '  ·  v' + (M.uiKit.version || '?');
+document.getElementById('foot').innerHTML =
+  'Synced ' + new Date(M.generatedAt).toLocaleString() + '<br>via Figma REST API';
+
+// ---- Sections ----
+const SECTIONS = [
+  { id:'overview',   title:'Overview',   sub:'Current state of the 4Shipper design system.', count:null, render:overview },
+  { id:'components', title:'Components',  sub:M.components.meaningful+' components ('+M.components.sets+' sets · '+M.components.standalone+' standalone), grouped by Figma page.', count:M.counts.meaningful, render:components },
+  { id:'typography', title:'Typography',  sub:M.counts.typography+' text styles with live previews.', count:M.counts.typography, render:typography },
+  { id:'shadows',    title:'Shadows',     sub:M.counts.shadows+' effect styles.', count:M.counts.shadows, render:shadows },
+  { id:'colors',     title:'Colors',      sub:'Color styles published in the library.', count:M.counts.colors, render:colors },
+  { id:'variables',  title:'Variables',   sub:'Figma variables (tokens with modes).', count:M.counts.variables, render:variables },
+  { id:'pages',      title:'Pages',       sub:M.counts.pages+' pages · '+M.counts.screens+' screens in the design file.', count:M.counts.pages, render:pages },
+  { id:'changelog',  title:'Changelog',   sub:'Recorded library changes over time.', count:null, render:changelog },
 ];
-document.getElementById('stats').innerHTML = stats.map(([l,n]) =>
-  '<div class="stat"><div class="n">'+n+'</div><div class="l">'+l+'</div></div>').join('');
 
-function compTable(rows) {
-  if (!rows.length) return '<div class="empty">Nothing here yet. Run <code>npm run sync</code>.</div>';
-  return '<input class="search" placeholder="Filter…" oninput="filterRows(this)">' +
-    '<table><thead><tr><th>Name</th><th>Set</th><th>Description</th></tr></thead><tbody>' +
-    rows.map(c => '<tr><td>'+esc(c.name)+'</td><td>'+(c.set?'<span class=pill>'+esc(c.set)+'</span>':'')+
-    '</td><td class="desc">'+esc(c.description)+'</td></tr>').join('') + '</tbody></table>';
-}
-function styleTable(rows) {
-  if (!rows.length) return '<div class="empty">No styles found.</div>';
-  return '<input class="search" placeholder="Filter…" oninput="filterRows(this)">' +
-    '<table><thead><tr><th>Name</th><th>Type</th><th>Description</th></tr></thead><tbody>' +
-    rows.map(s => '<tr><td>'+esc(s.name)+'</td><td><span class=pill>'+esc(s.type)+'</span></td>'+
-    '<td class="desc">'+esc(s.description)+'</td></tr>').join('') + '</tbody></table>';
-}
-function pagesView(design) {
-  if (!design.pages.length) return '<div class="empty">No pages found.</div>';
-  return design.pages.map(p => '<div class="page-group"><h3>'+esc(p.name)+
-    ' <span class="scr">('+(p.screens?.length||0)+' screens)</span></h3>' +
-    (p.screens?.length ? '<div class="scr">'+p.screens.map(s=>esc(s.name)).join(' · ')+'</div>' : '') +
-    '</div>').join('');
-}
-function changelogView(md) { return '<pre>'+esc(md)+'</pre>'; }
+document.getElementById('nav').innerHTML = SECTIONS.map((s,i) =>
+  '<button data-i="'+i+'" class="'+(i===0?'active':'')+'">'+esc(s.title)+
+  (s.count!=null?'<span class="cnt">'+s.count+'</span>':'')+'</button>').join('');
+document.querySelectorAll('#nav button').forEach(b => b.onclick = () => show(+b.dataset.i));
 
-const TABS = {
-  'Components': () => compTable(M.components),
-  'Component sets': () => compTable(M.componentSets),
-  'Styles': () => styleTable(M.styles),
-  'Pages': () => pagesView(M.design),
-  'Changelog': () => changelogView(M.changelog),
-};
-const names = Object.keys(TABS);
-document.getElementById('nav').innerHTML = names.map((n,i) =>
-  '<button class="'+(i===0?'active':'')+'" onclick="showTab('+i+')">'+n+'</button>').join('');
-function showTab(i) {
-  [...document.querySelectorAll('nav button')].forEach((b,j)=>b.classList.toggle('active',i===j));
-  document.getElementById('view').innerHTML = TABS[names[i]]();
+function show(i){
+  document.querySelectorAll('#nav button').forEach((b,j)=>b.classList.toggle('active',i===j));
+  const s = SECTIONS[i];
+  document.getElementById('vtitle').textContent = s.title;
+  document.getElementById('vsub').textContent = s.sub;
+  document.getElementById('view').innerHTML = s.render();
+  bindGroups();
+  if (location.hash !== '#'+s.id) history.replaceState(null,'','#'+s.id);
 }
-function filterRows(input) {
-  const q = input.value.toLowerCase();
-  input.parentElement.querySelectorAll('tbody tr').forEach(tr =>
-    tr.classList.toggle('hidden', !tr.textContent.toLowerCase().includes(q)));
+
+function statCards(list){
+  return '<div class="stats">'+list.map(([n,l,h])=>
+    '<div class="stat"><div class="n">'+n+'</div><div class="l">'+esc(l)+'</div>'+
+    (h?'<div class="hint">'+esc(h)+'</div>':'')+'</div>').join('')+'</div>';
 }
-showTab(0);
+
+function overview(){
+  const c=M.counts;
+  let html = statCards([
+    [c.meaningful,'Components', c.sets+' sets · '+c.standalone+' standalone'],
+    [c.variants,'Total variants','published in library'],
+    [c.typography+c.shadows+c.colors,'Style tokens', c.typography+' type · '+c.shadows+' shadow'],
+    [c.variables||'—','Variables', c.variables?'':'Enterprise-gated'],
+    [c.pages,'Design pages', c.screens+' screens'],
+  ]);
+  // latest changelog entry preview
+  const m = M.changelog.match(/##\\s.+?(?=\\n##\\s|$)/s);
+  html += '<div class="card"><h3>Latest change</h3>'+(m?mdToHtml(m[0]):'<span class="muted">No changes recorded yet.</span>')+'</div>';
+  return html;
+}
+
+function components(){
+  let html = '<input class="search" id="csearch" placeholder="Filter components…">';
+  html += M.components.groups.map((g,gi) => groupBlock(g.page, g.items.length, gi<2,
+    g.items.map(it =>
+      '<div class="row citem" data-n="'+esc((it.name+' '+(it.description||'')).toLowerCase())+'">'+
+      '<span class="nm">'+esc(it.name)+'</span>'+
+      (it.description?'<span class="ds">'+esc(it.description)+'</span>':'')+
+      (it.kind==='set'?'<span class="tag set">'+it.variants+' variants</span>':'<span class="tag comp">component</span>')+
+      '</div>').join('')
+  )).join('');
+  return html;
+}
+
+function typography(){
+  if(!M.tokens.typography.length) return '<div class="empty">No text styles found.</div>';
+  return '<div class="card">'+M.tokens.typography.map(t=>{
+    const px=(t.fontSize||16);
+    const style='font-family:'+(t.fontFamily?("'"+t.fontFamily+"',"):"")+'sans-serif;font-weight:'+(t.fontWeight||400)+
+      ';font-size:'+Math.min(px,30)+'px;line-height:1.2;'+(t.textCase==='UPPER'?'text-transform:uppercase;':'');
+    return '<div class="typ"><div class="prev" style="'+style+'">'+esc(t.name)+'</div>'+
+      '<div class="meta"><div class="tn">'+esc(t.name)+'</div>'+
+      '<div class="tv">'+esc(t.fontFamily||'?')+' · '+(t.fontWeight||'')+' · '+(t.fontSize||'?')+'/'+(t.lineHeight||'?')+'</div></div></div>';
+  }).join('')+'</div>';
+}
+
+function shadows(){
+  if(!M.tokens.shadows.length) return '<div class="empty">No effect styles found.</div>';
+  return '<div class="shadows">'+M.tokens.shadows.map(s=>
+    '<div class="shadow-card"><div class="shadow-swatch" style="box-shadow:'+esc(s.css||'none')+'"></div>'+
+    '<div class="tn">'+esc(s.name)+'</div><div class="tv">'+esc(s.css||'—')+'</div></div>').join('')+'</div>';
+}
+
+function colors(){
+  if(!M.tokens.colors.length) return '<div class="empty"><h4>No color styles in the library</h4>'+
+    'Colors in this UI Kit are defined as <strong>Figma Variables</strong>, not paint styles. See the <strong>Variables</strong> section.</div>';
+  return '<div class="colors">'+M.tokens.colors.map(c=>
+    '<div class="swatch"><div class="fill" style="background:'+esc(c.hex||'#000')+'"></div>'+
+    '<div class="info"><div class="tn">'+esc(c.name)+'</div><div class="tv">'+esc(c.hex||c.rgba||'')+'</div></div></div>').join('')+'</div>';
+}
+
+function variables(){
+  const v=M.tokens.variables;
+  if(v && v.available){
+    return v.collections.map(col=>groupBlock(col.name+'  ·  '+col.modes.map(m=>m.name).join(' / '), col.variables.length, true,
+      col.variables.map(vr=>'<div class="row"><span class="nm">'+esc(vr.name)+'</span><span class="tag comp">'+esc(vr.type)+'</span></div>').join('')
+    )).join('');
+  }
+  return '<div class="empty"><span class="badge-soft">UNAVAILABLE ON CURRENT PLAN</span>'+
+    '<h4>Variables aren\\'t exposed by the REST API here</h4>'+
+    '<p class="muted">'+esc(v?.reason||'The Figma Variables REST endpoint requires an Enterprise plan.')+'</p>'+
+    '<p class="muted">Two ways to populate this section:</p>'+
+    '<ol><li><strong>Enterprise plan</strong> → variables sync automatically with <code>npm run sync</code>.</li>'+
+    '<li><strong>One-time manual export</strong> → in Figma desktop, select a frame in the UI Kit and use the Figma MCP <code>get_variable_defs</code>, then drop the result into <code>data/variables.json</code>.</li></ol>'+
+    '<p class="faint" style="margin-top:14px">Meanwhile, typography and shadow tokens are live in their sections.</p></div>';
+}
+
+function pages(){
+  if(!M.design.pages.length) return '<div class="empty">No pages found.</div>';
+  let html = '<input class="search" id="psearch" placeholder="Filter screens…">';
+  html += M.design.pages.map((p,i)=>groupBlock(p.name, (p.screens||[]).length, false,
+    (p.screens||[]).map(s=>'<div class="row sitem" data-n="'+esc(s.name.toLowerCase())+'"><span class="nm">'+esc(s.name)+'</span><span class="tag scr">'+esc(s.type)+'</span></div>').join('')
+      || '<div class="row faint">No top-level frames.</div>'
+  )).join('');
+  return html;
+}
+
+function changelog(){ return '<div class="changelog card">'+mdToHtml(M.changelog)+'</div>'; }
+
+// ---- helpers ----
+function groupBlock(name, count, open, bodyHtml){
+  return '<div class="group'+(open?' open':'')+'"><button class="ghead"><span class="chev">▶</span>'+
+    '<span class="gname">'+esc(name)+'</span><span class="gcount">'+count+'</span></button>'+
+    '<div class="gbody">'+bodyHtml+'</div></div>';
+}
+function bindGroups(){
+  document.querySelectorAll('.group .ghead').forEach(h=> h.onclick=()=>h.parentElement.classList.toggle('open'));
+  const cs=document.getElementById('csearch'); if(cs) cs.oninput=()=>filter(cs,'.citem');
+  const ps=document.getElementById('psearch'); if(ps) ps.oninput=()=>filter(ps,'.sitem');
+}
+function filter(input, sel){
+  const q=input.value.toLowerCase();
+  document.querySelectorAll('.group').forEach(g=>{
+    let any=false;
+    g.querySelectorAll(sel).forEach(r=>{ const hit=r.dataset.n.includes(q); r.style.display=hit?'':'none'; if(hit)any=true; });
+    if(g.querySelector(sel)){ g.style.display=any?'':'none'; if(q&&any) g.classList.add('open'); }
+  });
+}
+function mdToHtml(md){
+  const lines=md.split('\\n'); let out=[]; let inList=false;
+  for(let ln of lines){
+    if(/^##\\s/.test(ln)){ if(inList){out.push('</ul>');inList=false;} out.push('<h2>'+esc(ln.replace(/^##\\s/,''))+'</h2>'); }
+    else if(/^#\\s/.test(ln)){ /* skip top title */ }
+    else if(/^[-*]\\s/.test(ln)){ if(!inList){out.push('<ul>');inList=true;} out.push('<li>'+inline(ln.replace(/^[-*]\\s/,''))+'</li>'); }
+    else { if(inList){out.push('</ul>');inList=false;} if(ln.trim()) out.push('<p class="muted">'+inline(ln)+'</p>'); }
+  }
+  if(inList)out.push('</ul>');
+  return out.join('');
+}
+function inline(s){ return esc(s).replace(/\\*\\*(.+?)\\*\\*/g,'<strong>$1</strong>'); }
+
+// init from hash
+const start = SECTIONS.findIndex(s=>'#'+s.id===location.hash);
+show(start>=0?start:0);
 </script>
 </body>
 </html>
@@ -152,8 +398,7 @@ showTab(0);
 
 export function buildDashboard() {
   mkdirSync(OUT_DIR, { recursive: true })
-  const html = render(collect())
-  writeFileSync(`${OUT_DIR}/index.html`, html)
+  writeFileSync(`${OUT_DIR}/index.html`, render(collect()))
   return `${OUT_DIR}/index.html`
 }
 

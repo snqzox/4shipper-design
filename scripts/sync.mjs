@@ -1,4 +1,5 @@
 import { pullAll } from './pull.mjs'
+import { buildTokens } from './tokens.mjs'
 import { buildSnapshot, readLatest, saveSnapshot } from './snapshot.mjs'
 import { diffSnapshots, hasChanges, writeChangelog } from './diff.mjs'
 import { buildDashboard } from './build-dashboard.mjs'
@@ -8,6 +9,7 @@ import { buildDashboard } from './build-dashboard.mjs'
 async function main() {
   console.log('→ Pulling current state from Figma…')
   await pullAll()
+  buildTokens()
 
   const previous = readLatest()
   const current = buildSnapshot()

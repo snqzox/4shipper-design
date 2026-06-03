@@ -35,6 +35,7 @@ async function publishedLibrary(key) {
       description: c.description || '',
       updatedAt: c.updated_at,
       set: c.containing_frame?.containingStateGroup?.name || null,
+      page: c.containing_frame?.pageName || null,
     })),
     componentSets: (sets.meta?.component_sets || []).map((s) => ({
       key: s.key,
@@ -46,11 +47,46 @@ async function publishedLibrary(key) {
     styles: (styles.meta?.styles || []).map((s) => ({
       key: s.key,
       name: s.name,
+      nodeId: s.node_id,
       type: s.style_type,
       description: s.description || '',
       updatedAt: s.updated_at,
     })),
   }
+}
+
+// Enrich each style with its real value by reading the underlying node.
+// TEXT → typography props, EFFECT → shadow list, FILL → color/gradient.
+async function fetchStyleValues(key, styles) {
+  const ids = styles.map((s) => s.nodeId).filter(Boolean)
+  if (!ids.length) return styles
+  const data = await figmaGet(`/v1/files/${key}/nodes?ids=${ids.join(',')}`)
+  const nodes = data.nodes || {}
+
+  const valueFor = (style) => {
+    const doc = nodes[style.nodeId]?.document
+    if (!doc) return null
+    if (style.type === 'TEXT' && doc.style) {
+      const t = doc.style
+      return {
+        fontFamily: t.fontFamily,
+        fontWeight: t.fontWeight,
+        fontSize: t.fontSize,
+        lineHeight: t.lineHeightPx ?? null,
+        letterSpacing: t.letterSpacing ?? 0,
+        textCase: t.textCase || 'ORIGINAL',
+      }
+    }
+    if (style.type === 'EFFECT') {
+      return { effects: (doc.effects || []).filter((e) => e.visible !== false) }
+    }
+    if (style.type === 'FILL') {
+      return { fills: doc.fills || [] }
+    }
+    return null
+  }
+
+  return styles.map((s) => ({ ...s, value: valueFor(s) }))
 }
 
 // depth=2 gives pages + their direct frame children (the screens), metadata only.
@@ -72,6 +108,7 @@ export async function pullAll() {
 
   const uiKitMeta = await fileMeta(FILES.uiKit.key)
   const library = await publishedLibrary(FILES.uiKit.key)
+  const styles = await fetchStyleValues(FILES.uiKit.key, library.styles)
   const variables = await figmaGetOptional(`/v1/files/${FILES.uiKit.key}/variables/local`)
   const design = await designScreens(FILES.design.key)
 
@@ -86,13 +123,13 @@ export async function pullAll() {
   writeJson('styles.json', {
     generatedAt,
     file: uiKitMeta,
-    count: library.styles.length,
-    styles: library.styles,
+    count: styles.length,
+    styles,
   })
   writeJson('variables.json', { generatedAt, file: uiKitMeta, raw: variables })
   writeJson('pages.json', { generatedAt, design })
 
-  return { uiKitMeta, library, design, generatedAt }
+  return { uiKitMeta, library: { ...library, styles }, design, generatedAt }
 }
 
 const isMain = import.meta.url === `file://${process.argv[1]}`

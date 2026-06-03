@@ -17,8 +17,8 @@ the thinking and **scripts doing the mechanical work** to save tokens.
 
 ## Layout
 ```
-scripts/        Node scripts (Figma REST API) — pull, snapshot, diff, dashboard, sync
-data/           Versioned extracted state (components/styles/pages JSON + snapshots)
+scripts/        Node scripts (Figma REST API) — pull, tokens, snapshot, diff, dashboard, sync, serve
+data/           Versioned extracted state (components/styles/tokens/pages JSON + snapshots)
 docs/design-system/   Documentation: components/, foundations/, guidelines/, changelog.md
 dashboard/      Generated static dashboard (index.html) → deployed to GitHub Pages
 .claude/agents/ design-system-manager, ds-component-describer, designer
@@ -31,9 +31,11 @@ platform-overview.md / platform-structure.md   Product context
 | Command | What it does |
 |---|---|
 | `npm run sync` | Pull from Figma → diff vs last snapshot → update changelog → rebuild dashboard. The main command. |
-| `npm run pull` | Just refresh `data/*.json` from Figma. |
+| `npm run pull` | Just refresh `data/*.json` from Figma (components, styles+values, pages). |
+| `npm run tokens` | Derive `data/tokens.json` (typography, shadows, colors, variables) from styles. |
 | `npm run snapshot` | Save a fingerprint snapshot of current data. |
 | `npm run dashboard` | Rebuild `dashboard/index.html` from `data/`. |
+| `npm run serve` | Local static preview of the dashboard at http://localhost:4178. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T01:19:03.104Z",
+  "generatedAt": "2026-06-03T01:34:42.813Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
@@ -213,184 +213,463 @@
     {
       "key": "502cdda8948fca79b7ef32a85155111f08392996",
       "name": "left",
+      "nodeId": "89:58453",
       "type": "EFFECT",
       "description": "",
-      "updatedAt": "2025-11-15T23:16:10.641Z"
+      "updatedAt": "2025-11-15T23:16:10.641Z",
+      "value": {
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "color": {
+              "r": 0.7980769276618958,
+              "g": 0.13429178297519684,
+              "b": 0.4993736445903778,
+              "a": 1
+            },
+            "blendMode": "NORMAL",
+            "offset": {
+              "x": -2,
+              "y": 0
+            },
+            "radius": 0,
+            "showShadowBehindNode": false
+          }
+        ]
+      }
     },
     {
       "key": "69346c4d379c2c843e15dc353708c977af5655a0",
       "name": "headline/h1",
+      "nodeId": "7:73",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.043Z"
+      "updatedAt": "2026-04-12T01:28:27.043Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 28,
+        "lineHeight": 32,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "3365858f67ec0405c4613b63d4f1c363ddfa723f",
       "name": "Default",
+      "nodeId": "114:15087",
       "type": "EFFECT",
       "description": "",
-      "updatedAt": "2026-03-27T08:54:10.440Z"
+      "updatedAt": "2026-03-27T08:54:10.440Z",
+      "value": {
+        "effects": [
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "color": {
+              "r": 0.03921568766236305,
+              "g": 0.0470588244497776,
+              "b": 0.07058823853731155,
+              "a": 0.11999999731779099
+            },
+            "blendMode": "NORMAL",
+            "offset": {
+              "x": 0,
+              "y": 2
+            },
+            "radius": 6,
+            "spread": -2,
+            "showShadowBehindNode": true
+          },
+          {
+            "type": "DROP_SHADOW",
+            "visible": true,
+            "color": {
+              "r": 0.038460902869701385,
+              "g": 0.04726683720946312,
+              "b": 0.07016225904226303,
+              "a": 0.1599999964237213
+            },
+            "blendMode": "NORMAL",
+            "offset": {
+              "x": 0,
+              "y": 12
+            },
+            "radius": 32,
+            "spread": -16,
+            "showShadowBehindNode": true
+          }
+        ]
+      }
     },
     {
       "key": "14d7a83ce8c188c0c111db291eb86dc35bd2a980",
       "name": "lg/lg-regular",
+      "nodeId": "102:21582",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.022Z"
+      "updatedAt": "2026-04-12T01:28:27.022Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 400,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "117e8b15699fbf765c0882e11c184e449d565c68",
       "name": "headline/h5",
+      "nodeId": "102:22166",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.379Z"
+      "updatedAt": "2026-04-12T01:28:28.379Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 14,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "1c8bd0ddfb4d951bf698c7fbf1d83626f8f6b638",
       "name": "headline/h3",
+      "nodeId": "102:22165",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.392Z"
+      "updatedAt": "2026-04-12T01:28:28.392Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 19,
+        "lineHeight": 28,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "ace2fbff791c55c236c8c8f7cf1bd1974f98aa8e",
       "name": "lg/lg-semibold",
+      "nodeId": "102:21579",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.059Z"
+      "updatedAt": "2026-04-12T01:28:27.059Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 600,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "c5639a23dd752652e50c5cf32ce2b6a77e6695d5",
       "name": "lg/lg-bold",
+      "nodeId": "102:21580",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.063Z"
+      "updatedAt": "2026-04-12T01:28:27.063Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "f521dfca5db7f3c61bca3da007d03fad38a7ced1",
       "name": "headline/h2",
+      "nodeId": "102:22164",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.075Z"
+      "updatedAt": "2026-04-12T01:28:27.075Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 23,
+        "lineHeight": 30,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "0b5b6e8b18e1bfe2ae314e725825eaf80644afb4",
       "name": "sm/sm-regular",
+      "nodeId": "26:1405",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.015Z"
+      "updatedAt": "2026-04-12T01:28:27.015Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 400,
+        "fontSize": 13,
+        "lineHeight": 18,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "1c60fc27afa3b02e7d166310d089d3dd50cbf2aa",
       "name": "xs/xs-extrabold",
+      "nodeId": "109:11201",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.387Z"
+      "updatedAt": "2026-04-12T01:28:28.387Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 12,
+        "lineHeight": 17,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "26118434ab3c03bfcd810238aff83e2c769ae877",
       "name": "body/md-regular",
+      "nodeId": "7:65",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:28.397Z"
+      "updatedAt": "2026-04-12T01:28:28.397Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 400,
+        "fontSize": 14,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "2e684a3ebdc4751b446719563dfa435aaae53112",
       "name": "sm/sm-extrabold",
+      "nodeId": "26:1406",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.030Z"
+      "updatedAt": "2026-04-12T01:28:27.030Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 13,
+        "lineHeight": 18,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "d8f4cbd44ad009fe9769c51117fbe997ce768f61",
       "name": "body/md-bold",
+      "nodeId": "7:70",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.067Z"
+      "updatedAt": "2026-04-12T01:28:27.067Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 14,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "e9f3fe441bcf7bb6b30dcb1fa79c97ec2787bf45",
       "name": "sm/sm-semibold",
+      "nodeId": "26:1408",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.071Z"
+      "updatedAt": "2026-04-12T01:28:27.071Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 600,
+        "fontSize": 13,
+        "lineHeight": 18,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "db750814e085a97104ecf61696a317ff0d26a078",
       "name": "xs/xs-semibold",
+      "nodeId": "109:11199",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.423Z"
+      "updatedAt": "2026-04-12T01:28:28.423Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 600,
+        "fontSize": 12,
+        "lineHeight": 17,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "573b650402da28692aad778ceb0adf9d5bcad52c",
       "name": "Special/Display 1",
+      "nodeId": "6885:66206",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-10T11:56:13.183Z"
+      "updatedAt": "2026-04-10T11:56:13.183Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 900,
+        "fontSize": 64,
+        "lineHeight": 80.31999969482422,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "512c584806744b7ed479e82adc9a9a6600eebda3",
       "name": "headline/h4",
+      "nodeId": "102:22167",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.034Z"
+      "updatedAt": "2026-04-12T01:28:27.034Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "a1b791985c798df20352df2c0a48edc4c5e39afd",
       "name": "headline/h6",
+      "nodeId": "102:22168",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:27.050Z"
+      "updatedAt": "2026-04-12T01:28:27.050Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 13,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "476b29eb3f62b55a8eb0f3fae17f00afb51094da",
       "name": "lg/lg-extrabold",
+      "nodeId": "102:21581",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:28.403Z"
+      "updatedAt": "2026-04-12T01:28:28.403Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 16,
+        "lineHeight": 24,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "5f35dbe232cca9ff56241c2fd080cf031e2f4935",
       "name": "xs/xs-regular",
+      "nodeId": "109:11198",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.408Z"
+      "updatedAt": "2026-04-12T01:28:28.408Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 400,
+        "fontSize": 12,
+        "lineHeight": 17,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "9512fae5ab8d5e51a4caf2fc95f189dbbbbda106",
       "name": "sm/sm-bold",
+      "nodeId": "26:1407",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.413Z"
+      "updatedAt": "2026-04-12T01:28:28.413Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 13,
+        "lineHeight": 18,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "cfa0e4c2f54a3821a88c9ec08893800e3f2ad109",
       "name": "xs/xs-bold",
+      "nodeId": "109:11200",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-04-12T01:28:28.418Z"
+      "updatedAt": "2026-04-12T01:28:28.418Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 12,
+        "lineHeight": 17,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "54556b20d8675b68fb01944a08a17ab85a29b2e4",
       "name": "body/md-semibold",
+      "nodeId": "7:67",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.039Z"
+      "updatedAt": "2026-04-12T01:28:27.039Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 600,
+        "fontSize": 14,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "a7c34316853cc13d2f1a39bf983682474502f66c",
       "name": "body/md-extrabold",
+      "nodeId": "7:78",
       "type": "TEXT",
       "description": "Default text style for this project.",
-      "updatedAt": "2026-04-12T01:28:27.054Z"
+      "updatedAt": "2026-04-12T01:28:27.054Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 800,
+        "fontSize": 14,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     },
     {
       "key": "f0089bbc765fb26aaa07ffcd16133292b01187fe",
       "name": "Special/Label",
+      "nodeId": "8683:46182",
       "type": "TEXT",
       "description": "",
-      "updatedAt": "2026-05-20T13:23:04.162Z"
+      "updatedAt": "2026-05-20T13:23:04.162Z",
+      "value": {
+        "fontFamily": "Mulish",
+        "fontWeight": 700,
+        "fontSize": 14,
+        "lineHeight": 20,
+        "letterSpacing": 0,
+        "textCase": "ORIGINAL"
+      }
     }
   ]
 }

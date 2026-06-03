@@ -6,9 +6,11 @@
   "description": "Design-ops workspace for the 4Shipper design system: Figma sync, reporting, dashboard.",
   "scripts": {
     "pull": "node scripts/pull.mjs",
+    "tokens": "node scripts/tokens.mjs",
     "snapshot": "node scripts/snapshot.mjs",
     "dashboard": "node scripts/build-dashboard.mjs",
-    "sync": "node scripts/sync.mjs"
+    "sync": "node scripts/sync.mjs",
+    "serve": "node scripts/serve.mjs"
   },
   "engines": {
     "node": ">=20.12"
