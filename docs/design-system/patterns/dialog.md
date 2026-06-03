@@ -17,9 +17,12 @@
 2. **Header / footer text FIRST, while the tree is pristine:**
    - Title: `header.findOne(n => n.type==='TEXT' && n.name==='Title')` → `setText(...)`; hide `Subtitle` (`.visible=false`) if unused.
    - Footer: set the text node inside `Primary Button` and the visible left `Button`; the rest are pre-styled.
-3. **Fill the `Holder` slot LAST.** Build a content frame (vertical auto-layout, field gap `layout-gap/md` 20,
-   padding `spacing/6` 24 / sides 32), add `Form Control` instances, then `holder.appendChild(content)`.
-   The Holder is auto-layout → set `content.layoutAlign = 'STRETCH'`.
+3. **Fill the `Holder` slot LAST.** Build a content frame (vertical auto-layout, field gap `layout-gap/md` 20),
+   add `Form Control` instances, then `holder.appendChild(content)`.
+   - **The Holder already has padding** (≈ 32 left/right, 20 bottom). Do **NOT** add your own side padding and
+     do **NOT** give the content a fixed width — both cause the inputs to overflow outside the dialog.
+   - Set the content frame **and every field** to fill width: `node.layoutSizingHorizontal = 'FILL'`
+     (fallback `layoutAlign = 'STRETCH'`). Verify with a screenshot that nothing exceeds the dialog edges.
 
 ## Gotchas (learned the hard way)
 - **Never empty the slot** (`remove` all its children before adding) — an empty slot collapses and its

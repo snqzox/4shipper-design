@@ -33,8 +33,10 @@ by fileKey (no desktop focus needed). Steps:
    then `inst.setProperties({ 'Label#6905:37': 'Name', Variant: 'Primary', 'HasLeftIcon#15:5': false })`.
 3. **Apply text styles by key** from `data/styles.json`: `importStyleByKeyAsync(key)` → `await text.setTextStyleIdAsync(style.id)`.
    Components carry their own bound color/type tokens — don't restyle them.
-4. **Auto-layout everything** with token spacing (e.g. form field gap = `layout-gap/md` 20, padding `spacing/6` 24);
-   stretch children with `layoutAlign = 'STRETCH'`. `loadFontAsync` for any fonts before setting `.characters`.
+4. **Auto-layout everything; width = FILL, never fixed.** Use `node.layoutSizingHorizontal = 'FILL'`
+   (fallback `layoutAlign = 'STRETCH'`) for content frames and their children — do not hardcode widths.
+   Don't add padding a container already provides (e.g. a Dialog `Holder` already pads ~32 sides) or content
+   overflows. Token spacing only (field gap `layout-gap/md` 20). `loadFontAsync` before setting `.characters`.
 5. Containers you build yourself: cards/dialogs `cornerRadius` 20 (`border-radius/lg`), white fill; add the
    library shadow for elevation. Bind variables when you have their keys; otherwise use exact token values.
 - **Place work on a dedicated WIP page** (create/use one, e.g. `🚧 …`); never overwrite existing screens

@@ -27,6 +27,8 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
 
 ## Layout & structure
 - **Auto-layout for everything.** No absolute positioning unless unavoidable.
+- **Width = FILL, never fixed** (`layoutSizingHorizontal = 'FILL'`). Fields/content stretch to their container;
+  don't hardcode widths, and don't re-pad a container that already pads (it pushes content past the edges).
 - In-app screens: standard **1440** frame with the app shell (sidebar + topbar). Content max-width
   consistent with neighbouring screens.
 - Vertical rhythm: section gaps `spacing/8 (32)`, block gaps `spacing/4 (16)`, control padding `spacing/3 (12)`.
