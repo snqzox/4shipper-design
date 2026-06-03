@@ -62,6 +62,8 @@ function componentHealth(item, ctx) {
     docContent,
     figmaUrl: nodeId ? `https://www.figma.com/design/${ctx.fileKey}/?node-id=${nodeId.replace(/:/g, '-')}` : null,
     thumb: nodeId ? ctx.thumbs[nodeId] || null : null,
+    nested: nodeId ? ctx.nested[nodeId] || [] : [],
+    usedBy: nodeId ? ctx.usedBy[nodeId] || [] : [],
     needsAttention: !hasDoc || !hasDescription || stale,
   }
 }
@@ -155,6 +157,25 @@ function collect() {
   const changelog = readText('docs/design-system/changelog.md', '# Design System Changelog\n\n_No changes recorded yet._')
   const staleDocs = readJson(`${DATA_DIR}/stale-docs.json`, { items: [] })
   const thumbnails = readJson(`${DATA_DIR}/thumbnails.json`, { thumbs: {} })
+  const nested = readJson(`${DATA_DIR}/nested.json`, { units: {} })
+
+  // Invert the nested graph into a "used in" map (reverse usage) — zero extra Figma calls.
+  // For each unit U that nests a resolved target T, record U as a consumer of T, keyed by T's nodeId.
+  const nameByNode = {}
+  for (const s of componentsData.componentSets || []) if (s.nodeId) nameByNode[s.nodeId] = s.name
+  for (const c of componentsData.components || []) if (!c.set && c.nodeId) nameByNode[c.nodeId] = c.name
+  const usedBy = {}
+  for (const [unitNode, list] of Object.entries(nested.units || {})) {
+    const userName = nameByNode[unitNode]
+    if (!userName) continue
+    for (const n of list || []) {
+      if (!n.resolved || !n.nodeId) continue
+      ;(usedBy[n.nodeId] ||= []).push({ name: userName, nodeId: unitNode, count: n.count || 1 })
+    }
+  }
+  for (const node of Object.keys(usedBy)) {
+    usedBy[node].sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+  }
 
   // Component names that have an in-Figma showcase page ("📖 Docs / <Name>") in the UI Kit.
   const showcaseNames = new Set(
@@ -167,6 +188,8 @@ function collect() {
     staleNames: new Set((staleDocs.items || []).map((i) => i.name)),
     showcaseNames,
     thumbs: thumbnails.thumbs || {},
+    nested: nested.units || {},
+    usedBy,
     fileKey: componentsData.file?.key || 'XVou4XJ4rWbt4oXoSxO7hO',
   }
   const comps = buildComponentsModel(componentsData, ctx)
@@ -444,6 +467,17 @@ function render(model) {
   .vname { font:10px/1.4 var(--mono); background:#141a25; border:1px solid var(--line); color:var(--muted); padding:3px 7px; border-radius:5px; }
   .dlinks { display:flex; flex-wrap:wrap; gap:14px; }
   .dlinks a { font-size:13px; }
+
+  /* Nested components */
+  .nlist { display:flex; flex-direction:column; gap:6px; }
+  .nrow { display:flex; align-items:center; gap:8px; background:#141a25; border:1px solid var(--line); border-radius:7px; padding:6px 10px; }
+  .nrow .nname { font-size:13px; color:var(--fg); }
+  .nrow a.nname { cursor:pointer; color:var(--accent2); text-decoration:none; }
+  .nrow a.nname:hover { text-decoration:underline; }
+  .nrow .ncount { font:10px/1 var(--mono); color:var(--muted); background:#0c1019; border:1px solid var(--line); padding:2px 6px; border-radius:5px; }
+  .nrow .nvia { font:10px/1.4 var(--mono); color:var(--faint); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .nrow .next { font:9px/1.4 var(--sans); text-transform:uppercase; letter-spacing:.05em; color:var(--faint); border:1px solid var(--line2); padding:2px 5px; border-radius:4px; }
+  .nrow .nfig { margin-left:auto; font-size:12px; flex:none; }
 
   /* Rendered doc markdown */
   .doc { font-size:13px; line-height:1.65; color:var(--fg); }
@@ -820,6 +854,29 @@ function detailPanel(it){
     body+='<div class="dsec"><h4>Variants ('+it.variantNames.length+')</h4><div class="vnames">'+
       it.variantNames.map(n=>'<span class="vname">'+esc(n)+'</span>').join('')+'</div></div>';
   }
+  if((it.nested||[]).length){
+    const rows=it.nested.map(n=>{
+      const figUrl=n.nodeId?'https://www.figma.com/design/'+(M.uiKit.key||'')+'/?node-id='+n.nodeId.replace(/:/g,'-'):null;
+      const nameHtml=n.resolved
+        ? '<a class="nname nlink" data-nnode="'+esc(n.nodeId||'')+'" data-nname="'+encodeURIComponent(n.name)+'">'+esc(n.name)+'</a>'
+        : '<span class="nname">'+esc(n.name)+'</span>';
+      const cnt=n.count>1?'<span class="ncount">×'+n.count+'</span>':'';
+      const tag=n.resolved?'':'<span class="next">'+(String(n.name).charAt(0)==='_'?'private':'external')+'</span>';
+      const via=n.viaVariant?'<span class="nvia">'+esc(n.viaVariant)+'</span>':'';
+      const fig=figUrl?'<a class="nfig" href="'+esc(figUrl)+'" target="_blank">Figma ↗</a>':'';
+      return '<div class="nrow">'+nameHtml+cnt+tag+via+fig+'</div>';
+    }).join('');
+    body+='<div class="dsec"><h4>Nested components ('+it.nested.length+')</h4><div class="nlist">'+rows+'</div></div>';
+  }
+  if((it.usedBy||[]).length){
+    const rows=it.usedBy.map(u=>{
+      const figUrl=u.nodeId?'https://www.figma.com/design/'+(M.uiKit.key||'')+'/?node-id='+u.nodeId.replace(/:/g,'-'):null;
+      const cnt=u.count>1?'<span class="ncount">×'+u.count+'</span>':'';
+      const fig=figUrl?'<a class="nfig" href="'+esc(figUrl)+'" target="_blank">Figma ↗</a>':'';
+      return '<div class="nrow"><a class="nname nlink" data-nnode="'+esc(u.nodeId||'')+'" data-nname="'+encodeURIComponent(u.name)+'">'+esc(u.name)+'</a>'+cnt+fig+'</div>';
+    }).join('');
+    body+='<div class="dsec"><h4>Used in ('+it.usedBy.length+')</h4><div class="nlist">'+rows+'</div></div>';
+  }
   if(it.docContent){
     body+='<div class="dsec"><h4>Documentation</h4><div class="doc">'+mdDoc(it.docContent)+'</div></div>';
   }
@@ -840,6 +897,15 @@ function openDetail(i){
   dr.classList.add('open'); dr.setAttribute('aria-hidden','false');
   document.body.style.overflow='hidden'; panel.scrollTop=0;
   panel.querySelector('.dclose').onclick=closeDetail;
+  // Clicking a nested / used-in component jumps the drawer to that component's detail.
+  // Match by nodeId first (exact — names can collide), fall back to name.
+  panel.querySelectorAll('.nlink').forEach(a=>a.onclick=()=>{
+    const node=a.dataset.nnode||'';
+    const name=decodeURIComponent(a.dataset.nname||'');
+    let j=node?COMP_ALL.findIndex(c=>c.nodeId===node):-1;
+    if(j<0) j=COMP_ALL.findIndex(c=>c.name===name);
+    if(j>=0) openDetail(j);
+  });
   document.querySelectorAll('.ctable tbody tr.sel').forEach(r=>r.classList.remove('sel'));
   const row=document.querySelector('.ctable tbody tr[data-id="'+i+'"]'); if(row) row.classList.add('sel');
 }

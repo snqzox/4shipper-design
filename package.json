@@ -6,6 +6,7 @@
   "description": "Design-ops workspace for the 4Shipper design system: Figma sync, reporting, dashboard.",
   "scripts": {
     "pull": "node scripts/pull.mjs",
+    "nested": "node scripts/pull-nested.mjs",
     "tokens": "node scripts/tokens.mjs",
     "snapshot": "node scripts/snapshot.mjs",
     "dashboard": "node scripts/build-dashboard.mjs",

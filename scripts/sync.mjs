@@ -1,4 +1,5 @@
 import { pullAll } from './pull.mjs'
+import { pullNested } from './pull-nested.mjs'
 import { buildTokens } from './tokens.mjs'
 import { buildSnapshot, readLatest, saveSnapshot } from './snapshot.mjs'
 import { diffSnapshots, hasChanges, writeChangelog } from './diff.mjs'
@@ -10,6 +11,15 @@ async function main() {
   console.log('→ Pulling current state from Figma…')
   await pullAll()
   buildTokens()
+
+  // Nested-component relationships are a dashboard enhancement, not part of change-tracking.
+  // A failure here must not abort the sync, so warn and continue with stale/absent nested data.
+  try {
+    const nested = await pullNested()
+    console.log(`✓ Nested components: ${nested.withNested}/${nested.units} units mapped.`)
+  } catch (err) {
+    console.warn(`⚠ Nested-component extraction skipped: ${err.message}`)
+  }
 
   const previous = readLatest()
   const current = buildSnapshot()
