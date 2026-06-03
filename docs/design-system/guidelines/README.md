@@ -48,6 +48,9 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
 - Multi-step flows use the `Stepper` / `Step Progress Tabs` (e.g. tender & request wizards).
 
 ## Pages & naming (4Shipper Design file)
+- **Naming individual screen/surface frames** (list views, dialogs, dropdowns, notifications) by their
+  content follows a fixed pattern — see [screen-naming.md](screen-naming.md)
+  (`<Section>/<Subsection>/<Type>[/<Name>][ - <Qualifier>]`, e.g. `Directory/Routes/Dialog/Edit Route`).
 - The file is split into two role sections marked by divider pages: **`SHIPPER ---------`** and
   **`CARRIER ---------`**.
 - Section pages carry an emoji prefix, mirroring the app nav: `⏰ Requests`, `🚚 Transports`,
