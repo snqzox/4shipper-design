@@ -98,16 +98,38 @@ async function fetchStyleValues(key, styles) {
   return styles.map((s) => ({ ...s, value: valueFor(s) }))
 }
 
-// depth=2 gives pages + their direct frame children (the screens), metadata only.
+// depth=3 gives pages → their direct frame children (the screens) → each screen's immediate
+// children. We keep metadata only (id/name/type + bounding-box size) and cap the child preview so
+// pages.json stays lean and diff-stable. snapshot.mjs only reads name + screens.length, so the
+// extra per-screen fields never churn the change-tracking fingerprint.
+const SCREEN_TYPES = new Set(['FRAME', 'SECTION', 'COMPONENT', 'COMPONENT_SET'])
+const CHILD_PREVIEW_CAP = 60
+
+function boxSize(node) {
+  const b = node.absoluteBoundingBox
+  if (!b || b.width == null || b.height == null) return null
+  return { w: Math.round(b.width), h: Math.round(b.height) }
+}
+
+function screenSummary(node) {
+  const kids = node.children || []
+  const size = boxSize(node)
+  return {
+    id: node.id,
+    name: node.name,
+    type: node.type,
+    ...(size ? { w: size.w, h: size.h } : {}),
+    childCount: kids.length,
+    children: kids.slice(0, CHILD_PREVIEW_CAP).map((c) => ({ name: c.name, type: c.type })),
+  }
+}
+
 async function designScreens(key) {
-  const data = await figmaGet(`/v1/files/${key}?depth=2`)
-  const screenTypes = new Set(['FRAME', 'SECTION', 'COMPONENT'])
+  const data = await figmaGet(`/v1/files/${key}?depth=3`)
   const pages = (data.document?.children || []).map((page) => ({
     id: page.id,
     name: page.name,
-    screens: (page.children || [])
-      .filter((n) => screenTypes.has(n.type))
-      .map((n) => ({ id: n.id, name: n.name, type: n.type })),
+    screens: (page.children || []).filter((n) => SCREEN_TYPES.has(n.type)).map(screenSummary),
   }))
   return { key, name: data.name, version: data.version, lastModified: data.lastModified, pages }
 }

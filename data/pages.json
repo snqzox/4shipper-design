@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-03T20:26:07.674Z",
+  "generatedAt": "2026-06-03T20:56:24.424Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
@@ -23,62 +23,544 @@
           {
             "id": "290:98518",
             "name": "Requests",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 947,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Requests",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1753:77800",
             "name": "New Request",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 16155,
+            "h": 9232,
+            "childCount": 41,
+            "children": [
+              {
+                "name": "Step 3 - Carriers / Spot transport",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 3 - Carriers / All contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 3 - Carriers / No matching contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 2 - Cargo info / Cargo items added",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 2 - Cargo info / No cargo items",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 1 - Route waypoints",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 3 - Carriers / Matching contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 3 - Carriers / Contract selected",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 4 - Details / Contract transport",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 5 - Overview / Contract transport",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 4 - Details / Spot transport",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 5 - Overview / Spot transport",
+                "type": "TEXT"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Selected",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Switch to All Contracts Tab",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Switch To Spot Transport",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Browse All Contracts",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Carrier Selected",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Add Cargo Items",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "No Matching Contracts Found",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Matching Contracts Found",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "New request",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
+              }
+            ]
           },
           {
             "id": "808:34729",
             "name": "Requests/Create New Request/Step 2 - With Cargo Items",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 855,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "951:22824",
             "name": "Requests/Create New Request/Step 5",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 855,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1111:36128",
             "name": "Requests/Create New Request/Step 8",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1775,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1077:14865",
             "name": "Requests/Create New Request/Step 6",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 2145,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "808:34802",
             "name": "Waypoints v3 — Recreation",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 555,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "AI Banner",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "808:34838",
             "name": "Main Content",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 944,
+            "h": 1293,
+            "childCount": 7,
+            "children": [
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Waypoint Card 3",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "808:38010",
             "name": "Waypoint Card 1",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 800,
+            "h": 908,
+            "childCount": 12,
+            "children": [
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 460",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content/Section Title",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content/Section Title",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Check, Radio, Switch Item",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Switch Item",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "945:11377",
+            "name": "Cargo Item Card",
+            "type": "COMPONENT_SET",
+            "w": 2560,
+            "h": 774,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              }
+            ]
           },
           {
             "id": "1111:33742",
             "name": "Screenshots from app",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 9347,
+            "h": 4097,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "Frame 462",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 461",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 4",
+                "type": "FRAME"
+              },
+              {
+                "name": "Group 1",
+                "type": "GROUP"
+              },
+              {
+                "name": "Frame 27815",
+                "type": "FRAME"
+              },
+              {
+                "name": "image 2",
+                "type": "RECTANGLE"
+              }
+            ]
           },
           {
             "id": "1173:339026",
             "name": "New Request/Cargo Item List View",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 320,
+            "h": 634,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27812",
+                "type": "FRAME"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Cargo Item Data Card",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "1222:403600",
+            "name": "Cargo Item Data Card",
+            "type": "COMPONENT_SET",
+            "w": 386,
+            "h": 604,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Collapsed=False",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Collapsed=True",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "1571:23238",
+            "name": "_Tender List Item",
+            "type": "COMPONENT_SET",
+            "w": 669,
+            "h": 722,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
           },
           {
             "id": "1626:22967",
             "name": "_Map Placeholder",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 511,
+            "h": 295,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "image 1",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "_Route Entry/Waypoint",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Route Entry/Waypoint",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Route Entry/Waypoint",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -89,7 +571,20 @@
           {
             "id": "290:86567",
             "name": "Transports",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 935,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Transports",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -100,7 +595,32 @@
           {
             "id": "250:16866",
             "name": "Directory",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 4175,
+            "h": 11188,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Routes",
+                "type": "FRAME"
+              },
+              {
+                "name": "Workspace Settings",
+                "type": "FRAME"
+              },
+              {
+                "name": "Groups",
+                "type": "FRAME"
+              },
+              {
+                "name": "Groups",
+                "type": "FRAME"
+              },
+              {
+                "name": "Directory/Routes",
+                "type": "FRAME"
+              }
+            ]
           }
         ]
       },
@@ -111,12 +631,50 @@
           {
             "id": "250:30730",
             "name": "Reports",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2269,
+            "h": 4383,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Reports",
+                "type": "FRAME"
+              },
+              {
+                "name": "Reports",
+                "type": "FRAME"
+              },
+              {
+                "name": "Reports",
+                "type": "FRAME"
+              },
+              {
+                "name": "Reports",
+                "type": "FRAME"
+              },
+              {
+                "name": "Reports",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "455:30027",
             "name": "Frame 1",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 526,
+            "h": 796,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Rectangle 1",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "aaaaaaa aaaaaaa aaaaaaa aaaaaaa aaaaaaa",
+                "type": "TEXT"
+              }
+            ]
           }
         ]
       },
@@ -127,22 +685,126 @@
           {
             "id": "292:19968",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 1558,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Tenders",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "292:21305",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 3428,
+            "childCount": 10,
+            "children": [
+              {
+                "name": "Tenders/Tender detail",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialogs",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "540:25723",
             "name": "Tender - Bulk selection",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 2422,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "Tender - Bulk selection",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "799:19375",
             "name": "Cargo Details — Recreation",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 851,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -153,12 +815,42 @@
           {
             "id": "317:75501",
             "name": "Contracts",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 1787,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "317:85352",
             "name": "Contracts",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 1287,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Contract detail",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -169,17 +861,72 @@
           {
             "id": "222:60091",
             "name": "Settings",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2464,
+            "h": 16823,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Workspace Settings",
+                "type": "FRAME"
+              },
+              {
+                "name": "Users",
+                "type": "FRAME"
+              },
+              {
+                "name": "Scheduled reports",
+                "type": "FRAME"
+              },
+              {
+                "name": "Vehicle types",
+                "type": "FRAME"
+              },
+              {
+                "name": "Workspace Settings",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "222:30428",
             "name": "_Workspace/Button",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 333,
+            "h": 56,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 454",
+                "type": "FRAME"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "345:40744",
             "name": "Frame 27752",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 3280,
+            "h": 2592,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27751",
+                "type": "FRAME"
+              },
+              {
+                "name": "image 3",
+                "type": "RECTANGLE"
+              }
+            ]
           }
         ]
       },
@@ -190,102 +937,1094 @@
           {
             "id": "1970:188650",
             "name": "Vehicle types and cargo categories",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 5915,
+            "h": 2864,
+            "childCount": 18,
+            "children": [
+              {
+                "name": "Page/Vehicle Types",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Cargo categories",
+                "type": "FRAME"
+              },
+              {
+                "name": "Offers collected, carrier waiting for proposal",
+                "type": "TEXT"
+              },
+              {
+                "name": "Vehicle types",
+                "type": "TEXT"
+              },
+              {
+                "name": "Cargo categories",
+                "type": "TEXT"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:188934",
             "name": "Tenders - Create new tender",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 17840,
+            "h": 2842,
+            "childCount": 28,
+            "children": [
+              {
+                "name": "Tenders - List view",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 1. - Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 2. - Routes",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 3. - Vehicle/Cargo types",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 4. - Carriers",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 5. - Overview",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page/Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender descriptiom",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "t",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:189644",
             "name": "Edit Tender",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 9589,
+            "h": 2842,
+            "childCount": 11,
+            "children": [
+              {
+                "name": "Edit tender - Step 1. - Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Edit tender - Step 2. - Routes",
+                "type": "TEXT"
+              },
+              {
+                "name": "Edit tender - Step 3. - Vehicle/Cargo types",
+                "type": "TEXT"
+              },
+              {
+                "name": "Edit tender - Step 4. - Carriers",
+                "type": "TEXT"
+              },
+              {
+                "name": "New tender - Step 5. - Overview",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:190087",
             "name": "Contracts",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 12718,
+            "h": 2551,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "Page/Contracts",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27334",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27195",
+                "type": "FRAME"
+              },
+              {
+                "name": "Contract Detail",
+                "type": "FRAME"
+              },
+              {
+                "name": "Shipper/Tender/List Entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Shipper/Contract/List Entry",
+                "type": "COMPONENT_SET"
+              }
+            ]
           },
           {
             "id": "1970:190594",
             "name": "Routes",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 12718,
+            "h": 2551,
+            "childCount": 30,
+            "children": [
+              {
+                "name": "Routes",
+                "type": "FRAME"
+              },
+              {
+                "name": "Routes",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/Routes Overview",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/Routes Overview",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Routes list",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/Routes Overview",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/New route",
+                "type": "FRAME"
+              },
+              {
+                "name": "Modal/Routes Overview",
+                "type": "FRAME"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "t",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:190800",
             "name": "Tender detail",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 14862,
+            "h": 1893,
+            "childCount": 11,
+            "children": [
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender detail / Price offers / Collecting offers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Chat with carriers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Documents",
+                "type": "TEXT"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:190940",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1070,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:190955",
             "name": "Tender detail / Price offers / Mass selection",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 13435,
+            "h": 2014,
+            "childCount": 29,
+            "children": [
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Tender detail / Price offers / Evaluating / Mass selection = Off",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Price offers / Evaluating / Mass selection = On",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Price offers / Evaluating / Mass selection",
+                "type": "TEXT"
+              },
+              {
+                "name": "Rows selected → Mass selection details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191159",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1134,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191188",
             "name": "Selection confirmation",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 860,
+            "h": 704,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Frame 27729",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27727",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27749",
+                "type": "FRAME"
+              },
+              {
+                "name": "Line 58",
+                "type": "LINE"
+              },
+              {
+                "name": "Frame 27067",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:191242",
             "name": "Price Offers - Tooltips",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 1723,
+            "h": 1496,
+            "childCount": 10,
+            "children": [
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Price Offer Popover",
+                "type": "FRAME"
+              },
+              {
+                "name": "Price Offer Popover",
+                "type": "FRAME"
+              },
+              {
+                "name": "Price Offer Popover",
+                "type": "FRAME"
+              },
+              {
+                "name": "Price Offer Popover",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:191277",
             "name": "Tender detail / Price offers",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 19081,
+            "h": 2614,
+            "childCount": 26,
+            "children": [
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender detail / Price offers / Evaluating",
+                "type": "TEXT"
+              },
+              {
+                "name": "Send export / Modal",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Price offers / Evaluating (Mass selection)",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender detail / Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender detail / Proposals",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender detail / Contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Selection confirmation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders",
+                "type": "FRAME"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Propose contract (3 offers)",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Show selected",
+                "type": "CONNECTOR"
+              }
+            ]
           },
           {
             "id": "1970:191534",
             "name": "Proposals/List entry",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1400,
+            "h": 67,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27760",
+                "type": "FRAME"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191540",
             "name": "Contracts/List entry",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1400,
+            "h": 67,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27760",
+                "type": "FRAME"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191546",
             "name": "Page/Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1029,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 310",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191567",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1229,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191594",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1070,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191600",
             "name": "Tenders",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 1175,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 453",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page/Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:191640",
             "name": "Components",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 14246,
+            "h": 16768,
+            "childCount": 23,
+            "children": [
+              {
+                "name": "_Form/Address",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "_Form/New Tender",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "_Form/New Tender/Variant3",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "_Form/New Tender/Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "_Form",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Address entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Route entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Waypoint Entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Route Definition",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Routes",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Routes Overview",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Waypoint combinations",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Chat list entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Contract Entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Shipper / Price Offers",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Shipper - Price Offers - Header",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Shipper - Price Offers - Action Stripe",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Tender Header - Shipper",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Content",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "image 9",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Carrier Offer",
+                "type": "COMPONENT_SET"
+              }
+            ]
           },
           {
             "id": "1970:192925",
             "name": "_Form/New Tender/1",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 800,
+            "h": 727,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 446",
+                "type": "FRAME"
+              },
+              {
+                "name": "Line 39",
+                "type": "LINE"
+              },
+              {
+                "name": "Modal/Footer",
+                "type": "FRAME"
+              }
+            ]
           }
         ]
       },
@@ -306,52 +2045,254 @@
           {
             "id": "2:12751",
             "name": "Alert - Session will expire",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Popover",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "81:4499",
             "name": "Email not verified",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "32:2309",
             "name": "Alert - Session will expire",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Popover",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "32:2052",
             "name": "Alert - Session will expire",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Frame 27292",
+                "type": "FRAME"
+              },
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "3:2706",
             "name": "Session expired",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27292",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "4:830",
             "name": "Session Expired - Link sent",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27292",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "3:2343",
             "name": "Toast - Session renewed",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "32:5364",
             "name": "Toast - Session renewed",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "9:2577",
             "name": "Email template",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 736,
+            "h": 972,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Frame 330",
+                "type": "FRAME"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "If you didn't request the access, you can safely ignore this email. Thank you, The 4Shipper Team",
+                "type": "TEXT"
+              },
+              {
+                "name": "Line 249",
+                "type": "LINE"
+              },
+              {
+                "name": "Mail Footer",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "79:4418",
             "name": "Page - Session extended",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1440,
+            "h": 680,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "ilustration-2",
+                "type": "FRAME"
+              },
+              {
+                "name": "ilustration-5",
+                "type": "FRAME"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Logo",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27294",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27295",
+                "type": "FRAME"
+              }
+            ]
           }
         ]
       },
@@ -362,87 +2303,390 @@
           {
             "id": "1898:158369",
             "name": "Frame 3",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 456,
+            "h": 18,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "3 offer updates left",
+                "type": "TEXT"
+              }
+            ]
           },
           {
             "id": "1890:52726",
             "name": "Shipper/Request Detail/Auction Header",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 496,
+            "h": 126,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1840:407573",
             "name": "Price/Auction",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 278,
+            "h": 64,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Your bid:",
+                "type": "TEXT"
+              },
+              {
+                "name": "Price",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Price/Auction/Fee",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1840:407562",
             "name": "Bidding Status",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 141,
+            "h": 28,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Icon",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Excellent price",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "1840:475074",
+            "name": "Frame 2",
+            "type": "COMPONENT_SET",
+            "w": 536,
+            "h": 554,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
           },
           {
             "id": "1840:485117",
             "name": "Header",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1392,
+            "h": 357,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Content Header",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138269",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138358",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138444",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138542",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 1082,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138657",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138735",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138813",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138891",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:138962",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1891:139096",
             "name": "New request - Waypoints",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 984,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Template/Footer",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27435",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27381",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1895:156776",
             "name": "Price/Auction/Fee",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 238,
+            "h": 18,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27585",
+                "type": "FRAME"
+              },
+              {
+                "name": "4597 HUF",
+                "type": "TEXT"
+              }
+            ]
           },
           {
             "id": "1996:189616",
             "name": "Bidding Flow",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 3280,
+            "h": 955,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -453,12 +2697,38 @@
           {
             "id": "451:28608",
             "name": "Contracts",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 1379,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "451:28611",
             "name": "Contract detail",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 2000,
+            "h": 1160,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Contract detail",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -474,87 +2744,572 @@
           {
             "id": "1970:165332",
             "name": "Tender Header / Status - Evaluation",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1232,
+            "h": 134,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27243",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27077",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27212",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165584",
             "name": "_Table/Price offers",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1232,
+            "h": 652,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27266",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165734",
             "name": "Page/Vehicle Types",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 832,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Header",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27302",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165756",
             "name": "Content/Tender details",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1232,
+            "h": 468,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Line 5",
+                "type": "LINE"
+              },
+              {
+                "name": "Frame 27336",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165785",
             "name": "Content/Attachments",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1232,
+            "h": 546,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Attachments",
+                "type": "TEXT"
+              },
+              {
+                "name": "Line 5",
+                "type": "LINE"
+              },
+              {
+                "name": "Slot",
+                "type": "SLOT"
+              }
+            ]
           },
           {
             "id": "1970:165799",
             "name": "Page/Vehicle Types",
-            "type": "FRAME"
+            "type": "FRAME",
+            "w": 1280,
+            "h": 832,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Header",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27302",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165821",
             "name": "_Content/Q&A",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1232,
+            "h": 759,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27239",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "1970:165830",
+            "name": "Frame 27192",
+            "type": "COMPONENT_SET",
+            "w": 1007,
+            "h": 684,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              }
+            ]
           },
           {
             "id": "1970:165858",
             "name": "Q&A/Entry",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 330,
+            "h": 443,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Question title placeholder",
+                "type": "TEXT"
+              },
+              {
+                "name": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eros lorem, hendrerit et euismod eget, fermentum vel diam. Phasellus finibus dignissim lorem, et consectetur tortor dignissim ut. Suspendisse consectetur, nisl vel blandit aliquam, turpis dui hendrerit mauris, sit amet rhoncus ex nulla et massa.",
+                "type": "TEXT"
+              },
+              {
+                "name": "Frame 27111",
+                "type": "FRAME"
+              },
+              {
+                "name": "Line 39",
+                "type": "LINE"
+              },
+              {
+                "name": "Frame 27112",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165870",
             "name": "Tender Header / Status - Collecting offers",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1280,
+            "h": 182,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27077",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27212",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:165898",
             "name": "_Carrier/Modal Content ",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 450,
+            "h": 350,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Frame 27231",
+                "type": "FRAME"
+              },
+              {
+                "name": "Line 356",
+                "type": "LINE"
+              },
+              {
+                "name": "Frame 27232",
+                "type": "FRAME"
+              },
+              {
+                "name": "Line 357",
+                "type": "LINE"
+              },
+              {
+                "name": "Frame 27227",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "1970:165917",
+            "name": "Tender/Draft Status",
+            "type": "COMPONENT_SET",
+            "w": 354,
+            "h": 239,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              }
+            ]
           },
           {
             "id": "1970:165933",
             "name": "Carrier/Tender/Status: Open - Collecting Offers",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 12742,
+            "h": 2921,
+            "childCount": 15,
+            "children": [
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Text",
+                "type": "TEXT"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Filling price offers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Status: New / Open - Collecting Offers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Offers sent to shipper",
+                "type": "TEXT"
+              },
+              {
+                "name": "Edit already sent price offers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Carrier/Tender",
+                "type": "FRAME"
+              },
+              {
+                "name": "Save as draft",
+                "type": "SECTION"
+              }
+            ]
           },
           {
             "id": "1970:167442",
             "name": "Carrier/Tender/Status: Open - Collecting Offers",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 15907,
+            "h": 2858,
+            "childCount": 18,
+            "children": [
+              {
+                "name": "Offers collected, carrier waiting for proposal",
+                "type": "TEXT"
+              },
+              {
+                "name": "Status: Evaluation",
+                "type": "TEXT"
+              },
+              {
+                "name": "New contract prices proposal",
+                "type": "TEXT"
+              },
+              {
+                "name": "Proposal accepted, contact created",
+                "type": "TEXT"
+              },
+              {
+                "name": "No contract created yet",
+                "type": "TEXT"
+              },
+              {
+                "name": "Additional routes proposed, contract will be updated",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
           },
           {
             "id": "1970:167759",
             "name": "Pages",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 9897,
+            "h": 2152,
+            "childCount": 12,
+            "children": [
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Details",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Tender/Q&A",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tender details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender attachments",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender messages",
+                "type": "TEXT"
+              },
+              {
+                "name": "Questions & answers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Price offers",
+                "type": "TEXT"
+              },
+              {
+                "name": "Tender/Contract",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier/Contracts - List view",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tenders - List view",
+                "type": "TEXT"
+              }
+            ]
           },
           {
             "id": "1970:168035",
             "name": "Chat with shipper Button",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 234,
+            "h": 74,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Button",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:168044",
             "name": "Contracts",
-            "type": "SECTION"
+            "type": "SECTION",
+            "w": 4939,
+            "h": 1400,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Carrier/Contracts - List view",
+                "type": "FRAME"
+              },
+              {
+                "name": "Contracts - List view",
+                "type": "TEXT"
+              },
+              {
+                "name": "Contract detail",
+                "type": "TEXT"
+              },
+              {
+                "name": "Carrier/Contract detail",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:168164",
             "name": "Carrier Header",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 1280,
+            "h": 72,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Frame 277",
+                "type": "FRAME"
+              }
+            ]
           },
           {
             "id": "1970:168182",
             "name": "_Person entry",
-            "type": "COMPONENT"
+            "type": "COMPONENT",
+            "w": 410,
+            "h": 64,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27338",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "1970:168191",
+            "name": "Price offers header",
+            "type": "COMPONENT_SET",
+            "w": 1272,
+            "h": 144,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "1970:168217",
+            "name": "Contracts/Entry",
+            "type": "COMPONENT_SET",
+            "w": 1064,
+            "h": 408,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
           }
         ]
       }
