@@ -26,7 +26,7 @@ export function buildSnapshot() {
       file: components.file,
       version: components.file?.version,
       lastModified: components.file?.lastModified,
-      components: byKey(components.components, (c) => ({ name: c.name, updatedAt: c.updatedAt, description: c.description })),
+      components: byKey(components.components, (c) => ({ name: c.name, updatedAt: c.updatedAt, description: c.description, set: c.set })),
       componentSets: byKey(components.componentSets, (c) => ({ name: c.name, updatedAt: c.updatedAt })),
       styles: byKey(styles.styles, (s) => ({ name: s.name, type: s.type, updatedAt: s.updatedAt })),
     },

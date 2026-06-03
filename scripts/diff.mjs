@@ -17,13 +17,19 @@ function diffMaps(prev = {}, next = {}) {
   return { added: added.sort(), changed: changed.sort(), removed: removed.sort() }
 }
 
+// Keep only standalone components (no set). Set-member variants are reported via the
+// "Component sets" section instead of as noisy "Property 1=…" variant names.
+function standalone(map = {}) {
+  return Object.fromEntries(Object.entries(map).filter(([, v]) => !v.set))
+}
+
 // Compare two snapshots (from snapshot.mjs). Returns a structured diff.
 export function diffSnapshots(prev, next) {
   if (!prev) return { firstRun: true }
   return {
     firstRun: false,
     publishDetected: prev.library?.version !== next.library?.version,
-    components: diffMaps(prev.library?.components, next.library?.components),
+    components: diffMaps(standalone(prev.library?.components), standalone(next.library?.components)),
     componentSets: diffMaps(prev.library?.componentSets, next.library?.componentSets),
     styles: diffMaps(prev.library?.styles, next.library?.styles),
     designVersionChanged: prev.design?.version !== next.design?.version,
