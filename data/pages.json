@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T11:20:57.310Z",
+  "generatedAt": "2026-06-03T11:28:43.776Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2360818487548235110",
-    "lastModified": "2026-06-03T11:21:01Z",
+    "lastModified": "2026-06-03T11:28:47Z",
     "pages": [
       {
         "id": "0:1",
@@ -349,13 +349,7 @@
       {
         "id": "1939:1707",
         "name": "🚧 DS Agent Test",
-        "screens": [
-          {
-            "id": "1942:1707",
-            "name": "Add cargo category",
-            "type": "FRAME"
-          }
-        ]
+        "screens": []
       }
     ]
   }
