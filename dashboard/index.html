@@ -118,6 +118,25 @@
   .changelog ul { margin:6px 0 14px; padding-left:18px; color:var(--muted); }
   .changelog li { margin:2px 0; }
 
+  /* Actions */
+  .actstatus { display:flex; flex-direction:column; gap:8px; }
+  .srow { display:flex; justify-content:space-between; gap:16px; font-size:13px; }
+  .srow span { color:var(--muted); }
+  .srow b.ok { color:var(--ok); } .srow b.warn { color:var(--warn); }
+  .actgrid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:12px; margin-bottom:14px; }
+  .actbtn { all:unset; cursor:pointer; display:flex; flex-direction:column; gap:3px; background:var(--panel);
+    border:1px solid var(--line2); border-radius:var(--radius); padding:15px 17px; transition:border-color .15s, background .15s; }
+  .actbtn:hover { border-color:var(--accent); background:#161d2a; }
+  .actbtn.primary { border-color:#2b3d63; background:#13203a; }
+  .actbtn.primary:hover { border-color:var(--accent); }
+  .actbtn[disabled] { opacity:.45; cursor:not-allowed; }
+  .actbtn.running { border-color:var(--accent); animation:pulse 1s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity:.6; } }
+  .actbtn .al { font-weight:600; font-size:14px; }
+  .actbtn .ad { color:var(--muted); font-size:12px; }
+  .actlog { max-height:340px; overflow:auto; margin:0; font:11px/1.5 var(--mono); color:var(--muted); }
+  .links { display:flex; flex-wrap:wrap; gap:16px; }
+  .links a { font-size:13px; }
   .pill { display:inline-block; background:var(--line); border-radius:6px; padding:2px 8px; font:11px/1.4 var(--mono); color:var(--muted); }
   .muted { color:var(--muted); } .faint { color:var(--faint); }
   @media (max-width:760px){ body{flex-direction:column} aside{width:auto;flex:none;height:auto;position:static;flex-direction:row;flex-wrap:wrap} main{padding:20px} }
@@ -149,6 +168,7 @@ document.getElementById('foot').innerHTML =
 // ---- Sections ----
 const SECTIONS = [
   { id:'overview',   title:'Overview',   sub:'Current state of the 4Shipper design system.', count:null, render:overview },
+  { id:'actions',    title:'Actions',    sub:'Refresh data and publish — no terminal needed.', count:null, render:actions },
   { id:'components', title:'Components',  sub:M.components.meaningful+' components ('+M.components.sets+' sets · '+M.components.standalone+' standalone), grouped by Figma page.', count:M.counts.meaningful, render:components },
   { id:'typography', title:'Typography',  sub:M.counts.typography+' text styles with live previews.', count:M.counts.typography, render:typography },
   { id:'shadows',    title:'Shadows',     sub:M.counts.shadows+' effect styles.', count:M.counts.shadows, render:shadows },
@@ -170,6 +190,7 @@ function show(i){
   document.getElementById('vsub').textContent = s.sub;
   document.getElementById('view').innerHTML = s.render();
   bindGroups();
+  if (s.id==='actions') initActions();
   if (location.hash !== '#'+s.id) history.replaceState(null,'','#'+s.id);
 }
 
@@ -192,6 +213,70 @@ function overview(){
   const m = M.changelog.match(/##\s.+?(?=\n##\s|$)/s);
   html += '<div class="card"><h3>Latest change</h3>'+(m?mdToHtml(m[0]):'<span class="muted">No changes recorded yet.</span>')+'</div>';
   return html;
+}
+
+const LINKS = {
+  uiKit:'https://www.figma.com/design/XVou4XJ4rWbt4oXoSxO7hO',
+  design:'https://www.figma.com/design/Xol48qmGXL8hIqA42jbHno',
+  repo:'https://github.com/snqzox/4shipper-design',
+  live:'https://snqzox.github.io/4shipper-design/'
+};
+function isLocal(){ return ['localhost','127.0.0.1'].includes(location.hostname); }
+
+function actions(){
+  const links='<div class="card"><h3>Links</h3><div class="links">'+
+    '<a href="'+LINKS.uiKit+'" target="_blank">UI Kit ↗</a>'+
+    '<a href="'+LINKS.design+'" target="_blank">4Shipper Design ↗</a>'+
+    '<a href="'+LINKS.repo+'" target="_blank">GitHub repo ↗</a>'+
+    '<a href="'+LINKS.live+'" target="_blank">Live dashboard ↗</a></div></div>';
+  if(!isLocal()){
+    return '<div class="empty"><h4>Open the control panel locally to use actions</h4>'+
+      '<p class="muted">This is the published, read-only dashboard. To refresh data and publish with buttons:</p>'+
+      '<ol><li>Double-click <code>4shipper-design.command</code> in the project folder (or run <code>npm run serve</code>).</li>'+
+      '<li>Your browser opens <code>http://localhost:4178</code> with these actions enabled.</li></ol></div>'+links;
+  }
+  const btn=(a,l,d,c)=>'<button class="actbtn '+(c||'')+'" onclick="runAction(\''+a+'\',this)"><span class="al">'+l+'</span><span class="ad">'+d+'</span></button>';
+  return '<div id="actstatus" class="card actstatus">Loading status…</div>'+
+    '<div class="actgrid">'+
+      btn('sync','↻ Refresh all','Pull components, styles & pages, then rebuild')+
+      btn('variables','🎨 Refresh variables','From Figma desktop (Dev Mode MCP must be on)')+
+      btn('dashboard','⟳ Rebuild dashboard','Regenerate from current data')+
+      btn('publish','▲ Publish to GitHub','Commit & push → updates the live site','primary')+
+    '</div>'+
+    '<div class="card"><h3>Output</h3><pre id="actlog" class="actlog">Idle. Pick an action above.</pre></div>'+
+    links;
+}
+
+async function initActions(){
+  const el=document.getElementById('actstatus'); if(!el) return;
+  try{
+    const s=await (await fetch('/api/status',{headers:{'x-ds-control':'1'}})).json();
+    const when=s.generatedAt?new Date(s.generatedAt).toLocaleString():'—';
+    const dirty=s.git&&s.git.dirty;
+    el.innerHTML=
+      '<div class="srow"><span>Last data sync</span><b>'+esc(when)+'</b></div>'+
+      '<div class="srow"><span>Components · Variables · Colors</span><b>'+s.components+' · '+s.variables+' · '+s.colors+'</b></div>'+
+      '<div class="srow"><span>Uncommitted changes</span><b class="'+(dirty?'warn':'ok')+'">'+(dirty?(s.git.changes+' files — Publish to deploy'):'none — up to date')+'</b></div>';
+  }catch(e){ el.textContent='Status unavailable ('+e.message+'). Is the control panel running (npm run serve)?'; }
+}
+
+async function runAction(action,btn){
+  const log=document.getElementById('actlog');
+  document.querySelectorAll('.actbtn').forEach(b=>{ b.disabled=true; });
+  btn.classList.add('running');
+  log.textContent='▶ '+action+' — running…\n';
+  try{
+    const r=await fetch('/api/run',{method:'POST',headers:{'content-type':'application/json','x-ds-control':'1'},body:JSON.stringify({action})});
+    const j=await r.json();
+    log.textContent=(j.output||'(no output)').trim();
+    if(j.ok){
+      log.textContent+='\n\n✓ Done.';
+      if(action!=='publish'){ log.textContent+=' Reloading with fresh data…'; setTimeout(()=>location.reload(),1400); return; }
+    } else { log.textContent+='\n\n✗ Failed — see output above.'; }
+  }catch(e){ log.textContent='✗ '+e.message; }
+  document.querySelectorAll('.actbtn').forEach(b=>{ b.disabled=false; });
+  btn.classList.remove('running');
+  initActions();
 }
 
 function components(){

@@ -36,7 +36,7 @@ platform-overview.md / platform-structure.md   Product context
 | `npm run tokens` | Derive `data/tokens.json` (typography, shadows, colors, variables) from styles. |
 | `npm run snapshot` | Save a fingerprint snapshot of current data. |
 | `npm run dashboard` | Rebuild `dashboard/index.html` from `data/`. |
-| `npm run serve` | Local static preview of the dashboard at http://localhost:4178. |
+| `npm run serve` | **Local control panel** at http://localhost:4178 — the dashboard plus an Actions tab with Refresh/Publish buttons (no terminal needed). Double-click `4shipper-design.command` in Finder to launch it. |
 | `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
