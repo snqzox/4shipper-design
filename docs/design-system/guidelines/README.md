@@ -15,11 +15,13 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
 - **Never** hardcode a value that duplicates a token — bind the variable/style.
 
 ## Components
-- Build from **published UI Kit components only** (56 sets + standalone — see Components tab or
+- Build from **published UI Kit components only** (41 sets + standalone — see Components tab or
   `data/components.json`). If a needed component is missing, **stop and request it** — don't draw it.
 - Prefer the highest-level fit: `Table` + `Table Cell`, `Input`/`Form Control`, `Button`, `Badge`,
   `Status/*`, `Dialog`, `Tabs`, `Dropdown`, `Notification (Alert)`, `Pagination`, `Stepper`,
-  `Carrier Selection`, `Route Entry`, `Waypoint Entry`.
+  `Carrier Selection`, `Route Entry`.
+  - **Note:** `Waypoint Entry`, `Address entry`, `Carrier Offer` are product compositions that now live
+    in the **4Shipper Design file**, not the UI Kit — use them there, don't expect them in the library.
 - Don't detach instances unless a one-off truly requires it — note why.
 - **Reuse the whole component, not its parts.** Containers (dialogs, cards, banners) are components —
   instance them and fill their slots; never rebuild their chrome from frames. Recipes in

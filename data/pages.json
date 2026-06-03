@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T11:47:06.364Z",
+  "generatedAt": "2026-06-03T13:05:44.938Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2360834293040300007",
-    "lastModified": "2026-06-03T11:39:48Z",
+    "version": "2360849846192687321",
+    "lastModified": "2026-06-03T13:03:48Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -184,6 +184,112 @@
         ]
       },
       {
+        "id": "1970:187597",
+        "name": "⌗ Tender & Contracts [Moved from UI Kit 2.0]",
+        "screens": [
+          {
+            "id": "1970:188650",
+            "name": "Vehicle types and cargo categories",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:188934",
+            "name": "Tenders - Create new tender",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:189644",
+            "name": "Edit Tender",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:190087",
+            "name": "Contracts",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:190594",
+            "name": "Routes",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:190800",
+            "name": "Tender detail",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:190940",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:190955",
+            "name": "Tender detail / Price offers / Mass selection",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:191159",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191188",
+            "name": "Selection confirmation",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191242",
+            "name": "Price Offers - Tooltips",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:191277",
+            "name": "Tender detail / Price offers",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:191534",
+            "name": "Proposals/List entry",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:191540",
+            "name": "Contracts/List entry",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:191546",
+            "name": "Page/Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191567",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191594",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191600",
+            "name": "Tenders",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:191640",
+            "name": "Components",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:192925",
+            "name": "_Form/New Tender/1",
+            "type": "COMPONENT"
+          }
+        ]
+      },
+      {
         "id": "241:11173",
         "name": "---------------",
         "screens": []
@@ -355,6 +461,97 @@
         "id": "1939:1707",
         "name": "🚧 DS Agent Test",
         "screens": []
+      },
+      {
+        "id": "1970:164277",
+        "name": "⌗ Tender & Contracts [Moved from UI Kit 2.0]",
+        "screens": [
+          {
+            "id": "1970:165332",
+            "name": "Tender Header / Status - Evaluation",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165584",
+            "name": "_Table/Price offers",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165734",
+            "name": "Page/Vehicle Types",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:165756",
+            "name": "Content/Tender details",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165785",
+            "name": "Content/Attachments",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165799",
+            "name": "Page/Vehicle Types",
+            "type": "FRAME"
+          },
+          {
+            "id": "1970:165821",
+            "name": "_Content/Q&A",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165858",
+            "name": "Q&A/Entry",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165870",
+            "name": "Tender Header / Status - Collecting offers",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165898",
+            "name": "_Carrier/Modal Content ",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:165933",
+            "name": "Carrier/Tender/Status: Open - Collecting Offers",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:167442",
+            "name": "Carrier/Tender/Status: Open - Collecting Offers",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:167759",
+            "name": "Pages",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:168035",
+            "name": "Chat with shipper Button",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:168044",
+            "name": "Contracts",
+            "type": "SECTION"
+          },
+          {
+            "id": "1970:168164",
+            "name": "Carrier Header",
+            "type": "COMPONENT"
+          },
+          {
+            "id": "1970:168182",
+            "name": "_Person entry",
+            "type": "COMPONENT"
+          }
+        ]
       }
     ]
   }
