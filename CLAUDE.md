@@ -37,7 +37,8 @@ platform-overview.md / platform-structure.md   Product context
 | `npm run snapshot` | Save a fingerprint snapshot of current data. |
 | `npm run dashboard` | Rebuild `dashboard/index.html` from `data/`. |
 | `npm run serve` | **Local control panel** at http://localhost:4178 — the dashboard plus an Actions tab with Refresh/Publish buttons (no terminal needed). Double-click `4shipper-design.command` in Finder to launch it. |
-| `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. |
+| `npm run variables:desktop` | Pull Figma **variables** via the local Dev Mode MCP (needs UI Kit open + active in Figma desktop). Writes `data/variables-desktop.json`, which `tokens` prefers over the Enterprise-gated REST variables. **Subject to a daily rate limit** on the Dev Mode MCP server. |
+| `npm run variables:bridge` | **Fallback when Dev Mode is rate-limited.** Resolves a **figma-mcp-bridge** variable dump (alias chains → concrete values) into `data/variables-desktop.json`. Two-step: the agent dumps local vars (compact) to `data/_bridge-vars-raw.json` via the bridge plugin, then this resolves them. The bridge MCP is stdio-only, so the agent must do the dump — a script can't reach it. Bonus: bridge returns only *local* vars, so library leaks can't appear. See `scripts/build-variables-from-bridge.mjs` header. |
 
 Requires `.env` with `FIGMA_TOKEN` (see `.env.example` / README).
 

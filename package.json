@@ -11,7 +11,8 @@
     "dashboard": "node scripts/build-dashboard.mjs",
     "sync": "node scripts/sync.mjs",
     "serve": "node scripts/serve.mjs",
-    "variables:desktop": "node scripts/pull-variables-desktop.mjs"
+    "variables:desktop": "node scripts/pull-variables-desktop.mjs",
+    "variables:bridge": "node scripts/build-variables-from-bridge.mjs"
   },
   "engines": {
     "node": ">=20.12"
