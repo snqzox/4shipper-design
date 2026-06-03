@@ -1,122 +1,78 @@
 {
-  "generatedAt": "2026-06-03T17:12:19.569Z",
+  "generatedAt": "2026-06-03T18:25:14.689Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2360895440990241440",
-    "lastModified": "2026-06-03T16:10:23Z",
+    "version": "2360921804098860507",
+    "lastModified": "2026-06-03T18:25:16Z",
     "pages": [
       {
-        "id": "1793:36457",
-        "name": "✉️ E-mail templates"
+        "id": "8860:108269",
+        "name": "🏠 Cover"
       },
       {
-        "id": "5510:145844",
-        "name": "--------"
+        "id": "8860:108270",
+        "name": "🧭 Index & Changelog"
       },
       {
-        "id": "0:1",
-        "name": "Helper Components"
+        "id": "8860:108271",
+        "name": "──  FOUNDATIONS  ──"
       },
       {
-        "id": "146:15362",
-        "name": "🧩 Assets"
+        "id": "8860:108272",
+        "name": "🎨 Foundations"
       },
       {
-        "id": "6803:72402",
-        "name": "-----------"
-      },
-      {
-        "id": "6983:1246590",
-        "name": "📦 Content Header"
-      },
-      {
-        "id": "8719:63079",
-        "name": "📦 Page"
-      },
-      {
-        "id": "6824:52717",
-        "name": "📦 Content Box"
-      },
-      {
-        "id": "8680:7883",
-        "name": "📦 Form Header"
-      },
-      {
-        "id": "5510:144478",
-        "name": "📦 Page Footer"
-      },
-      {
-        "id": "5934:67523",
-        "name": "📦 Page Header"
-      },
-      {
-        "id": "8719:57832",
-        "name": "------"
-      },
-      {
-        "id": "5746:44198",
-        "name": "⚛️ Alert Dialog"
-      },
-      {
-        "id": "8719:65102",
-        "name": "⚛️ Section Title"
+        "id": "8860:108273",
+        "name": "──  ACTIONS  ──"
       },
       {
         "id": "5510:140612",
         "name": "⚛️ Button"
       },
       {
-        "id": "8783:67502",
-        "name": "⚛️ Price"
-      },
-      {
-        "id": "5510:138757",
-        "name": "⚛️ Dropdown"
-      },
-      {
-        "id": "5803:42782",
-        "name": "⚛️ Popover"
-      },
-      {
-        "id": "5899:42070",
-        "name": "⚛️ No Data Placeholder"
-      },
-      {
-        "id": "5510:138631",
-        "name": "⚛️ Notification (Alert)"
-      },
-      {
-        "id": "146:14947",
-        "name": "⚛️ Dialog"
-      },
-      {
-        "id": "5510:138818",
-        "name": "⚛️ Tabs"
-      },
-      {
-        "id": "8719:82845",
-        "name": "⚛️ Separator"
-      },
-      {
-        "id": "6277:69151",
-        "name": "⚛️ Tooltip"
+        "id": "8860:108274",
+        "name": "──  FORMS & INPUTS  ──"
       },
       {
         "id": "5510:142308",
         "name": "⚛️ Input & Form Control"
       },
       {
+        "id": "5510:142860",
+        "name": "⚛️ Checkbox, Radio, Switch (Toggle)"
+      },
+      {
+        "id": "5510:138757",
+        "name": "⚛️ Dropdown"
+      },
+      {
         "id": "5510:143842",
         "name": "⚛️ Fileupload"
       },
       {
-        "id": "5510:144244",
-        "name": "⚛️ Pagination"
+        "id": "5510:143087",
+        "name": "⚛️ Attachment"
+      },
+      {
+        "id": "6324:59017",
+        "name": "⚛️ Option Cards"
+      },
+      {
+        "id": "8860:108275",
+        "name": "──  DATA DISPLAY  ──"
+      },
+      {
+        "id": "5510:145876",
+        "name": "⚛️ Table"
       },
       {
         "id": "5510:138759",
         "name": "⚛️ Badge"
+      },
+      {
+        "id": "8783:67502",
+        "name": "⚛️ Price"
       },
       {
         "id": "8745:49161",
@@ -131,28 +87,104 @@
         "name": "⚛️ Item"
       },
       {
-        "id": "146:15360",
-        "name": "⚛️ Breadcrumbs"
+        "id": "8719:82845",
+        "name": "⚛️ Separator"
       },
       {
-        "id": "5510:142860",
-        "name": "⚛️ Checkbox, Radio, Switch (Toggle)"
+        "id": "8719:65102",
+        "name": "⚛️ Section Title"
       },
       {
-        "id": "5510:145876",
-        "name": "⚛️ Table"
+        "id": "5899:42070",
+        "name": "⚛️ No Data Placeholder"
       },
       {
-        "id": "6956:1232757",
-        "name": "⚛️ Accordion"
+        "id": "8860:108276",
+        "name": "──  FEEDBACK  ──"
       },
       {
-        "id": "5510:143087",
-        "name": "⚛️ Attachment"
+        "id": "5510:138631",
+        "name": "⚛️ Notification (Alert)"
+      },
+      {
+        "id": "8860:108277",
+        "name": "──  OVERLAYS & SURFACES  ──"
+      },
+      {
+        "id": "146:14947",
+        "name": "⚛️ Dialog"
+      },
+      {
+        "id": "5746:44198",
+        "name": "⚛️ Alert Dialog"
+      },
+      {
+        "id": "5803:42782",
+        "name": "⚛️ Popover"
+      },
+      {
+        "id": "6277:69151",
+        "name": "⚛️ Tooltip"
+      },
+      {
+        "id": "8860:108278",
+        "name": "──  NAVIGATION  ──"
+      },
+      {
+        "id": "5510:138818",
+        "name": "⚛️ Tabs"
       },
       {
         "id": "8680:57271",
         "name": "⚛️ Step Progress Tabs"
+      },
+      {
+        "id": "8808:80242",
+        "name": "⚛️ Stepper"
+      },
+      {
+        "id": "146:15360",
+        "name": "⚛️ Breadcrumbs"
+      },
+      {
+        "id": "5510:144244",
+        "name": "⚛️ Pagination"
+      },
+      {
+        "id": "8860:108279",
+        "name": "──  LAYOUT & STRUCTURE  ──"
+      },
+      {
+        "id": "8719:63079",
+        "name": "📦 Page"
+      },
+      {
+        "id": "5934:67523",
+        "name": "📦 Page Header"
+      },
+      {
+        "id": "5510:144478",
+        "name": "📦 Page Footer"
+      },
+      {
+        "id": "6824:52717",
+        "name": "📦 Content Box"
+      },
+      {
+        "id": "6983:1246590",
+        "name": "📦 Content Header"
+      },
+      {
+        "id": "8680:7883",
+        "name": "📦 Form Header"
+      },
+      {
+        "id": "8860:108280",
+        "name": "──  DOMAIN (LOGISTICS)  ──"
+      },
+      {
+        "id": "6803:75281",
+        "name": "⚛️ Route Entry"
       },
       {
         "id": "5510:143872",
@@ -163,16 +195,36 @@
         "name": "⚛️ Location Pointer"
       },
       {
-        "id": "6324:59017",
-        "name": "⚛️ Option Cards"
+        "id": "8860:108281",
+        "name": "──  ASSETS  ──"
       },
       {
-        "id": "6803:75281",
-        "name": "⚛️ Route Entry"
+        "id": "146:15362",
+        "name": "🧩 Assets"
       },
       {
-        "id": "8808:80242",
-        "name": "Stepper"
+        "id": "1793:36457",
+        "name": "✉️ E-mail templates"
+      },
+      {
+        "id": "0:1",
+        "name": "Helper Components"
+      },
+      {
+        "id": "5510:145844",
+        "name": "--------"
+      },
+      {
+        "id": "6803:72402",
+        "name": "-----------"
+      },
+      {
+        "id": "8719:57832",
+        "name": "------"
+      },
+      {
+        "id": "6956:1232757",
+        "name": "⚛️ Accordion"
       },
       {
         "id": "8810:80309",
@@ -190,6 +242,6 @@
   },
   "raw": {
     "__unavailable": true,
-    "reason": "Figma API 403 Forbidden — /v1/files/XVou4XJ4rWbt4oXoSxO7hO/variables/local\n{\"status\":403,\"error\":true,\"message\":\"Invalid scope(s): current_user:read, file_comments:read, file_comments:write, file_content:read, file_metadata:read, file_versions:read, library_assets:read, library_content:read, team_library_content:read, file_dev_resources:read, file_dev_resources:write, proj"
+    "reason": "Figma API 403  — /v1/files/XVou4XJ4rWbt4oXoSxO7hO/variables/local\n{\"status\":403,\"error\":true,\"message\":\"Invalid scope(s): current_user:read, file_comments:read, file_comments:write, file_content:read, file_metadata:read, file_versions:read, library_assets:read, library_content:read, team_library_content:read, file_dev_resources:read, file_dev_resources:write, proj"
   }
 }
