@@ -89,3 +89,47 @@ Since B is not a real DS variable, the practical severity is lower than a true i
 the **published Button is already correct**. The risk is that a designer could still pick the stale
 `#0048E3` reference off the leaking node. Cleaning it removes that trap and stops the noise in the
 synced token data.
+
+---
+
+## Investigation result (2026-06-03) — where the leak lives & where it comes from
+
+**Libraries linked to UI Kit 2.0** (`get_libraries`):
+| Library | Source | Keep? |
+|---|---|---|
+| **Transportly UI Kit 2.0** | team (self) | ✅ canonical |
+| **Uixmate team library** | team | ❌ **suspected source of `button/primary/*`** — the only foreign team library; generic template naming |
+| Material 3 Design Kit | community | ❌ clutter, unrelated |
+| Simple Design System | community | ❌ clutter, unrelated |
+| iOS 18 and iPadOS 18 | community | ❌ clutter, unrelated |
+
+A `search_design_system` for "button primary bg" across all linked libraries returns **only** the
+canonical `button-primary/*` from Transportly UI Kit 2.0 — the foreign `button/primary/*` is not
+surfaced by any *currently linked* library's published index, consistent with it being an older/
+detached library (Uixmate) reference. **Confirm in 1 click:** select a leaking node (below), open its
+fill → the bound variable shows a library badge naming the source.
+
+**Leak locations** (scanned all 50 UI Kit pages via Dev Mode MCP `get_variable_defs`) — only **2 pages**:
+
+1. **Page `Tenders - Shipper`** (`146:60786`) — references on these top-level frames/sections:
+   - `3448:90659` Tenders - Create new tender · `5338:49569` Edit Tender · `3511:183956` Tender detail
+   - `1448:56134` Tender detail / Price offers / Mass selection · `3722:148508` Tender detail / Price offers
+   - `3771:123894` Selection confirmation · `4054:73237` Tenders · `5250:86013` Components · `147:64155` _Form/New Tender/1
+2. **Page `⚛️ Fileupload`** (`5510:143842`) — inside the **`Fileupload`** component (`5184:85248`), only `button/primary-subtle/*`.
+
+**What this tells us:** the `Tenders - Shipper` page is a set of **stale product mockups** (these are
+4Shipper *screens*, which belong in the 4Shipper Design file — not in the UI Kit). They were built
+against the old Uixmate tokens and never migrated.
+
+### Recommended cleanup (in order)
+1. **Delete the `Tenders - Shipper` page** from UI Kit 2.0 (product mockups don't belong in the library).
+   This removes ~90% of the leak instantly. (If any of it is still wanted, move it to the 4Shipper file
+   first.)
+2. **Fix the `Fileupload` component** (`5184:85248`): rebind its `button/primary-subtle/*` fills/strokes/
+   text to `button-primary-subtle/*` (Variables → `theme-colors`).
+3. **Unlink the non-Transportly libraries** — Assets → Libraries → toggle **off** *Uixmate team library*
+   (and, if unused, Material 3 / Simple Design System / iOS 18). With no node still referencing them,
+   removal is clean.
+4. **Publish** UI Kit 2.0 → `npm run sync` logs it.
+5. **Verify:** re-run `npm run variables:desktop` — `button/primary*` and `#0048E3` should be gone from
+   `data/variables-desktop.json`.
