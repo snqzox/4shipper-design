@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-03T17:12:19.569Z",
+  "generatedAt": "2026-06-03T17:59:15.830Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2360895440990241440",
-    "lastModified": "2026-06-03T16:10:23Z",
+    "version": "2360920291670830161",
+    "lastModified": "2026-06-03T17:59:18Z",
     "pages": [
       {
         "id": "1793:36457",
@@ -172,7 +172,7 @@
       },
       {
         "id": "8808:80242",
-        "name": "Stepper"
+        "name": "⚛️ Stepper"
       },
       {
         "id": "8810:80309",
