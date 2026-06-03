@@ -24,7 +24,12 @@ Base unit **4**, with half-steps where needed:
 
 ## Border radius (px)
 `border-radius/2xs 2 · xs 4 · sm 8 · md 12 · lg 20 · xl 32 · full 999`
-- Inputs & buttons → `sm` (8). Cards/dialogs → `md` (12). Pills/avatars → `full`.
+- **Components carry their own radius token** — e.g. **each button size has its own radius**; use the
+  component default, don't override it.
+- Containers you build yourself: **cards & dialogs → `lg` (20)**. Pills/avatars → `full`.
+
+**Form field spacing:** gap between fields = `layout-gap/md` (20). Use the `Form Control` component
+(label + hint + error built in) — see [../guidelines/README.md](../guidelines/README.md).
 
 ## Icon sizes (px)
 `10 · 12 · 16 · 18 · 20 · 22 · 24` (`icon-size/*`). Default inline icon **20**; small **16**.

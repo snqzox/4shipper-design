@@ -10,7 +10,8 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
   `body/md-regular` (14/20), labels `sm/sm-semibold`. See [typography.md](../foundations/typography.md).
 - **Spacing** → 4-base scale (`spacing/2 8`, `/3 12`, `/4 16`, `/6 24`, `/8 32`); layout gaps
   `xs6 sm12 md20 lg32`. See [spacing.md](../foundations/spacing.md).
-- **Radius** → inputs/buttons `sm 8`, cards/dialogs `md 12`, pills `full`. **Icons** default 20.
+- **Radius** → each component carries its own radius token (e.g. **every button size has its own
+  radius — don't override it**). Containers you build yourself: **cards & dialogs `lg 20`**, pills `full`. **Icons** default 20.
 - **Never** hardcode a value that duplicates a token — bind the variable/style.
 
 ## Components
@@ -28,9 +29,10 @@ file structure. Owned by `design-system-manager`. Keep concrete and current.
 - Vertical rhythm: section gaps `spacing/8 (32)`, block gaps `spacing/4 (16)`, control padding `spacing/3 (12)`.
 
 ## Forms
-- One column; label **above** field (`sm/sm-semibold`, `text/body`).
-- Fields use the `Input` / `Form Control` set, radius `sm 8`, border `border/input #D0D4DD`.
-- Required = `*` after label. Errors: `text/danger` message + danger border; helper text `sm/sm-regular text/muted`.
+- **Use the `Form Control` component for every field.** It already contains the label, hint/helper
+  text, and error state — do **not** hand-build label + input stacks. (UI Kit node `26:1580`.)
+- **Spacing between form fields = `layout-gap/md` (20px)** — set the form's auto-layout gap to it.
+- One column. Required, hint and error states are driven by `Form Control`'s own properties.
 - Group related fields; primary action right-aligned (`Button` primary), secondary to its left.
 - Multi-step flows use the `Stepper` / `Step Progress Tabs` (e.g. tender & request wizards).
 
