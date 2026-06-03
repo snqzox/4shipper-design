@@ -24,6 +24,15 @@ import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 // Output matches the Dev Mode format so tokens.mjs consumes it unchanged: colours = lowercase hex,
 // numbers = strings, strings = as-is. Because the bridge returns only LOCAL variables, foreign/library
 // leaks (e.g. an old Uixmate `button/primary/bg`) can never appear here by construction.
+//
+// LIMITATION — MULTI-MODE TOKENS (verified 2026-06-03). `figma_search_variables` compact returns ONE
+// value per variable: the collection's FIRST/default mode. For multi-mode collections this differs from
+// the Dev Mode `get_variable_defs` output (pull-variables-desktop.mjs), which resolves the mode actually
+// USED in context on the scanned pages. Concretely, the `input-sizes` collection has 4 size modes
+// (sm/md/lg/xl) — e.g. `button/size` = 28/34/42/48 — so the bridge yields 28 where Dev Mode yielded 42.
+// Colours (theme-colors, light/dark) match because both pick light. ⇒ This bridge path is RELIABLE for
+// COLOURS (and the leak-proofing that motivated it) but WRONG for multi-mode layout/size tokens, so it
+// is a fallback, NOT a drop-in replacement for the Dev Mode pull as the primary source.
 const DATA_DIR = 'data'
 const RAW = `${DATA_DIR}/_bridge-vars-raw.json`
 const OUT = process.argv[2] || `${DATA_DIR}/variables-desktop.json`
