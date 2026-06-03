@@ -41,6 +41,12 @@ by fileKey (no desktop focus needed). Steps:
    library shadow for elevation. Bind variables when you have their keys; otherwise use exact token values.
 - **Place work on a dedicated WIP page** (create/use one, e.g. `🚧 …`); never overwrite existing screens
   unless told to. When asked to "tidy pages", propose the reorganization first, then execute.
+- **Name every screen/surface frame by its content**, following
+  `docs/design-system/guidelines/screen-naming.md` —
+  `<Section>/<Subsection>/<Type>[/<Name>][ - <Qualifier>]` (e.g. `Directory/Routes/Dialog/Edit Route`).
+  This also covers the recurring **"rename screens to match content"** task: read each surface's title
+  (`get_metadata` + `get_screenshot`), derive the name, then set `node.name` via `use_figma`. Renaming
+  layers is link-safe.
 - **Verify with `get_screenshot(fileKey, nodeId)`** before reporting done.
 
 ## Workflow
