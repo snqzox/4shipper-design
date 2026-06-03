@@ -398,9 +398,11 @@ async function initActions(){
   try{
     const s=await (await fetch('/api/status',{headers:{'x-ds-control':'1'}})).json();
     const when=s.generatedAt?new Date(s.generatedAt).toLocaleString():'—';
+    const refreshed=s.refreshedAt?new Date(s.refreshedAt).toLocaleString():'—';
     const dirty=s.git&&s.git.dirty;
     el.innerHTML=
-      '<div class="srow"><span>Last data sync</span><b>'+esc(when)+'</b></div>'+
+      '<div class="srow"><span>Last change</span><b>'+esc(when)+'</b></div>'+
+      '<div class="srow"><span>Last refreshed</span><b>'+esc(refreshed)+'</b></div>'+
       '<div class="srow"><span>Components · Variables · Colors</span><b>'+s.components+' · '+s.variables+' · '+s.colors+'</b></div>'+
       '<div class="srow"><span>Uncommitted changes</span><b class="'+(dirty?'warn':'ok')+'">'+(dirty?(s.git.changes+' files — Publish to deploy'):'none — up to date')+'</b></div>';
   }catch(e){ el.textContent='Status unavailable ('+e.message+'). Is the control panel running (npm run serve)?'; }
