@@ -1,0 +1,782 @@
+{
+  "generatedAt": "2026-06-03T18:35:54.542Z",
+  "source": "data/components.json",
+  "library": {
+    "key": "XVou4XJ4rWbt4oXoSxO7hO",
+    "name": "Transportly UI Kit 2.0",
+    "version": "2360930161515345371",
+    "lastModified": "2026-06-03T18:32:46Z",
+    "pages": [
+      {
+        "id": "8860:108269",
+        "name": "🏠 Cover"
+      },
+      {
+        "id": "8860:108270",
+        "name": "🧭 Index & Changelog"
+      },
+      {
+        "id": "8860:108271",
+        "name": "──  FOUNDATIONS  ──"
+      },
+      {
+        "id": "8860:108272",
+        "name": "🎨 Foundations"
+      },
+      {
+        "id": "8860:108273",
+        "name": "──  ACTIONS  ──"
+      },
+      {
+        "id": "5510:140612",
+        "name": "⚛️ Button"
+      },
+      {
+        "id": "8860:108274",
+        "name": "──  FORMS & INPUTS  ──"
+      },
+      {
+        "id": "5510:142308",
+        "name": "⚛️ Input & Form Control"
+      },
+      {
+        "id": "5510:142860",
+        "name": "⚛️ Checkbox, Radio, Switch (Toggle)"
+      },
+      {
+        "id": "5510:138757",
+        "name": "⚛️ Dropdown"
+      },
+      {
+        "id": "5510:143842",
+        "name": "⚛️ Fileupload"
+      },
+      {
+        "id": "5510:143087",
+        "name": "⚛️ Attachment"
+      },
+      {
+        "id": "6324:59017",
+        "name": "⚛️ Option Cards"
+      },
+      {
+        "id": "8860:108275",
+        "name": "──  DATA DISPLAY  ──"
+      },
+      {
+        "id": "5510:145876",
+        "name": "⚛️ Table"
+      },
+      {
+        "id": "5510:138759",
+        "name": "⚛️ Badge"
+      },
+      {
+        "id": "8783:67502",
+        "name": "⚛️ Price"
+      },
+      {
+        "id": "8745:49161",
+        "name": "⚛️ Status"
+      },
+      {
+        "id": "7215:102889",
+        "name": "⚛️ Progress Bar"
+      },
+      {
+        "id": "6824:54251",
+        "name": "⚛️ Item"
+      },
+      {
+        "id": "8719:82845",
+        "name": "⚛️ Separator"
+      },
+      {
+        "id": "8719:65102",
+        "name": "⚛️ Section Title"
+      },
+      {
+        "id": "5899:42070",
+        "name": "⚛️ No Data Placeholder"
+      },
+      {
+        "id": "8860:108276",
+        "name": "──  FEEDBACK  ──"
+      },
+      {
+        "id": "5510:138631",
+        "name": "⚛️ Notification (Alert)"
+      },
+      {
+        "id": "8860:108277",
+        "name": "──  OVERLAYS & SURFACES  ──"
+      },
+      {
+        "id": "146:14947",
+        "name": "⚛️ Dialog"
+      },
+      {
+        "id": "5746:44198",
+        "name": "⚛️ Alert Dialog"
+      },
+      {
+        "id": "5803:42782",
+        "name": "⚛️ Popover"
+      },
+      {
+        "id": "6277:69151",
+        "name": "⚛️ Tooltip"
+      },
+      {
+        "id": "8860:108278",
+        "name": "──  NAVIGATION  ──"
+      },
+      {
+        "id": "5510:138818",
+        "name": "⚛️ Tabs"
+      },
+      {
+        "id": "8680:57271",
+        "name": "⚛️ Step Progress Tabs"
+      },
+      {
+        "id": "8808:80242",
+        "name": "⚛️ Stepper"
+      },
+      {
+        "id": "146:15360",
+        "name": "⚛️ Breadcrumbs"
+      },
+      {
+        "id": "5510:144244",
+        "name": "⚛️ Pagination"
+      },
+      {
+        "id": "8860:108279",
+        "name": "──  LAYOUT & STRUCTURE  ──"
+      },
+      {
+        "id": "8719:63079",
+        "name": "📦 Page"
+      },
+      {
+        "id": "5934:67523",
+        "name": "📦 Page Header"
+      },
+      {
+        "id": "5510:144478",
+        "name": "📦 Page Footer"
+      },
+      {
+        "id": "6824:52717",
+        "name": "📦 Content Box"
+      },
+      {
+        "id": "6983:1246590",
+        "name": "📦 Content Header"
+      },
+      {
+        "id": "8680:7883",
+        "name": "📦 Form Header"
+      },
+      {
+        "id": "8860:108280",
+        "name": "──  DOMAIN (LOGISTICS)  ──"
+      },
+      {
+        "id": "6803:75281",
+        "name": "⚛️ Route Entry"
+      },
+      {
+        "id": "5510:143872",
+        "name": "⚛️ Carrier Selection"
+      },
+      {
+        "id": "5510:145845",
+        "name": "⚛️ Location Pointer"
+      },
+      {
+        "id": "8860:108281",
+        "name": "──  ASSETS  ──"
+      },
+      {
+        "id": "146:15362",
+        "name": "🧩 Assets"
+      },
+      {
+        "id": "1793:36457",
+        "name": "✉️ E-mail templates"
+      },
+      {
+        "id": "0:1",
+        "name": "Helper Components"
+      },
+      {
+        "id": "5510:145844",
+        "name": "--------"
+      },
+      {
+        "id": "6803:72402",
+        "name": "-----------"
+      },
+      {
+        "id": "8719:57832",
+        "name": "------"
+      },
+      {
+        "id": "6956:1232757",
+        "name": "⚛️ Accordion"
+      },
+      {
+        "id": "8810:80309",
+        "name": "bc"
+      },
+      {
+        "id": "8815:992",
+        "name": "📖 Docs / Button"
+      },
+      {
+        "id": "8848:107957",
+        "name": "📖 Docs / Badge"
+      }
+    ]
+  },
+  "summary": {
+    "liveComponentPages": 37,
+    "placedPages": 37,
+    "categories": 10,
+    "newMetaPages": 3,
+    "setsTotal": 40,
+    "setsDescribed": 39,
+    "setsMissingDescription": 0
+  },
+  "sections": [
+    {
+      "divider": null,
+      "pages": [
+        {
+          "order": 0,
+          "current": null,
+          "target": "🏠 Cover",
+          "isNew": true,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 0,
+          "sets": []
+        },
+        {
+          "order": 1,
+          "current": null,
+          "target": "🧭 Index & Changelog",
+          "isNew": true,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 0,
+          "sets": []
+        }
+      ]
+    },
+    {
+      "divider": "──  FOUNDATIONS  ──",
+      "pages": [
+        {
+          "order": 2,
+          "current": null,
+          "target": "🎨 Foundations",
+          "isNew": true,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 0,
+          "sets": []
+        }
+      ]
+    },
+    {
+      "divider": "──  ACTIONS  ──",
+      "pages": [
+        {
+          "order": 3,
+          "current": "⚛️ Button",
+          "target": "⚛️ Button",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 27,
+          "sets": [
+            "Button"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  FORMS & INPUTS  ──",
+      "pages": [
+        {
+          "order": 4,
+          "current": "⚛️ Input & Form Control",
+          "target": "⚛️ Input & Form Control",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 29,
+          "sets": [
+            "Input",
+            "Textarea"
+          ]
+        },
+        {
+          "order": 5,
+          "current": "⚛️ Checkbox, Radio, Switch (Toggle)",
+          "target": "⚛️ Checkbox, Radio, Switch (Toggle)",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 24,
+          "sets": [
+            "Check, Radio, Switch Item",
+            "Selectable Group Entry",
+            "Selectable List Entry"
+          ]
+        },
+        {
+          "order": 6,
+          "current": "⚛️ Dropdown",
+          "target": "⚛️ Dropdown",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 6,
+          "sets": [
+            "Dropdown Item"
+          ]
+        },
+        {
+          "order": 7,
+          "current": "⚛️ Fileupload",
+          "target": "⚛️ Fileupload",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 8,
+          "current": "⚛️ Attachment",
+          "target": "⚛️ Attachment",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 2,
+          "sets": [
+            "Attachment entry"
+          ]
+        },
+        {
+          "order": 9,
+          "current": "⚛️ Option Cards",
+          "target": "⚛️ Option Cards",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 5,
+          "sets": [
+            "Option Cards/Card"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  DATA DISPLAY  ──",
+      "pages": [
+        {
+          "order": 10,
+          "current": "⚛️ Table",
+          "target": "⚛️ Table",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 8,
+          "sets": [
+            "Table Cell"
+          ]
+        },
+        {
+          "order": 11,
+          "current": "⚛️ Badge",
+          "target": "⚛️ Badge",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 7,
+          "sets": [
+            "Badge"
+          ]
+        },
+        {
+          "order": 12,
+          "current": "⚛️ Price",
+          "target": "⚛️ Price",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 11,
+          "sets": [
+            "Price",
+            "Price/Basic"
+          ]
+        },
+        {
+          "order": 13,
+          "current": "⚛️ Status",
+          "target": "⚛️ Status",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 28,
+          "sets": [
+            "Status",
+            "Status/Contract",
+            "Status/Requests",
+            "Status/Tender",
+            "Status/Transports"
+          ]
+        },
+        {
+          "order": 14,
+          "current": "⚛️ Progress Bar",
+          "target": "⚛️ Progress Bar",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 4,
+          "sets": [
+            "Progress Bar/Bar"
+          ]
+        },
+        {
+          "order": 15,
+          "current": "⚛️ Item",
+          "target": "⚛️ Item",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 3,
+          "sets": [
+            "Item"
+          ]
+        },
+        {
+          "order": 16,
+          "current": "⚛️ Separator",
+          "target": "⚛️ Separator",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 8,
+          "sets": [
+            "Separator"
+          ]
+        },
+        {
+          "order": 17,
+          "current": "⚛️ Section Title",
+          "target": "⚛️ Section Title",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 18,
+          "current": "⚛️ No Data Placeholder",
+          "target": "⚛️ No Data Placeholder",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        }
+      ]
+    },
+    {
+      "divider": "──  FEEDBACK  ──",
+      "pages": [
+        {
+          "order": 19,
+          "current": "⚛️ Notification (Alert)",
+          "target": "⚛️ Notification (Alert)",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 5,
+          "sets": [
+            "Notification (Alert)"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  OVERLAYS & SURFACES  ──",
+      "pages": [
+        {
+          "order": 20,
+          "current": "⚛️ Dialog",
+          "target": "⚛️ Dialog",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": [
+            "Dialog"
+          ]
+        },
+        {
+          "order": 21,
+          "current": "⚛️ Alert Dialog",
+          "target": "⚛️ Alert Dialog",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 22,
+          "current": "⚛️ Popover",
+          "target": "⚛️ Popover",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 5,
+          "sets": [
+            "Popover Item"
+          ]
+        },
+        {
+          "order": 23,
+          "current": "⚛️ Tooltip",
+          "target": "⚛️ Tooltip",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 4,
+          "sets": [
+            "Tooltip"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  NAVIGATION  ──",
+      "pages": [
+        {
+          "order": 24,
+          "current": "⚛️ Tabs",
+          "target": "⚛️ Tabs",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 2,
+          "sets": [
+            "Tabs"
+          ]
+        },
+        {
+          "order": 25,
+          "current": "⚛️ Step Progress Tabs",
+          "target": "⚛️ Step Progress Tabs",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 26,
+          "current": "⚛️ Stepper",
+          "target": "⚛️ Stepper",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 4,
+          "sets": [
+            "Stepper"
+          ]
+        },
+        {
+          "order": 27,
+          "current": "⚛️ Breadcrumbs",
+          "target": "⚛️ Breadcrumbs",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 3,
+          "sets": [
+            "Breadcrumb Item"
+          ]
+        },
+        {
+          "order": 28,
+          "current": "⚛️ Pagination",
+          "target": "⚛️ Pagination",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 2,
+          "sets": [
+            "Pagination"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  LAYOUT & STRUCTURE  ──",
+      "pages": [
+        {
+          "order": 29,
+          "current": "📦 Page",
+          "target": "📦 Page",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 2,
+          "sets": []
+        },
+        {
+          "order": 30,
+          "current": "📦 Page Header",
+          "target": "📦 Page Header",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 6,
+          "sets": [
+            "Page/Header/Carrier",
+            "Page/Header/Shipper"
+          ]
+        },
+        {
+          "order": 31,
+          "current": "📦 Page Footer",
+          "target": "📦 Page Footer",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 32,
+          "current": "📦 Content Box",
+          "target": "📦 Content Box",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 4,
+          "sets": [
+            "Content Box"
+          ]
+        },
+        {
+          "order": 33,
+          "current": "📦 Content Header",
+          "target": "📦 Content Header",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        },
+        {
+          "order": 34,
+          "current": "📦 Form Header",
+          "target": "📦 Form Header",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        }
+      ]
+    },
+    {
+      "divider": "──  DOMAIN (LOGISTICS)  ──",
+      "pages": [
+        {
+          "order": 35,
+          "current": "⚛️ Route Entry",
+          "target": "⚛️ Route Entry",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 16,
+          "sets": [
+            "Route Entry",
+            "Route Entry 2"
+          ]
+        },
+        {
+          "order": 36,
+          "current": "⚛️ Carrier Selection",
+          "target": "⚛️ Carrier Selection",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 6,
+          "sets": [
+            "Carrier Selection",
+            "Carrier Selection/Entry"
+          ]
+        },
+        {
+          "order": 37,
+          "current": "⚛️ Location Pointer",
+          "target": "⚛️ Location Pointer",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 2,
+          "sets": [
+            "Location Pointer"
+          ]
+        }
+      ]
+    },
+    {
+      "divider": "──  ASSETS  ──",
+      "pages": [
+        {
+          "order": 38,
+          "current": "🧩 Assets",
+          "target": "🧩 Assets",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 431,
+          "sets": [
+            "Flag",
+            "Illustration"
+          ]
+        },
+        {
+          "order": 39,
+          "current": "✉️ E-mail templates",
+          "target": "✉️ E-mail templates",
+          "isNew": false,
+          "renamed": false,
+          "renameReason": null,
+          "componentCount": 1,
+          "sets": []
+        }
+      ]
+    }
+  ],
+  "flags": {
+    "emojiFix": [],
+    "missingExpectedPage": [],
+    "unmappedPages": [],
+    "setsMissingDescription": 0
+  }
+}
