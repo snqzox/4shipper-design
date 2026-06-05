@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-04T17:16:43.993Z",
+  "generatedAt": "2026-06-05T13:52:47.131Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2361234798712140865",
-    "lastModified": "2026-06-04T14:04:32Z",
+    "version": "2361579740987697061",
+    "lastModified": "2026-06-05T12:25:33Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -44,7 +44,7 @@
             "type": "FRAME",
             "w": 16155,
             "h": 9232,
-            "childCount": 41,
+            "childCount": 45,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -131,6 +131,18 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Wegpunktadresse nicht gefunden",
+                "type": "TEXT"
+              },
+              {
                 "name": "Next Step",
                 "type": "CONNECTOR"
               },
@@ -209,6 +221,32 @@
               {
                 "name": "Next Step",
                 "type": "CONNECTOR"
+              },
+              {
+                "name": "Útpont címe nem található",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "2124:29546",
+            "name": "Frame 27806",
+            "type": "FRAME",
+            "w": 614,
+            "h": 284,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Route Entry 2",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Route Entry 2",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Route Entry 5",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -261,7 +299,7 @@
             "name": "Requests/Create New Request/Step 8",
             "type": "FRAME",
             "w": 1512,
-            "h": 1775,
+            "h": 1777,
             "childCount": 3,
             "children": [
               {
@@ -283,7 +321,7 @@
             "name": "Requests/Create New Request/Step 6",
             "type": "FRAME",
             "w": 1512,
-            "h": 2145,
+            "h": 2147,
             "childCount": 3,
             "children": [
               {
@@ -483,7 +521,7 @@
             "name": "New Request/Cargo Item List View",
             "type": "COMPONENT",
             "w": 320,
-            "h": 634,
+            "h": 636,
             "childCount": 3,
             "children": [
               {
@@ -2663,7 +2701,7 @@
             "name": "Bidding Flow",
             "type": "FRAME",
             "w": 3280,
-            "h": 955,
+            "h": 957,
             "childCount": 5,
             "children": [
               {
