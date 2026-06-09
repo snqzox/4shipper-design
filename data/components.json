@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-05T10:32:23.998Z",
+  "generatedAt": "2026-06-09T12:06:15.352Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2361553279155967399",
-    "lastModified": "2026-06-05T10:32:26Z",
+    "version": "2363060873321114347",
+    "lastModified": "2026-06-09T11:58:12Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,8 +244,8 @@
       }
     ]
   },
-  "count": 664,
-  "setCount": 40,
+  "count": 678,
+  "setCount": 43,
   "components": [
     {
       "key": "17358a3ae6f0c6a88b5e646ddec7dd29d9724642",
@@ -588,6 +588,132 @@
       "updatedAt": "2026-06-03T15:42:51.324Z",
       "set": null,
       "page": "🧩 Assets"
+    },
+    {
+      "key": "8a022dba28f3f54d443dabbf80d23ffebfa074bf",
+      "name": "Align=Left, Style=Single Line",
+      "nodeId": "9010:1967",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.768Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "e8cfa2596a6e1f70adea7aac1b1ec19e808736de",
+      "name": "Align=Right, Style=Single Line",
+      "nodeId": "9010:1987",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.775Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "8d057d9000588b610fa32df6c314a332c0af869d",
+      "name": "Align=Right, Style=Multi Lines",
+      "nodeId": "9010:1997",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.780Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "0ebcf1d7835369ffcbd86996582aeba22f8735c1",
+      "name": "Align=Left, Style=Multi Lines",
+      "nodeId": "9010:1977",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.786Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "55bf3e2ceb1e3644d75aad6a36c0b4d122063f9d",
+      "name": "Property 1=MD, Exchanged=False",
+      "nodeId": "9010:2093",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.790Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "8a9af122662058c13120a95651c57683223a2dd6",
+      "name": "Property 1=XS, Exchanged=False",
+      "nodeId": "9010:2103",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.795Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "b8d816c2fba6e82c9bc9f274aa0e94eae80839e4",
+      "name": "Property 1=XS, Exchanged=True",
+      "nodeId": "9010:2137",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.800Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "13a2a1a227b60e2dbe5475704c62d51fd1de0475",
+      "name": "Property 1=MD, Exchanged=True",
+      "nodeId": "9010:2129",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.805Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "d9c0c47f803cfc1989d9f6497c2c3ffa2d606376",
+      "name": "Property 1=SM, Exchanged=False",
+      "nodeId": "9010:2098",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.811Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "b68feb2807cfdcf26f61436d816a86d139abfa7d",
+      "name": "Property 1=SM, Exchanged=True",
+      "nodeId": "9010:2133",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.818Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "ff18ab7d207011d1be8550114778705b676eecd3",
+      "name": "Property 1=LG, Exchanged=False",
+      "nodeId": "9010:2108",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.824Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "f8cb4203ed5e9d69cb2f12008f05888f1abeb8c0",
+      "name": "Property 1=LG, Exchanged=True",
+      "nodeId": "9010:2141",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.831Z",
+      "set": "Price/Basic 2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "1bbac94916b345c3b532720734a82cd119a84ed5",
+      "name": "Align=Right",
+      "nodeId": "9012:2254",
+      "description": "",
+      "updatedAt": "2026-06-09T10:39:56.722Z",
+      "set": "Price Final",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "fb4f2a00e1de69abde1ef36152639f721521f94e",
+      "name": "Align=Left",
+      "nodeId": "9010:2217",
+      "description": "",
+      "updatedAt": "2026-06-09T10:39:56.734Z",
+      "set": "Price Final",
+      "page": "⚛️ Price"
     },
     {
       "key": "5de6d6b587f705582e44750780361e93b120e543",
@@ -1737,7 +1863,7 @@
       "name": "Price/Per Kilometer",
       "nodeId": "8784:67542",
       "description": "",
-      "updatedAt": "2026-06-03T14:56:32.984Z",
+      "updatedAt": "2026-06-09T10:31:30.870Z",
       "set": null,
       "page": "⚛️ Price"
     },
@@ -2120,6 +2246,15 @@
       "page": "⚛️ Input & Form Control"
     },
     {
+      "key": "14e12140269f44a27078b9892555ccb2539c7720",
+      "name": "Align=Left, Style=Single Line",
+      "nodeId": "8784:67605",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.878Z",
+      "set": "Price",
+      "page": "⚛️ Price"
+    },
+    {
       "key": "009a129716b7d5afcb79fd41409095b5e63b84fe",
       "name": "State=Default, Selected=False",
       "nodeId": "707:231189",
@@ -2127,15 +2262,6 @@
       "updatedAt": "2026-06-03T18:30:11.514Z",
       "set": "Dropdown Item",
       "page": "⚛️ Dropdown"
-    },
-    {
-      "key": "14e12140269f44a27078b9892555ccb2539c7720",
-      "name": "Align=Left, Style=Single Line",
-      "nodeId": "8784:67605",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:11.610Z",
-      "set": "Price",
-      "page": "⚛️ Price"
     },
     {
       "key": "4b790686479e200cc09bc9c4b3295e70e576246b",
@@ -2210,6 +2336,15 @@
       "page": "⚛️ Status"
     },
     {
+      "key": "aeda0e5aab389140e0a0acf37a15f5e464ee2918",
+      "name": "Align=Right, Style=Multi Lines",
+      "nodeId": "8812:83803",
+      "description": "",
+      "updatedAt": "2026-06-09T10:31:30.884Z",
+      "set": "Price",
+      "page": "⚛️ Price"
+    },
+    {
       "key": "ac137a19ff192c3fe2376002873ea7557f7d0538",
       "name": "Status=Processing",
       "nodeId": "8754:49379",
@@ -2217,15 +2352,6 @@
       "updatedAt": "2026-06-03T18:30:12.334Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
-    },
-    {
-      "key": "aeda0e5aab389140e0a0acf37a15f5e464ee2918",
-      "name": "Align=Right, Style=Multi Lines",
-      "nodeId": "8812:83803",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.340Z",
-      "set": "Price",
-      "page": "⚛️ Price"
     },
     {
       "key": "b005cf0339b875d01ccc4181fc0661ec183d6fac",
@@ -2250,7 +2376,7 @@
       "name": "Align=Right, Style=Single Line",
       "nodeId": "8812:83121",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.385Z",
+      "updatedAt": "2026-06-09T10:31:30.889Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -2259,7 +2385,7 @@
       "name": "Align=Left, Style=Multi Lines",
       "nodeId": "8812:83793",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.404Z",
+      "updatedAt": "2026-06-09T10:31:30.894Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -6240,13 +6366,6 @@
       "updatedAt": "2026-06-03T18:30:10.035Z"
     },
     {
-      "key": "068d4dd9032667d516d6d99b5696093912576cef",
-      "name": "Price",
-      "nodeId": "8804:49176",
-      "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
-      "updatedAt": "2026-06-03T18:30:10.102Z"
-    },
-    {
       "key": "0936891acbfea62ccc4021051fbc15b1cfe8c411",
       "name": "Dropdown Item",
       "nodeId": "707:402598",
@@ -6441,6 +6560,34 @@
       "nodeId": "5803:43489",
       "description": "What it is: A single action or navigation row inside a popover or context menu.\nWhen to use: Composed automatically inside Popover containers — not placed standalone.\nVariants: Default, hover, destructive; with leading icon; disabled.\nAvoid: Don't place Popover Items outside a Popover frame.",
       "updatedAt": "2026-06-03T18:31:15.440Z"
+    },
+    {
+      "key": "c59ba7856ba6797443a0dc8b47ee20a6ba4ae87d",
+      "name": "Price2",
+      "nodeId": "9010:1966",
+      "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
+      "updatedAt": "2026-06-09T10:31:30.738Z"
+    },
+    {
+      "key": "6d3dc4c1bd142e4b35d77a9a90f8b8b959ddf5d4",
+      "name": "Price/Basic 2",
+      "nodeId": "9010:2092",
+      "description": "What it is: A simplified price display without unit suffix, for contexts where only the total matters.\nWhen to use: Summary totals, invoice footers, quick-glance price chips.\nVariants: Small, medium, large; default and muted.\nAvoid: Don't use for per-unit rates — use Price instead.",
+      "updatedAt": "2026-06-09T10:31:30.747Z"
+    },
+    {
+      "key": "068d4dd9032667d516d6d99b5696093912576cef",
+      "name": "Price",
+      "nodeId": "8804:49176",
+      "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
+      "updatedAt": "2026-06-09T10:31:30.758Z"
+    },
+    {
+      "key": "655292a49c53dbf7ab527868291a31703712a85c",
+      "name": "Price Final",
+      "nodeId": "9012:2253",
+      "description": "",
+      "updatedAt": "2026-06-09T10:39:56.708Z"
     },
     {
       "key": "319b2d9325effc0f5aaa50289d006101fffd2f94",

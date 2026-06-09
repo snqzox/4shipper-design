@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-08T11:59:10.164Z",
+  "generatedAt": "2026-06-09T12:06:15.352Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2362672680775133741",
-    "lastModified": "2026-06-05T12:25:34Z",
+    "version": "2363060099713079871",
+    "lastModified": "2026-06-09T12:06:22Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -225,6 +225,28 @@
               {
                 "name": "Útpont címe nem található",
                 "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "2254:87258",
+            "name": "Frame 27820",
+            "type": "FRAME",
+            "w": 320,
+            "h": 360,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Route Entry 2",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Route Entry 2",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Route Entry 5",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -597,6 +619,24 @@
               {
                 "name": "_Route Entry/Waypoint",
                 "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "2254:87257",
+            "name": "Frame 27819",
+            "type": "FRAME",
+            "w": 190,
+            "h": 28,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "#0001",
+                "type": "TEXT"
+              },
+              {
+                "name": "Request type",
+                "type": "TEXT"
               }
             ]
           }

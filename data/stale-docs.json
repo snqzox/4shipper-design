@@ -1,10 +1,38 @@
 {
-  "generatedAt": "2026-06-03T19:41:02.135Z",
-  "libraryVersion": "2360940816807885383",
-  "count": 1,
+  "generatedAt": "2026-06-09T12:07:34.678Z",
+  "libraryVersion": "2363060873321114347",
+  "count": 5,
   "items": [
     {
-      "name": "Icon",
+      "name": "Price Final",
+      "kind": "set",
+      "change": "added",
+      "doc": null,
+      "hasDoc": false
+    },
+    {
+      "name": "Price/Basic 2",
+      "kind": "set",
+      "change": "added",
+      "doc": null,
+      "hasDoc": false
+    },
+    {
+      "name": "Price2",
+      "kind": "set",
+      "change": "added",
+      "doc": null,
+      "hasDoc": false
+    },
+    {
+      "name": "Price",
+      "kind": "set",
+      "change": "changed",
+      "doc": "price.md",
+      "hasDoc": true
+    },
+    {
+      "name": "Price/Per Kilometer",
       "kind": "component",
       "change": "changed",
       "doc": null,
