@@ -1,29 +1,8 @@
 {
-  "generatedAt": "2026-06-09T12:07:34.678Z",
-  "libraryVersion": "2363060873321114347",
-  "count": 5,
+  "generatedAt": "2026-06-09T22:10:56.059Z",
+  "libraryVersion": "2363202434922210120",
+  "count": 7,
   "items": [
-    {
-      "name": "Price Final",
-      "kind": "set",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Price/Basic 2",
-      "kind": "set",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Price2",
-      "kind": "set",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
-    },
     {
       "name": "Price",
       "kind": "set",
@@ -32,11 +11,46 @@
       "hasDoc": true
     },
     {
-      "name": "Price/Per Kilometer",
-      "kind": "component",
+      "name": "Price Final",
+      "kind": "set",
       "change": "changed",
       "doc": null,
       "hasDoc": false
+    },
+    {
+      "name": "Price2",
+      "kind": "set",
+      "change": "changed",
+      "doc": null,
+      "hasDoc": false
+    },
+    {
+      "name": "Status/Contract",
+      "kind": "set",
+      "change": "changed",
+      "doc": "status-contract.md",
+      "hasDoc": true
+    },
+    {
+      "name": "Status/Requests",
+      "kind": "set",
+      "change": "changed",
+      "doc": "status-requests.md",
+      "hasDoc": true
+    },
+    {
+      "name": "Status/Tender",
+      "kind": "set",
+      "change": "changed",
+      "doc": "status-tender.md",
+      "hasDoc": true
+    },
+    {
+      "name": "Status/Transports",
+      "kind": "set",
+      "change": "changed",
+      "doc": "status-transports.md",
+      "hasDoc": true
     }
   ]
 }

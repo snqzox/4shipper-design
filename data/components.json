@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T12:06:15.352Z",
+  "generatedAt": "2026-06-09T22:09:41.687Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2363060873321114347",
-    "lastModified": "2026-06-09T11:58:12Z",
+    "version": "2363202434922210120",
+    "lastModified": "2026-06-09T20:48:03Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,7 +244,7 @@
       }
     ]
   },
-  "count": 678,
+  "count": 679,
   "setCount": 43,
   "components": [
     {
@@ -282,15 +282,6 @@
       "updatedAt": "2026-06-03T18:30:35.579Z",
       "set": "Flag",
       "page": "🧩 Assets"
-    },
-    {
-      "key": "74c6a9f4afe3705ce72e421a7c47dd673cc79aab",
-      "name": "Status=Active",
-      "nodeId": "8754:49340",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.093Z",
-      "set": "Status/Requests",
-      "page": "⚛️ Status"
     },
     {
       "key": "d893129ac4155f34eebc3c21b05edd2f7891525b",
@@ -590,42 +581,6 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "8a022dba28f3f54d443dabbf80d23ffebfa074bf",
-      "name": "Align=Left, Style=Single Line",
-      "nodeId": "9010:1967",
-      "description": "",
-      "updatedAt": "2026-06-09T10:31:30.768Z",
-      "set": "Price2",
-      "page": "⚛️ Price"
-    },
-    {
-      "key": "e8cfa2596a6e1f70adea7aac1b1ec19e808736de",
-      "name": "Align=Right, Style=Single Line",
-      "nodeId": "9010:1987",
-      "description": "",
-      "updatedAt": "2026-06-09T10:31:30.775Z",
-      "set": "Price2",
-      "page": "⚛️ Price"
-    },
-    {
-      "key": "8d057d9000588b610fa32df6c314a332c0af869d",
-      "name": "Align=Right, Style=Multi Lines",
-      "nodeId": "9010:1997",
-      "description": "",
-      "updatedAt": "2026-06-09T10:31:30.780Z",
-      "set": "Price2",
-      "page": "⚛️ Price"
-    },
-    {
-      "key": "0ebcf1d7835369ffcbd86996582aeba22f8735c1",
-      "name": "Align=Left, Style=Multi Lines",
-      "nodeId": "9010:1977",
-      "description": "",
-      "updatedAt": "2026-06-09T10:31:30.786Z",
-      "set": "Price2",
-      "page": "⚛️ Price"
-    },
-    {
       "key": "55bf3e2ceb1e3644d75aad6a36c0b4d122063f9d",
       "name": "Property 1=MD, Exchanged=False",
       "nodeId": "9010:2093",
@@ -695,24 +650,6 @@
       "description": "",
       "updatedAt": "2026-06-09T10:31:30.831Z",
       "set": "Price/Basic 2",
-      "page": "⚛️ Price"
-    },
-    {
-      "key": "1bbac94916b345c3b532720734a82cd119a84ed5",
-      "name": "Align=Right",
-      "nodeId": "9012:2254",
-      "description": "",
-      "updatedAt": "2026-06-09T10:39:56.722Z",
-      "set": "Price Final",
-      "page": "⚛️ Price"
-    },
-    {
-      "key": "fb4f2a00e1de69abde1ef36152639f721521f94e",
-      "name": "Align=Left",
-      "nodeId": "9010:2217",
-      "description": "",
-      "updatedAt": "2026-06-09T10:39:56.734Z",
-      "set": "Price Final",
       "page": "⚛️ Price"
     },
     {
@@ -1832,6 +1769,78 @@
       "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
     },
     {
+      "key": "5aa722d361ffb4e16d6b6d768b92d37af01d90bf",
+      "name": "Align=Center",
+      "nodeId": "9018:2005",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.429Z",
+      "set": "Price Final",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "e8cfa2596a6e1f70adea7aac1b1ec19e808736de",
+      "name": "Align=Right, Style=Single Line",
+      "nodeId": "9010:1987",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.949Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "fb4f2a00e1de69abde1ef36152639f721521f94e",
+      "name": "Align=Left",
+      "nodeId": "9010:2217",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.997Z",
+      "set": "Price Final",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "0ebcf1d7835369ffcbd86996582aeba22f8735c1",
+      "name": "Align=Left, Style=Multi Lines",
+      "nodeId": "9010:1977",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.737Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "1bbac94916b345c3b532720734a82cd119a84ed5",
+      "name": "Align=Right",
+      "nodeId": "9012:2254",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.751Z",
+      "set": "Price Final",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "74c6a9f4afe3705ce72e421a7c47dd673cc79aab",
+      "name": "Status=Active",
+      "nodeId": "8754:49340",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.804Z",
+      "set": "Status/Requests",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "8a022dba28f3f54d443dabbf80d23ffebfa074bf",
+      "name": "Align=Left, Style=Single Line",
+      "nodeId": "9010:1967",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.818Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
+      "key": "8d057d9000588b610fa32df6c314a332c0af869d",
+      "name": "Align=Right, Style=Multi Lines",
+      "nodeId": "9010:1997",
+      "description": "",
+      "updatedAt": "2026-06-09T20:42:19.824Z",
+      "set": "Price2",
+      "page": "⚛️ Price"
+    },
+    {
       "key": "177928463ea079f89dd74ed1a32fb705303401c7",
       "name": "Headline=True",
       "nodeId": "128:9355",
@@ -1917,7 +1926,7 @@
       "name": "Status=Canceled by support",
       "nodeId": "8808:78055",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.585Z",
+      "updatedAt": "2026-06-09T20:42:19.731Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
     },
@@ -1926,7 +1935,7 @@
       "name": "Status=Canceled by carrier",
       "nodeId": "8808:78048",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.665Z",
+      "updatedAt": "2026-06-09T20:42:19.757Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
     },
@@ -1935,7 +1944,7 @@
       "name": "Status=Confirmed",
       "nodeId": "8808:78012",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.564Z",
+      "updatedAt": "2026-06-09T20:42:19.723Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -1944,7 +1953,7 @@
       "name": "Status=Canceled",
       "nodeId": "8808:78019",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.198Z",
+      "updatedAt": "2026-06-09T20:42:19.831Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -1980,7 +1989,7 @@
       "name": "Status=Bidding completed",
       "nodeId": "8754:49332",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.704Z",
+      "updatedAt": "2026-06-09T20:42:19.763Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -2007,7 +2016,7 @@
       "name": "Status=Canceled",
       "nodeId": "8754:49371",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.950Z",
+      "updatedAt": "2026-06-09T20:42:19.797Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
     },
@@ -2025,7 +2034,7 @@
       "name": "Status=Canceled",
       "nodeId": "8754:49228",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.127Z",
+      "updatedAt": "2026-06-09T20:42:19.811Z",
       "set": "Status/Tender",
       "page": "⚛️ Status"
     },
@@ -2061,7 +2070,7 @@
       "name": "Status=Status8",
       "nodeId": "8754:49268",
       "description": "",
-      "updatedAt": "2026-06-03T18:31:17.102Z",
+      "updatedAt": "2026-06-09T20:42:19.839Z",
       "set": "Status/Contract",
       "page": "⚛️ Status"
     },
@@ -2070,7 +2079,7 @@
       "name": "Status=Finished",
       "nodeId": "8754:49208",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.256Z",
+      "updatedAt": "2026-06-09T20:42:19.845Z",
       "set": "Status/Tender",
       "page": "⚛️ Status"
     },
@@ -2097,7 +2106,7 @@
       "name": "Status=Evaluation",
       "nodeId": "8754:49218",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.363Z",
+      "updatedAt": "2026-06-09T20:42:19.908Z",
       "set": "Status/Tender",
       "page": "⚛️ Status"
     },
@@ -2115,7 +2124,7 @@
       "name": "Status=Bidding completed",
       "nodeId": "8754:49375",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.451Z",
+      "updatedAt": "2026-06-09T20:42:19.937Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
     },
@@ -2124,7 +2133,7 @@
       "name": "Status=Draft",
       "nodeId": "8754:49223",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.470Z",
+      "updatedAt": "2026-06-09T20:42:19.943Z",
       "set": "Status/Tender",
       "page": "⚛️ Status"
     },
@@ -2133,7 +2142,7 @@
       "name": "Status=Expired",
       "nodeId": "8754:49298",
       "description": "",
-      "updatedAt": "2026-06-03T18:31:17.237Z",
+      "updatedAt": "2026-06-09T20:42:19.926Z",
       "set": "Status/Contract",
       "page": "⚛️ Status"
     },
@@ -2151,7 +2160,7 @@
       "name": "Status=Collecting offers",
       "nodeId": "8754:49198",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.555Z",
+      "updatedAt": "2026-06-09T20:42:19.954Z",
       "set": "Status/Tender",
       "page": "⚛️ Status"
     },
@@ -2250,7 +2259,7 @@
       "name": "Align=Left, Style=Single Line",
       "nodeId": "8784:67605",
       "description": "",
-      "updatedAt": "2026-06-09T10:31:30.878Z",
+      "updatedAt": "2026-06-09T20:42:19.743Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -2268,7 +2277,7 @@
       "name": "Status=Merged",
       "nodeId": "8754:49328",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:11.857Z",
+      "updatedAt": "2026-06-09T20:42:19.791Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -2331,7 +2340,7 @@
       "name": "Status=Canceled",
       "nodeId": "8754:49293",
       "description": "",
-      "updatedAt": "2026-06-03T18:31:17.136Z",
+      "updatedAt": "2026-06-09T20:42:19.853Z",
       "set": "Status/Contract",
       "page": "⚛️ Status"
     },
@@ -2340,7 +2349,7 @@
       "name": "Align=Right, Style=Multi Lines",
       "nodeId": "8812:83803",
       "description": "",
-      "updatedAt": "2026-06-09T10:31:30.884Z",
+      "updatedAt": "2026-06-09T20:42:19.901Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -2349,7 +2358,7 @@
       "name": "Status=Processing",
       "nodeId": "8754:49379",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.334Z",
+      "updatedAt": "2026-06-09T20:42:19.894Z",
       "set": "Status/Transports",
       "page": "⚛️ Status"
     },
@@ -2367,7 +2376,7 @@
       "name": "Status=Active",
       "nodeId": "8754:49278",
       "description": "",
-      "updatedAt": "2026-06-03T18:31:17.232Z",
+      "updatedAt": "2026-06-09T20:42:19.913Z",
       "set": "Status/Contract",
       "page": "⚛️ Status"
     },
@@ -2376,7 +2385,7 @@
       "name": "Align=Right, Style=Single Line",
       "nodeId": "8812:83121",
       "description": "",
-      "updatedAt": "2026-06-09T10:31:30.889Z",
+      "updatedAt": "2026-06-09T20:42:19.920Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -2385,7 +2394,7 @@
       "name": "Align=Left, Style=Multi Lines",
       "nodeId": "8812:83793",
       "description": "",
-      "updatedAt": "2026-06-09T10:31:30.894Z",
+      "updatedAt": "2026-06-09T20:42:19.932Z",
       "set": "Price",
       "page": "⚛️ Price"
     },
@@ -2403,7 +2412,7 @@
       "name": "Status=Draft",
       "nodeId": "8808:78027",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:12.563Z",
+      "updatedAt": "2026-06-09T20:42:19.990Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -6352,13 +6361,6 @@
   ],
   "componentSets": [
     {
-      "key": "f349eac3d3dd9b2605630691d585d3382756298b",
-      "name": "Status/Contract",
-      "nodeId": "8754:49262",
-      "description": "What it is: Status chip pre-configured with the contract lifecycle vocabulary (Draft, Active, Expired, Terminated).\nWhen to use: Contract list tables and contract detail pages.\nVariants: One variant per contract state; solid and subtle fills.\nAvoid: Don't apply contract states to non-contract entities — use the base Status set.",
-      "updatedAt": "2026-06-03T18:31:15.504Z"
-    },
-    {
       "key": "06425fc3df28be64fd47c485ec39e2aa10e5473e",
       "name": "Attachment entry",
       "nodeId": "5239:152707",
@@ -6408,13 +6410,6 @@
       "updatedAt": "2026-06-03T18:30:10.136Z"
     },
     {
-      "key": "4af4d705375309db2e7d90410a6a7650a81a2aab",
-      "name": "Status/Transports",
-      "nodeId": "8754:49370",
-      "description": "What it is: Status chip pre-configured with the transport execution vocabulary (Planned, In Transit, Delivered, Delayed, Cancelled).\nWhen to use: Shipment tracking tables, transport management views.\nVariants: One variant per transport state; solid and subtle fills.\nAvoid: Don't use for tender or contract statuses.",
-      "updatedAt": "2026-06-03T18:30:10.142Z"
-    },
-    {
       "key": "51e3164dc18d70b0d13464c492819ece8a21a3ac",
       "name": "Option Cards/Card",
       "nodeId": "6324:59033",
@@ -6429,25 +6424,11 @@
       "updatedAt": "2026-06-03T18:30:10.205Z"
     },
     {
-      "key": "706e0502b767864bab9fa8104f6da9261aa2d2d5",
-      "name": "Status/Tender",
-      "nodeId": "8754:49197",
-      "description": "What it is: Status chip pre-configured with the tender lifecycle vocabulary (Open, Closed, Awarded, Expired).\nWhen to use: Tender list and tender detail pages.\nVariants: One variant per tender state.\nAvoid: Don't use for contract or transport statuses.",
-      "updatedAt": "2026-06-03T18:30:10.211Z"
-    },
-    {
       "key": "73af3c481cbb9ab142ff025385c907dab07aeaa5",
       "name": "Carrier Selection",
       "nodeId": "147:67475",
       "description": "What it is: A composite card for choosing a freight carrier from a list, showing carrier name, logo, price, and transit details.\nWhen to use: Tender or booking flows where users compare and select a carrier offer.\nVariants: Default, selected, disabled; with and without pricing detail.\nAvoid: Don't use for carrier reference display only — use Status or Item instead.",
       "updatedAt": "2026-06-03T18:30:10.217Z"
-    },
-    {
-      "key": "774ff292d957e4a3d9f453fbf88c1f9ad5e1d873",
-      "name": "Status/Requests",
-      "nodeId": "8754:49327",
-      "description": "What it is: Status chip pre-configured with the request lifecycle vocabulary (Pending, Accepted, Rejected, Cancelled).\nWhen to use: Quote request and booking request list views.\nVariants: One variant per request state.\nAvoid: Don't use for transport statuses — use Status/Transports.",
-      "updatedAt": "2026-06-03T18:30:10.231Z"
     },
     {
       "key": "84f973cfe6ff58349b9a1013156d66bb2f43b4fd",
@@ -6562,13 +6543,6 @@
       "updatedAt": "2026-06-03T18:31:15.440Z"
     },
     {
-      "key": "c59ba7856ba6797443a0dc8b47ee20a6ba4ae87d",
-      "name": "Price2",
-      "nodeId": "9010:1966",
-      "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
-      "updatedAt": "2026-06-09T10:31:30.738Z"
-    },
-    {
       "key": "6d3dc4c1bd142e4b35d77a9a90f8b8b959ddf5d4",
       "name": "Price/Basic 2",
       "nodeId": "9010:2092",
@@ -6580,14 +6554,49 @@
       "name": "Price",
       "nodeId": "8804:49176",
       "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
-      "updatedAt": "2026-06-09T10:31:30.758Z"
+      "updatedAt": "2026-06-09T20:42:19.345Z"
+    },
+    {
+      "key": "4af4d705375309db2e7d90410a6a7650a81a2aab",
+      "name": "Status/Transports",
+      "nodeId": "8754:49370",
+      "description": "What it is: Status chip pre-configured with the transport execution vocabulary (Planned, In Transit, Delivered, Delayed, Cancelled).\nWhen to use: Shipment tracking tables, transport management views.\nVariants: One variant per transport state; solid and subtle fills.\nAvoid: Don't use for tender or contract statuses.",
+      "updatedAt": "2026-06-09T20:42:19.366Z"
     },
     {
       "key": "655292a49c53dbf7ab527868291a31703712a85c",
       "name": "Price Final",
       "nodeId": "9012:2253",
       "description": "",
-      "updatedAt": "2026-06-09T10:39:56.708Z"
+      "updatedAt": "2026-06-09T20:42:19.373Z"
+    },
+    {
+      "key": "706e0502b767864bab9fa8104f6da9261aa2d2d5",
+      "name": "Status/Tender",
+      "nodeId": "8754:49197",
+      "description": "What it is: Status chip pre-configured with the tender lifecycle vocabulary (Open, Closed, Awarded, Expired).\nWhen to use: Tender list and tender detail pages.\nVariants: One variant per tender state.\nAvoid: Don't use for contract or transport statuses.",
+      "updatedAt": "2026-06-09T20:42:19.391Z"
+    },
+    {
+      "key": "774ff292d957e4a3d9f453fbf88c1f9ad5e1d873",
+      "name": "Status/Requests",
+      "nodeId": "8754:49327",
+      "description": "What it is: Status chip pre-configured with the request lifecycle vocabulary (Pending, Accepted, Rejected, Cancelled).\nWhen to use: Quote request and booking request list views.\nVariants: One variant per request state.\nAvoid: Don't use for transport statuses — use Status/Transports.",
+      "updatedAt": "2026-06-09T20:42:19.398Z"
+    },
+    {
+      "key": "c59ba7856ba6797443a0dc8b47ee20a6ba4ae87d",
+      "name": "Price2",
+      "nodeId": "9010:1966",
+      "description": "What it is: A formatted monetary value display with currency symbol, amount, and optional per-unit suffix (e.g. /km).\nWhen to use: Freight rate cards, invoice line items, tender offer summaries.\nVariants: Small, medium, large; primary, muted, strike-through (original/discounted); per-km variant.\nAvoid: Don't use raw text nodes for prices — always use this component to ensure consistent formatting.",
+      "updatedAt": "2026-06-09T20:42:19.405Z"
+    },
+    {
+      "key": "f349eac3d3dd9b2605630691d585d3382756298b",
+      "name": "Status/Contract",
+      "nodeId": "8754:49262",
+      "description": "What it is: Status chip pre-configured with the contract lifecycle vocabulary (Draft, Active, Expired, Terminated).\nWhen to use: Contract list tables and contract detail pages.\nVariants: One variant per contract state; solid and subtle fills.\nAvoid: Don't apply contract states to non-contract entities — use the base Status set.",
+      "updatedAt": "2026-06-09T20:42:19.412Z"
     },
     {
       "key": "319b2d9325effc0f5aaa50289d006101fffd2f94",

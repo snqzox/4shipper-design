@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T15:39:31.796Z",
+  "generatedAt": "2026-06-09T22:09:41.687Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2363077880897518107",
-    "lastModified": "2026-06-09T12:07:21Z",
+    "version": "2363186986455843169",
+    "lastModified": "2026-06-09T20:41:59Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -225,28 +225,6 @@
               {
                 "name": "Útpont címe nem található",
                 "type": "TEXT"
-              }
-            ]
-          },
-          {
-            "id": "2254:87258",
-            "name": "Frame 27820",
-            "type": "FRAME",
-            "w": 320,
-            "h": 360,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Route Entry 2",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Route Entry 2",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Route Entry 5",
-                "type": "INSTANCE"
               }
             ]
           },
@@ -623,42 +601,20 @@
             ]
           },
           {
-            "id": "2254:87257",
-            "name": "Frame 27819",
+            "id": "2302:89920",
+            "name": "Frame 27828",
             "type": "FRAME",
-            "w": 190,
-            "h": 28,
+            "w": 841,
+            "h": 429,
             "childCount": 2,
             "children": [
               {
-                "name": "#0001",
-                "type": "TEXT"
+                "name": "Frame 27824",
+                "type": "FRAME"
               },
               {
-                "name": "Request type",
-                "type": "TEXT"
-              }
-            ]
-          },
-          {
-            "id": "2254:87449",
-            "name": "Frame 27821",
-            "type": "FRAME",
-            "w": 480,
-            "h": 18,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Responsible: John Doe",
-                "type": "TEXT"
-              },
-              {
-                "name": "Created by: John Doe",
-                "type": "TEXT"
-              },
-              {
-                "name": "Published: 25.05.2027 16:55",
-                "type": "TEXT"
+                "name": "Frame 27827",
+                "type": "FRAME"
               }
             ]
           }
