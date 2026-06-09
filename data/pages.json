@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T12:06:15.352Z",
+  "generatedAt": "2026-06-09T15:39:31.796Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2363060099713079871",
-    "lastModified": "2026-06-09T12:06:22Z",
+    "version": "2363077880897518107",
+    "lastModified": "2026-06-09T12:07:21Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -636,6 +636,28 @@
               },
               {
                 "name": "Request type",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "2254:87449",
+            "name": "Frame 27821",
+            "type": "FRAME",
+            "w": 480,
+            "h": 18,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Responsible: John Doe",
+                "type": "TEXT"
+              },
+              {
+                "name": "Created by: John Doe",
+                "type": "TEXT"
+              },
+              {
+                "name": "Published: 25.05.2027 16:55",
                 "type": "TEXT"
               }
             ]
