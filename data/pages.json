@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-10T08:09:29.441Z",
+  "generatedAt": "2026-06-10T11:52:49.560Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2363365142226514222",
-    "lastModified": "2026-06-10T07:47:03Z",
+    "version": "2363421169524554047",
+    "lastModified": "2026-06-10T11:41:29Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -44,7 +44,7 @@
             "type": "FRAME",
             "w": 16155,
             "h": 9232,
-            "childCount": 45,
+            "childCount": 41,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -131,18 +131,6 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Content Box",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Box",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Wegpunktadresse nicht gefunden",
-                "type": "TEXT"
-              },
-              {
                 "name": "Next Step",
                 "type": "CONNECTOR"
               },
@@ -221,10 +209,6 @@
               {
                 "name": "Next Step",
                 "type": "CONNECTOR"
-              },
-              {
-                "name": "Útpont címe nem található",
-                "type": "TEXT"
               }
             ]
           },
@@ -601,11 +585,11 @@
             ]
           },
           {
-            "id": "2312:222546",
-            "name": "Frame 27819",
-            "type": "FRAME",
-            "w": 1253,
-            "h": 409,
+            "id": "2332:223042",
+            "name": "Request/List entry",
+            "type": "COMPONENT",
+            "w": 1394,
+            "h": 358,
             "childCount": 2,
             "children": [
               {
