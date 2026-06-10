@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T22:09:41.687Z",
+  "generatedAt": "2026-06-10T08:09:29.441Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2363202434922210120",
-    "lastModified": "2026-06-09T20:48:03Z",
+    "version": "2363367852340547338",
+    "lastModified": "2026-06-10T07:47:16Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,7 +244,7 @@
       }
     ]
   },
-  "count": 679,
+  "count": 681,
   "setCount": 43,
   "components": [
     {
@@ -1920,6 +1920,24 @@
       "updatedAt": "2026-06-03T18:30:25.322Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "a44d9391d90e137182cf58df8d8a55ed7b4f345f",
+      "name": "bolt-auto",
+      "nodeId": "9025:2017",
+      "description": "",
+      "updatedAt": "2026-06-10T07:43:32.571Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "04e3b32eac426d9b64abcd1fa8e470fc704c8fb3",
+      "name": "star",
+      "nodeId": "9025:2018",
+      "description": "",
+      "updatedAt": "2026-06-10T07:43:32.584Z",
+      "set": null,
+      "page": "🧩 Assets"
     },
     {
       "key": "0e9e70f1ce1918d9ef1ff0c0df105e5022550c3b",

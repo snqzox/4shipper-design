@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-09T22:09:41.687Z",
+  "generatedAt": "2026-06-10T08:09:29.441Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2363186986455843169",
-    "lastModified": "2026-06-09T20:41:59Z",
+    "version": "2363365142226514222",
+    "lastModified": "2026-06-10T07:47:03Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -601,19 +601,67 @@
             ]
           },
           {
-            "id": "2302:89920",
-            "name": "Frame 27828",
+            "id": "2312:222546",
+            "name": "Frame 27819",
             "type": "FRAME",
-            "w": 841,
-            "h": 429,
+            "w": 1253,
+            "h": 409,
             "childCount": 2,
             "children": [
               {
-                "name": "Frame 27824",
+                "name": "Left Column",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Right Column",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "2312:222976",
+            "name": "Frame 27825",
+            "type": "COMPONENT",
+            "w": 372,
+            "h": 221,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Bids Info Container",
                 "type": "FRAME"
               },
               {
-                "name": "Frame 27827",
+                "name": "Bids Header",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27826",
+                "type": "FRAME"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "2312:222774",
+            "name": "Left Column",
+            "type": "COMPONENT",
+            "w": 841,
+            "h": 358,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Header",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content Container",
+                "type": "FRAME"
+              },
+              {
+                "name": "Responsible Info",
                 "type": "FRAME"
               }
             ]
@@ -2409,7 +2457,7 @@
             "name": "Price/Auction",
             "type": "COMPONENT",
             "w": 278,
-            "h": 64,
+            "h": 81,
             "childCount": 3,
             "children": [
               {
@@ -2417,7 +2465,7 @@
                 "type": "TEXT"
               },
               {
-                "name": "Price",
+                "name": "Price Final",
                 "type": "INSTANCE"
               },
               {
@@ -2719,7 +2767,7 @@
             "name": "Bidding Flow",
             "type": "FRAME",
             "w": 3280,
-            "h": 957,
+            "h": 974,
             "childCount": 5,
             "children": [
               {

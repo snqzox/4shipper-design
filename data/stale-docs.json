@@ -1,56 +1,21 @@
 {
-  "generatedAt": "2026-06-09T22:10:56.059Z",
-  "libraryVersion": "2363202434922210120",
-  "count": 7,
+  "generatedAt": "2026-06-10T08:10:41.550Z",
+  "libraryVersion": "2363367852340547338",
+  "count": 2,
   "items": [
     {
-      "name": "Price",
-      "kind": "set",
-      "change": "changed",
-      "doc": "price.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Price Final",
-      "kind": "set",
-      "change": "changed",
+      "name": "bolt-auto",
+      "kind": "component",
+      "change": "added",
       "doc": null,
       "hasDoc": false
     },
     {
-      "name": "Price2",
-      "kind": "set",
-      "change": "changed",
+      "name": "star",
+      "kind": "component",
+      "change": "added",
       "doc": null,
       "hasDoc": false
-    },
-    {
-      "name": "Status/Contract",
-      "kind": "set",
-      "change": "changed",
-      "doc": "status-contract.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Status/Requests",
-      "kind": "set",
-      "change": "changed",
-      "doc": "status-requests.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Status/Tender",
-      "kind": "set",
-      "change": "changed",
-      "doc": "status-tender.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Status/Transports",
-      "kind": "set",
-      "change": "changed",
-      "doc": "status-transports.md",
-      "hasDoc": true
     }
   ]
 }
