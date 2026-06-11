@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T07:14:39.281Z",
+  "generatedAt": "2026-06-11T11:55:27.864Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2363727912357592915",
-    "lastModified": "2026-06-11T07:14:44Z",
+    "lastModified": "2026-06-11T07:25:02Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -2741,8 +2741,8 @@
                 "type": "FRAME"
               },
               {
-                "name": "4597 HUF",
-                "type": "TEXT"
+                "name": "Frame 27586",
+                "type": "FRAME"
               }
             ]
           },
