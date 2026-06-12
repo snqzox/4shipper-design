@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-11T19:18:57.460Z",
+  "generatedAt": "2026-06-12T11:02:44.107Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2363896807184836369",
-    "lastModified": "2026-06-11T18:11:28Z",
+    "version": "2364128919488125315",
+    "lastModified": "2026-06-12T08:22:17Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -43,8 +43,8 @@
             "name": "New Request",
             "type": "FRAME",
             "w": 16155,
-            "h": 9232,
-            "childCount": 41,
+            "h": 12116,
+            "childCount": 45,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -56,6 +56,10 @@
               },
               {
                 "name": "Step 3 - Carriers / No matching contracts",
+                "type": "TEXT"
+              },
+              {
+                "name": "Step 3 - Carriers / Route could not be calculated",
                 "type": "TEXT"
               },
               {
@@ -96,6 +100,14 @@
               },
               {
                 "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
                 "type": "INSTANCE"
               },
               {
@@ -209,6 +221,10 @@
               {
                 "name": "Next Step",
                 "type": "CONNECTOR"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -585,24 +601,6 @@
             ]
           },
           {
-            "id": "2332:223042",
-            "name": "Request/List entry",
-            "type": "COMPONENT",
-            "w": 1394,
-            "h": 358,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Left Column",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Right Column",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
             "id": "2312:222976",
             "name": "Frame 27825",
             "type": "COMPONENT",
@@ -647,6 +645,24 @@
               {
                 "name": "Responsible Info",
                 "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "2468:255064",
+            "name": "Request/List entry",
+            "type": "COMPONENT_SET",
+            "w": 1434,
+            "h": 776,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=List entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
               }
             ]
           }
