@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-10T08:09:29.441Z",
+  "generatedAt": "2026-06-15T12:18:16.142Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2363367852340547338",
-    "lastModified": "2026-06-10T07:47:16Z",
+    "version": "2365231997031112591",
+    "lastModified": "2026-06-15T08:20:10Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,9 +244,54 @@
       }
     ]
   },
-  "count": 681,
+  "count": 682,
   "setCount": 43,
   "components": [
+    {
+      "key": "74c6a9f4afe3705ce72e421a7c47dd673cc79aab",
+      "name": "Status=Active",
+      "nodeId": "8754:49340",
+      "description": "",
+      "updatedAt": "2026-06-15T07:52:46.066Z",
+      "set": "Status/Requests",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "9f96a7e38d654e8951878f7f5e06d9fb3e65e8bb",
+      "name": "Status=Carrier assigned",
+      "nodeId": "9123:2172",
+      "description": "",
+      "updatedAt": "2026-06-15T07:52:46.015Z",
+      "set": "Status/Requests",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "65c30f3defdf96fd368adc003a5827ea1741a6e5",
+      "name": "Order=Order4",
+      "nodeId": "8724:53978",
+      "description": "",
+      "updatedAt": "2026-06-15T08:15:31.324Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "aacbd9b391644aefb73977cb333cb600e9d4fd4f",
+      "name": "Order=Small Dot",
+      "nodeId": "8624:87051",
+      "description": "",
+      "updatedAt": "2026-06-15T08:15:31.331Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "decfe197c6170ce7636be532568dcc585942a29f",
+      "name": "Order=Default",
+      "nodeId": "8617:6115",
+      "description": "",
+      "updatedAt": "2026-06-15T08:15:31.353Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
     {
       "key": "17358a3ae6f0c6a88b5e646ddec7dd29d9724642",
       "name": "Property 1=dm",
@@ -1580,24 +1625,6 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "aacbd9b391644aefb73977cb333cb600e9d4fd4f",
-      "name": "Order=Small Dot",
-      "nodeId": "8624:87051",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:25.305Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
-    },
-    {
-      "key": "decfe197c6170ce7636be532568dcc585942a29f",
-      "name": "Order=Default",
-      "nodeId": "8617:6115",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:25.328Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
-    },
-    {
       "key": "e7e7027fbe78564b282e228c41640b6b70dbe374",
       "name": "Form Header",
       "nodeId": "8680:8274",
@@ -1814,15 +1841,6 @@
       "page": "⚛️ Price"
     },
     {
-      "key": "74c6a9f4afe3705ce72e421a7c47dd673cc79aab",
-      "name": "Status=Active",
-      "nodeId": "8754:49340",
-      "description": "",
-      "updatedAt": "2026-06-09T20:42:19.804Z",
-      "set": "Status/Requests",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "8a022dba28f3f54d443dabbf80d23ffebfa074bf",
       "name": "Align=Left, Style=Single Line",
       "nodeId": "9010:1967",
@@ -1917,7 +1935,7 @@
       "name": "Order=Smaller",
       "nodeId": "8622:84282",
       "description": "",
-      "updatedAt": "2026-06-03T18:30:25.322Z",
+      "updatedAt": "2026-06-15T08:15:31.339Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
     },
@@ -1962,7 +1980,7 @@
       "name": "Status=Confirmed",
       "nodeId": "8808:78012",
       "description": "",
-      "updatedAt": "2026-06-09T20:42:19.723Z",
+      "updatedAt": "2026-06-15T07:52:46.050Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -1971,7 +1989,7 @@
       "name": "Status=Canceled",
       "nodeId": "8808:78019",
       "description": "",
-      "updatedAt": "2026-06-09T20:42:19.831Z",
+      "updatedAt": "2026-06-15T07:52:46.071Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -1994,6 +2012,15 @@
       "page": "⚛️ Attachment"
     },
     {
+      "key": "271ee7743a83a9c52b9bf6669686718410186f36",
+      "name": "Status=Bidding completed",
+      "nodeId": "8754:49332",
+      "description": "",
+      "updatedAt": "2026-06-15T07:52:46.056Z",
+      "set": "Status/Requests",
+      "page": "⚛️ Status"
+    },
+    {
       "key": "270971868a9ecb72797d4c3857e24f703aec30a0",
       "name": "Selected=True, Disabled=False",
       "nodeId": "6324:59058",
@@ -2001,15 +2028,6 @@
       "updatedAt": "2026-06-03T18:30:11.698Z",
       "set": "Option Cards/Card",
       "page": "⚛️ Option Cards"
-    },
-    {
-      "key": "271ee7743a83a9c52b9bf6669686718410186f36",
-      "name": "Status=Bidding completed",
-      "nodeId": "8754:49332",
-      "description": "",
-      "updatedAt": "2026-06-09T20:42:19.763Z",
-      "set": "Status/Requests",
-      "page": "⚛️ Status"
     },
     {
       "key": "4479bdc9b089fadf0bee634a33095f60b535e67e",
@@ -2295,7 +2313,7 @@
       "name": "Status=Merged",
       "nodeId": "8754:49328",
       "description": "",
-      "updatedAt": "2026-06-09T20:42:19.791Z",
+      "updatedAt": "2026-06-15T07:52:46.060Z",
       "set": "Status/Requests",
       "page": "⚛️ Status"
     },
@@ -2417,6 +2435,15 @@
       "page": "⚛️ Price"
     },
     {
+      "key": "f4c92be73dfbf73d3f17f0788e0126544e45f754",
+      "name": "Status=Draft",
+      "nodeId": "8808:78027",
+      "description": "",
+      "updatedAt": "2026-06-15T07:52:46.075Z",
+      "set": "Status/Requests",
+      "page": "⚛️ Status"
+    },
+    {
       "key": "eeb400f4eb5e669d483f9b0c421874af9ec00f8b",
       "name": "Expanded=True, State=Default, Selectable=False",
       "nodeId": "6956:1232665",
@@ -2424,15 +2451,6 @@
       "updatedAt": "2026-06-03T18:30:12.551Z",
       "set": "Selectable Group Entry",
       "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
-      "key": "f4c92be73dfbf73d3f17f0788e0126544e45f754",
-      "name": "Status=Draft",
-      "nodeId": "8808:78027",
-      "description": "",
-      "updatedAt": "2026-06-09T20:42:19.990Z",
-      "set": "Status/Requests",
-      "page": "⚛️ Status"
     },
     {
       "key": "b1d1f32dce559605c7c7ebbcf942f188927286a1",
@@ -3423,15 +3441,6 @@
       "updatedAt": "2026-06-03T18:30:25.267Z",
       "set": "Illustration",
       "page": "🧩 Assets"
-    },
-    {
-      "key": "65c30f3defdf96fd368adc003a5827ea1741a6e5",
-      "name": "Order=Order4",
-      "nodeId": "8724:53978",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:25.273Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
     },
     {
       "key": "7157b2daffac9c55a9514079949ceec265934bbb",
@@ -6498,13 +6507,6 @@
       "updatedAt": "2026-06-03T18:30:10.347Z"
     },
     {
-      "key": "72fb3256dcf6a6496c598efe8ae0558dcc839ac2",
-      "name": "Route Entry 2",
-      "nodeId": "8617:6114",
-      "description": "What it is: An updated layout variant of Route Entry with revised field ordering and multi-stop support.\nWhen to use: New shipment forms and tender wizards — prefer this over Route Entry for new designs.\nVariants: Single leg, multi-stop; collapsed and expanded; with waypoint add/remove controls.\nAvoid: Don't mix Route Entry and Route Entry 2 in the same form.",
-      "updatedAt": "2026-06-03T18:30:25.071Z"
-    },
-    {
       "key": "c94b8a923e4042ddf4b80f625d4b5967e0893ea9",
       "name": "Illustration",
       "nodeId": "8779:66010",
@@ -6596,13 +6598,6 @@
       "updatedAt": "2026-06-09T20:42:19.391Z"
     },
     {
-      "key": "774ff292d957e4a3d9f453fbf88c1f9ad5e1d873",
-      "name": "Status/Requests",
-      "nodeId": "8754:49327",
-      "description": "What it is: Status chip pre-configured with the request lifecycle vocabulary (Pending, Accepted, Rejected, Cancelled).\nWhen to use: Quote request and booking request list views.\nVariants: One variant per request state.\nAvoid: Don't use for transport statuses — use Status/Transports.",
-      "updatedAt": "2026-06-09T20:42:19.398Z"
-    },
-    {
       "key": "c59ba7856ba6797443a0dc8b47ee20a6ba4ae87d",
       "name": "Price2",
       "nodeId": "9010:1966",
@@ -6643,6 +6638,20 @@
       "nodeId": "6277:69164",
       "description": "What it is: A non-interactive floating label that reveals supplementary text on hover or focus of a trigger element.\nWhen to use: Icon-only buttons needing accessible labels, truncated text cells, contextual help for unfamiliar terms.\nVariants: Top, right, bottom, left placement; dark (default) and light theme.\nAvoid: Don't put interactive content (links, buttons) inside a Tooltip — use a Popover instead.",
       "updatedAt": "2026-06-03T18:30:10.251Z"
+    },
+    {
+      "key": "774ff292d957e4a3d9f453fbf88c1f9ad5e1d873",
+      "name": "Status/Requests",
+      "nodeId": "8754:49327",
+      "description": "What it is: Status chip pre-configured with the request lifecycle vocabulary (Pending, Accepted, Rejected, Cancelled).\nWhen to use: Quote request and booking request list views.\nVariants: One variant per request state.\nAvoid: Don't use for transport statuses — use Status/Transports.",
+      "updatedAt": "2026-06-15T07:52:46.001Z"
+    },
+    {
+      "key": "72fb3256dcf6a6496c598efe8ae0558dcc839ac2",
+      "name": "Route Entry 2",
+      "nodeId": "8617:6114",
+      "description": "What it is: An updated layout variant of Route Entry with revised field ordering and multi-stop support.\nWhen to use: New shipment forms and tender wizards — prefer this over Route Entry for new designs.\nVariants: Single leg, multi-stop; collapsed and expanded; with waypoint add/remove controls.\nAvoid: Don't mix Route Entry and Route Entry 2 in the same form.",
+      "updatedAt": "2026-06-15T08:15:31.253Z"
     },
     {
       "key": "75503a43038b004f191581ca7d5885113cb6a45d",

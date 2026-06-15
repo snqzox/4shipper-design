@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-06-10T08:10:41.550Z",
-  "libraryVersion": "2363367852340547338",
+  "generatedAt": "2026-06-15T12:19:39.734Z",
+  "libraryVersion": "2365231997031112591",
   "count": 2,
   "items": [
     {
-      "name": "bolt-auto",
-      "kind": "component",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
+      "name": "Route Entry 2",
+      "kind": "set",
+      "change": "changed",
+      "doc": "route-entry-2.md",
+      "hasDoc": true
     },
     {
-      "name": "star",
-      "kind": "component",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
+      "name": "Status/Requests",
+      "kind": "set",
+      "change": "changed",
+      "doc": "status-requests.md",
+      "hasDoc": true
     }
   ]
 }

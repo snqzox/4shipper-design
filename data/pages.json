@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-12T14:20:19.170Z",
+  "generatedAt": "2026-06-15T12:18:16.142Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2364195591329582024",
-    "lastModified": "2026-06-12T13:31:19Z",
+    "version": "2365284004781290745",
+    "lastModified": "2026-06-15T11:48:36Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -25,7 +25,7 @@
             "name": "Requests",
             "type": "FRAME",
             "w": 2000,
-            "h": 947,
+            "h": 2581,
             "childCount": 2,
             "children": [
               {
@@ -224,28 +224,6 @@
               },
               {
                 "name": "Tooltip",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "2124:29546",
-            "name": "Frame 27806",
-            "type": "FRAME",
-            "w": 614,
-            "h": 284,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Route Entry 2",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Route Entry 2",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Route Entry 5",
                 "type": "INSTANCE"
               }
             ]
@@ -602,7 +580,7 @@
           },
           {
             "id": "2312:222976",
-            "name": "Frame 27825",
+            "name": "Request/List/Right Column/Spot",
             "type": "COMPONENT",
             "w": 372,
             "h": 221,
@@ -628,7 +606,7 @@
           },
           {
             "id": "2312:222774",
-            "name": "Left Column",
+            "name": "Request/List/Left Column",
             "type": "COMPONENT",
             "w": 841,
             "h": 358,
@@ -652,9 +630,9 @@
             "id": "2468:255064",
             "name": "Request/List entry",
             "type": "COMPONENT_SET",
-            "w": 1434,
-            "h": 776,
-            "childCount": 2,
+            "w": 2916,
+            "h": 1318,
+            "childCount": 5,
             "children": [
               {
                 "name": "Property 1=List entry",
@@ -662,6 +640,18 @@
               },
               {
                 "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant4",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant5",
                 "type": "COMPONENT"
               }
             ]
