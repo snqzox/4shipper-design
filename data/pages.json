@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-16T08:27:27.616Z",
+  "generatedAt": "2026-06-16T13:14:13.751Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2365598396427458668",
-    "lastModified": "2026-06-16T08:25:19Z",
+    "version": "2365656996909366707",
+    "lastModified": "2026-06-16T12:06:37Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -25,25 +25,25 @@
             "name": "Requests",
             "type": "FRAME",
             "w": 2000,
-            "h": 2581,
+            "h": 2752,
             "childCount": 2,
             "children": [
               {
-                "name": "Requests",
-                "type": "TEXT"
-              },
-              {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Requests",
+                "type": "TEXT"
               }
             ]
           },
           {
             "id": "2585:280689",
-            "name": "Frame 27831",
+            "name": "Bid Entry",
             "type": "COMPONENT",
             "w": 388,
-            "h": 62,
+            "h": 68,
             "childCount": 2,
             "children": [
               {
@@ -613,12 +613,30 @@
                 "type": "FRAME"
               },
               {
-                "name": "Frame 27826",
-                "type": "FRAME"
+                "name": "Bids/Autoselect",
+                "type": "INSTANCE"
               },
               {
                 "name": "Button",
                 "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "2601:296474",
+            "name": "Bids/Autoselect",
+            "type": "COMPONENT",
+            "w": 372,
+            "h": 34,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Contract Icon",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Auto select enabled. Limit: 350 EUR",
+                "type": "TEXT"
               }
             ]
           },
@@ -671,6 +689,66 @@
               {
                 "name": "Property 1=Variant5",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "2601:299606",
+            "name": "Request Detail - Contracted",
+            "type": "FRAME",
+            "w": 5877,
+            "h": 2356,
+            "childCount": 7,
+            "children": [
+              {
+                "name": "Request Detail - Contracted",
+                "type": "TEXT"
+              },
+              {
+                "name": "Waiting for carrier acceptation",
+                "type": "TEXT"
+              },
+              {
+                "name": "Rejected by carrier",
+                "type": "TEXT"
+              },
+              {
+                "name": "Confirmed by carrier",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "2601:299607",
+            "name": "Request Detail - Spot",
+            "type": "FRAME",
+            "w": 2000,
+            "h": 2309,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Request Detail - Spot",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Bidding is active",
+                "type": "TEXT"
               }
             ]
           }
