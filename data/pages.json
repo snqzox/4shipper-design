@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-16T18:16:39.537Z",
+  "generatedAt": "2026-06-17T07:34:05.485Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2365707127753134145",
-    "lastModified": "2026-06-16T15:05:12Z",
+    "version": "2365947250780551184",
+    "lastModified": "2026-06-17T07:32:45Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -895,7 +895,7 @@
             "name": "Tenders",
             "type": "FRAME",
             "w": 2000,
-            "h": 3428,
+            "h": 3416,
             "childCount": 10,
             "children": [
               {
@@ -945,7 +945,7 @@
             "name": "Tender - Bulk selection",
             "type": "FRAME",
             "w": 2000,
-            "h": 2422,
+            "h": 2418,
             "childCount": 6,
             "children": [
               {
@@ -2907,7 +2907,7 @@
             "name": "Contract detail",
             "type": "FRAME",
             "w": 2000,
-            "h": 1160,
+            "h": 1180,
             "childCount": 2,
             "children": [
               {
