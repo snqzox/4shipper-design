@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-19T09:20:38.976Z",
+  "generatedAt": "2026-06-19T12:59:36.925Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2366713008028630753",
-    "lastModified": "2026-06-19T08:38:48Z",
+    "version": "2366768392171028567",
+    "lastModified": "2026-06-19T12:22:52Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -24,9 +24,9 @@
             "id": "290:98518",
             "name": "Requests",
             "type": "FRAME",
-            "w": 2000,
+            "w": 2350,
             "h": 2752,
-            "childCount": 2,
+            "childCount": 3,
             "children": [
               {
                 "name": "Page",
@@ -35,6 +35,10 @@
               {
                 "name": "Requests",
                 "type": "TEXT"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -686,9 +690,9 @@
             "id": "2601:299606",
             "name": "Request Detail - Contracted",
             "type": "FRAME",
-            "w": 8167,
-            "h": 2356,
-            "childCount": 9,
+            "w": 11964,
+            "h": 5208,
+            "childCount": 19,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -696,6 +700,26 @@
               },
               {
                 "name": "Waiting for carrier acceptation",
+                "type": "TEXT"
+              },
+              {
+                "name": "Cargo info",
+                "type": "TEXT"
+              },
+              {
+                "name": "Route",
+                "type": "TEXT"
+              },
+              {
+                "name": "Request settings",
+                "type": "TEXT"
+              },
+              {
+                "name": "Contracted option",
+                "type": "TEXT"
+              },
+              {
+                "name": "Documents",
                 "type": "TEXT"
               },
               {
@@ -725,6 +749,26 @@
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -733,8 +777,8 @@
             "name": "Request Detail - Spot",
             "type": "FRAME",
             "w": 11900,
-            "h": 2309,
-            "childCount": 11,
+            "h": 4581,
+            "childCount": 21,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -761,7 +805,47 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Bidding is active",
+                "type": "TEXT"
+              },
+              {
+                "name": "Cargo info",
+                "type": "TEXT"
+              },
+              {
+                "name": "Route",
+                "type": "TEXT"
+              },
+              {
+                "name": "Request settings",
+                "type": "TEXT"
+              },
+              {
+                "name": "Documents",
+                "type": "TEXT"
+              },
+              {
+                "name": "Bidding history",
                 "type": "TEXT"
               },
               {
@@ -797,6 +881,60 @@
               {
                 "name": "Property 1=Variant2",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "2720:68127",
+            "name": "Waypoints",
+            "type": "FRAME",
+            "w": 2067,
+            "h": 789,
+            "childCount": 11,
+            "children": [
+              {
+                "name": "Frame 27810",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27812",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27811",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27813",
+                "type": "FRAME"
+              },
+              {
+                "name": "image 1",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 2",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 3",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 4",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Line 1",
+                "type": "LINE"
+              },
+              {
+                "name": "Line 2",
+                "type": "LINE"
+              },
+              {
+                "name": "Line 3",
+                "type": "LINE"
               }
             ]
           }
