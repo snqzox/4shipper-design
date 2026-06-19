@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-18T19:30:08.973Z",
+  "generatedAt": "2026-06-19T09:20:38.976Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2366490859436051317",
-    "lastModified": "2026-06-18T17:37:59Z",
+    "version": "2366713008028630753",
+    "lastModified": "2026-06-19T08:38:48Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -623,24 +623,6 @@
             ]
           },
           {
-            "id": "2601:296474",
-            "name": "Bids/Autoselect",
-            "type": "COMPONENT",
-            "w": 372,
-            "h": 34,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Contract Icon",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Auto select enabled. Limit: 350 EUR",
-                "type": "TEXT"
-              }
-            ]
-          },
-          {
             "id": "2312:222774",
             "name": "Request/List/Left Column",
             "type": "COMPONENT",
@@ -666,16 +648,24 @@
             "id": "2468:255064",
             "name": "Request/List entry",
             "type": "COMPONENT_SET",
-            "w": 2916,
-            "h": 1318,
-            "childCount": 5,
+            "w": 4699,
+            "h": 2487,
+            "childCount": 7,
             "children": [
               {
                 "name": "Property 1=List entry",
                 "type": "COMPONENT"
               },
               {
+                "name": "Property 1=Variant6",
+                "type": "COMPONENT"
+              },
+              {
                 "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant7",
                 "type": "COMPONENT"
               },
               {
@@ -696,9 +686,9 @@
             "id": "2601:299606",
             "name": "Request Detail - Contracted",
             "type": "FRAME",
-            "w": 5877,
+            "w": 8167,
             "h": 2356,
-            "childCount": 7,
+            "childCount": 9,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -715,6 +705,14 @@
               {
                 "name": "Confirmed by carrier",
                 "type": "TEXT"
+              },
+              {
+                "name": "Cancelled by shipper",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
               },
               {
                 "name": "Page",
@@ -734,9 +732,9 @@
             "id": "2601:299607",
             "name": "Request Detail - Spot",
             "type": "FRAME",
-            "w": 2000,
+            "w": 11900,
             "h": 2309,
-            "childCount": 3,
+            "childCount": 11,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -747,8 +745,58 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Bidding is active",
                 "type": "TEXT"
+              },
+              {
+                "name": "Bidding finished - Waiting for carrier acceptation",
+                "type": "TEXT"
+              },
+              {
+                "name": "Bidding finished - Bid not selected",
+                "type": "TEXT"
+              },
+              {
+                "name": "Bidding finished - Confirmed by carrier",
+                "type": "TEXT"
+              },
+              {
+                "name": "Bidding finished - Rejected by carrier",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "2720:56846",
+            "name": "Bids/Autoselect",
+            "type": "COMPONENT_SET",
+            "w": 412,
+            "h": 128,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Autoselect",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
               }
             ]
           }
