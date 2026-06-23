@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-22T15:35:59.945Z",
+  "generatedAt": "2026-06-23T07:51:06.190Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2367889473682686658",
-    "lastModified": "2026-06-22T12:17:28Z",
+    "version": "2368191474271075422",
+    "lastModified": "2026-06-23T07:51:12Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -25,7 +25,7 @@
             "name": "Requests",
             "type": "FRAME",
             "w": 2350,
-            "h": 2752,
+            "h": 3342,
             "childCount": 3,
             "children": [
               {
@@ -64,9 +64,9 @@
             "id": "1753:77800",
             "name": "New Request",
             "type": "FRAME",
-            "w": 16155,
+            "w": 19056,
             "h": 12116,
-            "childCount": 45,
+            "childCount": 46,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -122,6 +122,10 @@
               },
               {
                 "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
                 "type": "INSTANCE"
               },
               {
@@ -778,7 +782,7 @@
             "type": "FRAME",
             "w": 11900,
             "h": 4581,
-            "childCount": 21,
+            "childCount": 22,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -806,6 +810,10 @@
               },
               {
                 "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Table Column",
                 "type": "INSTANCE"
               },
               {
@@ -1239,7 +1247,7 @@
             "name": "Settings",
             "type": "FRAME",
             "w": 2464,
-            "h": 16823,
+            "h": 16989,
             "childCount": 5,
             "children": [
               {
