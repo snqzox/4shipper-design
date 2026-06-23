@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-23T11:18:34.575Z",
+  "generatedAt": "2026-06-23T13:58:59.847Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2368201859518340921",
-    "lastModified": "2026-06-23T08:24:09Z",
+    "version": "2368279697196750548",
+    "lastModified": "2026-06-23T13:30:02Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -259,7 +259,7 @@
             "name": "Requests/Create New Request/Step 2 - With Cargo Items",
             "type": "FRAME",
             "w": 1512,
-            "h": 855,
+            "h": 937,
             "childCount": 3,
             "children": [
               {
@@ -281,7 +281,7 @@
             "name": "Requests/Create New Request/Step 5",
             "type": "FRAME",
             "w": 1512,
-            "h": 855,
+            "h": 937,
             "childCount": 3,
             "children": [
               {
@@ -303,7 +303,7 @@
             "name": "Requests/Create New Request/Step 8",
             "type": "FRAME",
             "w": 1512,
-            "h": 1777,
+            "h": 1862,
             "childCount": 3,
             "children": [
               {
@@ -325,7 +325,7 @@
             "name": "Requests/Create New Request/Step 6",
             "type": "FRAME",
             "w": 1512,
-            "h": 2147,
+            "h": 2232,
             "childCount": 3,
             "children": [
               {
@@ -635,7 +635,7 @@
             "name": "Request/List/Left Column",
             "type": "COMPONENT",
             "w": 841,
-            "h": 358,
+            "h": 364,
             "childCount": 3,
             "children": [
               {
@@ -957,7 +957,7 @@
             "name": "Transports",
             "type": "FRAME",
             "w": 2000,
-            "h": 935,
+            "h": 947,
             "childCount": 2,
             "children": [
               {
@@ -981,7 +981,7 @@
             "name": "Directory",
             "type": "FRAME",
             "w": 4175,
-            "h": 11188,
+            "h": 11196,
             "childCount": 5,
             "children": [
               {
@@ -1089,7 +1089,7 @@
             "name": "Tenders",
             "type": "FRAME",
             "w": 2000,
-            "h": 3416,
+            "h": 3432,
             "childCount": 10,
             "children": [
               {
@@ -1139,7 +1139,7 @@
             "name": "Tender - Bulk selection",
             "type": "FRAME",
             "w": 2000,
-            "h": 2418,
+            "h": 2430,
             "childCount": 6,
             "children": [
               {
