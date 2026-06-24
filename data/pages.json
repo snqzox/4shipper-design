@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-24T13:35:46.606Z",
+  "generatedAt": "2026-06-24T16:23:08.090Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2368636302982218168",
-    "lastModified": "2026-06-24T12:40:10Z",
+    "version": "2368683149267787520",
+    "lastModified": "2026-06-24T14:14:26Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -782,7 +782,7 @@
             "type": "FRAME",
             "w": 11900,
             "h": 4581,
-            "childCount": 21,
+            "childCount": 24,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -867,6 +867,18 @@
               {
                 "name": "Bidding finished - Rejected by carrier",
                 "type": "TEXT"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -1199,7 +1211,7 @@
             "name": "Tender - Bulk selection",
             "type": "FRAME",
             "w": 2000,
-            "h": 2430,
+            "h": 2426,
             "childCount": 6,
             "children": [
               {
