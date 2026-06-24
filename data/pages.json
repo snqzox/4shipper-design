@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-24T11:12:11.283Z",
+  "generatedAt": "2026-06-24T13:35:46.606Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2368600995121447817",
-    "lastModified": "2026-06-24T10:18:02Z",
+    "version": "2368636302982218168",
+    "lastModified": "2026-06-24T12:40:10Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -782,7 +782,7 @@
             "type": "FRAME",
             "w": 11900,
             "h": 4581,
-            "childCount": 22,
+            "childCount": 21,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -810,10 +810,6 @@
               },
               {
                 "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Table Column",
                 "type": "INSTANCE"
               },
               {
@@ -871,6 +867,70 @@
               {
                 "name": "Bidding finished - Rejected by carrier",
                 "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "3037:286315",
+            "name": "Frame 27832",
+            "type": "FRAME",
+            "w": 1927,
+            "h": 518,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Content Slot",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content Slot",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              }
+            ]
+          },
+          {
+            "id": "3037:286316",
+            "name": "Content Slot",
+            "type": "FRAME",
+            "w": 884,
+            "h": 423,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Table",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "3037:286631",
+            "name": "Content Slot",
+            "type": "FRAME",
+            "w": 884,
+            "h": 423,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Table",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "3037:288430",
+            "name": "Content Slot",
+            "type": "FRAME",
+            "w": 884,
+            "h": 423,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Table",
+                "type": "INSTANCE"
               }
             ]
           },
