@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-25T12:22:47.485Z",
+  "generatedAt": "2026-06-25T15:23:49.927Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2369001654385186098",
-    "lastModified": "2026-06-25T12:22:56Z",
+    "version": "2369046361781734330",
+    "lastModified": "2026-06-25T15:10:00Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1013,23 +1013,23 @@
                 "type": "COMPONENT"
               },
               {
-                "name": "Property 1=Variant2",
+                "name": "Property 1=Bid received",
                 "type": "COMPONENT"
               },
               {
-                "name": "Property 1=Variant6",
+                "name": "Property 1=Bid received (Disabled)",
                 "type": "COMPONENT"
               },
               {
-                "name": "Property 1=Variant3",
+                "name": "Property 1=Rejected",
                 "type": "COMPONENT"
               },
               {
-                "name": "Property 1=Variant4",
+                "name": "Property 1=Confirmed",
                 "type": "COMPONENT"
               },
               {
-                "name": "Property 1=Variant5",
+                "name": "Property 1=Selected",
                 "type": "COMPONENT"
               }
             ]
@@ -1042,6 +1042,42 @@
             "h": 58,
             "childCount": 1,
             "children": [
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3114:53281",
+        "name": "⭐️ Special",
+        "screens": [
+          {
+            "id": "3114:53282",
+            "name": "Separator",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 718,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Ellipse 1",
+                "type": "ELLIPSE"
+              },
+              {
+                "name": "Illustration",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Your access is restricted",
+                "type": "TEXT"
+              },
+              {
+                "name": "Your access is restricted because of unpaid invoices.",
+                "type": "TEXT"
+              },
               {
                 "name": "Button",
                 "type": "INSTANCE"

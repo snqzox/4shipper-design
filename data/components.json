@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-25T12:22:47.485Z",
+  "generatedAt": "2026-06-25T15:23:49.927Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2369004271063262249",
-    "lastModified": "2026-06-25T12:22:49Z",
+    "version": "2369005262695081529",
+    "lastModified": "2026-06-25T12:24:09Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,7 +244,7 @@
       }
     ]
   },
-  "count": 683,
+  "count": 684,
   "setCount": 43,
   "components": [
     {
@@ -6391,6 +6391,15 @@
       "nodeId": "9188:12625",
       "description": "",
       "updatedAt": "2026-06-19T08:09:12.314Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "3c1b8dbc6425d535fb05c1f176653ad4b5b83729",
+      "name": "arrow-u-turn-up-left",
+      "nodeId": "9229:13583",
+      "description": "",
+      "updatedAt": "2026-06-25T12:23:18.129Z",
       "set": null,
       "page": "🧩 Assets"
     }
