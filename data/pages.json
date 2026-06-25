@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-25T15:23:49.927Z",
+  "generatedAt": "2026-06-25T17:29:49.470Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2369046361781734330",
-    "lastModified": "2026-06-25T15:10:00Z",
+    "version": "2369086479974785681",
+    "lastModified": "2026-06-25T17:29:56Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1060,7 +1060,7 @@
             "type": "FRAME",
             "w": 1660,
             "h": 718,
-            "childCount": 5,
+            "childCount": 6,
             "children": [
               {
                 "name": "Ellipse 1",
@@ -1080,6 +1080,10 @@
               },
               {
                 "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Logo",
                 "type": "INSTANCE"
               }
             ]
