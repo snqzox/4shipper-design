@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-25T17:29:49.470Z",
+  "generatedAt": "2026-06-25T19:27:06.445Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2369086479974785681",
-    "lastModified": "2026-06-25T17:29:56Z",
+    "lastModified": "2026-06-25T17:41:48Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1044,46 +1044,6 @@
             "children": [
               {
                 "name": "Button",
-                "type": "INSTANCE"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "3114:53281",
-        "name": "⭐️ Special",
-        "screens": [
-          {
-            "id": "3114:53282",
-            "name": "Separator",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 718,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Ellipse 1",
-                "type": "ELLIPSE"
-              },
-              {
-                "name": "Illustration",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Your access is restricted",
-                "type": "TEXT"
-              },
-              {
-                "name": "Your access is restricted because of unpaid invoices.",
-                "type": "TEXT"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Logo",
                 "type": "INSTANCE"
               }
             ]
@@ -3252,6 +3212,30 @@
               },
               {
                 "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3114:53281",
+        "name": "🚫 Blocked access",
+        "screens": [
+          {
+            "id": "3114:53282",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 718,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 1",
+                "type": "FRAME"
+              },
+              {
+                "name": "Carrier Header",
                 "type": "INSTANCE"
               }
             ]
