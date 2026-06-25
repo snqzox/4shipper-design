@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-25T09:51:56.420Z",
+  "generatedAt": "2026-06-25T12:22:47.485Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2368966329332857229",
-    "lastModified": "2026-06-25T09:48:03Z",
+    "version": "2369001654385186098",
+    "lastModified": "2026-06-25T12:22:56Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -39,24 +39,6 @@
               {
                 "name": "Dropdown Menu",
                 "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "2585:280689",
-            "name": "Bid Entry",
-            "type": "COMPONENT",
-            "w": 388,
-            "h": 68,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Frame 27830",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27829",
-                "type": "FRAME"
               }
             ]
           },
@@ -1015,6 +997,54 @@
               {
                 "name": "Line 3",
                 "type": "LINE"
+              }
+            ]
+          },
+          {
+            "id": "3095:40056",
+            "name": "Bid Entry",
+            "type": "COMPONENT_SET",
+            "w": 827,
+            "h": 775,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant6",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant4",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant5",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "3095:42157",
+            "name": "Frame 27834",
+            "type": "FRAME",
+            "w": 356,
+            "h": 58,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Button",
+                "type": "INSTANCE"
               }
             ]
           }
