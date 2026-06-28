@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-26T14:27:23.832Z",
+  "generatedAt": "2026-06-28T23:03:35.734Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2369369329867316214",
-    "lastModified": "2026-06-26T12:11:22Z",
+    "version": "2370238902386294979",
+    "lastModified": "2026-06-28T23:03:42Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -48,7 +48,7 @@
             "type": "FRAME",
             "w": 19056,
             "h": 12116,
-            "childCount": 46,
+            "childCount": 51,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -159,8 +159,16 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Content/Request/Form/Step 3 - Carriers (Matching contracts)",
+                "type": "COMPONENT"
+              },
+              {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Content/Request/Form/Step 3 - Carriers (Contract Selected)",
+                "type": "COMPONENT"
               },
               {
                 "name": "Carrier Selected",
@@ -233,6 +241,18 @@
               {
                 "name": "Tooltip",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Instaorder Banner",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Content/Request/Form/Step 4 - Carriers (Spot)",
+                "type": "COMPONENT"
               }
             ]
           },
@@ -677,8 +697,8 @@
             "name": "Request Detail - Contracted",
             "type": "FRAME",
             "w": 11964,
-            "h": 5208,
-            "childCount": 19,
+            "h": 7607,
+            "childCount": 27,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -746,7 +766,7 @@
               },
               {
                 "name": "Page",
-                "type": "INSTANCE"
+                "type": "FRAME"
               },
               {
                 "name": "Page",
@@ -755,6 +775,38 @@
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Change contract option",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Contract option selected",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Next step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Next Step",
+                "type": "CONNECTOR"
               }
             ]
           },
