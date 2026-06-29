@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-29T01:36:46.955Z",
+  "generatedAt": "2026-06-29T16:23:26.908Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2370271178003502038",
-    "lastModified": "2026-06-29T01:36:52Z",
+    "version": "2370536990304697766",
+    "lastModified": "2026-06-29T16:01:26Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -698,7 +698,7 @@
             "type": "FRAME",
             "w": 11964,
             "h": 7607,
-            "childCount": 27,
+            "childCount": 28,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -802,6 +802,10 @@
               },
               {
                 "name": "Next step",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Convert to spot",
                 "type": "CONNECTOR"
               },
               {
@@ -1085,6 +1089,44 @@
               {
                 "name": "Button",
                 "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "3271:40628",
+            "name": "Status/Requests",
+            "type": "COMPONENT_SET",
+            "w": 200,
+            "h": 342,
+            "childCount": 7,
+            "children": [
+              {
+                "name": "Status=Active",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Bidding completed",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Confirmed",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Canceled",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Draft",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Merged",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Carrier assigned",
+                "type": "COMPONENT"
               }
             ]
           }
