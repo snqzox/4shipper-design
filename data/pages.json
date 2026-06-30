@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-29T18:29:17.757Z",
+  "generatedAt": "2026-06-30T11:45:42.025Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2370579956090203710",
-    "lastModified": "2026-06-29T16:01:27Z",
+    "version": "2370824095433703571",
+    "lastModified": "2026-06-30T10:24:46Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -698,7 +698,7 @@
             "type": "FRAME",
             "w": 11964,
             "h": 7607,
-            "childCount": 28,
+            "childCount": 27,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -789,19 +789,11 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Dialog",
-                "type": "INSTANCE"
-              },
-              {
                 "name": "Change contract option",
                 "type": "CONNECTOR"
               },
               {
                 "name": "Contract option selected",
-                "type": "CONNECTOR"
-              },
-              {
-                "name": "Next step",
                 "type": "CONNECTOR"
               },
               {
@@ -811,6 +803,10 @@
               {
                 "name": "Next Step",
                 "type": "CONNECTOR"
+              },
+              {
+                "name": "Confirm dialog",
+                "type": "TEXT"
               }
             ]
           },
@@ -1127,6 +1123,112 @@
               {
                 "name": "Status=Carrier assigned",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "3315:41450",
+            "name": "Frame 27840",
+            "type": "COMPONENT",
+            "w": 412,
+            "h": 93,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 27827",
+                "type": "FRAME"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27840",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3315:41581",
+            "name": "Frame 27842",
+            "type": "FRAME",
+            "w": 3200,
+            "h": 865,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Frame 27843",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27840",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27841",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27842",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3315:41678",
+            "name": "Frame 27843",
+            "type": "FRAME",
+            "w": 3820,
+            "h": 2339,
+            "childCount": 12,
+            "children": [
+              {
+                "name": "Frame 27844",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27846",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27840",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bidding time finished",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Frame 27841",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27842",
+                "type": "FRAME"
+              },
+              {
+                "name": "Rejected by carrier",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Frame 27843",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27845",
+                "type": "FRAME"
+              },
+              {
+                "name": "Cancelled by shipper",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Confirmed by carrier",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Bid selected",
+                "type": "CONNECTOR"
               }
             ]
           }
