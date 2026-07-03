@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-02T15:40:56.557Z",
+  "generatedAt": "2026-07-03T10:05:59.192Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2371623964358960388",
-    "lastModified": "2026-07-02T12:43:25Z",
+    "version": "2371910330799557050",
+    "lastModified": "2026-07-03T08:30:31Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -48,7 +48,7 @@
             "type": "FRAME",
             "w": 19056,
             "h": 12116,
-            "childCount": 51,
+            "childCount": 47,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -139,6 +139,10 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Page",
                 "type": "INSTANCE"
               },
@@ -159,16 +163,8 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Content/Request/Form/Step 3 - Carriers (Matching contracts)",
-                "type": "COMPONENT"
-              },
-              {
                 "name": "Page",
                 "type": "INSTANCE"
-              },
-              {
-                "name": "Content/Request/Form/Step 3 - Carriers (Contract Selected)",
-                "type": "COMPONENT"
               },
               {
                 "name": "Carrier Selected",
@@ -241,18 +237,152 @@
               {
                 "name": "Tooltip",
                 "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "3198:38586",
+            "name": "Content/Request/Form/Step 3 - Carriers (Matching contracts)",
+            "type": "COMPONENT",
+            "w": 952,
+            "h": 784,
+            "childCount": 6,
+            "children": [
+              {
+                "name": "Form Header",
+                "type": "INSTANCE"
               },
               {
-                "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
-                "type": "COMPONENT"
+                "name": "Tabs",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27807",
+                "type": "FRAME"
+              },
+              {
+                "name": "Table",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Form/New Tender/1",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3198:41991",
+            "name": "Content/Request/Form/Step 3 - Carriers (Contract Selected)",
+            "type": "COMPONENT",
+            "w": 952,
+            "h": 769,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Form Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27561",
+                "type": "FRAME"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Form/New Tender/1",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3198:52081",
+            "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
+            "type": "COMPONENT",
+            "w": 952,
+            "h": 1163,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Form Header",
+                "type": "INSTANCE"
               },
               {
                 "name": "Instaorder Banner",
-                "type": "COMPONENT_SET"
+                "type": "INSTANCE"
               },
               {
-                "name": "Content/Request/Form/Step 4 - Carriers (Spot)",
+                "name": "Frame 27561",
+                "type": "FRAME"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Form/New Tender/1",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3198:52160",
+            "name": "Instaorder Banner",
+            "type": "COMPONENT_SET",
+            "w": 1004,
+            "h": 365,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Not Available",
                 "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Available",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "3198:58898",
+            "name": "Content/Request/Form/Step 4 - Carriers (Spot)",
+            "type": "COMPONENT",
+            "w": 872,
+            "h": 808,
+            "childCount": 7,
+            "children": [
+              {
+                "name": "Form Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27796",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27836",
+                "type": "FRAME"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "_Form/New Tender/1",
+                "type": "FRAME"
               }
             ]
           },
@@ -698,7 +828,7 @@
             "type": "FRAME",
             "w": 11964,
             "h": 7607,
-            "childCount": 27,
+            "childCount": 35,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -789,7 +919,19 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Change contract option",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Contract option selected",
                 "type": "CONNECTOR"
               },
               {
@@ -801,11 +943,31 @@
                 "type": "CONNECTOR"
               },
               {
-                "name": "Next Step",
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Confirm dialog",
                 "type": "CONNECTOR"
               },
               {
                 "name": "Confirm dialog",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Convert to spot",
+                "type": "TEXT"
+              },
+              {
+                "name": "Convert to conracted",
                 "type": "TEXT"
               }
             ]
@@ -2967,6 +3129,38 @@
         ]
       },
       {
+        "id": "3480:44949",
+        "name": "Blocks",
+        "screens": [
+          {
+            "id": "3480:44954",
+            "name": "Toast - Session renewed",
+            "type": "FRAME",
+            "w": 1512,
+            "h": 920,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Popover",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Carrier Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27225",
+                "type": "FRAME"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "1819:217875",
         "name": "⏰ Requests",
         "screens": [
@@ -3333,7 +3527,7 @@
             "name": "Bidding Flow",
             "type": "FRAME",
             "w": 3280,
-            "h": 974,
+            "h": 1011,
             "childCount": 5,
             "children": [
               {
