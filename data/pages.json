@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-06T20:53:08.779Z",
+  "generatedAt": "2026-07-06T22:14:24.985Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2373207566118638278",
-    "lastModified": "2026-07-06T20:53:15Z",
+    "version": "2373234705974643208",
+    "lastModified": "2026-07-06T21:05:19Z",
     "pages": [
       {
         "id": "3661:331898",
@@ -577,8 +577,8 @@
             "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
             "type": "COMPONENT",
             "w": 952,
-            "h": 1251,
-            "childCount": 5,
+            "h": 1163,
+            "childCount": 6,
             "children": [
               {
                 "name": "Form Header",
@@ -598,6 +598,10 @@
               },
               {
                 "name": "_Form/New Tender/1",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27854",
                 "type": "FRAME"
               }
             ]
@@ -1725,24 +1729,6 @@
               {
                 "name": "Property 1=Variant2",
                 "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "3663:350458",
-            "name": "Frame 27853",
-            "type": "FRAME",
-            "w": 317,
-            "h": 44,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Frame 2",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27852",
-                "type": "FRAME"
               }
             ]
           }
