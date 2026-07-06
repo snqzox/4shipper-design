@@ -1,11 +1,171 @@
 {
-  "generatedAt": "2026-07-06T18:55:38.927Z",
+  "generatedAt": "2026-07-06T20:53:08.779Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2373182303106696829",
-    "lastModified": "2026-07-06T18:08:52Z",
+    "version": "2373207566118638278",
+    "lastModified": "2026-07-06T20:53:15Z",
     "pages": [
+      {
+        "id": "3661:331898",
+        "name": "Email Templates",
+        "screens": [
+          {
+            "id": "3661:331899",
+            "name": "Email/Data item",
+            "type": "COMPONENT",
+            "w": 350,
+            "h": 42,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Icon",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27860",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3661:331904",
+            "name": "Frame 27863",
+            "type": "COMPONENT",
+            "w": 700,
+            "h": 2029,
+            "childCount": 8,
+            "children": [
+              {
+                "name": "Email/Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Email/Headline",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Slot",
+                "type": "SLOT"
+              },
+              {
+                "name": "Email/Data block",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Email/Actions",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Email/Footer",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "3661:331912",
+            "name": "Email/Footer",
+            "type": "COMPONENT",
+            "w": 508,
+            "h": 296,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27858",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27859",
+                "type": "FRAME"
+              },
+              {
+                "name": "Email generated in 4Shipper by Transportly This is an automated message. Replies are not monitored. For 4Shipper support, please contact info@transportly.eu.",
+                "type": "TEXT"
+              },
+              {
+                "name": "You can manage your email preferences here",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "3661:331938",
+            "name": "Email/Actions",
+            "type": "COMPONENT",
+            "w": 530,
+            "h": 168,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Content",
+                "type": "SLOT"
+              }
+            ]
+          },
+          {
+            "id": "3661:331945",
+            "name": "Email/Data block",
+            "type": "COMPONENT",
+            "w": 530,
+            "h": 190,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Slot",
+                "type": "SLOT"
+              }
+            ]
+          },
+          {
+            "id": "3661:331950",
+            "name": "Email/Headline",
+            "type": "COMPONENT",
+            "w": 475,
+            "h": 84,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Hello Carrier,",
+                "type": "TEXT"
+              },
+              {
+                "name": "You have been invited to participate in a tender.",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "3661:331953",
+            "name": "Email/Header",
+            "type": "COMPONENT",
+            "w": 475,
+            "h": 55,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Logo",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Separator",
+                "type": "INSTANCE"
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "1938:163864",
         "name": "-----------",
@@ -164,7 +324,7 @@
             "type": "FRAME",
             "w": 19056,
             "h": 12116,
-            "childCount": 47,
+            "childCount": 46,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -252,10 +412,6 @@
               },
               {
                 "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Notification (Alert)",
                 "type": "INSTANCE"
               },
               {
@@ -421,7 +577,7 @@
             "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
             "type": "COMPONENT",
             "w": 952,
-            "h": 1163,
+            "h": 1251,
             "childCount": 5,
             "children": [
               {
@@ -1569,6 +1725,24 @@
               {
                 "name": "Property 1=Variant2",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "3663:350458",
+            "name": "Frame 27853",
+            "type": "FRAME",
+            "w": 317,
+            "h": 44,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 2",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27852",
+                "type": "FRAME"
               }
             ]
           }
@@ -3245,7 +3419,7 @@
             "name": "Email template",
             "type": "FRAME",
             "w": 736,
-            "h": 972,
+            "h": 997,
             "childCount": 5,
             "children": [
               {
@@ -3265,7 +3439,7 @@
                 "type": "LINE"
               },
               {
-                "name": "Mail Footer",
+                "name": "Email/Footer",
                 "type": "INSTANCE"
               }
             ]

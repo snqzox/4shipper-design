@@ -1,69 +1,13 @@
 {
-  "generatedAt": "2026-07-06T16:38:28.200Z",
-  "libraryVersion": "2373130441875479317",
-  "count": 22,
+  "generatedAt": "2026-07-06T20:54:50.449Z",
+  "libraryVersion": "2373220850036181559",
+  "count": 4,
   "items": [
-    {
-      "name": "Attachment entry",
-      "kind": "set",
-      "change": "changed",
-      "doc": "attachment-entry.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Button",
-      "kind": "set",
-      "change": "changed",
-      "doc": "button.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Content Box",
-      "kind": "set",
-      "change": "changed",
-      "doc": "content-box.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Dialog",
-      "kind": "set",
-      "change": "changed",
-      "doc": "dialog.md",
-      "hasDoc": true
-    },
     {
       "name": "Item",
       "kind": "set",
       "change": "changed",
       "doc": "item.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Notification (Alert)",
-      "kind": "set",
-      "change": "changed",
-      "doc": "notification-alert.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Page/Header/Carrier",
-      "kind": "set",
-      "change": "changed",
-      "doc": "page-header-carrier.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Page/Header/Shipper",
-      "kind": "set",
-      "change": "changed",
-      "doc": "page-header-shipper.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Pagination",
-      "kind": "set",
-      "change": "changed",
-      "doc": "pagination.md",
       "hasDoc": true
     },
     {
@@ -74,51 +18,9 @@
       "hasDoc": false
     },
     {
-      "name": "Route Entry",
-      "kind": "set",
-      "change": "changed",
-      "doc": "route-entry.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Status/Requests",
-      "kind": "set",
-      "change": "changed",
-      "doc": "status-requests.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Textarea",
-      "kind": "set",
-      "change": "changed",
-      "doc": "textarea.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Alert Dialog",
+      "name": "file-contract",
       "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Content Header",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Fileupload",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Form Control",
-      "kind": "component",
-      "change": "changed",
+      "change": "added",
       "doc": null,
       "hasDoc": false
     },
@@ -128,34 +30,6 @@
       "change": "changed",
       "doc": null,
       "hasDoc": false
-    },
-    {
-      "name": "Page",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Page/Main Content Container",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Popover",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Step Progress Tabs",
-      "kind": "component",
-      "change": "changed",
-      "doc": "step-progress-tabs.md",
-      "hasDoc": true
     }
   ]
 }

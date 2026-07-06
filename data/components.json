@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-06T18:55:38.927Z",
+  "generatedAt": "2026-07-06T20:53:08.779Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2373179884998363289",
-    "lastModified": "2026-07-06T18:27:24Z",
+    "version": "2373220850036181559",
+    "lastModified": "2026-07-06T20:52:30Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -252,7 +252,7 @@
       "name": "Status=Transport-Confirmed",
       "nodeId": "9251:5317",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.233Z",
+      "updatedAt": "2026-07-06T20:45:37.255Z",
       "set": "Request Status",
       "page": "⚛️ Status"
     },
@@ -482,24 +482,6 @@
       "page": "⚛️ Notification (Alert)"
     },
     {
-      "key": "85b65c4421eb7d7949da2d23106577c5fa538d81",
-      "name": "Status=Rejected-By-Carrier",
-      "nodeId": "9251:5323",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.184Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "8f8bacdd4fa3cff4e1784a544fbaa9b8b01e5354",
-      "name": "Status=Bidding-Finished",
-      "nodeId": "9251:5369",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.195Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "91bfaccc141801cccc95c6d04980d6a08a62417c",
       "name": "Variant=Primary, State=Disabled",
       "nodeId": "6324:46380",
@@ -518,15 +500,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "a70fbb845175f1d6672331775b949ae7bfd8fdb7",
-      "name": "Align=Horizontal",
-      "nodeId": "6826:332",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.220Z",
-      "set": "Item",
-      "page": "⚛️ Item"
-    },
-    {
       "key": "a7958fec0699178a171f8ff0995b26f5ecb0fcaa",
       "name": "Selected=False, Expanded=False, Selectable=False",
       "nodeId": "6814:1101651",
@@ -536,15 +509,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "ae1220de565d33836087af99d22162cf9c9d1d53",
-      "name": "Status=Cancelled",
-      "nodeId": "9251:5329",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.239Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "b81731dd54db51b46e23c2119f02380e27b8da6c",
       "name": "Layout=Mobile, Expanded=True",
       "nodeId": "7713:17363",
@@ -552,15 +516,6 @@
       "updatedAt": "2026-07-06T14:50:56.249Z",
       "set": "Page/Header/Carrier",
       "page": "📦 Page Header"
-    },
-    {
-      "key": "ba1cd930041d51d592f8abbc6725af3e9a908e52",
-      "name": "Status=Spot-Requested",
-      "nodeId": "9251:5311",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.253Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
     },
     {
       "key": "c105077452d1fe48d67f2c7bdd6c89cde7daed0b",
@@ -581,24 +536,6 @@
       "page": "📦 Page Header"
     },
     {
-      "key": "d55b343d2443f0e85bd438a5e4e7d1dac66e013e",
-      "name": "Align=Horizontal - Right",
-      "nodeId": "6827:292",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.286Z",
-      "set": "Item",
-      "page": "⚛️ Item"
-    },
-    {
-      "key": "df02963e102bf79e7da335707468fcc03cb6f855",
-      "name": "Status=Bidding-Active",
-      "nodeId": "9251:5353",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.290Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "e1f50a89ab6670b4424b12be24902586af53db03",
       "name": "Variant=Inverted, State=Hover",
       "nodeId": "6905:1229330",
@@ -615,6 +552,24 @@
       "updatedAt": "2026-07-06T14:50:56.298Z",
       "set": "Notification (Alert)",
       "page": "⚛️ Notification (Alert)"
+    },
+    {
+      "key": "d55b343d2443f0e85bd438a5e4e7d1dac66e013e",
+      "name": "Align=Horizontal - Right",
+      "nodeId": "6827:292",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.275Z",
+      "set": "Item",
+      "page": "⚛️ Item"
+    },
+    {
+      "key": "df02963e102bf79e7da335707468fcc03cb6f855",
+      "name": "Status=Bidding-Active",
+      "nodeId": "9251:5353",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.282Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
     },
     {
       "key": "070099fb216768417ef71472d9c1089d92df8516",
@@ -725,15 +680,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "3c5b8a6656c37c7396ec2eb228d06f337dedb0b0",
-      "name": "Status=Draft",
-      "nodeId": "9251:5341",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.033Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "4730a2db3693bf0727a8dc5cec62cf4af4ed2862",
       "name": "Variant=Danger, State=Disabled",
       "nodeId": "6324:46420",
@@ -741,15 +687,6 @@
       "updatedAt": "2026-07-06T14:50:56.038Z",
       "set": "Button",
       "page": "⚛️ Button"
-    },
-    {
-      "key": "49b2d878859798a7cd5e8a5aac0e654c0a372c83",
-      "name": "Status=Merged",
-      "nodeId": "9251:5347",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.042Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
     },
     {
       "key": "502bfdc62584816a9255a1ccdadc0305637a52f1",
@@ -959,6 +896,78 @@
       "page": "⚛️ Status"
     },
     {
+      "key": "3c5b8a6656c37c7396ec2eb228d06f337dedb0b0",
+      "name": "Status=Draft",
+      "nodeId": "9251:5341",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.208Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "49b2d878859798a7cd5e8a5aac0e654c0a372c83",
+      "name": "Status=Merged",
+      "nodeId": "9251:5347",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.215Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "85b65c4421eb7d7949da2d23106577c5fa538d81",
+      "name": "Status=Rejected-By-Carrier",
+      "nodeId": "9251:5323",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.236Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "8f8bacdd4fa3cff4e1784a544fbaa9b8b01e5354",
+      "name": "Status=Bidding-Finished",
+      "nodeId": "9251:5369",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.241Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "a70fbb845175f1d6672331775b949ae7bfd8fdb7",
+      "name": "Align=Horizontal",
+      "nodeId": "6826:332",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.245Z",
+      "set": "Item",
+      "page": "⚛️ Item"
+    },
+    {
+      "key": "ae1220de565d33836087af99d22162cf9c9d1d53",
+      "name": "Status=Cancelled",
+      "nodeId": "9251:5329",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.264Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "ba1cd930041d51d592f8abbc6725af3e9a908e52",
+      "name": "Status=Spot-Requested",
+      "nodeId": "9251:5311",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.270Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "953c9e6bdfde211a7cea06b8c11eb698346d059e",
+      "name": "file-contract",
+      "nodeId": "9311:2707",
+      "description": "",
+      "updatedAt": "2026-07-06T20:52:02.985Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
       "key": "1ccd467be67896703a5d34c8be64d93d30bc526b",
       "name": "icon/paper-plane",
       "nodeId": "922:62386",
@@ -1062,7 +1071,7 @@
       "name": "Status=Transport-Confirmed-Spot",
       "nodeId": "9251:5375",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.114Z",
+      "updatedAt": "2026-07-06T20:45:37.228Z",
       "set": "Request Status",
       "page": "⚛️ Status"
     },
@@ -1071,7 +1080,7 @@
       "name": "Status=Cancelled-Alt",
       "nodeId": "9251:5335",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.228Z",
+      "updatedAt": "2026-07-06T20:45:37.250Z",
       "set": "Request Status",
       "page": "⚛️ Status"
     },
@@ -1346,15 +1355,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "31fb25b8ffc005ab9d2a0a19730fb776dfb567a4",
-      "name": "Mail Footer",
-      "nodeId": "5184:138201",
-      "description": "",
-      "updatedAt": "2026-04-12T01:28:26.415Z",
-      "set": null,
-      "page": "✉️ E-mail templates"
-    },
-    {
       "key": "0435debb38ad77e167b74da63766b0fe81d0e45f",
       "name": "Selected=True, Expanded=False, Selectable=True",
       "nodeId": "3608:116320",
@@ -1413,7 +1413,7 @@
       "name": "Align=Vertical",
       "nodeId": "6824:54255",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.109Z",
+      "updatedAt": "2026-07-06T20:45:37.221Z",
       "set": "Item",
       "page": "⚛️ Item"
     },
@@ -1476,7 +1476,7 @@
       "name": "Form Header",
       "nodeId": "8680:8274",
       "description": "",
-      "updatedAt": "2026-07-06T15:18:36.512Z",
+      "updatedAt": "2026-07-06T20:46:38.763Z",
       "set": null,
       "page": "📦 Form Header"
     },
@@ -6756,7 +6756,7 @@
       "name": "Item",
       "nodeId": "6826:331",
       "description": "What it is: A compact key-value row for displaying a single labelled data point in a summary or detail list.\nWhen to use: Detail panels, shipment summaries, invoice line items.\nVariants: Horizontal and vertical label/value layout; with and without icon.\nAvoid: Don't use Item for interactive selections — use List Entry or Dropdown Item.",
-      "updatedAt": "2026-07-06T14:50:55.507Z"
+      "updatedAt": "2026-07-06T20:45:37.131Z"
     },
     {
       "key": "72fb3256dcf6a6496c598efe8ae0558dcc839ac2",
@@ -6808,18 +6808,18 @@
       "updatedAt": "2026-07-06T14:50:55.516Z"
     },
     {
-      "key": "9af34a5947e5ca3fda45eca879fbd5849ea270dc",
-      "name": "Request Status",
-      "nodeId": "9251:5310",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:55.520Z"
-    },
-    {
       "key": "f833a956fbe878a6d2b8ca6b049b23ec54cfb188",
       "name": "Notification (Alert)",
       "nodeId": "32:1770",
       "description": "What it is: An inline alert banner communicating important system feedback — info, success, warning, or error.\nWhen to use: Form validation summaries, API error messages, success confirmations, policy notices placed within page content.\nVariants: Info, success, warning, danger; with and without dismiss button; with and without action link.\nAvoid: Don't use for toast-style transient messages — those use a separate notification pattern outside this component.",
       "updatedAt": "2026-07-06T14:50:55.546Z"
+    },
+    {
+      "key": "9af34a5947e5ca3fda45eca879fbd5849ea270dc",
+      "name": "Request Status",
+      "nodeId": "9251:5310",
+      "description": "",
+      "updatedAt": "2026-07-06T20:45:37.142Z"
     }
   ]
 }
