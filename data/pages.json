@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-05T04:40:10.030Z",
+  "generatedAt": "2026-07-06T09:00:15.135Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2372472481864832620",
-    "lastModified": "2026-07-05T01:37:17Z",
+    "version": "2373034045073879599",
+    "lastModified": "2026-07-06T08:43:27Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -26,10 +26,14 @@
             "type": "FRAME",
             "w": 2350,
             "h": 3342,
-            "childCount": 3,
+            "childCount": 6,
             "children": [
               {
                 "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
                 "type": "INSTANCE"
               },
               {
@@ -38,6 +42,14 @@
               },
               {
                 "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
                 "type": "INSTANCE"
               }
             ]
@@ -1315,7 +1327,7 @@
             "name": "Frame 27842",
             "type": "FRAME",
             "w": 3200,
-            "h": 865,
+            "h": 926,
             "childCount": 4,
             "children": [
               {
@@ -1587,7 +1599,7 @@
             "name": "Tender - Bulk selection",
             "type": "FRAME",
             "w": 2000,
-            "h": 2426,
+            "h": 2430,
             "childCount": 6,
             "children": [
               {
@@ -3581,7 +3593,7 @@
             "name": "Contract detail",
             "type": "FRAME",
             "w": 2000,
-            "h": 1180,
+            "h": 1160,
             "childCount": 2,
             "children": [
               {
@@ -4095,7 +4107,7 @@
             "id": "1970:168035",
             "name": "Chat with shipper Button",
             "type": "COMPONENT",
-            "w": 234,
+            "w": 242,
             "h": 74,
             "childCount": 1,
             "children": [

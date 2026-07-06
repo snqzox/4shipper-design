@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-30T11:45:42.025Z",
+  "generatedAt": "2026-07-06T09:00:15.135Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2370807564654171095",
-    "lastModified": "2026-06-30T09:15:18Z",
+    "version": "2373015125207885542",
+    "lastModified": "2026-07-06T07:56:20Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -247,6 +247,78 @@
   "count": 696,
   "setCount": 44,
   "components": [
+    {
+      "key": "49b2d878859798a7cd5e8a5aac0e654c0a372c83",
+      "name": "Status=Merged",
+      "nodeId": "9251:5347",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.041Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "85b65c4421eb7d7949da2d23106577c5fa538d81",
+      "name": "Status=Rejected-By-Carrier",
+      "nodeId": "9251:5323",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.057Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "8f8bacdd4fa3cff4e1784a544fbaa9b8b01e5354",
+      "name": "Status=Bidding-Finished",
+      "nodeId": "9251:5369",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.063Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "ac6e2ce1a3ee51ee23c21137eb7a1ef3e4910f16",
+      "name": "Status=Transport-Confirmed",
+      "nodeId": "9251:5317",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.074Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "ae1220de565d33836087af99d22162cf9c9d1d53",
+      "name": "Status=Cancelled",
+      "nodeId": "9251:5329",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.080Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "ba1cd930041d51d592f8abbc6725af3e9a908e52",
+      "name": "Status=Spot-Requested",
+      "nodeId": "9251:5311",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.086Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "df02963e102bf79e7da335707468fcc03cb6f855",
+      "name": "Status=Bidding-Active",
+      "nodeId": "9251:5353",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.091Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "3c5b8a6656c37c7396ec2eb228d06f337dedb0b0",
+      "name": "Status=Draft",
+      "nodeId": "9251:5341",
+      "description": "",
+      "updatedAt": "2026-07-06T07:53:18.032Z",
+      "set": "Request Status",
+      "page": "⚛️ Status"
+    },
     {
       "key": "74c6a9f4afe3705ce72e421a7c47dd673cc79aab",
       "name": "Status=Active",
@@ -536,56 +608,11 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "ac6e2ce1a3ee51ee23c21137eb7a1ef3e4910f16",
-      "name": "Status=Transport-Confirmed",
-      "nodeId": "9251:5317",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.867Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "3c5b8a6656c37c7396ec2eb228d06f337dedb0b0",
-      "name": "Status=Draft",
-      "nodeId": "9251:5341",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.872Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "85b65c4421eb7d7949da2d23106577c5fa538d81",
-      "name": "Status=Rejected-By-Carrier",
-      "nodeId": "9251:5323",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.877Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "49b2d878859798a7cd5e8a5aac0e654c0a372c83",
-      "name": "Status=Merged",
-      "nodeId": "9251:5347",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.881Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "ae1220de565d33836087af99d22162cf9c9d1d53",
-      "name": "Status=Cancelled",
-      "nodeId": "9251:5329",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.885Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
       "key": "70fdc2e55ca522cceea676c842a421e2cc4e0b69",
       "name": "Status=Transport-Confirmed-Spot",
       "nodeId": "9251:5375",
       "description": "",
-      "updatedAt": "2026-06-30T08:51:04.890Z",
+      "updatedAt": "2026-07-06T07:53:18.048Z",
       "set": "Request Status",
       "page": "⚛️ Status"
     },
@@ -594,34 +621,7 @@
       "name": "Status=Cancelled-Alt",
       "nodeId": "9251:5335",
       "description": "",
-      "updatedAt": "2026-06-30T08:51:04.894Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "ba1cd930041d51d592f8abbc6725af3e9a908e52",
-      "name": "Status=Spot-Requested",
-      "nodeId": "9251:5311",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.898Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "df02963e102bf79e7da335707468fcc03cb6f855",
-      "name": "Status=Bidding-Active",
-      "nodeId": "9251:5353",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.904Z",
-      "set": "Request Status",
-      "page": "⚛️ Status"
-    },
-    {
-      "key": "8f8bacdd4fa3cff4e1784a544fbaa9b8b01e5354",
-      "name": "Status=Bidding-Finished",
-      "nodeId": "9251:5369",
-      "description": "",
-      "updatedAt": "2026-06-30T08:51:04.908Z",
+      "updatedAt": "2026-07-06T07:53:18.069Z",
       "set": "Request Status",
       "page": "⚛️ Status"
     },
@@ -6784,7 +6784,7 @@
       "name": "Request Status",
       "nodeId": "9251:5310",
       "description": "",
-      "updatedAt": "2026-06-30T08:51:04.855Z"
+      "updatedAt": "2026-07-06T07:53:17.967Z"
     },
     {
       "key": "985fbefe3b48427841ee78502b04546959317ba3",
