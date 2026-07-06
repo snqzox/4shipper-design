@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-06T13:03:45.161Z",
+  "generatedAt": "2026-07-06T16:36:39.105Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2373034045073879599",
-    "lastModified": "2026-07-06T09:05:44Z",
+    "version": "2373156190178326177",
+    "lastModified": "2026-07-06T16:35:38Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -26,14 +26,10 @@
             "type": "FRAME",
             "w": 2350,
             "h": 3342,
-            "childCount": 6,
+            "childCount": 3,
             "children": [
               {
                 "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
                 "type": "INSTANCE"
               },
               {
@@ -42,14 +38,6 @@
               },
               {
                 "name": "Dropdown Menu",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
                 "type": "INSTANCE"
               }
             ]
@@ -1326,9 +1314,9 @@
             "id": "3315:41581",
             "name": "Frame 27842",
             "type": "FRAME",
-            "w": 3200,
-            "h": 926,
-            "childCount": 4,
+            "w": 8411,
+            "h": 1200,
+            "childCount": 8,
             "children": [
               {
                 "name": "Frame 27843",
@@ -1345,6 +1333,22 @@
               {
                 "name": "Frame 27842",
                 "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
               }
             ]
           },
@@ -1352,9 +1356,9 @@
             "id": "3315:41678",
             "name": "Frame 27843",
             "type": "FRAME",
-            "w": 3820,
-            "h": 2339,
-            "childCount": 12,
+            "w": 8411,
+            "h": 3570,
+            "childCount": 20,
             "children": [
               {
                 "name": "Frame 27844",
@@ -1403,6 +1407,56 @@
               {
                 "name": "Bid selected",
                 "type": "CONNECTOR"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27821",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "3632:210659",
+            "name": "Bids/Autoselect",
+            "type": "COMPONENT_SET",
+            "w": 72,
+            "h": 124,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Autoselect",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
               }
             ]
           }
@@ -1707,7 +1761,7 @@
             "name": "Settings",
             "type": "FRAME",
             "w": 2464,
-            "h": 17001,
+            "h": 18021,
             "childCount": 5,
             "children": [
               {
