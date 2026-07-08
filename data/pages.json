@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-08T07:29:20.768Z",
+  "generatedAt": "2026-07-08T11:50:59.256Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2373745833441226871",
-    "lastModified": "2026-07-08T07:04:14Z",
+    "version": "2373814295145299044",
+    "lastModified": "2026-07-08T11:30:28Z",
     "pages": [
       {
         "id": "3661:331898",
@@ -198,122 +198,6 @@
               },
               {
                 "name": "Dropdown Menu",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3652:331598",
-            "name": "Quick Filters Left",
-            "type": "FRAME",
-            "w": 1392,
-            "h": 34,
-            "childCount": 12,
-            "children": [
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3652:331761",
-            "name": "Quick Filters Left",
-            "type": "FRAME",
-            "w": 1392,
-            "h": 34,
-            "childCount": 12,
-            "children": [
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
                 "type": "INSTANCE"
               }
             ]
@@ -1731,6 +1615,28 @@
                 "type": "COMPONENT"
               }
             ]
+          },
+          {
+            "id": "3810:80326",
+            "name": "Filters",
+            "type": "FRAME",
+            "w": 1137,
+            "h": 317,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Quick Filters Left",
+                "type": "FRAME"
+              },
+              {
+                "name": "Quick Filters Left",
+                "type": "FRAME"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
+              }
+            ]
           }
         ]
       },
@@ -2033,7 +1939,7 @@
             "name": "Settings",
             "type": "FRAME",
             "w": 2464,
-            "h": 18235,
+            "h": 17851,
             "childCount": 5,
             "children": [
               {
