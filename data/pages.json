@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-08T14:11:33.277Z",
+  "generatedAt": "2026-07-09T11:28:15.786Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2373827784577096490",
-    "lastModified": "2026-07-08T11:30:29Z",
+    "version": "2374179065664023575",
+    "lastModified": "2026-07-09T11:28:19Z",
     "pages": [
       {
         "id": "3661:331898",
@@ -1127,7 +1127,7 @@
                 "type": "TEXT"
               },
               {
-                "name": "Convert to conracted",
+                "name": "Convert to contracted",
                 "type": "TEXT"
               }
             ]
@@ -1635,6 +1635,186 @@
               {
                 "name": "Tooltip",
                 "type": "INSTANCE"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3853:80333",
+        "name": "Addresses + Time Slots",
+        "screens": [
+          {
+            "id": "3853:81230",
+            "name": "OLD - To Be Converted",
+            "type": "SECTION",
+            "w": 15420,
+            "h": 19980,
+            "childCount": 41,
+            "children": [
+              {
+                "name": "Logo",
+                "type": "FRAME"
+              },
+              {
+                "name": "Logo",
+                "type": "FRAME"
+              },
+              {
+                "name": "Address/Gates",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Frame 11",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bookings/Booking management",
+                "type": "FRAME"
+              },
+              {
+                "name": "Addresses / Address detail",
+                "type": "TEXT"
+              },
+              {
+                "name": "Frame 44",
+                "type": "FRAME"
+              },
+              {
+                "name": "Logo",
+                "type": "FRAME"
+              },
+              {
+                "name": "Logo",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 180",
+                "type": "FRAME"
+              },
+              {
+                "name": "Address/Operating hours",
+                "type": "FRAME"
+              },
+              {
+                "name": "Address/Exceptions",
+                "type": "FRAME"
+              },
+              {
+                "name": "Address/Exceptions",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Booking links",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Add exception",
+                "type": "FRAME"
+              },
+              {
+                "name": "Add gate",
+                "type": "FRAME"
+              },
+              {
+                "name": "Add exception",
+                "type": "FRAME"
+              },
+              {
+                "name": "Add booking slot",
+                "type": "FRAME"
+              },
+              {
+                "name": "Add booking slot",
+                "type": "FRAME"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Add booking slot",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 203",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 190",
+                "type": "FRAME"
               }
             ]
           }
