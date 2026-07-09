@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T17:01:27.444Z",
+  "generatedAt": "2026-07-09T19:07:36.666Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2374276574285203523",
-    "lastModified": "2026-07-09T16:57:01Z",
+    "version": "2374287428730142987",
+    "lastModified": "2026-07-09T18:55:00Z",
     "pages": [
       {
         "id": "3661:331898",
@@ -33,7 +33,7 @@
             "name": "Frame 27863",
             "type": "COMPONENT",
             "w": 700,
-            "h": 2029,
+            "h": 2025,
             "childCount": 8,
             "children": [
               {
@@ -1942,12 +1942,38 @@
             "id": "3859:180305",
             "name": "Booking Entry",
             "type": "COMPONENT_SET",
-            "w": 766,
-            "h": 658,
+            "w": 1682,
+            "h": 963,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Property 1=Default, Type=Loading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Default, Type=Unloading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2, Type=Loading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2, Type=Unloading",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "3878:250012",
+            "name": "Address/Transport detail",
+            "type": "COMPONENT_SET",
+            "w": 364,
+            "h": 134,
             "childCount": 2,
             "children": [
               {
-                "name": "Property 1=Default",
+                "name": "Property 1=Transport detail",
                 "type": "COMPONENT"
               },
               {
@@ -2233,7 +2259,7 @@
             "name": "Contracts",
             "type": "FRAME",
             "w": 2000,
-            "h": 1287,
+            "h": 1285,
             "childCount": 2,
             "children": [
               {
@@ -2257,7 +2283,7 @@
             "name": "Settings",
             "type": "FRAME",
             "w": 2464,
-            "h": 17851,
+            "h": 17847,
             "childCount": 5,
             "children": [
               {

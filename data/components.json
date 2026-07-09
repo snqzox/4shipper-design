@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T14:07:26.952Z",
+  "generatedAt": "2026-07-09T19:07:36.666Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2374222183350532430",
-    "lastModified": "2026-07-09T13:48:32Z",
+    "version": "2374277043538188935",
+    "lastModified": "2026-07-09T17:41:32Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -734,15 +734,6 @@
       "page": "⚛️ Button"
     },
     {
-      "key": "6ccd09b5a1a4a49c2e203f991100b08b43aaf75f",
-      "name": "Style=Boxed, Size=LG",
-      "nodeId": "8770:65915",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.094Z",
-      "set": "Content Box",
-      "page": "📦 Content Box"
-    },
-    {
       "key": "6d9ac951d43a2879f02b108e17ec1207bda125ee",
       "name": "Variant=Primary Subtle, State=Disabled",
       "nodeId": "6324:46388",
@@ -1134,7 +1125,7 @@
       "name": "Style=Boxed, Size=MD",
       "nodeId": "6824:54246",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.027Z",
+      "updatedAt": "2026-07-09T17:38:50.792Z",
       "set": "Content Box",
       "page": "📦 Content Box"
     },
@@ -1440,7 +1431,7 @@
       "name": "Style=Simple, Size=LG",
       "nodeId": "8770:65925",
       "description": "",
-      "updatedAt": "2026-07-06T14:50:56.277Z",
+      "updatedAt": "2026-07-09T17:38:50.828Z",
       "set": "Content Box",
       "page": "📦 Content Box"
     },
@@ -2426,15 +2417,6 @@
       "page": "⚛️ Price"
     },
     {
-      "key": "1fc8997ad1739248ace39e656e1095f172aaacec",
-      "name": "Style=Simple, Size=MD",
-      "nodeId": "6985:1377168",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:55.989Z",
-      "set": "Content Box",
-      "page": "📦 Content Box"
-    },
-    {
       "key": "a44d9391d90e137182cf58df8d8a55ed7b4f345f",
       "name": "bolt-auto",
       "nodeId": "9025:2017",
@@ -3324,15 +3306,6 @@
       "updatedAt": "2026-07-06T14:50:56.001Z",
       "set": "Button",
       "page": "⚛️ Button"
-    },
-    {
-      "key": "5127864807f7dfcdc47e134c96b0244249fb6a92",
-      "name": "Page/Main Content Container",
-      "nodeId": "6987:65811",
-      "description": "",
-      "updatedAt": "2026-07-06T15:18:36.493Z",
-      "set": null,
-      "page": "📦 Page"
     },
     {
       "key": "5867050f905f8a09f1581cb1a2d0bed900e1dd92",
@@ -6498,7 +6471,7 @@
       "name": "Page",
       "nodeId": "6987:87353",
       "description": "",
-      "updatedAt": "2026-07-09T11:40:07.700Z",
+      "updatedAt": "2026-07-09T17:38:50.810Z",
       "set": null,
       "page": "📦 Page"
     },
@@ -6564,6 +6537,33 @@
       "updatedAt": "2026-07-09T13:45:29.829Z",
       "set": "Status/Address Booking",
       "page": "⚛️ Status"
+    },
+    {
+      "key": "1fc8997ad1739248ace39e656e1095f172aaacec",
+      "name": "Style=Simple, Size=MD",
+      "nodeId": "6985:1377168",
+      "description": "",
+      "updatedAt": "2026-07-09T17:38:50.784Z",
+      "set": "Content Box",
+      "page": "📦 Content Box"
+    },
+    {
+      "key": "5127864807f7dfcdc47e134c96b0244249fb6a92",
+      "name": "Page/Main Content Container",
+      "nodeId": "6987:65811",
+      "description": "",
+      "updatedAt": "2026-07-09T17:38:50.802Z",
+      "set": null,
+      "page": "📦 Page"
+    },
+    {
+      "key": "6ccd09b5a1a4a49c2e203f991100b08b43aaf75f",
+      "name": "Style=Boxed, Size=LG",
+      "nodeId": "8770:65915",
+      "description": "",
+      "updatedAt": "2026-07-09T17:38:50.819Z",
+      "set": "Content Box",
+      "page": "📦 Content Box"
     }
   ],
   "componentSets": [
@@ -6834,13 +6834,6 @@
       "updatedAt": "2026-07-06T14:50:55.529Z"
     },
     {
-      "key": "d3ef278bb9bb9f2acf4b3c4bfaa3b64e9ab519be",
-      "name": "Content Box",
-      "nodeId": "6985:1377167",
-      "description": "What it is: A bordered card container that groups related content within a page section.\nWhen to use: Wrapping form sections, summary panels, or detail blocks inside a page layout.\nVariants: Default, with header, with footer actions; light and dark surface.\nAvoid: Don't nest Content Boxes more than one level deep.",
-      "updatedAt": "2026-07-06T14:50:55.534Z"
-    },
-    {
       "key": "fd9f4a0ab37b03c9328b07800e9a5ffef0bada64",
       "name": "Tabs",
       "nodeId": "36:1862",
@@ -6881,6 +6874,13 @@
       "nodeId": "9323:6992",
       "description": "What it is: Status chip pre-configured with the contract lifecycle vocabulary (Draft, Active, Expired, Terminated).\nWhen to use: Contract list tables and contract detail pages.\nVariants: One variant per contract state; solid and subtle fills.\nAvoid: Don't apply contract states to non-contract entities — use the base Status set.",
       "updatedAt": "2026-07-09T13:45:29.781Z"
+    },
+    {
+      "key": "d3ef278bb9bb9f2acf4b3c4bfaa3b64e9ab519be",
+      "name": "Content Box",
+      "nodeId": "6985:1377167",
+      "description": "What it is: A bordered card container that groups related content within a page section.\nWhen to use: Wrapping form sections, summary panels, or detail blocks inside a page layout.\nVariants: Default, with header, with footer actions; light and dark surface.\nAvoid: Don't nest Content Boxes more than one level deep.",
+      "updatedAt": "2026-07-09T17:38:50.730Z"
     }
   ]
 }
