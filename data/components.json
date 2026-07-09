@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-06T20:53:08.779Z",
+  "generatedAt": "2026-07-09T14:07:26.952Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2373220850036181559",
-    "lastModified": "2026-07-06T20:52:30Z",
+    "version": "2374222183350532430",
+    "lastModified": "2026-07-09T13:48:32Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,8 +244,8 @@
       }
     ]
   },
-  "count": 696,
-  "setCount": 44,
+  "count": 702,
+  "setCount": 45,
   "components": [
     {
       "key": "ac6e2ce1a3ee51ee23c21137eb7a1ef3e4910f16",
@@ -770,15 +770,6 @@
       "page": "⚛️ Input & Form Control"
     },
     {
-      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
-      "name": "Page",
-      "nodeId": "6987:87353",
-      "description": "",
-      "updatedAt": "2026-07-06T15:18:36.497Z",
-      "set": null,
-      "page": "📦 Page"
-    },
-    {
       "key": "0a1e07611e4d893f22356933458dcbc371ccf9c6",
       "name": "Status=Confirmed",
       "nodeId": "8808:78012",
@@ -840,15 +831,6 @@
       "updatedAt": "2026-07-06T15:18:36.502Z",
       "set": null,
       "page": "⚛️ Alert Dialog"
-    },
-    {
-      "key": "60cab2a70c66b27301fa9599ae6d356f153d88c2",
-      "name": "Content Header",
-      "nodeId": "6984:1254074",
-      "description": "",
-      "updatedAt": "2026-07-06T15:18:36.507Z",
-      "set": null,
-      "page": "📦 Content Header"
     },
     {
       "key": "f78504a8d023e7c87220778790205a014ebdf61c",
@@ -6510,6 +6492,78 @@
       "updatedAt": "2026-06-25T12:23:18.129Z",
       "set": null,
       "page": "🧩 Assets"
+    },
+    {
+      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
+      "name": "Page",
+      "nodeId": "6987:87353",
+      "description": "",
+      "updatedAt": "2026-07-09T11:40:07.700Z",
+      "set": null,
+      "page": "📦 Page"
+    },
+    {
+      "key": "60cab2a70c66b27301fa9599ae6d356f153d88c2",
+      "name": "Content Header",
+      "nodeId": "6984:1254074",
+      "description": "",
+      "updatedAt": "2026-07-09T11:40:07.708Z",
+      "set": null,
+      "page": "📦 Content Header"
+    },
+    {
+      "key": "da6726ebbe75efdfdef91d11553deaf21c1f7341",
+      "name": "square-up",
+      "nodeId": "9321:6990",
+      "description": "",
+      "updatedAt": "2026-07-09T13:25:53.230Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "2426f1affc46d4f3ce24d17caae0c363a3cbceb9",
+      "name": "square-down",
+      "nodeId": "9321:6991",
+      "description": "",
+      "updatedAt": "2026-07-09T13:25:53.239Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "f5ca05fc4cdb7c30c004f278501819c82af92424",
+      "name": "Status=Canceled",
+      "nodeId": "9323:6993",
+      "description": "",
+      "updatedAt": "2026-07-09T13:45:29.802Z",
+      "set": "Status/Address Booking",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "fed7f4ba618d8662a1a8cb66841f84ca996f4f64",
+      "name": "Status=Status4",
+      "nodeId": "9323:7125",
+      "description": "",
+      "updatedAt": "2026-07-09T13:45:29.813Z",
+      "set": "Status/Address Booking",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "c52650fa7747b09dda18b57344d79d21dec5d5d8",
+      "name": "Status=Active",
+      "nodeId": "9323:6997",
+      "description": "",
+      "updatedAt": "2026-07-09T13:45:29.822Z",
+      "set": "Status/Address Booking",
+      "page": "⚛️ Status"
+    },
+    {
+      "key": "4acd016444505764013d062f26cb1b6bb22a992c",
+      "name": "Status=Expired",
+      "nodeId": "9323:7001",
+      "description": "",
+      "updatedAt": "2026-07-09T13:45:29.829Z",
+      "set": "Status/Address Booking",
+      "page": "⚛️ Status"
     }
   ],
   "componentSets": [
@@ -6820,6 +6874,13 @@
       "nodeId": "9251:5310",
       "description": "",
       "updatedAt": "2026-07-06T20:45:37.142Z"
+    },
+    {
+      "key": "38c76db474b19eef7efe053ff94c66846bc03195",
+      "name": "Status/Address Booking",
+      "nodeId": "9323:6992",
+      "description": "What it is: Status chip pre-configured with the contract lifecycle vocabulary (Draft, Active, Expired, Terminated).\nWhen to use: Contract list tables and contract detail pages.\nVariants: One variant per contract state; solid and subtle fills.\nAvoid: Don't apply contract states to non-contract entities — use the base Status set.",
+      "updatedAt": "2026-07-09T13:45:29.781Z"
     }
   ]
 }
