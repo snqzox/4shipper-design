@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T19:07:36.666Z",
+  "generatedAt": "2026-07-09T21:04:06.956Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2374287428730142987",
-    "lastModified": "2026-07-09T18:55:00Z",
+    "version": "2374305158361398452",
+    "lastModified": "2026-07-09T19:49:18Z",
     "pages": [
       {
         "id": "3661:331898",
@@ -1819,46 +1819,6 @@
             ]
           },
           {
-            "id": "3853:111055",
-            "name": "Frame 1",
-            "type": "FRAME",
-            "w": 1000,
-            "h": 68,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Length unit",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Length unit",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Length unit",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3853:111394",
-            "name": "Frame 460",
-            "type": "FRAME",
-            "w": 1000,
-            "h": 68,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Length unit",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Volume unit",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "3853:107749",
             "name": "Groups",
             "type": "FRAME",
@@ -1901,24 +1861,6 @@
                 "type": "TEXT"
               }
             ]
-          },
-          {
-            "id": "3862:70966",
-            "name": "operating-hours-readonly",
-            "type": "FRAME",
-            "w": 742,
-            "h": 590,
-            "childCount": 0,
-            "children": []
-          },
-          {
-            "id": "3863:70883",
-            "name": "Operating Hours (Read-only)",
-            "type": "FRAME",
-            "w": 700,
-            "h": 436,
-            "childCount": 0,
-            "children": []
           },
           {
             "id": "3859:125371",
