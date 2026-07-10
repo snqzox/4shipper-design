@@ -1,24 +1,17 @@
 {
-  "generatedAt": "2026-07-10T08:24:59.621Z",
-  "libraryVersion": "2374495682595501766",
-  "count": 3,
+  "generatedAt": "2026-07-10T11:27:30.259Z",
+  "libraryVersion": "2374512870528206314",
+  "count": 2,
   "items": [
     {
-      "name": "Content Box",
-      "kind": "set",
-      "change": "changed",
-      "doc": "content-box.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Page",
+      "name": "Content Header",
       "kind": "component",
       "change": "changed",
       "doc": null,
       "hasDoc": false
     },
     {
-      "name": "Page/Main Content Container",
+      "name": "Page",
       "kind": "component",
       "change": "changed",
       "doc": null,
