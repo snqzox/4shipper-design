@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-09T19:07:36.666Z",
+  "generatedAt": "2026-07-10T08:23:05.501Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2374277043538188935",
-    "lastModified": "2026-07-09T17:41:32Z",
+    "version": "2374495682595501766",
+    "lastModified": "2026-07-10T07:38:48Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -1121,15 +1121,6 @@
       "page": "⚛️ Button"
     },
     {
-      "key": "3bbbf25adec6908319521d95be9335682cc956a9",
-      "name": "Style=Boxed, Size=MD",
-      "nodeId": "6824:54246",
-      "description": "",
-      "updatedAt": "2026-07-09T17:38:50.792Z",
-      "set": "Content Box",
-      "page": "📦 Content Box"
-    },
-    {
       "key": "5657432f6f9fafb935ddbd5be8b788fd6870f555",
       "name": "Empty=True, Type=Text, Disabled=True",
       "nodeId": "31:1931",
@@ -1431,7 +1422,7 @@
       "name": "Style=Simple, Size=LG",
       "nodeId": "8770:65925",
       "description": "",
-      "updatedAt": "2026-07-09T17:38:50.828Z",
+      "updatedAt": "2026-07-10T07:35:45.791Z",
       "set": "Content Box",
       "page": "📦 Content Box"
     },
@@ -6471,7 +6462,7 @@
       "name": "Page",
       "nodeId": "6987:87353",
       "description": "",
-      "updatedAt": "2026-07-09T17:38:50.810Z",
+      "updatedAt": "2026-07-10T07:35:45.782Z",
       "set": null,
       "page": "📦 Page"
     },
@@ -6543,7 +6534,16 @@
       "name": "Style=Simple, Size=MD",
       "nodeId": "6985:1377168",
       "description": "",
-      "updatedAt": "2026-07-09T17:38:50.784Z",
+      "updatedAt": "2026-07-10T07:35:45.768Z",
+      "set": "Content Box",
+      "page": "📦 Content Box"
+    },
+    {
+      "key": "3bbbf25adec6908319521d95be9335682cc956a9",
+      "name": "Style=Boxed, Size=MD",
+      "nodeId": "6824:54246",
+      "description": "",
+      "updatedAt": "2026-07-10T07:35:45.774Z",
       "set": "Content Box",
       "page": "📦 Content Box"
     },
@@ -6552,7 +6552,7 @@
       "name": "Page/Main Content Container",
       "nodeId": "6987:65811",
       "description": "",
-      "updatedAt": "2026-07-09T17:38:50.802Z",
+      "updatedAt": "2026-07-10T07:35:45.778Z",
       "set": null,
       "page": "📦 Page"
     },
@@ -6561,7 +6561,7 @@
       "name": "Style=Boxed, Size=LG",
       "nodeId": "8770:65915",
       "description": "",
-      "updatedAt": "2026-07-09T17:38:50.819Z",
+      "updatedAt": "2026-07-10T07:35:45.787Z",
       "set": "Content Box",
       "page": "📦 Content Box"
     }
@@ -6880,7 +6880,7 @@
       "name": "Content Box",
       "nodeId": "6985:1377167",
       "description": "What it is: A bordered card container that groups related content within a page section.\nWhen to use: Wrapping form sections, summary panels, or detail blocks inside a page layout.\nVariants: Default, with header, with footer actions; light and dark surface.\nAvoid: Don't nest Content Boxes more than one level deep.",
-      "updatedAt": "2026-07-09T17:38:50.730Z"
+      "updatedAt": "2026-07-10T07:35:45.734Z"
     }
   ]
 }
