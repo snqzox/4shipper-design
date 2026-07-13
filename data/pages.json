@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-13T13:00:49.167Z",
+  "generatedAt": "2026-07-13T16:04:06.614Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2375686054787850114",
-    "lastModified": "2026-07-13T12:58:27Z",
+    "version": "2375710488307740491",
+    "lastModified": "2026-07-13T14:38:13Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1675,7 +1675,7 @@
             "name": "Page",
             "type": "FRAME",
             "w": 1660,
-            "h": 842,
+            "h": 882,
             "childCount": 3,
             "children": [
               {
@@ -1698,6 +1698,28 @@
             "type": "FRAME",
             "w": 1660,
             "h": 675,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4134:115474",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 985,
             "childCount": 3,
             "children": [
               {
@@ -1741,7 +1763,7 @@
             "name": "Page",
             "type": "FRAME",
             "w": 1660,
-            "h": 842,
+            "h": 882,
             "childCount": 3,
             "children": [
               {
@@ -1978,8 +2000,8 @@
             "id": "4134:107514",
             "name": "Address/Gate entry",
             "type": "COMPONENT_SET",
-            "w": 654,
-            "h": 182,
+            "w": 861,
+            "h": 1131,
             "childCount": 2,
             "children": [
               {
@@ -1989,24 +2011,6 @@
               {
                 "name": "Property 1=Variant2",
                 "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "4134:107521",
-            "name": "Frame 480",
-            "type": "FRAME",
-            "w": 54,
-            "h": 54,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Frame 479",
-                "type": "FRAME"
-              },
-              {
-                "name": "6 vehicle types",
-                "type": "TEXT"
               }
             ]
           }
@@ -4988,7 +4992,7 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Carrier no longer has the best bid",
+                "name": "RFQ XXX | Your bid is not the lowest",
                 "type": "TEXT"
               }
             ]
