@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-13T10:27:48.864Z",
+  "generatedAt": "2026-07-13T13:00:49.167Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2375649018233133414",
-    "lastModified": "2026-07-13T10:18:38Z",
+    "version": "2375686054787850114",
+    "lastModified": "2026-07-13T12:58:27Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1671,62 +1671,134 @@
             ]
           },
           {
-            "id": "4065:7714",
-            "name": "Frame 461",
+            "id": "4133:95399",
+            "name": "Page",
             "type": "FRAME",
-            "w": 1000,
-            "h": 256,
-            "childCount": 8,
+            "w": 1660,
+            "h": 842,
+            "childCount": 3,
             "children": [
               {
-                "name": "Toggle – Transport order document",
+                "name": "Page/Header/Shipper",
                 "type": "INSTANCE"
               },
               {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
+                "name": "Content Holder",
+                "type": "FRAME"
               },
               {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Toggle – Transport order document",
-                "type": "INSTANCE"
+                "name": "Bottom Holder",
+                "type": "FRAME"
               }
             ]
           },
           {
-            "id": "4065:7659",
-            "name": "Frame 472",
+            "id": "4134:106756",
+            "name": "Page",
             "type": "FRAME",
-            "w": 1000,
-            "h": 74,
-            "childCount": 2,
+            "w": 1660,
+            "h": 675,
+            "childCount": 3,
             "children": [
               {
-                "name": "Toggle – InstaOrder",
+                "name": "Page/Header/Shipper",
                 "type": "INSTANCE"
               },
               {
-                "name": "Toggle – InstaOrder",
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4133:104079",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 836,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4133:98087",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 842,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4133:100513",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 2430,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4133:104699",
+            "name": "Page",
+            "type": "FRAME",
+            "w": 1660,
+            "h": 915,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page/Header/Shipper",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content Holder",
+                "type": "FRAME"
+              },
+              {
+                "name": "Bottom Holder",
+                "type": "FRAME"
               }
             ]
           },
@@ -1899,6 +1971,42 @@
               {
                 "name": "Available=False",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "4134:107514",
+            "name": "Address/Gate entry",
+            "type": "COMPONENT_SET",
+            "w": 654,
+            "h": 182,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Gate entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "4134:107521",
+            "name": "Frame 480",
+            "type": "FRAME",
+            "w": 54,
+            "h": 54,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
+              },
+              {
+                "name": "6 vehicle types",
+                "type": "TEXT"
               }
             ]
           }

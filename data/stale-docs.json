@@ -1,17 +1,10 @@
 {
-  "generatedAt": "2026-07-10T11:27:30.259Z",
-  "libraryVersion": "2374512870528206314",
-  "count": 2,
+  "generatedAt": "2026-07-13T13:02:35.614Z",
+  "libraryVersion": "2375679752993389013",
+  "count": 1,
   "items": [
     {
-      "name": "Content Header",
-      "kind": "component",
-      "change": "changed",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "Page",
+      "name": "No Data Placeholder",
       "kind": "component",
       "change": "changed",
       "doc": null,
