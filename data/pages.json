@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-13T16:04:06.614Z",
+  "generatedAt": "2026-07-13T18:16:08.783Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2375710488307740491",
-    "lastModified": "2026-07-13T14:38:13Z",
+    "version": "2375762139587966807",
+    "lastModified": "2026-07-13T17:20:39Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1488,9 +1488,9 @@
             "id": "3853:81230",
             "name": "OLD - To Be Converted",
             "type": "SECTION",
-            "w": 15420,
+            "w": 20388,
             "h": 19980,
-            "childCount": 44,
+            "childCount": 66,
             "children": [
               {
                 "name": "Logo",
@@ -1667,6 +1667,70 @@
               {
                 "name": "Frame 190",
                 "type": "FRAME"
+              },
+              {
+                "name": "image 1",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Groups",
+                "type": "FRAME"
+              },
+              {
+                "name": "image 2",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 4",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 5",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 6",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 7",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 8",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 9",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Settings",
+                "type": "TEXT"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 464",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Overview",
+                "type": "TEXT"
               }
             ]
           },
@@ -1825,66 +1889,6 @@
             ]
           },
           {
-            "id": "3912:125345",
-            "name": "Frame 464",
-            "type": "FRAME",
-            "w": 1000,
-            "h": 71,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Frame 462",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 467",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 465",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 463",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 464",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 466",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3853:107749",
-            "name": "Groups",
-            "type": "FRAME",
-            "w": 2000,
-            "h": 1675,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "Addresses",
-                "type": "TEXT"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "New address",
-                "type": "TEXT"
-              },
-              {
-                "name": "Dialog",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "3853:119537",
             "name": "Address/Data Block",
             "type": "COMPONENT",
@@ -1965,20 +1969,6 @@
             ]
           },
           {
-            "id": "4123:73398",
-            "name": "Frame 1",
-            "type": "FRAME",
-            "w": 40,
-            "h": 40,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Icon",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "4125:87047",
             "name": "Addresses/Vehicle type",
             "type": "COMPONENT_SET",
@@ -1993,6 +1983,82 @@
               {
                 "name": "Available=False",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "4152:120765",
+            "name": "Address/Slot & vehicle settings/Duration per vehicle",
+            "type": "COMPONENT",
+            "w": 821,
+            "h": 704,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Toggle – InstaOrder",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4152:122242",
+            "name": "Address/Slot & vehicle settings/Gates",
+            "type": "COMPONENT",
+            "w": 821,
+            "h": 434,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Left Panel2",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4152:123223",
+            "name": "Address/Slot & vehicle settings/Operating hours",
+            "type": "COMPONENT",
+            "w": 755,
+            "h": 524,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "days-list",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4152:120172",
+            "name": "Address/Slot & vehicle settings/General",
+            "type": "COMPONENT",
+            "w": 821,
+            "h": 494,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 480",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 479",
+                "type": "FRAME"
               }
             ]
           },
