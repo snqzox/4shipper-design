@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-14T08:36:07.809Z",
+  "generatedAt": "2026-07-14T10:47:25.548Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2375993093431363878",
-    "lastModified": "2026-07-14T08:36:13Z",
+    "lastModified": "2026-07-14T08:37:25Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1819,72 +1819,6 @@
               {
                 "name": "Bottom Holder",
                 "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4171:149042",
-            "name": "Frame 462",
-            "type": "FRAME",
-            "w": 1000,
-            "h": 371,
-            "childCount": 14,
-            "children": [
-              {
-                "name": "Monday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Tuesday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Wednesday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Thursday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Friday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Saturday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Sunday",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
               }
             ]
           },
