@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-15T10:20:36.479Z",
+  "generatedAt": "2026-07-15T16:02:20.401Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376366080723011764",
-    "lastModified": "2026-07-14T08:37:27Z",
+    "version": "2376472647440712865",
+    "lastModified": "2026-07-15T15:41:03Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -24,9 +24,9 @@
             "id": "290:98518",
             "name": "Requests",
             "type": "FRAME",
-            "w": 2350,
-            "h": 3342,
-            "childCount": 3,
+            "w": 4493,
+            "h": 4981,
+            "childCount": 4,
             "children": [
               {
                 "name": "Page",
@@ -39,6 +39,10 @@
               {
                 "name": "Dropdown Menu",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Filters",
+                "type": "FRAME"
               }
             ]
           },
@@ -383,94 +387,6 @@
               {
                 "name": "_Form/New Tender/1",
                 "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "808:34729",
-            "name": "Requests/Create New Request/Step 2 - With Cargo Items",
-            "type": "FRAME",
-            "w": 1512,
-            "h": 937,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 453",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "951:22824",
-            "name": "Requests/Create New Request/Step 5",
-            "type": "FRAME",
-            "w": 1512,
-            "h": 937,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 453",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "1111:36128",
-            "name": "Requests/Create New Request/Step 8",
-            "type": "FRAME",
-            "w": 1512,
-            "h": 1862,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 453",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "1077:14865",
-            "name": "Requests/Create New Request/Step 6",
-            "type": "FRAME",
-            "w": 1512,
-            "h": 2232,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 453",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
               }
             ]
           },
@@ -828,7 +744,7 @@
             "type": "FRAME",
             "w": 11964,
             "h": 7607,
-            "childCount": 35,
+            "childCount": 33,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -927,19 +843,11 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Change contract option",
-                "type": "CONNECTOR"
-              },
-              {
                 "name": "Contract option selected",
                 "type": "CONNECTOR"
               },
               {
                 "name": "Contract option selected",
-                "type": "CONNECTOR"
-              },
-              {
-                "name": "Convert to spot",
                 "type": "CONNECTOR"
               },
               {
@@ -973,9 +881,9 @@
             ]
           },
           {
-            "id": "2601:299607",
+            "id": "4348:64697",
             "name": "Request Detail - Spot",
-            "type": "FRAME",
+            "type": "SECTION",
             "w": 11900,
             "h": 4581,
             "childCount": 21,
@@ -1063,70 +971,6 @@
               {
                 "name": "Bidding finished - Rejected by carrier",
                 "type": "TEXT"
-              }
-            ]
-          },
-          {
-            "id": "3037:286315",
-            "name": "Frame 27832",
-            "type": "FRAME",
-            "w": 1927,
-            "h": 518,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Content Slot",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content Slot",
-                "type": "FRAME"
-              },
-              {
-                "name": "Connector line",
-                "type": "CONNECTOR"
-              }
-            ]
-          },
-          {
-            "id": "3037:286316",
-            "name": "Content Slot",
-            "type": "FRAME",
-            "w": 884,
-            "h": 423,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Table",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3037:286631",
-            "name": "Content Slot",
-            "type": "FRAME",
-            "w": 884,
-            "h": 423,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Table",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3037:288430",
-            "name": "Content Slot",
-            "type": "FRAME",
-            "w": 884,
-            "h": 423,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Table",
-                "type": "INSTANCE"
               }
             ]
           },
@@ -1311,90 +1155,90 @@
             ]
           },
           {
-            "id": "3315:41581",
-            "name": "Frame 27842",
-            "type": "FRAME",
+            "id": "4348:64696",
+            "name": "Contracted Request - Flow",
+            "type": "SECTION",
             "w": 8411,
             "h": 1200,
             "childCount": 8,
             "children": [
               {
                 "name": "Frame 27843",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Frame 27840",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Frame 27841",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Frame 27842",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Request/List entry",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Request/List entry",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Request/List entry",
-                "type": "FRAME"
+                "type": "COMPONENT"
               },
               {
                 "name": "Request/List entry",
-                "type": "FRAME"
+                "type": "COMPONENT"
               }
             ]
           },
           {
-            "id": "3315:41678",
-            "name": "Frame 27843",
-            "type": "FRAME",
+            "id": "4348:64687",
+            "name": "Spot Request - Flow",
+            "type": "SECTION",
             "w": 8411,
             "h": 3570,
             "childCount": 19,
             "children": [
               {
-                "name": "Frame 27844",
-                "type": "FRAME"
+                "name": "Request Detail / Bidding Active",
+                "type": "COMPONENT"
               },
               {
-                "name": "Frame 27846",
-                "type": "FRAME"
+                "name": "Request Detail / Active - Bid Selected",
+                "type": "COMPONENT"
               },
               {
-                "name": "Frame 27840",
-                "type": "FRAME"
+                "name": "Request Detail / Bidding Finished",
+                "type": "COMPONENT"
               },
               {
                 "name": "Bidding time finished",
                 "type": "CONNECTOR"
               },
               {
-                "name": "Frame 27841",
-                "type": "FRAME"
+                "name": "Request Detail / Awaiting Confirmation",
+                "type": "COMPONENT"
               },
               {
-                "name": "Frame 27842",
-                "type": "FRAME"
+                "name": "Request Detail / Bid Rejected",
+                "type": "COMPONENT"
               },
               {
                 "name": "Rejected by carrier",
                 "type": "CONNECTOR"
               },
               {
-                "name": "Frame 27843",
-                "type": "FRAME"
+                "name": "Request Detail / Confirmed",
+                "type": "COMPONENT"
               },
               {
-                "name": "Frame 27845",
-                "type": "FRAME"
+                "name": "Request Detail / Canceled",
+                "type": "COMPONENT"
               },
               {
                 "name": "Cancelled by shipper",
@@ -1409,32 +1253,32 @@
                 "type": "CONNECTOR"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Active",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Active - Bid Selected",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Bidding Finished",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Bidding Finished - Bid Selected",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Bidding Finished - Bid Rejected",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Canceled",
+                "type": "COMPONENT"
               },
               {
-                "name": "Request/List entry",
-                "type": "FRAME"
+                "name": "Request List Entry / Confirmed",
+                "type": "COMPONENT"
               }
             ]
           },
@@ -1457,23 +1301,51 @@
             ]
           },
           {
-            "id": "3810:80326",
-            "name": "Filters",
-            "type": "FRAME",
-            "w": 1137,
-            "h": 317,
-            "childCount": 3,
+            "id": "4348:87381",
+            "name": "Backup",
+            "type": "SECTION",
+            "w": 20354,
+            "h": 12356,
+            "childCount": 10,
             "children": [
               {
-                "name": "Quick Filters Left",
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Requests/Create New Request/Step 2 - With Cargo Items",
                 "type": "FRAME"
               },
               {
-                "name": "Quick Filters Left",
+                "name": "Requests/Create New Request/Step 5",
                 "type": "FRAME"
               },
               {
-                "name": "Tooltip",
+                "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Requests/Create New Request/Step 8",
+                "type": "FRAME"
+              },
+              {
+                "name": "Step Progress Tabs",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Requests/Create New Request/Step 6",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
                 "type": "INSTANCE"
               }
             ]
