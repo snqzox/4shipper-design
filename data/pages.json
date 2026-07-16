@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-16T15:39:36.969Z",
+  "generatedAt": "2026-07-16T17:17:34.307Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376839935335182557",
-    "lastModified": "2026-07-16T15:33:27Z",
+    "version": "2376872616280888208",
+    "lastModified": "2026-07-16T16:40:55Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1097,28 +1097,6 @@
             ]
           },
           {
-            "id": "4447:79595",
-            "name": "Bookings/Booking management",
-            "type": "FRAME",
-            "w": 1440,
-            "h": 1931,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 229",
-                "type": "FRAME"
-              },
-              {
-                "name": "Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "4414:66026",
             "name": "Addresses",
             "type": "SECTION",
@@ -1627,35 +1605,17 @@
             ]
           },
           {
-            "id": "4428:94460",
-            "name": "booking-full-form",
-            "type": "FRAME",
-            "w": 1440,
-            "h": 1959,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Main Split Layout",
-                "type": "FRAME"
-              },
-              {
-                "name": "Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "4447:64234",
             "name": "Booking management",
             "type": "SECTION",
             "w": 7111,
-            "h": 6834,
-            "childCount": 6,
+            "h": 10273,
+            "childCount": 7,
             "children": [
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
               {
                 "name": "Page",
                 "type": "INSTANCE"
