@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-16T07:22:15.902Z",
+  "generatedAt": "2026-07-16T09:34:41.078Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376719852337313971",
-    "lastModified": "2026-07-16T07:22:20Z",
+    "version": "2376754302820938045",
+    "lastModified": "2026-07-16T09:34:49Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -47,9 +47,9 @@
             ]
           },
           {
-            "id": "1753:77800",
+            "id": "4403:65673",
             "name": "New Request",
-            "type": "FRAME",
+            "type": "SECTION",
             "w": 19056,
             "h": 12116,
             "childCount": 46,
@@ -275,12 +275,12 @@
             ]
           },
           {
-            "id": "2601:299606",
+            "id": "4393:46596",
             "name": "Request Detail - Contracted",
-            "type": "FRAME",
+            "type": "SECTION",
             "w": 11964,
-            "h": 7607,
-            "childCount": 33,
+            "h": 6263,
+            "childCount": 36,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -383,6 +383,14 @@
                 "type": "CONNECTOR"
               },
               {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
                 "name": "Contract option selected",
                 "type": "CONNECTOR"
               },
@@ -413,6 +421,52 @@
               {
                 "name": "Convert to contracted",
                 "type": "TEXT"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4348:64696",
+            "name": "Contracted Request - Flow",
+            "type": "SECTION",
+            "w": 8411,
+            "h": 1200,
+            "childCount": 8,
+            "children": [
+              {
+                "name": "Frame 27843",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Frame 27840",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Frame 27841",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Frame 27842",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "COMPONENT"
               }
             ]
           },
@@ -422,7 +476,7 @@
             "type": "SECTION",
             "w": 11900,
             "h": 4581,
-            "childCount": 21,
+            "childCount": 22,
             "children": [
               {
                 "name": "Request Detail - Spot",
@@ -507,48 +561,10 @@
               {
                 "name": "Bidding finished - Rejected by carrier",
                 "type": "TEXT"
-              }
-            ]
-          },
-          {
-            "id": "4348:64696",
-            "name": "Contracted Request - Flow",
-            "type": "SECTION",
-            "w": 8411,
-            "h": 1200,
-            "childCount": 8,
-            "children": [
-              {
-                "name": "Frame 27843",
-                "type": "COMPONENT"
               },
               {
-                "name": "Frame 27840",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Frame 27841",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Frame 27842",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Request/List entry",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Request/List entry",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Request/List entry",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Request/List entry",
-                "type": "COMPONENT"
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
               }
             ]
           },
@@ -836,7 +852,7 @@
             "type": "SECTION",
             "w": 20388,
             "h": 19980,
-            "childCount": 66,
+            "childCount": 65,
             "children": [
               {
                 "name": "Logo",
@@ -1027,10 +1043,6 @@
                 "type": "INSTANCE"
               },
               {
-                "name": "Groups",
-                "type": "FRAME"
-              },
-              {
                 "name": "image 2",
                 "type": "RECTANGLE"
               },
@@ -1077,160 +1089,36 @@
               {
                 "name": "Overview",
                 "type": "TEXT"
+              },
+              {
+                "name": "Bookings",
+                "type": "TEXT"
               }
             ]
           },
           {
-            "id": "4133:95399",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 882,
-            "childCount": 3,
+            "id": "4414:66026",
+            "name": "Addresses",
+            "type": "SECTION",
+            "w": 2000,
+            "h": 2020,
+            "childCount": 4,
             "children": [
               {
-                "name": "Page/Header/Shipper",
+                "name": "Addresses",
+                "type": "TEXT"
+              },
+              {
+                "name": "Page",
                 "type": "INSTANCE"
               },
               {
-                "name": "Content Holder",
-                "type": "FRAME"
+                "name": "New address",
+                "type": "TEXT"
               },
               {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4134:106756",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 675,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
+                "name": "Dialog",
                 "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4134:115474",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 985,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4171:149022",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 878,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4133:104079",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 836,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4133:98087",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 882,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4133:100513",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 915,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
               }
             ]
           },
@@ -1248,50 +1136,6 @@
               },
               {
                 "name": "Frame 472",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4133:104699",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 897,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "4171:127697",
-            "name": "Page",
-            "type": "FRAME",
-            "w": 1660,
-            "h": 825,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content Holder",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bottom Holder",
                 "type": "FRAME"
               }
             ]
@@ -1399,7 +1243,7 @@
             "name": "Address/Slot & vehicle settings/Duration per vehicle",
             "type": "COMPONENT",
             "w": 821,
-            "h": 704,
+            "h": 602,
             "childCount": 3,
             "children": [
               {
@@ -1449,33 +1293,11 @@
             ]
           },
           {
-            "id": "4171:135708",
-            "name": "Frame 484",
-            "type": "FRAME",
-            "w": 338,
-            "h": 42,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Input",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "-",
-                "type": "TEXT"
-              },
-              {
-                "name": "Input",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "4152:120172",
             "name": "Address/Slot & vehicle settings/General",
             "type": "COMPONENT",
             "w": 821,
-            "h": 494,
+            "h": 392,
             "childCount": 3,
             "children": [
               {
@@ -1511,20 +1333,216 @@
             ]
           },
           {
-            "id": "4171:135256",
-            "name": "Add exception",
-            "type": "FRAME",
-            "w": 613,
-            "h": 558,
-            "childCount": 2,
+            "id": "4403:64647",
+            "name": "Address / General info",
+            "type": "SECTION",
+            "w": 1929,
+            "h": 1334,
+            "childCount": 3,
             "children": [
               {
-                "name": "Frame 98",
+                "name": "Page",
                 "type": "FRAME"
               },
               {
-                "name": "Frame 100",
+                "name": "Address detail / General info",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Enabled",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4403:64654",
+            "name": "Address / General info / Times slots: Disabled",
+            "type": "SECTION",
+            "w": 1929,
+            "h": 2300,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Page",
                 "type": "FRAME"
+              },
+              {
+                "name": "Address detail / General info",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Disabled",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4403:65136",
+            "name": "Address / Enabling time slots",
+            "type": "SECTION",
+            "w": 5675,
+            "h": 2326,
+            "childCount": 9,
+            "children": [
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Address detail / Time slot settings",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Disabled",
+                "type": "TEXT"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4403:64648",
+            "name": "Address / Slot & vehicle settings",
+            "type": "SECTION",
+            "w": 2417,
+            "h": 3340,
+            "childCount": 8,
+            "children": [
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Address detail / Time slot settings / Slot & vehicle settings",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Enabled",
+                "type": "TEXT"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              }
+            ]
+          },
+          {
+            "id": "4403:64649",
+            "name": "Address / Gates",
+            "type": "SECTION",
+            "w": 1929,
+            "h": 1842,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Address detail / Time slot settings / Gates",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Enabled",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4403:64650",
+            "name": "Address / Operating hours",
+            "type": "SECTION",
+            "w": 1929,
+            "h": 2193,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Address detail / Time slot settings / Operating hours",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Enabled",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4403:64651",
+            "name": "Address / Exception dates",
+            "type": "SECTION",
+            "w": 1929,
+            "h": 2014,
+            "childCount": 5,
+            "children": [
+              {
+                "name": "Page",
+                "type": "FRAME"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Address detail / Time slot settings / Operating hours",
+                "type": "TEXT"
+              },
+              {
+                "name": "Time slots: Enabled",
+                "type": "TEXT"
               }
             ]
           }

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-13T13:00:49.167Z",
+  "generatedAt": "2026-07-16T09:34:41.078Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2375679752993389013",
-    "lastModified": "2026-07-13T12:16:14Z",
+    "version": "2376748508892056655",
+    "lastModified": "2026-07-16T09:11:18Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -527,15 +527,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "cfd2aae2763369032a765f931345f3e0f2d3b354",
-      "name": "Layout=Desktop, Expanded=False",
-      "nodeId": "111:12466",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.281Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
-    },
-    {
       "key": "e1f50a89ab6670b4424b12be24902586af53db03",
       "name": "Variant=Inverted, State=Hover",
       "nodeId": "6905:1229330",
@@ -624,15 +615,6 @@
       "updatedAt": "2026-07-06T14:50:55.966Z",
       "set": "Button",
       "page": "⚛️ Button"
-    },
-    {
-      "key": "15fdb9cee1a98518580c736791432f153ef86d62",
-      "name": "Layout=Mobile, Expanded=False",
-      "nodeId": "106:7040",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:55.971Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
     },
     {
       "key": "177928463ea079f89dd74ed1a32fb705303401c7",
@@ -1191,15 +1173,6 @@
       "updatedAt": "2026-06-30T08:52:12.066Z",
       "set": "Input",
       "page": "⚛️ Input & Form Control"
-    },
-    {
-      "key": "ff99e69b29386c223a3667ba286f6be3f8f9c8d7",
-      "name": "Layout=Mobile, Expanded=True",
-      "nodeId": "106:7071",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.327Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
     },
     {
       "key": "55bf3e2ceb1e3644d75aad6a36c0b4d122063f9d",
@@ -6458,15 +6431,6 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
-      "name": "Page",
-      "nodeId": "6987:87353",
-      "description": "",
-      "updatedAt": "2026-07-10T08:39:53.203Z",
-      "set": null,
-      "page": "📦 Page"
-    },
-    {
       "key": "60cab2a70c66b27301fa9599ae6d356f153d88c2",
       "name": "Content Header",
       "nodeId": "6984:1254074",
@@ -6564,6 +6528,42 @@
       "updatedAt": "2026-07-10T07:35:45.787Z",
       "set": "Content Box",
       "page": "📦 Content Box"
+    },
+    {
+      "key": "15fdb9cee1a98518580c736791432f153ef86d62",
+      "name": "Layout=Mobile, Expanded=False",
+      "nodeId": "106:7040",
+      "description": "",
+      "updatedAt": "2026-07-16T09:07:06.676Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
+      "name": "Page",
+      "nodeId": "6987:87353",
+      "description": "",
+      "updatedAt": "2026-07-16T09:07:06.682Z",
+      "set": null,
+      "page": "📦 Page"
+    },
+    {
+      "key": "cfd2aae2763369032a765f931345f3e0f2d3b354",
+      "name": "Layout=Desktop, Expanded=False",
+      "nodeId": "111:12466",
+      "description": "",
+      "updatedAt": "2026-07-16T09:07:06.689Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "ff99e69b29386c223a3667ba286f6be3f8f9c8d7",
+      "name": "Layout=Mobile, Expanded=True",
+      "nodeId": "106:7071",
+      "description": "",
+      "updatedAt": "2026-07-16T09:07:06.694Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
     }
   ],
   "componentSets": [
@@ -6848,13 +6848,6 @@
       "updatedAt": "2026-07-06T14:50:55.512Z"
     },
     {
-      "key": "985fbefe3b48427841ee78502b04546959317ba3",
-      "name": "Page/Header/Shipper",
-      "nodeId": "106:7070",
-      "description": "What it is: The top navigation header bar for shipper-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every shipper-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in carrier-role pages — use Page/Header/Carrier.",
-      "updatedAt": "2026-07-06T14:50:55.516Z"
-    },
-    {
       "key": "f833a956fbe878a6d2b8ca6b049b23ec54cfb188",
       "name": "Notification (Alert)",
       "nodeId": "32:1770",
@@ -6881,6 +6874,13 @@
       "nodeId": "6985:1377167",
       "description": "What it is: A bordered card container that groups related content within a page section.\nWhen to use: Wrapping form sections, summary panels, or detail blocks inside a page layout.\nVariants: Default, with header, with footer actions; light and dark surface.\nAvoid: Don't nest Content Boxes more than one level deep.",
       "updatedAt": "2026-07-10T07:35:45.734Z"
+    },
+    {
+      "key": "985fbefe3b48427841ee78502b04546959317ba3",
+      "name": "Page/Header/Shipper",
+      "nodeId": "106:7070",
+      "description": "What it is: The top navigation header bar for shipper-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every shipper-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in carrier-role pages — use Page/Header/Carrier.",
+      "updatedAt": "2026-07-16T09:07:06.651Z"
     }
   ]
 }
