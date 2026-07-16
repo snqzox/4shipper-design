@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-16T09:34:41.078Z",
+  "generatedAt": "2026-07-16T11:40:27.839Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376754302820938045",
-    "lastModified": "2026-07-16T09:34:49Z",
+    "version": "2376774094567400910",
+    "lastModified": "2026-07-16T10:35:59Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1127,7 +1127,7 @@
             "name": "Frame 472",
             "type": "FRAME",
             "w": 1000,
-            "h": 1467,
+            "h": 1547,
             "childCount": 2,
             "children": [
               {
@@ -1543,6 +1543,130 @@
               {
                 "name": "Time slots: Enabled",
                 "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4424:75342",
+            "name": "booking-add-empty",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 800,
+            "childCount": 0,
+            "children": []
+          },
+          {
+            "id": "4424:75343",
+            "name": "booking-add-transport-selected",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1010,
+            "childCount": 0,
+            "children": []
+          },
+          {
+            "id": "4424:75344",
+            "name": "booking-create-link",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1035,
+            "childCount": 0,
+            "children": []
+          },
+          {
+            "id": "4424:75345",
+            "name": "booking-add-full-form",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1930,
+            "childCount": 0,
+            "children": []
+          },
+          {
+            "id": "4427:93488",
+            "name": "booking-add-empty",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1000,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Footer",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4427:93703",
+            "name": "booking-add-selected",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1000,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Footer",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4428:94178",
+            "name": "booking-create-link",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1159,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Footer",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4428:94460",
+            "name": "booking-full-form",
+            "type": "FRAME",
+            "w": 1440,
+            "h": 1959,
+            "childCount": 3,
+            "children": [
+              {
+                "name": "Header",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Main Split Layout",
+                "type": "FRAME"
+              },
+              {
+                "name": "Footer",
+                "type": "INSTANCE"
               }
             ]
           }
