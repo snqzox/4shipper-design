@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-15T16:02:20.401Z",
+  "generatedAt": "2026-07-16T07:22:15.902Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376472647440712865",
-    "lastModified": "2026-07-15T15:41:03Z",
+    "version": "2376719852337313971",
+    "lastModified": "2026-07-16T07:22:20Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -241,300 +241,6 @@
             ]
           },
           {
-            "id": "3198:38586",
-            "name": "Content/Request/Form/Step 3 - Carriers (Matching contracts)",
-            "type": "COMPONENT",
-            "w": 952,
-            "h": 784,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Form Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Tabs",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27807",
-                "type": "FRAME"
-              },
-              {
-                "name": "Table",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Form/New Tender/1",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "3198:41991",
-            "name": "Content/Request/Form/Step 3 - Carriers (Contract Selected)",
-            "type": "COMPONENT",
-            "w": 952,
-            "h": 769,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "Form Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27561",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Form/New Tender/1",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "3198:52081",
-            "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
-            "type": "COMPONENT",
-            "w": 952,
-            "h": 1163,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Form Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Instaorder Banner",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27561",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Form/New Tender/1",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27854",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "3198:52160",
-            "name": "Instaorder Banner",
-            "type": "COMPONENT_SET",
-            "w": 1004,
-            "h": 365,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Property 1=Not Available",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Available",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "3198:58898",
-            "name": "Content/Request/Form/Step 4 - Carriers (Spot)",
-            "type": "COMPONENT",
-            "w": 872,
-            "h": 808,
-            "childCount": 7,
-            "children": [
-              {
-                "name": "Form Header",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27796",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27836",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Form/New Tender/1",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "808:34802",
-            "name": "Waypoints v3 — Recreation",
-            "type": "FRAME",
-            "w": 1280,
-            "h": 555,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "AI Banner",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "808:34838",
-            "name": "Main Content",
-            "type": "FRAME",
-            "w": 944,
-            "h": 1293,
-            "childCount": 7,
-            "children": [
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Waypoint Card 3",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "808:38010",
-            "name": "Waypoint Card 1",
-            "type": "COMPONENT",
-            "w": 800,
-            "h": 908,
-            "childCount": 12,
-            "children": [
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 460",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content/Section Title",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content/Section Title",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Check, Radio, Switch Item",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Switch Item",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "945:11377",
-            "name": "Cargo Item Card",
-            "type": "COMPONENT_SET",
-            "w": 2560,
-            "h": 774,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Property 1=Default",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant3",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
             "id": "1111:33742",
             "name": "Screenshots from app",
             "type": "SECTION",
@@ -565,176 +271,6 @@
               {
                 "name": "image 2",
                 "type": "RECTANGLE"
-              }
-            ]
-          },
-          {
-            "id": "1173:339026",
-            "name": "New Request/Cargo Item List View",
-            "type": "COMPONENT",
-            "w": 320,
-            "h": 636,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Frame 27812",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Cargo Item Data Card",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "1222:403600",
-            "name": "Cargo Item Data Card",
-            "type": "COMPONENT_SET",
-            "w": 386,
-            "h": 604,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Collapsed=False",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Collapsed=True",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "1571:23238",
-            "name": "_Tender List Item",
-            "type": "COMPONENT_SET",
-            "w": 669,
-            "h": 722,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Property 1=Default",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "1626:22967",
-            "name": "_Map Placeholder",
-            "type": "COMPONENT",
-            "w": 511,
-            "h": 295,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "image 1",
-                "type": "RECTANGLE"
-              },
-              {
-                "name": "_Route Entry/Waypoint",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Route Entry/Waypoint",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "_Route Entry/Waypoint",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "2312:222976",
-            "name": "Request/List/Right Column/Spot",
-            "type": "COMPONENT",
-            "w": 372,
-            "h": 221,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "Bids Info Container",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bids Header",
-                "type": "FRAME"
-              },
-              {
-                "name": "Bids/Autoselect",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "2312:222774",
-            "name": "Request/List/Left Column",
-            "type": "COMPONENT",
-            "w": 841,
-            "h": 364,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Header",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content Container",
-                "type": "FRAME"
-              },
-              {
-                "name": "Responsible Info",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "2468:255064",
-            "name": "Request/List entry",
-            "type": "COMPONENT_SET",
-            "w": 4699,
-            "h": 2487,
-            "childCount": 7,
-            "children": [
-              {
-                "name": "Property 1=List entry",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant6",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant7",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant3",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant4",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant5",
-                "type": "COMPONENT"
               }
             ]
           },
@@ -975,186 +511,6 @@
             ]
           },
           {
-            "id": "2720:56846",
-            "name": "Bids/Autoselect",
-            "type": "COMPONENT_SET",
-            "w": 412,
-            "h": 128,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Property 1=Autoselect",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "2720:68127",
-            "name": "Waypoints",
-            "type": "FRAME",
-            "w": 2067,
-            "h": 789,
-            "childCount": 11,
-            "children": [
-              {
-                "name": "Frame 27810",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27812",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27811",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27813",
-                "type": "FRAME"
-              },
-              {
-                "name": "image 1",
-                "type": "RECTANGLE"
-              },
-              {
-                "name": "image 2",
-                "type": "RECTANGLE"
-              },
-              {
-                "name": "image 3",
-                "type": "RECTANGLE"
-              },
-              {
-                "name": "image 4",
-                "type": "RECTANGLE"
-              },
-              {
-                "name": "Line 1",
-                "type": "LINE"
-              },
-              {
-                "name": "Line 2",
-                "type": "LINE"
-              },
-              {
-                "name": "Line 3",
-                "type": "LINE"
-              }
-            ]
-          },
-          {
-            "id": "3095:40056",
-            "name": "Bid Entry",
-            "type": "COMPONENT_SET",
-            "w": 827,
-            "h": 775,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Property 1=Default",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Bid received",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Bid received (Disabled)",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Rejected",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Confirmed",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Selected",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "3095:42157",
-            "name": "Frame 27834",
-            "type": "FRAME",
-            "w": 356,
-            "h": 58,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "3271:40628",
-            "name": "Status/Requests",
-            "type": "COMPONENT_SET",
-            "w": 200,
-            "h": 342,
-            "childCount": 7,
-            "children": [
-              {
-                "name": "Status=Active",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Bidding completed",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Confirmed",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Canceled",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Draft",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Merged",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Status=Carrier assigned",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "3315:41450",
-            "name": "Frame 27840",
-            "type": "COMPONENT",
-            "w": 412,
-            "h": 93,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Frame 27827",
-                "type": "FRAME"
-              },
-              {
-                "name": "Separator",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame 27840",
-                "type": "FRAME"
-              }
-            ]
-          },
-          {
             "id": "4348:64696",
             "name": "Contracted Request - Flow",
             "type": "SECTION",
@@ -1283,30 +639,12 @@
             ]
           },
           {
-            "id": "3632:210659",
-            "name": "Bids/Autoselect",
-            "type": "COMPONENT_SET",
-            "w": 72,
-            "h": 124,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Property 1=Autoselect",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
             "id": "4348:87381",
             "name": "Backup",
             "type": "SECTION",
             "w": 20354,
             "h": 12356,
-            "childCount": 10,
+            "childCount": 44,
             "children": [
               {
                 "name": "Page",
@@ -1347,6 +685,142 @@
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Content Box",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "image 3",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Request/List/Right Column/Spot",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List/Left Column",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Request/List entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "image 6",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Bids/Autoselect",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Frame 27834",
+                "type": "FRAME"
+              },
+              {
+                "name": "Waypoints",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content/Request/Form/Step 3 - Carriers (Matching contracts)",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Content/Request/Form/Step 3 - Carriers (Contract Selected)",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Instaorder Banner",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Content/Request/Form/Step 4 - Carriers (Spot)",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27840",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "image 11",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 7",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 10",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Bids/Autoselect",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "image 12",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "image 8",
+                "type": "RECTANGLE"
+              },
+              {
+                "name": "Waypoints v3 — Recreation",
+                "type": "FRAME"
+              },
+              {
+                "name": "Main Content",
+                "type": "FRAME"
+              },
+              {
+                "name": "Waypoint Card 1",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Cargo Item Card",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "New Request/Cargo Item List View",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Cargo Item Data Card",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "_Tender List Item",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "_Map Placeholder",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Badge",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Bid Entry",
+                "type": "COMPONENT_SET"
+              },
+              {
+                "name": "Badge",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Status/Requests",
+                "type": "COMPONENT_SET"
               }
             ]
           }
