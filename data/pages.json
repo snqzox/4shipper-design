@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-16T18:40:23.973Z",
+  "generatedAt": "2026-07-17T08:34:34.827Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2376888992450380235",
-    "lastModified": "2026-07-16T18:01:18Z",
+    "version": "2377095843441604228",
+    "lastModified": "2026-07-17T08:11:14Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -52,7 +52,7 @@
             "type": "SECTION",
             "w": 19056,
             "h": 12116,
-            "childCount": 46,
+            "childCount": 49,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -236,6 +236,18 @@
               },
               {
                 "name": "Tooltip",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Notification (Alert)",
                 "type": "INSTANCE"
               }
             ]
@@ -1610,12 +1622,8 @@
             "type": "SECTION",
             "w": 7111,
             "h": 10273,
-            "childCount": 7,
+            "childCount": 6,
             "children": [
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
               {
                 "name": "Page",
                 "type": "INSTANCE"
