@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-17T08:34:34.827Z",
+  "generatedAt": "2026-07-17T10:47:42.492Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2377095843441604228",
-    "lastModified": "2026-07-17T08:11:14Z",
+    "version": "2377119779301652167",
+    "lastModified": "2026-07-17T09:41:30Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1139,7 +1139,7 @@
             "name": "Frame 472",
             "type": "FRAME",
             "w": 1000,
-            "h": 1547,
+            "h": 1467,
             "childCount": 2,
             "children": [
               {
