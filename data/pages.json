@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-18T17:31:44.840Z",
+  "generatedAt": "2026-07-18T19:06:00.979Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2377587484048642424",
-    "lastModified": "2026-07-17T09:41:31Z",
+    "lastModified": "2026-07-18T17:43:35Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -292,7 +292,7 @@
             "type": "SECTION",
             "w": 11964,
             "h": 6263,
-            "childCount": 36,
+            "childCount": 37,
             "children": [
               {
                 "name": "Request Detail - Contracted",
@@ -433,6 +433,10 @@
               {
                 "name": "Convert to contracted",
                 "type": "TEXT"
+              },
+              {
+                "name": "Dropdown Menu",
+                "type": "INSTANCE"
               },
               {
                 "name": "Dropdown Menu",
