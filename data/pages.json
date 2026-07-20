@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-20T10:12:25.589Z",
+  "generatedAt": "2026-07-20T15:11:52.067Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2378227150729615085",
-    "lastModified": "2026-07-20T08:42:43Z",
+    "version": "2378305958510157688",
+    "lastModified": "2026-07-20T14:28:06Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3379,6 +3379,38 @@
               {
                 "name": "Frame 27295",
                 "type": "FRAME"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "4700:68445",
+        "name": "Bookings",
+        "screens": [
+          {
+            "id": "4700:83558",
+            "name": "Waypoint booking status",
+            "type": "COMPONENT_SET",
+            "w": 577,
+            "h": 220,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant4",
+                "type": "COMPONENT"
               }
             ]
           }

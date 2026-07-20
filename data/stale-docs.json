@@ -1,19 +1,33 @@
 {
-  "generatedAt": "2026-07-18T19:07:49.359Z",
-  "libraryVersion": "2377587878645450869",
-  "count": 2,
+  "generatedAt": "2026-07-20T15:13:49.119Z",
+  "libraryVersion": "2378303811049750088",
+  "count": 4,
   "items": [
     {
-      "name": "clock",
+      "name": "Route Entry 2",
+      "kind": "set",
+      "change": "changed",
+      "doc": "route-entry-2.md",
+      "hasDoc": true
+    },
+    {
+      "name": "car",
       "kind": "component",
       "change": "added",
       "doc": null,
       "hasDoc": false
     },
     {
-      "name": "file-contract",
+      "name": "garage",
       "kind": "component",
-      "change": "changed",
+      "change": "added",
+      "doc": null,
+      "hasDoc": false
+    },
+    {
+      "name": "square-user",
+      "kind": "component",
+      "change": "added",
       "doc": null,
       "hasDoc": false
     }

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-18T19:06:00.979Z",
+  "generatedAt": "2026-07-20T15:11:52.067Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2377587878645450869",
-    "lastModified": "2026-07-18T17:41:19Z",
+    "version": "2378303811049750088",
+    "lastModified": "2026-07-20T13:53:34Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -244,7 +244,7 @@
       }
     ]
   },
-  "count": 703,
+  "count": 706,
   "setCount": 45,
   "components": [
     {
@@ -723,6 +723,42 @@
       "updatedAt": "2026-07-06T14:50:56.098Z",
       "set": "Button",
       "page": "⚛️ Button"
+    },
+    {
+      "key": "e97b0960cb9b0167a64f896da396362fbf224319",
+      "name": "square-user",
+      "nodeId": "9378:470",
+      "description": "",
+      "updatedAt": "2026-07-20T13:29:04.245Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "12b6e10676a84547c04ed365ddf1f74b2821ccc4",
+      "name": "car",
+      "nodeId": "9378:469",
+      "description": "",
+      "updatedAt": "2026-07-20T13:29:04.255Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "1faf827ffb9bbb2127942444758ccb6e5c2727a8",
+      "name": "garage",
+      "nodeId": "9379:473",
+      "description": "",
+      "updatedAt": "2026-07-20T13:35:31.984Z",
+      "set": null,
+      "page": "🧩 Assets"
+    },
+    {
+      "key": "decfe197c6170ce7636be532568dcc585942a29f",
+      "name": "Order=Default",
+      "nodeId": "8617:6115",
+      "description": "",
+      "updatedAt": "2026-07-20T13:48:02.625Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
     },
     {
       "key": "b916fa814088b3dd49b3b533b1f95e2e48d03f8b",
@@ -1332,7 +1368,7 @@
       "name": "Order=Order4",
       "nodeId": "8724:53978",
       "description": "",
-      "updatedAt": "2026-06-23T12:51:59.267Z",
+      "updatedAt": "2026-07-20T13:48:02.608Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
     },
@@ -1389,15 +1425,6 @@
       "updatedAt": "2026-07-10T07:35:45.791Z",
       "set": "Content Box",
       "page": "📦 Content Box"
-    },
-    {
-      "key": "decfe197c6170ce7636be532568dcc585942a29f",
-      "name": "Order=Default",
-      "nodeId": "8617:6115",
-      "description": "",
-      "updatedAt": "2026-06-23T12:51:59.571Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
     },
     {
       "key": "e7e7027fbe78564b282e228c41640b6b70dbe374",
@@ -3357,7 +3384,7 @@
       "name": "Order=Small Dot",
       "nodeId": "8624:87051",
       "description": "",
-      "updatedAt": "2026-06-23T12:51:59.483Z",
+      "updatedAt": "2026-07-20T13:48:02.614Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
     },
@@ -3366,7 +3393,7 @@
       "name": "Order=Smaller",
       "nodeId": "8622:84282",
       "description": "",
-      "updatedAt": "2026-06-23T12:51:59.529Z",
+      "updatedAt": "2026-07-20T13:48:02.620Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
     },
@@ -6826,7 +6853,7 @@
       "name": "Route Entry 2",
       "nodeId": "8617:6114",
       "description": "What it is: An updated layout variant of Route Entry with revised field ordering and multi-stop support.\nWhen to use: New shipment forms and tender wizards — prefer this over Route Entry for new designs.\nVariants: Single leg, multi-stop; collapsed and expanded; with waypoint add/remove controls.\nAvoid: Don't mix Route Entry and Route Entry 2 in the same form.",
-      "updatedAt": "2026-06-23T12:51:58.560Z"
+      "updatedAt": "2026-07-20T13:48:02.553Z"
     },
     {
       "key": "20ca3f58e52ca60646e8a283cd2b3218285c1d4a",
