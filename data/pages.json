@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-21T12:08:26.085Z",
+  "generatedAt": "2026-07-21T14:34:28.040Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2378635438907347604",
-    "lastModified": "2026-07-21T11:27:56Z",
+    "version": "2378674986933765104",
+    "lastModified": "2026-07-21T14:02:26Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3386,7 +3386,7 @@
       },
       {
         "id": "4700:68445",
-        "name": "Bookings",
+        "name": "Transports",
         "screens": [
           {
             "id": "4700:83558",
@@ -3410,6 +3410,82 @@
               },
               {
                 "name": "Property 1=Variant4",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "4803:82832",
+            "name": "Waypoint booking status",
+            "type": "COMPONENT_SET",
+            "w": 577,
+            "h": 220,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Property 1=Default",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant3",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant4",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "4803:75572",
+            "name": "Frame 27824",
+            "type": "FRAME",
+            "w": 480,
+            "h": 20,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "#TagPlaceholder",
+                "type": "TEXT"
+              },
+              {
+                "name": "#secondTag",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4803:75570",
+            "name": "Created From Info",
+            "type": "FRAME",
+            "w": 480,
+            "h": 36,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Created From Text",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "4803:79524",
+            "name": "Carrier/Transport Card",
+            "type": "COMPONENT_SET",
+            "w": 1432,
+            "h": 766,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Transport Card",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
                 "type": "COMPONENT"
               }
             ]
