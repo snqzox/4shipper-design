@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-22T07:13:26.227Z",
+  "generatedAt": "2026-07-22T09:59:31.770Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2378942047487727620",
-    "lastModified": "2026-07-22T07:13:30Z",
+    "version": "2378969556190172090",
+    "lastModified": "2026-07-22T08:36:20Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1618,7 +1618,7 @@
             "type": "SECTION",
             "w": 7111,
             "h": 10273,
-            "childCount": 6,
+            "childCount": 8,
             "children": [
               {
                 "name": "Page",
@@ -1627,6 +1627,14 @@
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
               },
               {
                 "name": "Page",
