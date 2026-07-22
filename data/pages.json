@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-22T09:59:31.770Z",
+  "generatedAt": "2026-07-22T11:56:57.768Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2378969556190172090",
-    "lastModified": "2026-07-22T08:36:20Z",
+    "version": "2379003882121468723",
+    "lastModified": "2026-07-22T11:17:00Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1616,7 +1616,7 @@
             "id": "4447:64234",
             "name": "Booking management",
             "type": "SECTION",
-            "w": 7111,
+            "w": 7688,
             "h": 10273,
             "childCount": 8,
             "children": [
@@ -3445,38 +3445,6 @@
             ]
           },
           {
-            "id": "4803:75572",
-            "name": "Frame 27824",
-            "type": "FRAME",
-            "w": 480,
-            "h": 20,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "#TagPlaceholder",
-                "type": "TEXT"
-              },
-              {
-                "name": "#secondTag",
-                "type": "TEXT"
-              }
-            ]
-          },
-          {
-            "id": "4803:75570",
-            "name": "Created From Info",
-            "type": "FRAME",
-            "w": 480,
-            "h": 36,
-            "childCount": 1,
-            "children": [
-              {
-                "name": "Created From Text",
-                "type": "TEXT"
-              }
-            ]
-          },
-          {
             "id": "4803:79524",
             "name": "Carrier/Transport Card",
             "type": "COMPONENT_SET",
@@ -3495,19 +3463,41 @@
             ]
           },
           {
-            "id": "4872:81732",
-            "name": "booking-read-only",
+            "id": "4912:180031",
+            "name": "_Form/New Tender/1",
             "type": "FRAME",
-            "w": 720,
-            "h": 1029,
-            "childCount": 2,
+            "w": 960,
+            "h": 1307,
+            "childCount": 3,
             "children": [
               {
-                "name": "header-meta",
+                "name": "Main Content",
                 "type": "FRAME"
               },
               {
-                "name": "main-panel",
+                "name": "Separator",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Modal/Footer",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4912:179785",
+            "name": "Frame 483",
+            "type": "FRAME",
+            "w": 360,
+            "h": 805,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27815",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27816",
                 "type": "FRAME"
               }
             ]
