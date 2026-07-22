@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-22T11:56:57.768Z",
+  "generatedAt": "2026-07-22T14:10:06.651Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2379003882121468723",
-    "lastModified": "2026-07-22T11:17:00Z",
+    "version": "2379051448885555409",
+    "lastModified": "2026-07-22T14:10:13Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -52,7 +52,7 @@
             "type": "SECTION",
             "w": 19056,
             "h": 12116,
-            "childCount": 48,
+            "childCount": 50,
             "children": [
               {
                 "name": "Step 3 - Carriers / Spot transport",
@@ -145,6 +145,10 @@
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 27854",
+                "type": "FRAME"
               },
               {
                 "name": "Page",
@@ -243,7 +247,43 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Notification (Alert)",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4867:106708",
+            "name": "Frame 2",
+            "type": "FRAME",
+            "w": 200,
+            "h": 200,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Illustration",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame 2",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "4925:194699",
+            "name": "Frame 2",
+            "type": "FRAME",
+            "w": 40,
+            "h": 40,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Icon",
                 "type": "INSTANCE"
               }
             ]
@@ -668,7 +708,7 @@
             "type": "SECTION",
             "w": 20354,
             "h": 12356,
-            "childCount": 44,
+            "childCount": 45,
             "children": [
               {
                 "name": "Page",
@@ -757,6 +797,10 @@
               {
                 "name": "Content/Request/Form/Step 3 - Carriers (Spot)",
                 "type": "COMPONENT"
+              },
+              {
+                "name": "Frame 27855",
+                "type": "FRAME"
               },
               {
                 "name": "Instaorder Banner",
