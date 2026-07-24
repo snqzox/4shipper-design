@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-24T11:42:59.525Z",
+  "generatedAt": "2026-07-24T13:47:16.273Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2379751262824136346",
-    "lastModified": "2026-07-24T11:39:45Z",
+    "version": "2379769631852841778",
+    "lastModified": "2026-07-24T13:04:24Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -4799,7 +4799,7 @@
             "type": "SECTION",
             "w": 4327,
             "h": 1819,
-            "childCount": 4,
+            "childCount": 6,
             "children": [
               {
                 "name": "Frame 27863",
@@ -4814,8 +4814,16 @@
                 "type": "TEXT"
               },
               {
-                "name": "RFQ XXX | Access denied",
+                "name": "subject: You're missing an RFQ invitation — unpaid invoices on your account",
                 "type": "TEXT"
+              },
+              {
+                "name": "subject: AI request creation - file(s) skipped",
+                "type": "TEXT"
+              },
+              {
+                "name": "Frame 27866",
+                "type": "FRAME"
               }
             ]
           }
