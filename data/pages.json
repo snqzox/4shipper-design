@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-23T16:27:25.921Z",
+  "generatedAt": "2026-07-24T09:55:28.412Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2379456450897869135",
-    "lastModified": "2026-07-23T16:27:34Z",
+    "version": "2379717714278387467",
+    "lastModified": "2026-07-24T08:50:12Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -896,7 +896,7 @@
       },
       {
         "id": "3853:80333",
-        "name": "Addresses + Time Slots",
+        "name": "📍 Addresses + Time Slots",
         "screens": [
           {
             "id": "3853:81230",
@@ -1179,7 +1179,7 @@
             "name": "Frame 472",
             "type": "FRAME",
             "w": 1000,
-            "h": 1467,
+            "h": 1331,
             "childCount": 2,
             "children": [
               {
@@ -1662,7 +1662,7 @@
             "type": "SECTION",
             "w": 7688,
             "h": 10273,
-            "childCount": 8,
+            "childCount": 7,
             "children": [
               {
                 "name": "Page",
@@ -1677,24 +1677,38 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "4704:49520",
+            "name": "Frame",
+            "type": "FRAME",
+            "w": 960,
+            "h": 264,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Select address",
+                "type": "TEXT"
+              },
+              {
                 "name": "Frame",
                 "type": "FRAME"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
               }
             ]
           }
@@ -3466,7 +3480,7 @@
             "id": "4803:82832",
             "name": "Waypoint booking status",
             "type": "COMPONENT_SET",
-            "w": 577,
+            "w": 68,
             "h": 220,
             "childCount": 4,
             "children": [
