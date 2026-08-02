@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-20T15:11:52.067Z",
+  "generatedAt": "2026-08-02T14:08:07.215Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2378303811049750088",
-    "lastModified": "2026-07-20T13:53:34Z",
+    "version": "2383092081647616620",
+    "lastModified": "2026-08-02T13:34:26Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -338,15 +338,6 @@
       "page": "⚛️ Table"
     },
     {
-      "key": "0d5fa8714c77d8b442233f27f1a7dee4e3330267",
-      "name": "Expanded=True, State=Selected, Selectable=True",
-      "nodeId": "6956:1232721",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:11.571Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
       "key": "1a84eb6748bc78e8b12e49e001b8c10ba3f265d7",
       "name": "Variant=Body",
       "nodeId": "18:996",
@@ -354,15 +345,6 @@
       "updatedAt": "2026-06-30T08:51:56.554Z",
       "set": "Badge",
       "page": "⚛️ Badge"
-    },
-    {
-      "key": "40a6c321cae377387e030b0d88761995f102251d",
-      "name": "Expanded=False, State=Default, Selectable=True",
-      "nodeId": "5978:71499",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:11.820Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
     },
     {
       "key": "95ae22619373e16acf75d73e63a70e30adc3900f",
@@ -1571,15 +1553,6 @@
       "page": "⚛️ Location Pointer"
     },
     {
-      "key": "961d195317893d9de5a5f72717c286e071ff5e91",
-      "name": "Expanded=True, State=Default, Selectable=True",
-      "nodeId": "5978:71432",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.230Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
       "key": "ca94791313e0bdb0d1d9d9456761b6f9ef4ce1a7",
       "name": "Checked=True, Variant=Card Left, Disabled=False",
       "nodeId": "147:66302",
@@ -1605,15 +1578,6 @@
       "updatedAt": "2026-06-03T18:30:12.503Z",
       "set": "Separator",
       "page": "⚛️ Separator"
-    },
-    {
-      "key": "e895a4ebdead68c7a918ae3a62f1e0ddf6044f0b",
-      "name": "Expanded=False, State=Selected, Selectable=True",
-      "nodeId": "6956:1232730",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.516Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
     },
     {
       "key": "ed833808fa445290d5a2a6122fc3789ab43ea62a",
@@ -2795,15 +2759,6 @@
       "page": "⚛️ Status"
     },
     {
-      "key": "eeb400f4eb5e669d483f9b0c421874af9ec00f8b",
-      "name": "Expanded=True, State=Default, Selectable=False",
-      "nodeId": "6956:1232665",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.551Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
       "key": "b1d1f32dce559605c7c7ebbcf942f188927286a1",
       "name": "icon/square-xmark",
       "nodeId": "3612:119068",
@@ -3443,24 +3398,6 @@
       "page": "⚛️ Input & Form Control"
     },
     {
-      "key": "652549d86f3ec0db14176678ac9dc189d30b152f",
-      "name": "Expanded=True, State=Partialy Selected, Selectable=True",
-      "nodeId": "8858:108161",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:10.401Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
-      "key": "f03ef32f15cae2d5b2da9b7b1ac1f5ed13595a59",
-      "name": "Expanded=False, State=Partialy Selected, Selectable=True",
-      "nodeId": "8858:108170",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:10.412Z",
-      "set": "Selectable Group Entry",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
       "key": "03270e7bae531062b2650bc2b6fd00e45e6d92d7",
       "name": "Checked=False, Variant=Default, Disabled=True",
       "nodeId": "5934:70266",
@@ -3530,15 +3467,6 @@
       "description": "",
       "updatedAt": "2026-06-03T18:30:11.999Z",
       "set": "Check, Radio, Switch Item",
-      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
-      "key": "6e2a8b367d8aac52d2b41509cd2a238e31296290",
-      "name": "Expanded=False, State=Default, Selectable=False",
-      "nodeId": "6956:1232674",
-      "description": "",
-      "updatedAt": "2026-06-03T18:30:12.030Z",
-      "set": "Selectable Group Entry",
       "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
     },
     {
@@ -6600,6 +6528,78 @@
       "updatedAt": "2026-07-18T17:38:07.271Z",
       "set": null,
       "page": "🧩 Assets"
+    },
+    {
+      "key": "0d5fa8714c77d8b442233f27f1a7dee4e3330267",
+      "name": "Expanded=True, State=Selected, Selectable=True",
+      "nodeId": "6956:1232721",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.682Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "40a6c321cae377387e030b0d88761995f102251d",
+      "name": "Expanded=False, State=Default, Selectable=True",
+      "nodeId": "5978:71499",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.690Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "652549d86f3ec0db14176678ac9dc189d30b152f",
+      "name": "Expanded=True, State=Partialy Selected, Selectable=True",
+      "nodeId": "8858:108161",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.694Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "6e2a8b367d8aac52d2b41509cd2a238e31296290",
+      "name": "Expanded=False, State=Default, Selectable=False",
+      "nodeId": "6956:1232674",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.699Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "961d195317893d9de5a5f72717c286e071ff5e91",
+      "name": "Expanded=True, State=Default, Selectable=True",
+      "nodeId": "5978:71432",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.705Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "e895a4ebdead68c7a918ae3a62f1e0ddf6044f0b",
+      "name": "Expanded=False, State=Selected, Selectable=True",
+      "nodeId": "6956:1232730",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.710Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "eeb400f4eb5e669d483f9b0c421874af9ec00f8b",
+      "name": "Expanded=True, State=Default, Selectable=False",
+      "nodeId": "6956:1232665",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.714Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
+    },
+    {
+      "key": "f03ef32f15cae2d5b2da9b7b1ac1f5ed13595a59",
+      "name": "Expanded=False, State=Partialy Selected, Selectable=True",
+      "nodeId": "8858:108170",
+      "description": "",
+      "updatedAt": "2026-08-02T13:31:23.719Z",
+      "set": "Selectable Group Entry",
+      "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
     }
   ],
   "componentSets": [
@@ -6644,13 +6644,6 @@
       "nodeId": "6324:59033",
       "description": "What it is: A large selectable card that lets users pick one or multiple options, each with a title, optional description, and icon.\nWhen to use: Onboarding plan selection, shipment-type chooser, feature toggle flows where visual weight aids comprehension.\nVariants: Default, hover, selected, disabled; single-select (radio) and multi-select (checkbox) modes.\nAvoid: Don't use when options exceed 5–6 — fall back to a radio/checkbox list for scannability.",
       "updatedAt": "2026-06-03T18:30:10.199Z"
-    },
-    {
-      "key": "51e89e90156b44f4591b3158c2c8bd3f851a0b87",
-      "name": "Selectable Group Entry",
-      "nodeId": "5978:71425",
-      "description": "What it is: A labelled group wrapper that stacks List Entry rows under a section header.\nWhen to use: Grouping related settings or options (e.g. \"Notification preferences\", \"Access levels\").\nVariants: With group label, with/without group-level select-all control.\nAvoid: Don't use for single ungrouped lists — use List Entry rows directly.",
-      "updatedAt": "2026-06-03T18:30:10.205Z"
     },
     {
       "key": "73af3c481cbb9ab142ff025385c907dab07aeaa5",
@@ -6805,6 +6798,13 @@
       "nodeId": "8754:49327",
       "description": "What it is: Status chip pre-configured with the request lifecycle vocabulary (Pending, Accepted, Rejected, Cancelled).\nWhen to use: Quote request and booking request list views.\nVariants: One variant per request state.\nAvoid: Don't use for transport statuses — use Status/Transports.",
       "updatedAt": "2026-07-06T15:18:18.367Z"
+    },
+    {
+      "key": "51e89e90156b44f4591b3158c2c8bd3f851a0b87",
+      "name": "Selectable Group Entry",
+      "nodeId": "5978:71425",
+      "description": "What it is: A labelled group wrapper that stacks List Entry rows under a section header.\nWhen to use: Grouping related settings or options (e.g. \"Notification preferences\", \"Access levels\").\nVariants: With group label, with/without group-level select-all control.\nAvoid: Don't use for single ungrouped lists — use List Entry rows directly.",
+      "updatedAt": "2026-08-02T13:31:23.628Z"
     },
     {
       "key": "22ac6b48fd8d58b488643fa29de41607956ec4dc",

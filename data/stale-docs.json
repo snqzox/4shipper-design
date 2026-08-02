@@ -1,33 +1,12 @@
 {
-  "generatedAt": "2026-07-20T15:13:49.119Z",
-  "libraryVersion": "2378303811049750088",
-  "count": 4,
+  "generatedAt": "2026-08-02T14:09:59.223Z",
+  "libraryVersion": "2383092081647616620",
+  "count": 1,
   "items": [
     {
-      "name": "Route Entry 2",
+      "name": "Selectable Group Entry",
       "kind": "set",
       "change": "changed",
-      "doc": "route-entry-2.md",
-      "hasDoc": true
-    },
-    {
-      "name": "car",
-      "kind": "component",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "garage",
-      "kind": "component",
-      "change": "added",
-      "doc": null,
-      "hasDoc": false
-    },
-    {
-      "name": "square-user",
-      "kind": "component",
-      "change": "added",
       "doc": null,
       "hasDoc": false
     }
