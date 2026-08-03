@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-08-02T14:09:59.223Z",
-  "libraryVersion": "2383092081647616620",
+  "generatedAt": "2026-08-03T15:27:29.014Z",
+  "libraryVersion": "2383517600709477951",
   "count": 1,
   "items": [
     {
-      "name": "Selectable Group Entry",
+      "name": "Page/Header/Carrier",
       "kind": "set",
       "change": "changed",
-      "doc": null,
-      "hasDoc": false
+      "doc": "page-header-carrier.md",
+      "hasDoc": true
     }
   ]
 }

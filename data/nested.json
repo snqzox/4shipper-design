@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-08-02T14:09:59.218Z",
+  "generatedAt": "2026-08-03T15:27:29.006Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
-    "version": "2383092081647616620"
+    "version": "2383517600709477951"
   },
   "units": {
     "707:402598": [
@@ -497,7 +497,7 @@
         "nodeId": null,
         "resolved": false,
         "viaVariant": null,
-        "count": 5
+        "count": 6
       },
       {
         "name": "Logo",

@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-02T14:08:07.215Z",
+  "generatedAt": "2026-08-03T15:25:15.126Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2383092081647616620",
-    "lastModified": "2026-08-02T13:34:26Z",
+    "version": "2383517600709477951",
+    "lastModified": "2026-08-03T15:23:41Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -392,15 +392,6 @@
       "page": "⚛️ Route Entry"
     },
     {
-      "key": "7498a936406b63ef1131324c24641af0b3423ec0",
-      "name": "Layout=Mobile, Expanded=False",
-      "nodeId": "7713:17337",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.147Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
-    },
-    {
       "key": "74bd0fec05c65ed64a4e3f62409928f0fc9b1332",
       "name": "Variant=Secondary, State=Hover",
       "nodeId": "6072:77435",
@@ -489,15 +480,6 @@
       "updatedAt": "2026-07-06T14:50:56.224Z",
       "set": "Route Entry",
       "page": "⚛️ Route Entry"
-    },
-    {
-      "key": "b81731dd54db51b46e23c2119f02380e27b8da6c",
-      "name": "Layout=Mobile, Expanded=True",
-      "nodeId": "7713:17363",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:56.249Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
     },
     {
       "key": "c105077452d1fe48d67f2c7bdd6c89cde7daed0b",
@@ -615,15 +597,6 @@
       "updatedAt": "2026-07-06T14:50:55.984Z",
       "set": "Button",
       "page": "⚛️ Button"
-    },
-    {
-      "key": "24b9005e375704fe2e3ce6151c2439fe0a01e2e6",
-      "name": "Layout=Desktop, Expanded=False",
-      "nodeId": "7713:17347",
-      "description": "",
-      "updatedAt": "2026-07-06T14:50:55.996Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
     },
     {
       "key": "2b0c689cf9c500c83099b18a88ae64bc5a1e7c9c",
@@ -849,6 +822,33 @@
       "updatedAt": "2026-06-29T15:43:06.164Z",
       "set": null,
       "page": "🧩 Assets"
+    },
+    {
+      "key": "24b9005e375704fe2e3ce6151c2439fe0a01e2e6",
+      "name": "Layout=Desktop, Expanded=False",
+      "nodeId": "7713:17347",
+      "description": "",
+      "updatedAt": "2026-08-03T15:00:46.883Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "7498a936406b63ef1131324c24641af0b3423ec0",
+      "name": "Layout=Mobile, Expanded=False",
+      "nodeId": "7713:17337",
+      "description": "",
+      "updatedAt": "2026-08-03T15:00:46.891Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "b81731dd54db51b46e23c2119f02380e27b8da6c",
+      "name": "Layout=Mobile, Expanded=True",
+      "nodeId": "7713:17363",
+      "description": "",
+      "updatedAt": "2026-08-03T15:00:46.896Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
     },
     {
       "key": "cdb63c71b3edf630c9713c7fe33405b4ba0526b6",
@@ -6881,7 +6881,7 @@
       "name": "Page/Header/Carrier",
       "nodeId": "7713:17336",
       "description": "What it is: The top navigation header bar for carrier-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every carrier-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in shipper-role pages — use Page/Header/Shipper.",
-      "updatedAt": "2026-07-06T14:50:55.512Z"
+      "updatedAt": "2026-08-03T15:00:46.862Z"
     },
     {
       "key": "f833a956fbe878a6d2b8ca6b049b23ec54cfb188",

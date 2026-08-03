@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-03T12:25:08.802Z",
+  "generatedAt": "2026-08-03T15:25:15.126Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2383471907086508046",
-    "lastModified": "2026-08-03T12:20:16Z",
+    "version": "2383526229839560751",
+    "lastModified": "2026-08-03T15:25:21Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3448,7 +3448,7 @@
       },
       {
         "id": "4700:68445",
-        "name": "🚚 Transports",
+        "name": "🚚 Transports & Bookings",
         "screens": [
           {
             "id": "4700:83558",
@@ -3521,6 +3521,24 @@
             ]
           },
           {
+            "id": "5530:109567",
+            "name": "Carrier/Booking Card",
+            "type": "COMPONENT_SET",
+            "w": 1432,
+            "h": 766,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Property 1=Transport Card",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
             "id": "5487:74574",
             "name": "Frame 27833",
             "type": "FRAME",
@@ -3575,6 +3593,11 @@
             ]
           }
         ]
+      },
+      {
+        "id": "5530:108031",
+        "name": "🗓️ Bookings",
+        "screens": []
       },
       {
         "id": "3480:44949",
