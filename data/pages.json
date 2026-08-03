@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-03T15:25:15.126Z",
+  "generatedAt": "2026-08-03T17:24:46.465Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
     "version": "2383526229839560751",
-    "lastModified": "2026-08-03T15:25:21Z",
+    "lastModified": "2026-08-03T15:48:54Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3526,14 +3526,10 @@
             "type": "COMPONENT_SET",
             "w": 1432,
             "h": 766,
-            "childCount": 2,
+            "childCount": 1,
             "children": [
               {
                 "name": "Property 1=Transport Card",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2",
                 "type": "COMPONENT"
               }
             ]
@@ -3593,11 +3589,6 @@
             ]
           }
         ]
-      },
-      {
-        "id": "5530:108031",
-        "name": "🗓️ Bookings",
-        "screens": []
       },
       {
         "id": "3480:44949",
