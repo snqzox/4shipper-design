@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-04T17:49:45.532Z",
+  "generatedAt": "2026-08-05T09:20:20.897Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2383926090190368154",
-    "lastModified": "2026-08-04T08:22:33Z",
+    "version": "2384154380614271817",
+    "lastModified": "2026-08-05T08:17:30Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3535,24 +3535,6 @@
             ]
           },
           {
-            "id": "5487:71977",
-            "name": "Frame 483",
-            "type": "FRAME",
-            "w": 952,
-            "h": 146,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Frame 483",
-                "type": "FRAME"
-              },
-              {
-                "name": "Button",
-                "type": "INSTANCE"
-              }
-            ]
-          },
-          {
             "id": "5487:74574",
             "name": "Frame 27833",
             "type": "FRAME",
@@ -3563,40 +3545,6 @@
               {
                 "name": "Content/Section Title",
                 "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "5487:71306",
-            "name": "Frame 27833",
-            "type": "FRAME",
-            "w": 888,
-            "h": 221,
-            "childCount": 6,
-            "children": [
-              {
-                "name": "Content/Section Title",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Header",
-                "type": "FRAME"
-              },
-              {
-                "name": "Slot 2",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame 27834",
-                "type": "FRAME"
-              },
-              {
-                "name": "Right Slot",
-                "type": "FRAME"
-              },
-              {
-                "name": "Right Slot",
-                "type": "FRAME"
               }
             ]
           },
