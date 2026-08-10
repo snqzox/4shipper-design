@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10T18:22:49.375Z",
+  "generatedAt": "2026-08-10T19:30:44.644Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2386162605334836709",
-    "lastModified": "2026-08-10T18:04:15Z",
+    "version": "2386174153404266414",
+    "lastModified": "2026-08-10T19:30:49Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3615,72 +3615,6 @@
               {
                 "name": "Group 1",
                 "type": "GROUP"
-              }
-            ]
-          },
-          {
-            "id": "6207:206342",
-            "name": "Main Content",
-            "type": "FRAME",
-            "w": 872,
-            "h": 2288,
-            "childCount": 14,
-            "children": [
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Form Control",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
-              },
-              {
-                "name": "Content/Section Title",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Check, Radio, Switch Item",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Cargo Item Card",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Cargo Item Card",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Frame",
-                "type": "FRAME"
               }
             ]
           }
