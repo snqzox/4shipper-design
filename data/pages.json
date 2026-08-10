@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-07T09:31:55.843Z",
+  "generatedAt": "2026-08-10T17:02:26.148Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2384913452176138291",
-    "lastModified": "2026-08-06T13:00:32Z",
+    "version": "2386151128592143155",
+    "lastModified": "2026-08-10T17:02:33Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1662,35 +1662,15 @@
             "type": "SECTION",
             "w": 7688,
             "h": 10273,
-            "childCount": 7,
+            "childCount": 2,
             "children": [
               {
                 "name": "Page",
                 "type": "INSTANCE"
               },
               {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Page",
-                "type": "INSTANCE"
+                "name": "Group 1",
+                "type": "GROUP"
               }
             ]
           },
@@ -3626,6 +3606,86 @@
             "children": [
               {
                 "name": "Request List Entry / Active",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "6180:126780",
+            "name": "Frame 27836",
+            "type": "FRAME",
+            "w": 1872,
+            "h": 1632,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Group 1",
+                "type": "GROUP"
+              }
+            ]
+          },
+          {
+            "id": "6207:206342",
+            "name": "Main Content",
+            "type": "FRAME",
+            "w": 872,
+            "h": 2288,
+            "childCount": 14,
+            "children": [
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Form Control",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
+                "type": "FRAME"
+              },
+              {
+                "name": "Content/Section Title",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Check, Radio, Switch Item",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Cargo Item Card",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Cargo Item Card",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Frame",
                 "type": "FRAME"
               }
             ]
