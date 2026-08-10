@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-03T15:25:15.126Z",
+  "generatedAt": "2026-08-10T18:22:49.375Z",
   "file": {
     "key": "XVou4XJ4rWbt4oXoSxO7hO",
     "name": "Transportly UI Kit 2.0",
-    "version": "2383517600709477951",
-    "lastModified": "2026-08-03T15:23:41Z",
+    "version": "2386155445573499193",
+    "lastModified": "2026-08-10T17:56:10Z",
     "pages": [
       {
         "id": "8860:108269",
@@ -707,15 +707,6 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "decfe197c6170ce7636be532568dcc585942a29f",
-      "name": "Order=Default",
-      "nodeId": "8617:6115",
-      "description": "",
-      "updatedAt": "2026-07-20T13:48:02.625Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
-    },
-    {
       "key": "b916fa814088b3dd49b3b533b1f95e2e48d03f8b",
       "name": "Waypoint",
       "nodeId": "8622:85326",
@@ -824,33 +815,6 @@
       "page": "🧩 Assets"
     },
     {
-      "key": "24b9005e375704fe2e3ce6151c2439fe0a01e2e6",
-      "name": "Layout=Desktop, Expanded=False",
-      "nodeId": "7713:17347",
-      "description": "",
-      "updatedAt": "2026-08-03T15:00:46.883Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
-    },
-    {
-      "key": "7498a936406b63ef1131324c24641af0b3423ec0",
-      "name": "Layout=Mobile, Expanded=False",
-      "nodeId": "7713:17337",
-      "description": "",
-      "updatedAt": "2026-08-03T15:00:46.891Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
-    },
-    {
-      "key": "b81731dd54db51b46e23c2119f02380e27b8da6c",
-      "name": "Layout=Mobile, Expanded=True",
-      "nodeId": "7713:17363",
-      "description": "",
-      "updatedAt": "2026-08-03T15:00:46.896Z",
-      "set": "Page/Header/Carrier",
-      "page": "📦 Page Header"
-    },
-    {
       "key": "cdb63c71b3edf630c9713c7fe33405b4ba0526b6",
       "name": "icon/face-laugh",
       "nodeId": "8768:65851",
@@ -930,6 +894,96 @@
       "updatedAt": "2026-07-06T20:45:37.270Z",
       "set": "Request Status",
       "page": "⚛️ Status"
+    },
+    {
+      "key": "15fdb9cee1a98518580c736791432f153ef86d62",
+      "name": "Layout=Mobile, Expanded=False",
+      "nodeId": "106:7040",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.419Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "24b9005e375704fe2e3ce6151c2439fe0a01e2e6",
+      "name": "Layout=Desktop, Expanded=False",
+      "nodeId": "7713:17347",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.423Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
+      "name": "Page",
+      "nodeId": "6987:87353",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.427Z",
+      "set": null,
+      "page": "📦 Page"
+    },
+    {
+      "key": "65c30f3defdf96fd368adc003a5827ea1741a6e5",
+      "name": "Order=Order4",
+      "nodeId": "8724:53978",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.432Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "7498a936406b63ef1131324c24641af0b3423ec0",
+      "name": "Layout=Mobile, Expanded=False",
+      "nodeId": "7713:17337",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.435Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "b81731dd54db51b46e23c2119f02380e27b8da6c",
+      "name": "Layout=Mobile, Expanded=True",
+      "nodeId": "7713:17363",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.443Z",
+      "set": "Page/Header/Carrier",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "c4ca311bc1364ed9debb7f10bc8e3241702bcc09",
+      "name": "Order=Smaller",
+      "nodeId": "8622:84282",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.447Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "cfd2aae2763369032a765f931345f3e0f2d3b354",
+      "name": "Layout=Desktop, Expanded=False",
+      "nodeId": "111:12466",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.451Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
+    },
+    {
+      "key": "decfe197c6170ce7636be532568dcc585942a29f",
+      "name": "Order=Default",
+      "nodeId": "8617:6115",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.455Z",
+      "set": "Route Entry 2",
+      "page": "⚛️ Route Entry"
+    },
+    {
+      "key": "ff99e69b29386c223a3667ba286f6be3f8f9c8d7",
+      "name": "Layout=Mobile, Expanded=True",
+      "nodeId": "106:7071",
+      "description": "",
+      "updatedAt": "2026-08-10T17:53:27.459Z",
+      "set": "Page/Header/Shipper",
+      "page": "📦 Page Header"
     },
     {
       "key": "1ccd467be67896703a5d34c8be64d93d30bc526b",
@@ -1344,15 +1398,6 @@
       "updatedAt": "2026-06-23T12:51:59.181Z",
       "set": "Selectable List Entry",
       "page": "⚛️ Checkbox, Radio, Switch (Toggle)"
-    },
-    {
-      "key": "65c30f3defdf96fd368adc003a5827ea1741a6e5",
-      "name": "Order=Order4",
-      "nodeId": "8724:53978",
-      "description": "",
-      "updatedAt": "2026-07-20T13:48:02.608Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
     },
     {
       "key": "6f4ec23b28b1de60d6634f40c8c51e9f60111148",
@@ -3339,16 +3384,7 @@
       "name": "Order=Small Dot",
       "nodeId": "8624:87051",
       "description": "",
-      "updatedAt": "2026-07-20T13:48:02.614Z",
-      "set": "Route Entry 2",
-      "page": "⚛️ Route Entry"
-    },
-    {
-      "key": "c4ca311bc1364ed9debb7f10bc8e3241702bcc09",
-      "name": "Order=Smaller",
-      "nodeId": "8622:84282",
-      "description": "",
-      "updatedAt": "2026-07-20T13:48:02.620Z",
+      "updatedAt": "2026-08-10T17:53:27.439Z",
       "set": "Route Entry 2",
       "page": "⚛️ Route Entry"
     },
@@ -6476,42 +6512,6 @@
       "page": "📦 Content Box"
     },
     {
-      "key": "15fdb9cee1a98518580c736791432f153ef86d62",
-      "name": "Layout=Mobile, Expanded=False",
-      "nodeId": "106:7040",
-      "description": "",
-      "updatedAt": "2026-07-16T09:07:06.676Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
-    },
-    {
-      "key": "5739a213e1cda821c910827e8778d6ccefac8ce9",
-      "name": "Page",
-      "nodeId": "6987:87353",
-      "description": "",
-      "updatedAt": "2026-07-16T09:07:06.682Z",
-      "set": null,
-      "page": "📦 Page"
-    },
-    {
-      "key": "cfd2aae2763369032a765f931345f3e0f2d3b354",
-      "name": "Layout=Desktop, Expanded=False",
-      "nodeId": "111:12466",
-      "description": "",
-      "updatedAt": "2026-07-16T09:07:06.689Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
-    },
-    {
-      "key": "ff99e69b29386c223a3667ba286f6be3f8f9c8d7",
-      "name": "Layout=Mobile, Expanded=True",
-      "nodeId": "106:7071",
-      "description": "",
-      "updatedAt": "2026-07-16T09:07:06.694Z",
-      "set": "Page/Header/Shipper",
-      "page": "📦 Page Header"
-    },
-    {
       "key": "df6f0f704cd453832d6e518a322aac8de1e5dbcd",
       "name": "clock",
       "nodeId": "9375:464",
@@ -6853,7 +6853,7 @@
       "name": "Route Entry 2",
       "nodeId": "8617:6114",
       "description": "What it is: An updated layout variant of Route Entry with revised field ordering and multi-stop support.\nWhen to use: New shipment forms and tender wizards — prefer this over Route Entry for new designs.\nVariants: Single leg, multi-stop; collapsed and expanded; with waypoint add/remove controls.\nAvoid: Don't mix Route Entry and Route Entry 2 in the same form.",
-      "updatedAt": "2026-07-20T13:48:02.553Z"
+      "updatedAt": "2026-08-10T17:53:27.348Z"
     },
     {
       "key": "20ca3f58e52ca60646e8a283cd2b3218285c1d4a",
@@ -6877,13 +6877,6 @@
       "updatedAt": "2026-06-30T08:51:56.340Z"
     },
     {
-      "key": "9600dd4b71ce18b1df961b9ade785382652e7a9f",
-      "name": "Page/Header/Carrier",
-      "nodeId": "7713:17336",
-      "description": "What it is: The top navigation header bar for carrier-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every carrier-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in shipper-role pages — use Page/Header/Shipper.",
-      "updatedAt": "2026-08-03T15:00:46.862Z"
-    },
-    {
       "key": "f833a956fbe878a6d2b8ca6b049b23ec54cfb188",
       "name": "Notification (Alert)",
       "nodeId": "32:1770",
@@ -6896,6 +6889,13 @@
       "nodeId": "9251:5310",
       "description": "",
       "updatedAt": "2026-07-06T20:45:37.142Z"
+    },
+    {
+      "key": "9600dd4b71ce18b1df961b9ade785382652e7a9f",
+      "name": "Page/Header/Carrier",
+      "nodeId": "7713:17336",
+      "description": "What it is: The top navigation header bar for carrier-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every carrier-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in shipper-role pages — use Page/Header/Shipper.",
+      "updatedAt": "2026-08-10T17:53:27.356Z"
     },
     {
       "key": "38c76db474b19eef7efe053ff94c66846bc03195",
@@ -6916,7 +6916,7 @@
       "name": "Page/Header/Shipper",
       "nodeId": "106:7070",
       "description": "What it is: The top navigation header bar for shipper-role pages, including logo, primary nav links, and user menu.\nWhen to use: Every shipper-facing page as the persistent top bar.\nVariants: With/without notification badge; active nav item highlighted.\nAvoid: Don't use in carrier-role pages — use Page/Header/Carrier.",
-      "updatedAt": "2026-07-16T09:07:06.651Z"
+      "updatedAt": "2026-08-10T17:53:27.360Z"
     }
   ]
 }

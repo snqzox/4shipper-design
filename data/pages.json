@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10T17:02:26.148Z",
+  "generatedAt": "2026-08-10T18:22:49.375Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2386151128592143155",
-    "lastModified": "2026-08-10T17:02:33Z",
+    "version": "2386162605334836709",
+    "lastModified": "2026-08-10T18:04:15Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3515,6 +3515,20 @@
             ]
           },
           {
+            "id": "6209:211485",
+            "name": "Frame 27806",
+            "type": "FRAME",
+            "w": 505,
+            "h": 236,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Timeline Container",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
             "id": "5487:74574",
             "name": "Frame 27833",
             "type": "FRAME",
@@ -3569,43 +3583,23 @@
             ]
           },
           {
-            "id": "5592:122064",
-            "name": "Carrier/Booking Card",
+            "id": "6209:211724",
+            "name": "Frame 27837",
             "type": "FRAME",
             "w": 1392,
-            "h": 244,
-            "childCount": 1,
+            "h": 772,
+            "childCount": 3,
             "children": [
               {
-                "name": "Request List Entry / Active",
+                "name": "Carrier/Booking Card",
                 "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "5592:124864",
-            "name": "Carrier/Booking Card",
-            "type": "FRAME",
-            "w": 1392,
-            "h": 244,
-            "childCount": 1,
-            "children": [
+              },
               {
-                "name": "Request List Entry / Active",
+                "name": "Carrier/Booking Card",
                 "type": "FRAME"
-              }
-            ]
-          },
-          {
-            "id": "5592:125335",
-            "name": "Carrier/Booking Card",
-            "type": "FRAME",
-            "w": 1392,
-            "h": 244,
-            "childCount": 1,
-            "children": [
+              },
               {
-                "name": "Request List Entry / Active",
+                "name": "Carrier/Booking Card",
                 "type": "FRAME"
               }
             ]
