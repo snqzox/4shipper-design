@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-11T18:26:45.369Z",
+  "generatedAt": "2026-08-11T21:49:16.475Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2386531577344686094",
-    "lastModified": "2026-08-11T18:21:07Z",
+    "version": "2386588988187540518",
+    "lastModified": "2026-08-11T21:49:24Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1653,24 +1653,6 @@
               {
                 "name": "Footer",
                 "type": "INSTANCE"
-              }
-            ]
-          },
-          {
-            "id": "4447:64234",
-            "name": "Booking management",
-            "type": "SECTION",
-            "w": 7688,
-            "h": 10273,
-            "childCount": 2,
-            "children": [
-              {
-                "name": "Page",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Group 1",
-                "type": "GROUP"
               }
             ]
           },
@@ -3687,6 +3669,48 @@
               {
                 "name": "Frame 27838",
                 "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "6381:201015",
+            "name": "Booking management",
+            "type": "SECTION",
+            "w": 7688,
+            "h": 10273,
+            "childCount": 8,
+            "children": [
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
               }
             ]
           }
