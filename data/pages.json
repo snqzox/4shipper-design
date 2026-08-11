@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-10T20:42:49.677Z",
+  "generatedAt": "2026-08-11T10:05:43.033Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2386174153404266414",
-    "lastModified": "2026-08-10T19:42:41Z",
+    "version": "2386396912391431371",
+    "lastModified": "2026-08-11T09:08:26Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3511,6 +3511,56 @@
               {
                 "name": "Property 1=Transport Card",
                 "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "6249:33768",
+            "name": "Frame 27838",
+            "type": "FRAME",
+            "w": 952,
+            "h": 104,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27838",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27837",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "6249:33775",
+            "name": "Frame 27839",
+            "type": "FRAME",
+            "w": 952,
+            "h": 104,
+            "childCount": 2,
+            "children": [
+              {
+                "name": "Frame 27838",
+                "type": "FRAME"
+              },
+              {
+                "name": "Frame 27837",
+                "type": "FRAME"
+              }
+            ]
+          },
+          {
+            "id": "6215:14770",
+            "name": "Frame 483",
+            "type": "FRAME",
+            "w": 952,
+            "h": 100,
+            "childCount": 1,
+            "children": [
+              {
+                "name": "Frame 484",
+                "type": "FRAME"
               }
             ]
           },
