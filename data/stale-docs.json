@@ -1,33 +1,12 @@
 {
-  "generatedAt": "2026-08-10T18:24:45.820Z",
-  "libraryVersion": "2386155445573499193",
-  "count": 4,
+  "generatedAt": "2026-08-11T18:28:39.388Z",
+  "libraryVersion": "2386541420347876708",
+  "count": 1,
   "items": [
     {
-      "name": "Page/Header/Carrier",
-      "kind": "set",
-      "change": "changed",
-      "doc": "page-header-carrier.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Page/Header/Shipper",
-      "kind": "set",
-      "change": "changed",
-      "doc": "page-header-shipper.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Route Entry 2",
-      "kind": "set",
-      "change": "changed",
-      "doc": "route-entry-2.md",
-      "hasDoc": true
-    },
-    {
-      "name": "Page",
+      "name": "location-crosshairs",
       "kind": "component",
-      "change": "changed",
+      "change": "added",
       "doc": null,
       "hasDoc": false
     }
