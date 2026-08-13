@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-12T08:48:16.306Z",
+  "generatedAt": "2026-08-13T14:36:45.143Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2386729708500059432",
-    "lastModified": "2026-08-11T21:55:35Z",
+    "version": "2387167808044943026",
+    "lastModified": "2026-08-13T11:27:28Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1895,28 +1895,6 @@
                 "type": "INSTANCE"
               }
             ]
-          },
-          {
-            "id": "799:19375",
-            "name": "Cargo Details — Recreation",
-            "type": "FRAME",
-            "w": 1280,
-            "h": 851,
-            "childCount": 3,
-            "children": [
-              {
-                "name": "Page/Header/Shipper",
-                "type": "INSTANCE"
-              },
-              {
-                "name": "Content",
-                "type": "FRAME"
-              },
-              {
-                "name": "Page/Footer",
-                "type": "INSTANCE"
-              }
-            ]
           }
         ]
       },
@@ -3676,10 +3654,18 @@
             "id": "6381:201015",
             "name": "Booking management",
             "type": "SECTION",
-            "w": 7688,
+            "w": 11400,
             "h": 10273,
-            "childCount": 9,
+            "childCount": 11,
             "children": [
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
               {
                 "name": "Page",
                 "type": "INSTANCE"
