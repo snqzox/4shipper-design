@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T11:43:22.370Z",
+  "generatedAt": "2026-08-14T13:07:22.812Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2387514612716270311",
-    "lastModified": "2026-08-14T09:53:30Z",
+    "version": "2387564362375349784",
+    "lastModified": "2026-08-14T13:04:43Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1179,7 +1179,7 @@
             "name": "Frame 472",
             "type": "FRAME",
             "w": 1000,
-            "h": 2451,
+            "h": 1347,
             "childCount": 2,
             "children": [
               {
@@ -3816,6 +3816,48 @@
               },
               {
                 "name": "Property 1=Variant2, Type=Unloading",
+                "type": "COMPONENT"
+              }
+            ]
+          },
+          {
+            "id": "6619:72946",
+            "name": "Status",
+            "type": "COMPONENT_SET",
+            "w": 351,
+            "h": 240,
+            "childCount": 8,
+            "children": [
+              {
+                "name": "Status=Expired",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Withdrawn",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Confirmed",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Rejected",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Arrived",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Canceled",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Completed",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Status=Pending",
                 "type": "COMPONENT"
               }
             ]
