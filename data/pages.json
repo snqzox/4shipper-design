@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-13T14:36:45.143Z",
+  "generatedAt": "2026-08-14T11:43:22.370Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2387167808044943026",
-    "lastModified": "2026-08-13T11:27:28Z",
+    "version": "2387514612716270311",
+    "lastModified": "2026-08-14T09:53:30Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1179,7 +1179,7 @@
             "name": "Frame 472",
             "type": "FRAME",
             "w": 1000,
-            "h": 1331,
+            "h": 2451,
             "childCount": 2,
             "children": [
               {
@@ -1224,32 +1224,6 @@
               },
               {
                 "name": "Property 1=Variant2",
-                "type": "COMPONENT"
-              }
-            ]
-          },
-          {
-            "id": "3859:180305",
-            "name": "Booking Entry",
-            "type": "COMPONENT_SET",
-            "w": 1682,
-            "h": 963,
-            "childCount": 4,
-            "children": [
-              {
-                "name": "Property 1=Default, Type=Loading",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Default, Type=Unloading",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2, Type=Loading",
-                "type": "COMPONENT"
-              },
-              {
-                "name": "Property 1=Variant2, Type=Unloading",
                 "type": "COMPONENT"
               }
             ]
@@ -3652,10 +3626,10 @@
           },
           {
             "id": "6381:201015",
-            "name": "Booking management",
+            "name": "Shipper - Booking management",
             "type": "SECTION",
             "w": 11400,
-            "h": 10273,
+            "h": 7969,
             "childCount": 11,
             "children": [
               {
@@ -3699,8 +3673,150 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              }
+            ]
+          },
+          {
+            "id": "6543:221480",
+            "name": "Carrier - Booking management",
+            "type": "SECTION",
+            "w": 7393,
+            "h": 5069,
+            "childCount": 9,
+            "children": [
+              {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Bookings list",
+                "type": "TEXT"
+              },
+              {
+                "name": "Booking detail / Pending confirmation",
+                "type": "TEXT"
+              },
+              {
+                "name": "Carrier → Add new booking",
+                "type": "TEXT"
+              },
+              {
+                "name": "Bookings",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "6543:221481",
+            "name": "Carrier - Transports",
+            "type": "SECTION",
+            "w": 10352,
+            "h": 3936,
+            "childCount": 15,
+            "children": [
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Button",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Transports list",
+                "type": "TEXT"
+              },
+              {
+                "name": "Edit tansport details",
+                "type": "TEXT"
+              },
+              {
+                "name": "Transport detail - Bid selected / Awaiting carriers confirmation",
+                "type": "TEXT"
+              },
+              {
+                "name": "Transport detail - Transport confirmed / Details not provided",
+                "type": "TEXT"
+              },
+              {
+                "name": "Transport detail - Transport confirmed / Details provided",
+                "type": "TEXT"
+              },
+              {
+                "name": "Transports",
+                "type": "TEXT"
+              }
+            ]
+          },
+          {
+            "id": "3859:180305",
+            "name": "Shipper/Booking Card",
+            "type": "COMPONENT_SET",
+            "w": 2465,
+            "h": 963,
+            "childCount": 4,
+            "children": [
+              {
+                "name": "Property 1=Default, Type=Loading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Default, Type=Unloading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2, Type=Loading",
+                "type": "COMPONENT"
+              },
+              {
+                "name": "Property 1=Variant2, Type=Unloading",
+                "type": "COMPONENT"
               }
             ]
           }
