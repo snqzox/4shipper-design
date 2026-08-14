@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T13:07:22.812Z",
+  "generatedAt": "2026-08-14T14:30:31.162Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2387564362375349784",
-    "lastModified": "2026-08-14T13:04:43Z",
+    "version": "2387580558137990933",
+    "lastModified": "2026-08-14T14:30:36Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -3630,7 +3630,7 @@
             "type": "SECTION",
             "w": 11400,
             "h": 7969,
-            "childCount": 11,
+            "childCount": 12,
             "children": [
               {
                 "name": "Page",
@@ -3674,6 +3674,10 @@
               },
               {
                 "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Dropdown Menu",
                 "type": "INSTANCE"
               }
             ]
