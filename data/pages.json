@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-14T14:30:31.162Z",
+  "generatedAt": "2026-08-14T15:52:40.119Z",
   "design": {
     "key": "Xol48qmGXL8hIqA42jbHno",
     "name": "Transportly 4Shipper - Design",
-    "version": "2387580558137990933",
-    "lastModified": "2026-08-14T14:30:36Z",
+    "version": "2387608428173915695",
+    "lastModified": "2026-08-14T15:52:47Z",
     "pages": [
       {
         "id": "1938:163864",
@@ -1927,7 +1927,7 @@
             "name": "Settings",
             "type": "FRAME",
             "w": 2464,
-            "h": 17847,
+            "h": 18231,
             "childCount": 5,
             "children": [
               {
@@ -3630,8 +3630,12 @@
             "type": "SECTION",
             "w": 11400,
             "h": 7969,
-            "childCount": 12,
+            "childCount": 20,
             "children": [
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
               {
                 "name": "Page",
                 "type": "INSTANCE"
@@ -3677,7 +3681,35 @@
                 "type": "INSTANCE"
               },
               {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Alert Dialog",
+                "type": "INSTANCE"
+              },
+              {
                 "name": "Dropdown Menu",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Connector line",
+                "type": "CONNECTOR"
+              },
+              {
+                "name": "Tooltip",
+                "type": "INSTANCE"
+              },
+              {
+                "name": "Tooltip",
                 "type": "INSTANCE"
               }
             ]
@@ -3686,13 +3718,17 @@
             "id": "6543:221480",
             "name": "Carrier - Booking management",
             "type": "SECTION",
-            "w": 7393,
+            "w": 8427,
             "h": 5069,
-            "childCount": 9,
+            "childCount": 11,
             "children": [
               {
                 "name": "Page",
                 "type": "INSTANCE"
+              },
+              {
+                "name": "Page",
+                "type": "COMPONENT"
               },
               {
                 "name": "Page",
@@ -3725,6 +3761,10 @@
               {
                 "name": "Bookings",
                 "type": "TEXT"
+              },
+              {
+                "name": "Dialog",
+                "type": "INSTANCE"
               }
             ]
           },
